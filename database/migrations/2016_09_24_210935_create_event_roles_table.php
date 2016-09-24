@@ -13,8 +13,10 @@ class CreateEventRolesTable extends Migration
     public function up()
     {
         Schema::create('event_roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+          $table->increments('id');
+          $table->string('name')->nullable();
+          $table->string('description')->nullable();
+          $table->timestamps();
         });
     }
 

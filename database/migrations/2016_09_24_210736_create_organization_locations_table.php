@@ -14,6 +14,10 @@ class CreateOrganizationLocationsTable extends Migration
     {
         Schema::create('organization_locations', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('organization_id')->unsigned()->nullable()->default(null);
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
+            $table->integer('location_id')->unsigned()->nullable()->default(null);
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
             $table->timestamps();
         });
     }

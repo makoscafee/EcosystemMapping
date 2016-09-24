@@ -14,6 +14,10 @@ class CreateEcosystemsTable extends Migration
     {
         Schema::create('ecosystems', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
+            $table->string('edition')->nullable();
+            $table->integer('parent_id')->unsigned()->nullable()->default(null);
+            $table->foreign('parent_id')->references('id')->on('parents')->onDelete('cascade');
             $table->timestamps();
         });
     }

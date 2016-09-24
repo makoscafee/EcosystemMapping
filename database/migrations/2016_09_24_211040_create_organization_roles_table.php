@@ -14,6 +14,10 @@ class CreateOrganizationRolesTable extends Migration
     {
         Schema::create('organization_roles', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('organization_id')->unsigned()->nullable()->default(null);
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
+            $table->integer('role_id')->unsigned()->nullable()->default(null);
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->timestamps();
         });
     }
