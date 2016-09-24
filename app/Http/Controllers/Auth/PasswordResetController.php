@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use Mail;
-use App\User;
-use App\PasswordReset;
+use App\Ecosystem\Models\User;
+use App\Ecosystem\Models\PasswordReset;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

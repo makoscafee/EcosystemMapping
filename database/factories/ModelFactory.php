@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Ecosystem\Models\User::class, function (Faker\Generator $faker) {
     return [
         'name'  => $faker->name,
         'email' => $faker->safeEmail,
@@ -20,7 +20,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\PasswordReset::class, function (Faker\Generator $faker) {
+$factory->define(App\Ecosystem\Models\PasswordReset::class, function (Faker\Generator $faker) {
     return [
         'email'  => $faker->safeEmail,
         'token' => str_random(10),

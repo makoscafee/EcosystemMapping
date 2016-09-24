@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Auth;
 use JWTAuth;
-use App\User;
+use App\Ecosystem\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
