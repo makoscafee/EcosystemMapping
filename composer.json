@@ -11,7 +11,8 @@
         "barryvdh/laravel-cors": "0.7.x",
         "laravelangular/generators": "2.7.x",
         "dingo/api": "1.0.x@dev",
-        "infyomlabs/laravel-generator": "5.2.x-dev"
+        "infyomlabs/laravel-generator": "5.2.x-dev",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

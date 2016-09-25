@@ -13,11 +13,11 @@ return [
 
         'migration'         => base_path('database/migrations/'),
 
-        'model'             => app_path('Models/'),
+        'model'             => app_path('Ecosystem/Models/'),
 
         'datatables'        => app_path('DataTables/'),
 
-        'repository'        => app_path('Repositories/'),
+        'repository'        => app_path('Ecosystem/Repositories/'),
 
         'routes'            => app_path('Http/routes.php'),
 
