@@ -16,6 +16,8 @@ branches:
 before_script:
   - mysql -e 'create database ecosystem;'
 
-install: travis_retry composer install --no-interaction --prefer-dist
+install:
+  - travis_retry composer install --no-interaction --prefer-dist
+  - php artisan migrate
 
 script: vendor/bin/phpunit --verbose
