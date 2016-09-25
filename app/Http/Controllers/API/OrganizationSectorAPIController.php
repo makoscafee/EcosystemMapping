@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateOrganizationSectorAPIRequest;
 use App\Http\Requests\API\UpdateOrganizationSectorAPIRequest;
-use App\Models\OrganizationSector;
-use App\Repositories\OrganizationSectorRepository;
+use App\Ecosystem\Models\OrganizationSector;
+use App\Ecosystem\Repositories\OrganizationSectorRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

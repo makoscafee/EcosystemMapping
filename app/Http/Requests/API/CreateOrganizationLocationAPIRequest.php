@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\OrganizationLocation;
+use App\Ecosystem\Models\OrganizationLocation;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateOrganizationLocationAPIRequest extends APIRequest

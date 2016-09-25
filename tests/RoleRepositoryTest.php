@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Role;
-use App\Repositories\RoleRepository;
+use App\Ecosystem\Models\Role;
+use App\Ecosystem\Repositories\RoleRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RoleRepositoryTest extends TestCase

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateOrganizationLocationRequest;
 use App\Http\Requests\UpdateOrganizationLocationRequest;
-use App\Repositories\OrganizationLocationRepository;
+use App\Ecosystem\Repositories\OrganizationLocationRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

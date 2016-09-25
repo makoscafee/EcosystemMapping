@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\EventInfo;
+use App\Ecosystem\Models\EventInfo;
 use InfyOm\Generator\Common\BaseRepository;
 
 class EventInfoRepository extends BaseRepository

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\ProjectInfo;
+use App\Ecosystem\Models\ProjectInfo;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateProjectInfoAPIRequest extends APIRequest

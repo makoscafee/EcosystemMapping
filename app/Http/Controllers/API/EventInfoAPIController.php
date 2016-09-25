@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateEventInfoAPIRequest;
 use App\Http\Requests\API\UpdateEventInfoAPIRequest;
-use App\Models\EventInfo;
-use App\Repositories\EventInfoRepository;
+use App\Ecosystem\Models\EventInfo;
+use App\Ecosystem\Repositories\EventInfoRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

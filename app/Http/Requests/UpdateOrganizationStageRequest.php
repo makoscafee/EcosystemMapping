@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\OrganizationStage;
+use App\Ecosystem\Models\OrganizationStage;
 
 class UpdateOrganizationStageRequest extends Request
 {

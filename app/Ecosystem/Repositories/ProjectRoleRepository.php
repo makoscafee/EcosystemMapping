@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\ProjectRole;
+use App\Ecosystem\Models\ProjectRole;
 use InfyOm\Generator\Common\BaseRepository;
 
 class ProjectRoleRepository extends BaseRepository

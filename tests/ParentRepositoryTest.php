@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Parent;
-use App\Repositories\ParentRepository;
+use App\Ecosystem\Models\EcoParent;
+use App\Ecosystem\Repositories\ParentRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ParentRepositoryTest extends TestCase

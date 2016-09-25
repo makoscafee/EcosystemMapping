@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Sector;
-use App\Repositories\SectorRepository;
+use App\Ecosystem\Models\Sector;
+use App\Ecosystem\Repositories\SectorRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class SectorRepositoryTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\Sector;
+use App\Ecosystem\Models\Sector;
 use InfyOm\Generator\Common\BaseRepository;
 
 class SectorRepository extends BaseRepository

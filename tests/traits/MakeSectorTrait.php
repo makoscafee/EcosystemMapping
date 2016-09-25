@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Sector;
-use App\Repositories\SectorRepository;
+use App\Ecosystem\Models\Sector;
+use App\Ecosystem\Repositories\SectorRepository;
 
 trait MakeSectorTrait
 {

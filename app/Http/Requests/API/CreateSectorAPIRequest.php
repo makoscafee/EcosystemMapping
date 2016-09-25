@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Sector;
+use App\Ecosystem\Models\Sector;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateSectorAPIRequest extends APIRequest

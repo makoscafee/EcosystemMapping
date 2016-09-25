@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\EventRole;
-use App\Repositories\EventRoleRepository;
+use App\Ecosystem\Models\EventRole;
+use App\Ecosystem\Repositories\EventRoleRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class EventRoleRepositoryTest extends TestCase

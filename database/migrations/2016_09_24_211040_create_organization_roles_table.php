@@ -18,6 +18,7 @@ class CreateOrganizationRolesTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->integer('role_id')->unsigned()->nullable()->default(null);
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

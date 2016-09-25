@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\ProjectRole;
+use App\Ecosystem\Models\ProjectRole;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateProjectRoleAPIRequest extends APIRequest

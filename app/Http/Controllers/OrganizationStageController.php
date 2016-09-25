@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateOrganizationStageRequest;
 use App\Http\Requests\UpdateOrganizationStageRequest;
-use App\Repositories\OrganizationStageRepository;
+use App\Ecosystem\Repositories\OrganizationStageRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

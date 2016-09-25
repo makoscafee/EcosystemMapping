@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\OrganizationEcosystem;
-use App\Repositories\OrganizationEcosystemRepository;
+use App\Ecosystem\Models\OrganizationEcosystem;
+use App\Ecosystem\Repositories\OrganizationEcosystemRepository;
 
 trait MakeOrganizationEcosystemTrait
 {

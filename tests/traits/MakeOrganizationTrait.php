@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Organization;
-use App\Repositories\OrganizationRepository;
+use App\Ecosystem\Models\Organization;
+use App\Ecosystem\Repositories\OrganizationRepository;
 
 trait MakeOrganizationTrait
 {
@@ -42,7 +42,7 @@ trait MakeOrganizationTrait
         $fake = Faker::create();
 
         return array_merge([
-            'parent_id' => $fake->randomDigitNotNull,
+            'ecosystem_parent_id' => $fake->randomDigitNotNull,
             'name' => $fake->word,
             'description' => $fake->word,
             'date_founded' => $fake->word,

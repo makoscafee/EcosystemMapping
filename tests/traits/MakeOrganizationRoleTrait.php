@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\OrganizationRole;
-use App\Repositories\OrganizationRoleRepository;
+use App\Ecosystem\Models\OrganizationRole;
+use App\Ecosystem\Repositories\OrganizationRoleRepository;
 
 trait MakeOrganizationRoleTrait
 {

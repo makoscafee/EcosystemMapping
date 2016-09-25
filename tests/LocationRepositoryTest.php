@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Location;
-use App\Repositories\LocationRepository;
+use App\Ecosystem\Models\Location;
+use App\Ecosystem\Repositories\LocationRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LocationRepositoryTest extends TestCase

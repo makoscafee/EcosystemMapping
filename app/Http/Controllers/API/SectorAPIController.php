@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateSectorAPIRequest;
 use App\Http\Requests\API\UpdateSectorAPIRequest;
-use App\Models\Sector;
-use App\Repositories\SectorRepository;
+use App\Ecosystem\Models\Sector;
+use App\Ecosystem\Repositories\SectorRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

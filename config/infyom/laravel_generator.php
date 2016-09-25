@@ -55,11 +55,11 @@ return [
 
     'namespace' => [
 
-        'model'             => 'App\Models',
+        'model'             => 'App\Ecosystem\Models',
 
         'datatables'        => 'App\DataTables',
 
-        'repository'        => 'App\Repositories',
+        'repository'        => 'App\Ecosystem\Repositories',
 
         'controller'        => 'App\Http\Controllers',
 
@@ -168,8 +168,6 @@ return [
         'created_at'    => 'created_at',
 
         'updated_at'    => 'updated_at',
-
-        'deleted_at'    => 'deleted_at',
     ],
 
 ];

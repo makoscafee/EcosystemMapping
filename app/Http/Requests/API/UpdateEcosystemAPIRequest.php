@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Ecosystem;
+use App\Ecosystem\Models\Ecosystem;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateEcosystemAPIRequest extends APIRequest

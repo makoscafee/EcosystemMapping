@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Role;
+use App\Ecosystem\Models\Role;
 
 class UpdateRoleRequest extends Request
 {

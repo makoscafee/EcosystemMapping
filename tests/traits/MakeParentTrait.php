@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Parent;
-use App\Repositories\ParentRepository;
+use App\Ecosystem\Models\EcoParent;
+use App\Ecosystem\Repositories\ParentRepository;
 
 trait MakeParentTrait
 {

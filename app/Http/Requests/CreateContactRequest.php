@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Contact;
+use App\Ecosystem\Models\Contact;
 
 class CreateContactRequest extends Request
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Ecosystem\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -15,18 +15,16 @@ class Ecosystem extends Model
     use SoftDeletes;
 
     public $table = 'ecosystems';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'name',
         'edition',
-        'parent_id'
+        'ecosystem_parent_id'
     ];
 
     /**
@@ -38,7 +36,7 @@ class Ecosystem extends Model
         'id' => 'integer',
         'name' => 'string',
         'edition' => 'string',
-        'parent_id' => 'integer'
+        'ecosystem_parent_id' => 'integer'
     ];
 
     /**
@@ -47,7 +45,7 @@ class Ecosystem extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**

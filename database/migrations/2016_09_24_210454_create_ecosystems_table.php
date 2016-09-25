@@ -16,8 +16,9 @@ class CreateEcosystemsTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('edition')->nullable();
-            $table->integer('parent_id')->unsigned()->nullable()->default(null);
-            $table->foreign('parent_id')->references('id')->on('parents')->onDelete('cascade');
+            $table->integer('ecosystem_parent_id')->unsigned()->nullable()->default(null);
+            $table->foreign('ecosystem_parent_id')->references('id')->on('ecosystem_parents')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

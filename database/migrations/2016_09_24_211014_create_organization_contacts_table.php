@@ -18,6 +18,7 @@ class CreateOrganizationContactsTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->integer('contact_id')->unsigned()->nullable()->default(null);
             $table->foreign('contact_id')->references('id')->on('contacts')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

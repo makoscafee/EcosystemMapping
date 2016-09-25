@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Contact;
+use App\Ecosystem\Models\Contact;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateContactAPIRequest extends APIRequest

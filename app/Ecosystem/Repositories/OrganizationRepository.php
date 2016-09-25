@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\Organization;
+use App\Ecosystem\Models\Organization;
 use InfyOm\Generator\Common\BaseRepository;
 
 class OrganizationRepository extends BaseRepository
@@ -11,7 +11,7 @@ class OrganizationRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'parent_id',
+        'ecosystem_parent_id',
         'name',
         'description',
         'date_founded',

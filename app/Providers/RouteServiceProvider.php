@@ -17,6 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
 
+    protected $api_namespace = 'App\Http\Controllers\API';
+
     /**
      * This version is applied to the API routes in your routes file.
      *
@@ -53,6 +55,14 @@ class RouteServiceProvider extends ServiceProvider
                     require app_path('Http/routes.php');
                 });
             });
+        });
+
+        $router->group([
+            'middleware' => 'api',
+            'namespace' => $this->namespace,
+            'prefix' => 'api/'.$this->version.'/',
+            'as' => 'api.',], function ($router) {
+              require app_path('Http/api_routes.php');
         });
     }
 }

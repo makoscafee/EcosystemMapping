@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\EventRole;
+use App\Ecosystem\Models\EventRole;
 
 class UpdateEventRoleRequest extends Request
 {

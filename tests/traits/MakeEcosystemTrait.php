@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Ecosystem;
-use App\Repositories\EcosystemRepository;
+use App\Ecosystem\Models\Ecosystem;
+use App\Ecosystem\Repositories\EcosystemRepository;
 
 trait MakeEcosystemTrait
 {
@@ -44,7 +44,7 @@ trait MakeEcosystemTrait
         return array_merge([
             'name' => $fake->word,
             'edition' => $fake->word,
-            'parent_id' => $fake->randomDigitNotNull,
+            'ecosystem_parent_id' => $fake->randomDigitNotNull,
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
         ], $ecosystemFields);

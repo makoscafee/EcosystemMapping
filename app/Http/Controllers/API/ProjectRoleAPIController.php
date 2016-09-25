@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateProjectRoleAPIRequest;
 use App\Http\Requests\API\UpdateProjectRoleAPIRequest;
-use App\Models\ProjectRole;
-use App\Repositories\ProjectRoleRepository;
+use App\Ecosystem\Models\ProjectRole;
+use App\Ecosystem\Repositories\ProjectRoleRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

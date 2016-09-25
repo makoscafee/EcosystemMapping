@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\ProjectRole;
-use App\Repositories\ProjectRoleRepository;
+use App\Ecosystem\Models\ProjectRole;
+use App\Ecosystem\Repositories\ProjectRoleRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProjectRoleRepositoryTest extends TestCase

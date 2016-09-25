@@ -6,9 +6,9 @@ use Mail;
 use App\Ecosystem\Models\User;
 use App\Ecosystem\Models\PasswordReset;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\AppBaseController;
 
-class PasswordResetController extends Controller
+class PasswordResetController extends AppBaseController
 {
     public function sendResetLinkEmail(Request $request)
     {

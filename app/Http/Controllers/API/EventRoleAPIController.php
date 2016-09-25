@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateEventRoleAPIRequest;
 use App\Http\Requests\API\UpdateEventRoleAPIRequest;
-use App\Models\EventRole;
-use App\Repositories\EventRoleRepository;
+use App\Ecosystem\Models\EventRole;
+use App\Ecosystem\Repositories\EventRoleRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

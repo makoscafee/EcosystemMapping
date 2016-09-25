@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Parent;
+use App\Ecosystem\Models\EcoParent;
 
 class CreateParentRequest extends Request
 {

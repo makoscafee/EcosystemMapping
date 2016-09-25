@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\Ecosystem;
+use App\Ecosystem\Models\Ecosystem;
 use InfyOm\Generator\Common\BaseRepository;
 
 class EcosystemRepository extends BaseRepository
@@ -13,7 +13,7 @@ class EcosystemRepository extends BaseRepository
     protected $fieldSearchable = [
         'name',
         'edition',
-        'parent_id'
+        'ecosystem_parent_id'
     ];
 
     /**

@@ -18,6 +18,7 @@ class CreateOrganizationSectorsTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->integer('sector_id')->unsigned()->nullable()->default(null);
             $table->foreign('sector_id')->references('id')->on('sectors')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

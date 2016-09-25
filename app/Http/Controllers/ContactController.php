@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateContactRequest;
 use App\Http\Requests\UpdateContactRequest;
-use App\Repositories\ContactRepository;
+use App\Ecosystem\Repositories\ContactRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

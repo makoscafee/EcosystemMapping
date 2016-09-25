@@ -16,6 +16,7 @@ class CreateLocationsTable extends Migration
             $table->increments('id');
             $table->decimal('long', 10, 7);
             $table->decimal('lat', 10, 7);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

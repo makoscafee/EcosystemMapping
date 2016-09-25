@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\ProjectInfo;
-use App\Repositories\ProjectInfoRepository;
+use App\Ecosystem\Models\ProjectInfo;
+use App\Ecosystem\Repositories\ProjectInfoRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProjectInfoRepositoryTest extends TestCase

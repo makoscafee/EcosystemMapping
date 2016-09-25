@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProjectRoleRequest;
 use App\Http\Requests\UpdateProjectRoleRequest;
-use App\Repositories\ProjectRoleRepository;
+use App\Ecosystem\Repositories\ProjectRoleRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

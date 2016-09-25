@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\OrganizationSector;
-use App\Repositories\OrganizationSectorRepository;
+use App\Ecosystem\Models\OrganizationSector;
+use App\Ecosystem\Repositories\OrganizationSectorRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class OrganizationSectorRepositoryTest extends TestCase

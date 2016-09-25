@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\OrganizationStage;
-use App\Repositories\OrganizationStageRepository;
+use App\Ecosystem\Models\OrganizationStage;
+use App\Ecosystem\Repositories\OrganizationStageRepository;
 
 trait MakeOrganizationStageTrait
 {

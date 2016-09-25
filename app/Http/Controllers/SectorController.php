@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateSectorRequest;
 use App\Http\Requests\UpdateSectorRequest;
-use App\Repositories\SectorRepository;
+use App\Ecosystem\Repositories\SectorRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

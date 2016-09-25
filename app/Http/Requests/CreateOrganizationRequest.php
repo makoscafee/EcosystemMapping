@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Organization;
+use App\Ecosystem\Models\Organization;
 
 class CreateOrganizationRequest extends Request
 {

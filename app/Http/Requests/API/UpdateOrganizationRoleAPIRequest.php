@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\OrganizationRole;
+use App\Ecosystem\Models\OrganizationRole;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateOrganizationRoleAPIRequest extends APIRequest

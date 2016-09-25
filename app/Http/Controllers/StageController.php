@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateStageRequest;
 use App\Http\Requests\UpdateStageRequest;
-use App\Repositories\StageRepository;
+use App\Ecosystem\Repositories\StageRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
