@@ -15,6 +15,7 @@ class CreateEcosystemParentsTable extends Migration
     {
         Schema::create('ecosystem_parents', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
