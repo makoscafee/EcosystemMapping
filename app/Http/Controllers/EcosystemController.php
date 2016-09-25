@@ -2,92 +2,154 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateEcosystemRequest;
+use App\Http\Requests\UpdateEcosystemRequest;
+use App\Repositories\EcosystemRepository;
+use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Flash;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Response;
 
-use App\Http\Requests;
-use App\Ecosystem\Models\Ecosystem;
-
-class EcosystemController extends Controller
+class EcosystemController extends AppBaseController
 {
+    /** @var  EcosystemRepository */
+    private $ecosystemRepository;
 
-    public function __construct(Ecosystem $ecosystem)
+    public function __construct(EcosystemRepository $ecosystemRepo)
     {
-      $this->ecosystem = $ecosystem;
+        $this->ecosystemRepository = $ecosystemRepo;
     }
+
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Ecosystem.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $ecosystems = $this->ecosystem->all();
-        
+        $this->ecosystemRepository->pushCriteria(new RequestCriteria($request));
+        $ecosystems = $this->ecosystemRepository->all();
+
+        return view('ecosystems.index')
+            ->with('ecosystems', $ecosystems);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new Ecosystem.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return view('ecosystems.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Ecosystem in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param CreateEcosystemRequest $request
+     *
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateEcosystemRequest $request)
     {
-        //
+        $input = $request->all();
+
+        $ecosystem = $this->ecosystemRepository->create($input);
+
+        Flash::success('Ecosystem saved successfully.');
+
+        return redirect(route('ecosystems.index'));
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Ecosystem.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function show($id)
     {
-        //
+        $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+        if (empty($ecosystem)) {
+            Flash::error('Ecosystem not found');
+
+            return redirect(route('ecosystems.index'));
+        }
+
+        return view('ecosystems.show')->with('ecosystem', $ecosystem);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Ecosystem.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function edit($id)
     {
-        //
+        $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+        if (empty($ecosystem)) {
+            Flash::error('Ecosystem not found');
+
+            return redirect(route('ecosystems.index'));
+        }
+
+        return view('ecosystems.edit')->with('ecosystem', $ecosystem);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Ecosystem in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int              $id
+     * @param UpdateEcosystemRequest $request
+     *
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, UpdateEcosystemRequest $request)
     {
-        //
+        $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+        if (empty($ecosystem)) {
+            Flash::error('Ecosystem not found');
+
+            return redirect(route('ecosystems.index'));
+        }
+
+        $ecosystem = $this->ecosystemRepository->update($request->all(), $id);
+
+        Flash::success('Ecosystem updated successfully.');
+
+        return redirect(route('ecosystems.index'));
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Ecosystem from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function destroy($id)
     {
-        //
+        $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+        if (empty($ecosystem)) {
+            Flash::error('Ecosystem not found');
+
+            return redirect(route('ecosystems.index'));
+        }
+
+        $this->ecosystemRepository->delete($id);
+
+        Flash::success('Ecosystem deleted successfully.');
+
+        return redirect(route('ecosystems.index'));
     }
 }

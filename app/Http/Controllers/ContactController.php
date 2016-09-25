@@ -2,85 +2,154 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateContactRequest;
+use App\Http\Requests\UpdateContactRequest;
+use App\Repositories\ContactRepository;
+use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Flash;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Response;
 
-use App\Http\Requests;
-
-class ContactController extends Controller
+class ContactController extends AppBaseController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    /** @var  ContactRepository */
+    private $contactRepository;
+
+    public function __construct(ContactRepository $contactRepo)
     {
-        //
+        $this->contactRepository = $contactRepo;
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the Contact.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        $this->contactRepository->pushCriteria(new RequestCriteria($request));
+        $contacts = $this->contactRepository->all();
+
+        return view('contacts.index')
+            ->with('contacts', $contacts);
+    }
+
+    /**
+     * Show the form for creating a new Contact.
+     *
+     * @return Response
      */
     public function create()
     {
-        //
+        return view('contacts.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Contact in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param CreateContactRequest $request
+     *
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateContactRequest $request)
     {
-        //
+        $input = $request->all();
+
+        $contact = $this->contactRepository->create($input);
+
+        Flash::success('Contact saved successfully.');
+
+        return redirect(route('contacts.index'));
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Contact.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function show($id)
     {
-        //
+        $contact = $this->contactRepository->findWithoutFail($id);
+
+        if (empty($contact)) {
+            Flash::error('Contact not found');
+
+            return redirect(route('contacts.index'));
+        }
+
+        return view('contacts.show')->with('contact', $contact);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Contact.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function edit($id)
     {
-        //
+        $contact = $this->contactRepository->findWithoutFail($id);
+
+        if (empty($contact)) {
+            Flash::error('Contact not found');
+
+            return redirect(route('contacts.index'));
+        }
+
+        return view('contacts.edit')->with('contact', $contact);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Contact in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int              $id
+     * @param UpdateContactRequest $request
+     *
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, UpdateContactRequest $request)
     {
-        //
+        $contact = $this->contactRepository->findWithoutFail($id);
+
+        if (empty($contact)) {
+            Flash::error('Contact not found');
+
+            return redirect(route('contacts.index'));
+        }
+
+        $contact = $this->contactRepository->update($request->all(), $id);
+
+        Flash::success('Contact updated successfully.');
+
+        return redirect(route('contacts.index'));
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Contact from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return Response
      */
     public function destroy($id)
     {
-        //
+        $contact = $this->contactRepository->findWithoutFail($id);
+
+        if (empty($contact)) {
+            Flash::error('Contact not found');
+
+            return redirect(route('contacts.index'));
+        }
+
+        $this->contactRepository->delete($id);
+
+        Flash::success('Contact deleted successfully.');
+
+        return redirect(route('contacts.index'));
     }
 }
