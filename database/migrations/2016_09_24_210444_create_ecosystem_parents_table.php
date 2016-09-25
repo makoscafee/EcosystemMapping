@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
-class CreateParentsTable extends Migration
+class CreateEcosystemParentsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -12,9 +13,10 @@ class CreateParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parents', function (Blueprint $table) {
+        Schema::create('ecosystem_parents', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -25,6 +27,6 @@ class CreateParentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('parents');
+        Schema::drop('ecosystem_parents');
     }
 }

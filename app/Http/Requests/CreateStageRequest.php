@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Stage;
+use App\Ecosystem\Models\Stage;
 
 class CreateStageRequest extends Request
 {

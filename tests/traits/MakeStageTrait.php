@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Stage;
-use App\Repositories\StageRepository;
+use App\Ecosystem\Models\Stage;
+use App\Ecosystem\Repositories\StageRepository;
 
 trait MakeStageTrait
 {

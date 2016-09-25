@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Role;
-use App\Repositories\RoleRepository;
+use App\Ecosystem\Models\Role;
+use App\Ecosystem\Repositories\RoleRepository;
 
 trait MakeRoleTrait
 {

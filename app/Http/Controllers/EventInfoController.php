@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateEventInfoRequest;
 use App\Http\Requests\UpdateEventInfoRequest;
-use App\Repositories\EventInfoRepository;
+use App\Ecosystem\Repositories\EventInfoRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

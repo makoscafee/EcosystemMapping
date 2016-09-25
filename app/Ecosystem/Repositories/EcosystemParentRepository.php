@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\Parent;
+use App\Ecosystem\Models\EcosystemParent;
 use InfyOm\Generator\Common\BaseRepository;
 
-class ParentRepository extends BaseRepository
+class EcosystemParentRepository extends BaseRepository
 {
     /**
      * @var array
@@ -19,6 +19,6 @@ class ParentRepository extends BaseRepository
      **/
     public function model()
     {
-        return Parent::class;
+        return EcosystemParent::class;
     }
 }

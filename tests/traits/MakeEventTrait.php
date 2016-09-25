@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Event;
-use App\Repositories\EventRepository;
+use App\Ecosystem\Models\Event;
+use App\Ecosystem\Repositories\EventRepository;
 
 trait MakeEventTrait
 {

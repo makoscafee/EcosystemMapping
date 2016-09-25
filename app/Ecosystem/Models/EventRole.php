@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Ecosystem\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -8,17 +8,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class EventRole
  * @package App\Models
- * @version September 25, 2016, 6:02 pm UTC
+ * @version September 25, 2016, 7:56 pm UTC
  */
 class EventRole extends Model
 {
     use SoftDeletes;
 
     public $table = 'event_roles';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
 
     protected $dates = ['deleted_at'];
 
@@ -45,7 +44,7 @@ class EventRole extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**

@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Stage;
-use App\Repositories\StageRepository;
+use App\Ecosystem\Models\Stage;
+use App\Ecosystem\Repositories\StageRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class StageRepositoryTest extends TestCase

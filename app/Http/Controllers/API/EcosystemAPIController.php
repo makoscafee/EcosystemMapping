@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateEcosystemAPIRequest;
 use App\Http\Requests\API\UpdateEcosystemAPIRequest;
-use App\Models\Ecosystem;
-use App\Repositories\EcosystemRepository;
+use App\Ecosystem\Models\Ecosystem;
+use App\Ecosystem\Repositories\EcosystemRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

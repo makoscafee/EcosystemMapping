@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateOrganizationRoleRequest;
 use App\Http\Requests\UpdateOrganizationRoleRequest;
-use App\Repositories\OrganizationRoleRepository;
+use App\Ecosystem\Repositories\OrganizationRoleRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

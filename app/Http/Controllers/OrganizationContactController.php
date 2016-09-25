@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateOrganizationContactRequest;
 use App\Http\Requests\UpdateOrganizationContactRequest;
-use App\Repositories\OrganizationContactRepository;
+use App\Ecosystem\Repositories\OrganizationContactRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

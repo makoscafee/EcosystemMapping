@@ -18,6 +18,7 @@ class CreateOrganizationStagesTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->integer('stage_id')->unsigned()->nullable()->default(null);
             $table->foreign('stage_id')->references('id')->on('stages')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateProjectInfoAPIRequest;
 use App\Http\Requests\API\UpdateProjectInfoAPIRequest;
-use App\Models\ProjectInfo;
-use App\Repositories\ProjectInfoRepository;
+use App\Ecosystem\Models\ProjectInfo;
+use App\Ecosystem\Repositories\ProjectInfoRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

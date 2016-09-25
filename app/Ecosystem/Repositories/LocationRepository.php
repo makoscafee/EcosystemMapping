@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\Location;
+use App\Ecosystem\Models\Location;
 use InfyOm\Generator\Common\BaseRepository;
 
 class LocationRepository extends BaseRepository

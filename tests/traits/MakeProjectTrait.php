@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Project;
-use App\Repositories\ProjectRepository;
+use App\Ecosystem\Models\Project;
+use App\Ecosystem\Repositories\ProjectRepository;
 
 trait MakeProjectTrait
 {

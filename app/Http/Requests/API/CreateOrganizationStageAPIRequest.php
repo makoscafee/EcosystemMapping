@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\OrganizationStage;
+use App\Ecosystem\Models\OrganizationStage;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateOrganizationStageAPIRequest extends APIRequest

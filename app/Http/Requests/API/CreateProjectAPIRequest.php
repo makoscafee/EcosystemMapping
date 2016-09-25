@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Project;
+use App\Ecosystem\Models\Project;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateProjectAPIRequest extends APIRequest

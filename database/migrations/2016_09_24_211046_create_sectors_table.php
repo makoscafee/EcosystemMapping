@@ -16,6 +16,7 @@ class CreateSectorsTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('description')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

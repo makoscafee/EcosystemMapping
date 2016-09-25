@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class AngularController extends Controller
+class AngularController extends AppBaseController
 {
     public function serveApp()
     {

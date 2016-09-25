@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Contact;
-use App\Repositories\ContactRepository;
+use App\Ecosystem\Models\Contact;
+use App\Ecosystem\Repositories\ContactRepository;
 
 trait MakeContactTrait
 {

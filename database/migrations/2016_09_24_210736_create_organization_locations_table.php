@@ -18,6 +18,7 @@ class CreateOrganizationLocationsTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->integer('location_id')->unsigned()->nullable()->default(null);
             $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

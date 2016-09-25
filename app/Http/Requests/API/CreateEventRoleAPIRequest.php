@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\EventRole;
+use App\Ecosystem\Models\EventRole;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateEventRoleAPIRequest extends APIRequest

@@ -20,6 +20,7 @@ class CreateProjectInfosTable extends Migration
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->integer('project_role_id')->unsigned()->nullable()->default(null);
             $table->foreign('project_role_id')->references('id')->on('project_roles')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

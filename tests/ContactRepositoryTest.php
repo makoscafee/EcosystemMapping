@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Contact;
-use App\Repositories\ContactRepository;
+use App\Ecosystem\Models\Contact;
+use App\Ecosystem\Repositories\ContactRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ContactRepositoryTest extends TestCase

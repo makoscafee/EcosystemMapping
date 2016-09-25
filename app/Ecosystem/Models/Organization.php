@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Ecosystem\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -15,16 +15,14 @@ class Organization extends Model
     use SoftDeletes;
 
     public $table = 'organizations';
-    
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'updated_at';
 
+    const CREATED_AT = 'created_at';
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'parent_id',
+        'ecosystem_parent_id',
         'name',
         'description',
         'date_founded',
@@ -39,7 +37,7 @@ class Organization extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'parent_id' => 'integer',
+        'ecosystem_parent_id' => 'integer',
         'name' => 'string',
         'description' => 'string',
         'date_founded' => 'date',
@@ -53,7 +51,7 @@ class Organization extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**

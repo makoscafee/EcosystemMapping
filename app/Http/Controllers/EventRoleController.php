@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateEventRoleRequest;
 use App\Http\Requests\UpdateEventRoleRequest;
-use App\Repositories\EventRoleRepository;
+use App\Ecosystem\Repositories\EventRoleRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

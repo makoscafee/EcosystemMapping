@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Location;
+use App\Ecosystem\Models\Location;
 
 class CreateLocationRequest extends Request
 {

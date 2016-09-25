@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Parent;
+use App\Ecosystem\Models\EcoParent;
 use InfyOm\Generator\Request\APIRequest;
 
 class CreateParentAPIRequest extends APIRequest

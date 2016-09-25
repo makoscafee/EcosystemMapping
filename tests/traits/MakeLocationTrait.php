@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use App\Models\Location;
-use App\Repositories\LocationRepository;
+use App\Ecosystem\Models\Location;
+use App\Ecosystem\Repositories\LocationRepository;
 
 trait MakeLocationTrait
 {

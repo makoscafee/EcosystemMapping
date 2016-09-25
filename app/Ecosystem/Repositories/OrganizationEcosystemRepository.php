@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\OrganizationEcosystem;
+use App\Ecosystem\Models\OrganizationEcosystem;
 use InfyOm\Generator\Common\BaseRepository;
 
 class OrganizationEcosystemRepository extends BaseRepository

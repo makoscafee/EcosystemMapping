@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Location;
+use App\Ecosystem\Models\Location;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateLocationAPIRequest extends APIRequest

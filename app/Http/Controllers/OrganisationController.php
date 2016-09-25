@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class OrganisationController extends Controller
+class OrganisationController extends AppBaseController
 {
     /**
      * Display a listing of the resource.

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateEcosystemRequest;
 use App\Http\Requests\UpdateEcosystemRequest;
-use App\Repositories\EcosystemRepository;
+use App\Ecosystem\Repositories\EcosystemRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;

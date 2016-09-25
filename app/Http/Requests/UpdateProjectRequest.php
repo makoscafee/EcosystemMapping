@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use App\Models\Project;
+use App\Ecosystem\Models\Project;
 
 class UpdateProjectRequest extends Request
 {

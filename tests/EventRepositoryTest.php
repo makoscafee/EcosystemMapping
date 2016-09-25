@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Event;
-use App\Repositories\EventRepository;
+use App\Ecosystem\Models\Event;
+use App\Ecosystem\Repositories\EventRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class EventRepositoryTest extends TestCase

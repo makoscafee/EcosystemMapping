@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateOrganizationStageAPIRequest;
 use App\Http\Requests\API\UpdateOrganizationStageAPIRequest;
-use App\Models\OrganizationStage;
-use App\Repositories\OrganizationStageRepository;
+use App\Ecosystem\Models\OrganizationStage;
+use App\Ecosystem\Repositories\OrganizationStageRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;

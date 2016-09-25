@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Ecosystem\Repositories;
 
-use App\Models\EventRole;
+use App\Ecosystem\Models\EventRole;
 use InfyOm\Generator\Common\BaseRepository;
 
 class EventRoleRepository extends BaseRepository

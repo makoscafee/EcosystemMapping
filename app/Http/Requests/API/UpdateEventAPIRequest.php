@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Event;
+use App\Ecosystem\Models\Event;
 use InfyOm\Generator\Request\APIRequest;
 
 class UpdateEventAPIRequest extends APIRequest
