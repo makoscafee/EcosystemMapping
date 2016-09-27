@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c473456c44aa9c2977b9e607d1e8583d",
-    "content-hash": "ef5dba6555966d0838b93785fe92abd9",
+    "hash": "d2d3039b724819657817b31e8459b6ee",
+    "content-hash": "ed659082e9e55fffef785873043394df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -844,6 +844,51 @@
                 "view"
             ],
             "time": "2016-09-24 13:01:31"
+        },
+        {
+            "name": "infyomlabs/metronic-templates",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/metronic-templates.git",
+                "reference": "201d436cc2065bd6440bb18a136771bd362ba1be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/metronic-templates/zipball/201d436cc2065bd6440bb18a136771bd362ba1be",
+                "reference": "201d436cc2065bd6440bb18a136771bd362ba1be",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\MetronicTemplates\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "Metronic theme templates for InfyOm Laravel Generator",
+            "keywords": [
+                "bootstrap",
+                "generator",
+                "infyom",
+                "laravel",
+                "metronic",
+                "templates"
+            ],
+            "time": "2016-06-15 14:15:01"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -4465,7 +4510,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "dingo/api": 20,
-        "infyomlabs/laravel-generator": 20
+        "infyomlabs/laravel-generator": 20,
+        "infyomlabs/metronic-templates": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -162,6 +162,7 @@ return [
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         LaravelAngular\Generators\LaravelServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        InfyOm\MetronicTemplates\MetronicTemplatesServiceProvider::class,
         InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
 
     ],

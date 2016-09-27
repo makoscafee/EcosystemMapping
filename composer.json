@@ -12,6 +12,7 @@
         "laravelangular/generators": "2.7.x",
         "dingo/api": "1.0.x@dev",
         "infyomlabs/laravel-generator": "5.2.x-dev",
+        "infyomlabs/metronic-templates": "dev-master",
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
