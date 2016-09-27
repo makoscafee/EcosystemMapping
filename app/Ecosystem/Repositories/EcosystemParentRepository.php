@@ -11,7 +11,7 @@ class EcosystemParentRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        
+        'name'
     ];
 
     /**

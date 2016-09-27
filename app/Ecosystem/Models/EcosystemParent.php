@@ -15,13 +15,13 @@ class EcosystemParent extends Model
     use SoftDeletes;
 
     public $table = 'ecosystem_parents';
-    
+
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        
+        'name'
     ];
 
     /**
@@ -30,7 +30,7 @@ class EcosystemParent extends Model
      * @var array
      */
     protected $casts = [
-        
+
     ];
 
     /**
@@ -39,8 +39,8 @@ class EcosystemParent extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
 }
