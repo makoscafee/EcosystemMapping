@@ -52,7 +52,7 @@ class OrganizationLocation extends Model
      **/
     public function location()
     {
-        return $this->belongsTo(\App\Models\Location::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Location::class);
     }
 
     /**
@@ -60,6 +60,6 @@ class OrganizationLocation extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 }

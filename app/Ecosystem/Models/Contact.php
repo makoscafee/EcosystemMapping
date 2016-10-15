@@ -60,6 +60,6 @@ class Contact extends Model
      **/
     public function organizationContacts()
     {
-        return $this->hasMany(\App\Models\OrganizationContact::class);
+        return $this->hasMany(\App\Ecosystem\Models\OrganizationContact::class);
     }
 }

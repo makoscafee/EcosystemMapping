@@ -23,19 +23,15 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('locations', 'LocationAPIController');
 
     Route::resource('organizations', 'OrganizationAPIController');
+    Route::get('organizations/{id}/locations', 'OrganizationAPIController@locations');
 
-    Route::resource('organization_contacts', 'OrganizationContactAPIController');
+    Route::get('organizations/{id}/contacts', 'OrganizationAPIController@contacts');
 
-    Route::resource('organization_ecosystems', 'OrganizationEcosystemAPIController');
+    Route::get('organization/{id}/roles', 'OrganizationAPIController@roles');
 
+    Route::get('organization/{id}/sectors', 'OrganizationAPIController@sectors');
 
-    Route::resource('organization_locations', 'OrganizationLocationAPIController');
-
-    Route::resource('organization_roles', 'OrganizationRoleAPIController');
-
-    Route::resource('organization_sectors', 'OrganizationSectorAPIController');
-
-    Route::resource('organization_stages', 'OrganizationStageAPIController');
+    Route::get('organization/{id}/stages', 'OrganizationAPIController@stages');
 
     Route::resource('projects', 'ProjectAPIController');
 
@@ -52,4 +48,8 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('contacts', 'ContactAPIController');
 
     Route::resource('ecosystem_parents', 'EcosystemParentAPIController');
+
+    Route::resource('ecosystems', 'EcosystemAPIController');
+
+    Route::get('ecosystems/{id}/organizations', 'EcosystemAPIController@organizations');
 });

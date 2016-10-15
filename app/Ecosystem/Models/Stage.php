@@ -51,6 +51,6 @@ class Stage extends Model
      **/
     public function organizationStages()
     {
-        return $this->hasMany(\App\Models\OrganizationStage::class);
+        return $this->hasMany(\App\Ecosystem\Models\OrganizationStage::class);
     }
 }

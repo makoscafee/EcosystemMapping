@@ -53,14 +53,14 @@ class Ecosystem extends Model
      **/
     public function parent()
     {
-        return $this->belongsTo(\App\Models\Parent::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Parent::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationEcosystems()
+    public function organizations()
     {
-        return $this->hasMany(\App\Models\OrganizationEcosystem::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Organization::class, 'organization_ecosystems')->withPivot('status')->withTimestamps();
     }
 }

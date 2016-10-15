@@ -51,7 +51,7 @@ class OrganizationStage extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 
     /**
@@ -59,6 +59,6 @@ class OrganizationStage extends Model
      **/
     public function stage()
     {
-        return $this->belongsTo(\App\Models\Stage::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Stage::class);
     }
 }
