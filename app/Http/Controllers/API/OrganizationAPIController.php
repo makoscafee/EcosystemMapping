@@ -126,4 +126,69 @@ class OrganizationAPIController extends AppBaseController
 
         return $this->sendResponse($id, 'Organization deleted successfully');
     }
+
+    public function locations($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $locations = $organization->locations()->get();
+      return $this->sendResponse($locations, 'Organisation locations retrieved successfully');
+    }
+
+    public function roles($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $roles = $organization->roles()->get();
+      return $this->sendResponse($roles, 'Organisation roles retrieved successfully');
+    }
+
+    public function contacts($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $contacts = $organization->contacts()->get();
+      return $this->sendResponse($contacts, 'Organisation contacts retrieved successfully');
+    }
+
+    public function sectors($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $sectors = $organization->sectors()->get();
+      return $this->sendResponse($sectors, 'Organisation sectors retrieved successfully');
+    }
+
+    public function stages($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $stages = $organization->stages()->get();
+      return $this->sendResponse($stages, 'Organisation stages retrieved successfully');
+    }
 }

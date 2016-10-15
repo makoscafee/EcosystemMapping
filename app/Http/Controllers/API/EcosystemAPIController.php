@@ -126,4 +126,16 @@ class EcosystemAPIController extends AppBaseController
 
         return $this->sendResponse($id, 'Ecosystem deleted successfully');
     }
+
+    public function organizations($id)
+    {
+      $ecosystem = $this->ecosystemRepository->findOrFail($id);
+
+      if (empty($ecosystem)) {
+          return $this->sendError('Ecosystem not found');
+      }
+
+      $organizations = $ecosystem->organizations()->get();
+      return $this->sendResponse($organizations, 'organizations retrieved successfully');
+    }
 }

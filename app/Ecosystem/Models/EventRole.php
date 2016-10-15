@@ -52,6 +52,6 @@ class EventRole extends Model
      **/
     public function eventInfos()
     {
-        return $this->hasMany(\App\Models\EventInfo::class);
+        return $this->hasMany(\App\Ecosystem\Models\EventInfo::class);
     }
 }

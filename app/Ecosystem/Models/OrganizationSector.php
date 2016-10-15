@@ -51,7 +51,7 @@ class OrganizationSector extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 
     /**
@@ -59,6 +59,6 @@ class OrganizationSector extends Model
      **/
     public function sector()
     {
-        return $this->belongsTo(\App\Models\Sector::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Sector::class);
     }
 }

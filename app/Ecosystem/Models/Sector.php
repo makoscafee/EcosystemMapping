@@ -52,6 +52,6 @@ class Sector extends Model
      **/
     public function organizationSectors()
     {
-        return $this->hasMany(\App\Models\OrganizationSector::class);
+        return $this->hasMany(\App\Ecosystem\Models\OrganizationSector::class);
     }
 }

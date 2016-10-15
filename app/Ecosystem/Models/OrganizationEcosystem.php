@@ -54,7 +54,7 @@ class OrganizationEcosystem extends Model
      **/
     public function ecosystem()
     {
-        return $this->belongsTo(\App\Models\Ecosystem::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Ecosystem::class);
     }
 
     /**
@@ -62,6 +62,6 @@ class OrganizationEcosystem extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 }

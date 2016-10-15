@@ -51,6 +51,6 @@ class ProjectRole extends Model
      **/
     public function projectInfos()
     {
-        return $this->hasMany(\App\Models\ProjectInfo::class);
+        return $this->hasMany(\App\Ecosystem\Models\ProjectInfo::class);
     }
 }

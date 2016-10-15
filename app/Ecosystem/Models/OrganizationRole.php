@@ -51,7 +51,7 @@ class OrganizationRole extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 
     /**
@@ -59,6 +59,6 @@ class OrganizationRole extends Model
      **/
     public function role()
     {
-        return $this->belongsTo(\App\Models\Role::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Role::class);
     }
 }

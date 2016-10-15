@@ -54,7 +54,7 @@ class ProjectInfo extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 
     /**
@@ -62,7 +62,7 @@ class ProjectInfo extends Model
      **/
     public function project()
     {
-        return $this->belongsTo(\App\Models\Project::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Project::class);
     }
 
     /**
@@ -70,6 +70,6 @@ class ProjectInfo extends Model
      **/
     public function projectRole()
     {
-        return $this->belongsTo(\App\Models\ProjectRole::class);
+        return $this->belongsTo(\App\Ecosystem\Models\ProjectRole::class);
     }
 }

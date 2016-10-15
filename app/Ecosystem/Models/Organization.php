@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Organization
- * @package App\Models
+ * @package App\Ecosystem\Models
  * @version September 25, 2016, 6:05 pm UTC
  */
 class Organization extends Model
@@ -59,70 +59,70 @@ class Organization extends Model
      **/
     public function parent()
     {
-        return $this->belongsTo(\App\Models\Parent::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Parent::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function eventInfos()
+    public function events()
     {
-        return $this->hasMany(\App\Models\EventInfo::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Event::class, 'event_infos')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationContacts()
+    public function contacts()
     {
-        return $this->hasMany(\App\Models\OrganizationContact::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Contact::class, 'organization_contacts')->withTimestamps();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     **/
+    public function ecosystem()
+    {
+        return $this->belongsToMany(\App\Ecosystem\Models\Ecosystem::class, 'organization_ecosystems')->withPivot('status')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationEcosystems()
+    public function locations()
     {
-        return $this->hasMany(\App\Models\OrganizationEcosystem::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Location::class, 'organization_locations')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationLocations()
+    public function roles()
     {
-        return $this->hasMany(\App\Models\OrganizationLocation::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Role::class, 'organization_roles')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationRoles()
+    public function sectors()
     {
-        return $this->hasMany(\App\Models\OrganizationRole::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Sector::class, 'organization_sectors')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationSectors()
+    public function stages()
     {
-        return $this->hasMany(\App\Models\OrganizationSector::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Stage::class, 'organization_stages')->withTimestamps();
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationStages()
+    public function projects()
     {
-        return $this->hasMany(\App\Models\OrganizationStage::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function projectInfos()
-    {
-        return $this->hasMany(\App\Models\ProjectInfo::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Project::class, 'project_infos')->withTimestamps();
     }
 }
