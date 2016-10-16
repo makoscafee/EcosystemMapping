@@ -51,6 +51,6 @@ class Role extends Model
      **/
     public function organizationRoles()
     {
-        return $this->hasMany(\App\Models\OrganizationRole::class);
+        return $this->hasMany(\App\Ecosystem\Models\OrganizationRole::class);
     }
 }

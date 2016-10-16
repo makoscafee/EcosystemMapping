@@ -50,6 +50,6 @@ class Location extends Model
      **/
     public function organizationLocations()
     {
-        return $this->hasMany(\App\Models\OrganizationLocation::class);
+        return $this->hasMany(\App\Ecosystem\Models\OrganizationLocation::class);
     }
 }

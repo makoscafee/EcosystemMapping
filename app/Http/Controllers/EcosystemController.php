@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateEcosystemRequest;
 use App\Http\Requests\UpdateEcosystemRequest;
 use App\Ecosystem\Repositories\EcosystemRepository;
+use App\Ecosystem\Repositories\OrganizationRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
@@ -152,4 +153,5 @@ class EcosystemController extends AppBaseController
 
         return redirect(route('ecosystems.index'));
     }
+
 }

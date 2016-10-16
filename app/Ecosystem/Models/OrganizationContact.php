@@ -52,7 +52,7 @@ class OrganizationContact extends Model
      **/
     public function contact()
     {
-        return $this->belongsTo(\App\Models\Contact::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Contact::class);
     }
 
     /**
@@ -60,6 +60,6 @@ class OrganizationContact extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 }

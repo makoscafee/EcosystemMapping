@@ -54,7 +54,7 @@ class EventInfo extends Model
      **/
     public function event()
     {
-        return $this->belongsTo(\App\Models\Event::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Event::class);
     }
 
     /**
@@ -62,7 +62,7 @@ class EventInfo extends Model
      **/
     public function eventRole()
     {
-        return $this->belongsTo(\App\Models\EventRole::class);
+        return $this->belongsTo(\App\Ecosystem\Models\EventRole::class);
     }
 
     /**
@@ -70,6 +70,6 @@ class EventInfo extends Model
      **/
     public function organization()
     {
-        return $this->belongsTo(\App\Models\Organization::class);
+        return $this->belongsTo(\App\Ecosystem\Models\Organization::class);
     }
 }
