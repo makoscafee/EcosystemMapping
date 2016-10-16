@@ -52,4 +52,6 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('ecosystems', 'EcosystemAPIController');
 
     Route::get('ecosystems/{id}/organizations', 'EcosystemAPIController@organizations');
+    
+    Route::get('ecosystems/{id}/locations', 'EcosystemAPIController@locations');
 });
