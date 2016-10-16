@@ -129,7 +129,7 @@ class EcosystemAPIController extends AppBaseController
 
     public function organizations($id)
     {
-      $ecosystem = $this->ecosystemRepository->findOrFail($id);
+      $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
 
       if (empty($ecosystem)) {
           return $this->sendError('Ecosystem not found');
