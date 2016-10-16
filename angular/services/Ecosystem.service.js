@@ -1,21 +1,20 @@
 export class EcosystemService{
-    constructor(API,$log){
+    constructor(API,$log,$q){
         'ngInject';
 
         //getting all Ecosystems
         this.API = API;
         this.$log = $log;
+        this.$q = $q;
+        this.ecosystemData = null;
 
     }
 
 
       //getting all ecosystems
     getAll(){
-      this.API.all('ecosystem_parents').get('')
-         .then((response) => {
-              this.ecosystemData = response.data;
-              return this.ecosystemData;
-         });
+    return  this.API.all('ecosystem_parents').get('');
+
 
     }
 
@@ -28,9 +27,9 @@ export class EcosystemService{
           this.$log.log(this.ecosystemOne);
         });
     }
-
-    getOrganisation(){
-
+      //gets organizations of an ecosystem
+    getOrganisation(ecosystemId){
+        return this.API.one('ecosystems',ecosystemId).one('organizations').get('');
     }
 
     create(data){

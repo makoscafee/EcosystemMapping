@@ -1,20 +1,27 @@
 class SelectEcosystemController{
-    constructor($log,EcosystemService,API){
+    constructor($log,EcosystemService,API,$state){
         'ngInject';
 
-        //
+        //Initilizing global variables
         this.EcosystemService = EcosystemService;
         this.$log = $log;
         this.API =  API;
-        $log.log("Hey am gud!");
-        //the logics
+        this.$state = $state;
 
-          //to be removed
-        this.API.all('ecosystem_parents').get('')
-           .then((response) => {
-                this.ecosystemData = response.data;
-                this.$log.log(this.ecosystemData);
+
+          //getting ecosystems
+           this.EcosystemService.getAll().then((response)=>{
+             this.ecosystemData = response.data;
            });
+    } //end the constructor
+
+      //getting organisations of a given ecosystem and
+      //changing the state to home state
+    home(ecosystemId){
+      this.EcosystemService.getOrganisation(ecosystemId).then((response)=>{
+        this.organisationData = response.data;
+      });
+      this.$state.go('app.home');
 
     }
 
