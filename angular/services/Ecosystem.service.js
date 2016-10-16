@@ -27,11 +27,13 @@ export class EcosystemService{
           this.$log.log(this.ecosystemOne);
         });
     }
+
       //gets organizations of an ecosystem
     getOrganisation(ecosystemId){
         return this.API.one('ecosystems',ecosystemId).one('organizations').get('');
     }
 
+      //this creates a new ecosystem
     create(data){
       this.API.all('ecosystem_parents').post(data).
       then((response)=> {

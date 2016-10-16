@@ -30,9 +30,10 @@ export class OrganizationService{
       });
 
     }
-
+      //this returns an object containing location
+      //information of an object
     getLocation(){
-
+      //waiting for an api
     }
 
     getContacts(){
