@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Requests\API\CreateEcosystemAPIRequest;
 use App\Http\Requests\API\UpdateEcosystemAPIRequest;
 use App\Ecosystem\Models\Ecosystem;
+use App\Ecosystem\Models\Organization;
 use App\Ecosystem\Repositories\EcosystemRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
@@ -137,5 +138,27 @@ class EcosystemAPIController extends AppBaseController
 
       $organizations = $ecosystem->organizations()->get();
       return $this->sendResponse($organizations, 'organizations retrieved successfully');
+    }
+
+    public function locations($id)
+    {
+      $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+      if (empty($ecosystem)) {
+          return $this->sendError('Ecosystem not found');
+      }
+      $organizations = $ecosystem->organizations();
+      //return $this->sendResponse($organizations, 'organizations retrieved successfully');
+      $organizationIds = $organizations->lists('organization_id')->all();
+      $locations = array();
+      foreach ($organizationIds as $key => $value) {
+        $org = Organization::findOrFail($value);
+        $loc = $org->locations()->get();
+        if(count($loc) > 0){
+          $locations[] = $loc;
+        }
+      }
+
+      return $this->sendResponse($locations, 'ecosystem locations retrieved successfully');
     }
 }
