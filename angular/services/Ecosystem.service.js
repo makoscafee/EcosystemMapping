@@ -13,10 +13,10 @@ export class EcosystemService{
     getAll(){
       this.API.all('ecosystem_parents').get('')
          .then((response) => {
-               this.ecosystemData = response.data;
-               this.$log.log(this.ecosystemData);
-
+              this.ecosystemData = response.data;
+              return this.ecosystemData;
          });
+
     }
 
       //getting one ecosystem
