@@ -1,0 +1,34 @@
+
+
+    <div>
+      <div layout="row" layout-align="center center" layout-fill style="min-height: 500px">
+          <div flex="30">
+            <!-- Input auto-complete -->
+               <md-content class="md-padding">
+                  <form ng-submit="$event.preventDefault()">
+                     <md-autocomplete
+                        ng-disabled="vm.isDisabled"
+                        md-no-cache="vm.noCache"
+                        md-selected-item="vm.selectedItem"
+                        md-search-text="vm.searchText"
+                         md-items="item in vm.querySearch(vm.searchText)"
+                        md-item-text="item.name"
+                        md-search-text-change="vm.searchTextChange(vm.searchText)"
+                         md-selected-item-change="vm.selectedItemChange(item)"
+                        md-min-length="0"
+                        placeholder="Search For An Ecosystem">
+                        <md-item-template>
+                           <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                           No Ecosystems matching "{{vm.searchText}}" were found.
+                        </md-not-found>
+                     </md-autocomplete>
+               </md-content>
+        </div>
+        <div>
+          <!-- search button -->
+       <md-button class="md-raised md-primary" ng-click="vm.home(vm.selectedItem)">Search</md-button>
+        </div>
+      </div>
+    </div>

@@ -1,20 +1,2 @@
-<div>
-  <div layout="row" layout-align="center center" layout-fill style="min-height: 500px">
-    <div>
-      <input type="text"/>
-    </div>
-    <div>
-    <md-button class="md-raised md-primary" >Search</md-button>
-    </div>
-    <div>
-      <md-menu>
-          <md-button class="md-raised" md-menu-origin ng-click="$mdOpenMenu()">Ecosystem</md-button>
-          <md-menu-content width="2">
-              <md-menu-item ng-repeat="eco in vm.ecosystemData">
-                  <md-button ng-click="vm.home(eco.id)">{{eco.name}}</md-button>
-              </md-menu-item>
-          </md-menu-content>
-       </md-menu>
-    </div>
-  </div>
-</div>
+
+<search-autocomplete></search-autocomplete>

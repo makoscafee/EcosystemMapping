@@ -1,3 +1,4 @@
+import {SearchAutocompleteComponent} from './app/components/search-autocomplete/search-autocomplete.component';
 import {LeftMenuComponent} from './app/components/left-menu/left-menu.component';
 import {SelectEcosystemComponent} from './app/components/select-ecosystem/select-ecosystem.component';
 import {AppHeaderComponent} from './app/components/app-header/app-header.component';
@@ -9,6 +10,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('searchAutocomplete', SearchAutocompleteComponent)
 	.component('leftMenu', LeftMenuComponent)
 	.component('selectEcosystem', SelectEcosystemComponent)
 	.component('appHeader', AppHeaderComponent)
