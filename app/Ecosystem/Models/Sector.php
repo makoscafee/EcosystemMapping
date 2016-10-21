@@ -50,8 +50,9 @@ class Sector extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationSectors()
+    public function organizations()
     {
-        return $this->hasMany(\App\Ecosystem\Models\OrganizationSector::class);
+      return $this->belongsToMany(\App\Ecosystem\Models\Organization::class, 'organization_sectors')->withTimestamps();
+
     }
 }

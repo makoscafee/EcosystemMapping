@@ -126,4 +126,22 @@ class RoleAPIController extends AppBaseController
 
         return $this->sendResponse($id, 'Role deleted successfully');
     }
+
+    public function organizations($id)
+    {
+        /** @var Role $role */
+        $role = $this->roleRepository->findWithoutFail($id);
+
+        if (empty($role)) {
+            return $this->sendError('Role not found');
+        }
+
+        $organizations = $role->organizations()->get();
+
+        if (empty($organizations)) {
+            return $this->sendError('No organizations in this role not found');
+        }
+
+        return $this->sendResponse($organizations, 'organizations retrieved successfully');
+    }
 }

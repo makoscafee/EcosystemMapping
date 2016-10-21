@@ -49,8 +49,9 @@ class Stage extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationStages()
+    public function organizations()
     {
-        return $this->hasMany(\App\Ecosystem\Models\OrganizationStage::class);
+      return $this->belongsToMany(\App\Ecosystem\Models\Organization::class, 'organization_stages')->withTimestamps();
+
     }
 }
