@@ -1,9 +1,14 @@
 class LeftMenuController{
-    constructor(){
+    constructor($mdSidenav){
         'ngInject';
 
         //
+        this.$mdSidenav = $mdSidenav;
     }
+
+      openLeftMenu() {
+               this.$mdSidenav('left').toggle();
+             };
 
     $onInit(){
     }

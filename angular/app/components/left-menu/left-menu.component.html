@@ -1,29 +1,106 @@
-<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
-  <md-toolbar class="md-theme-indigo">
-       <h1 class="md-toolbar-tools">Sidenav Left</h1>
-  </md-toolbar>
-  <md-content layout-padding="" >
-     <md-button ng-click="close()" class="md-primary" hide-gt-md="">
-       Close Sidenav Left
-     </md-button>
-     <p hide="" show-gt-md="">
-       Contents of the side menu to be placed here
-     </p>
-   </md-content>
-</md-sidenav>
-<md-content flex="" layout-padding="">
+<div layout="column"  layout-fill style="height:700px;" ng-cloak>
+  <section layout="row" flex>
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-whiteframe="4">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Tanzania StartUp Ecosystem</h1>
+      </md-toolbar>
+        <!-- nav bar contents -->
+      <md-content layout-padding>
+        <div>
+        <md-list>
+          <md-list-item>
+            <p> StartUp </p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
 
-    <div layout="column" layout-align="top center">
-      <p>
-    A map to be placed here
-      </p>
-      <div>
-        <md-button ng-click="toggleLeft()" class="md-primary" ng-hide="isOpenRight()">
-          Toggle left
-        </md-button>
+          <md-list-item>
+            <p> Co-working Spaces </p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
+
+          <md-list-item>
+            <p> Funding Agencies </p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
+
+          <md-list-item>
+            <p> Incubators</p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
+
+          <md-list-item>
+            <p> R&D Centres </p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
+
+          <md-list-item>
+            <p> Development Organisations </p>
+            <md-button>12</md-button>
+            <md-checkbox class="md-secondary"></md-checkbox>
+            <md-divider></md-divider>
+          </md-list-item>
+            <md-divider></md-divider>
+        </md-list>
+            <!-- these are the setors -->
+            <md-subheader>Sector</md-subheader>
+            <md-list>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Agriculture</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Finance</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Mining</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Fishing</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Utility</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Education</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Healthy</p>
+                       </md-list-item>
+                       <md-list-item>
+                         <md-checkbox></md-checkbox>
+                         <p>Sanitation</p>
+                       </md-list-item>
+                     </md-list>
+                   </div>
+
+      </md-content>
+    </md-sidenav>
+    <!-- the contents for the side navigation bar -->
+    <md-content flex layout-padding>
+      <div layout="column" layout-align="top center">
+        <p>Here is for the contents of side navigation bar</p>
       </div>
-    </div>
+    </md-content>
+  </section>
 
-    <div flex=""></div>
-
-  </md-content>
+</div>
