@@ -126,4 +126,30 @@ class SectorAPIController extends AppBaseController
 
         return $this->sendResponse($id, 'Sector deleted successfully');
     }
+
+    /**
+     * get the specified Organization from storage based on the sector.
+     * GET /sectors/{id}/organizations
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function organizations($id)
+    {
+        /** @var Sector $sector */
+        $sector = $this->sectorRepository->findWithoutFail($id);
+
+        if (empty($sector)) {
+            return $this->sendError('Role not found');
+        }
+
+        $organizations = $sector->organizations()->get();
+
+        if (empty($organizations)) {
+            return $this->sendError('No organizations in this role not found');
+        }
+
+        return $this->sendResponse($organizations, 'organizations retrieved successfully');
+    }
 }

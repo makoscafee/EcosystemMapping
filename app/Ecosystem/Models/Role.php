@@ -49,8 +49,8 @@ class Role extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function organizationRoles()
+    public function organizations()
     {
-        return $this->hasMany(\App\Ecosystem\Models\OrganizationRole::class);
+        return $this->belongsToMany(\App\Ecosystem\Models\Organization::class, 'organization_roles')->withTimestamps();
     }
 }
