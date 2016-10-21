@@ -92,6 +92,16 @@
                        </md-list-item>
                      </md-list>
                    </div>
+                   <!-- this is slider -->
+                   <div>
+                       <md-slider-container>
+                          <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
+                          </md-slider>
+                          <md-input-container>
+                            <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+                          </md-input-container>
+                      </md-slider-container>
+                   </div>
 
       </md-content>
     </md-sidenav>
