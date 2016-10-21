@@ -126,4 +126,32 @@ class StageAPIController extends AppBaseController
 
         return $this->sendResponse($id, 'Stage deleted successfully');
     }
+
+    /**
+     * get the specified Organization from storage based on the stage.
+     * GET /stages/{id}/organizations
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function organizations($id)
+    {
+        /** @var Stage $stage */
+        $stage = $this->stageRepository->findWithoutFail($id);
+
+        if (empty($stage)) {
+            return $this->sendError('Role not found');
+        }
+
+        $organizations = $stage->organizations()->get();
+
+        if (empty($organizations)) {
+            return $this->sendError('No organizations in this role not found');
+        }
+
+        return $this->sendResponse($organizations, 'organizations retrieved successfully');
+    }
+
+
 }

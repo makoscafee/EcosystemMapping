@@ -41,9 +41,15 @@ Route::group(['namespace' => 'API'], function() {
 
     Route::resource('roles', 'RoleAPIController');
 
+    Route::get('roles/{id}/organizations', 'RoleAPIController@organizations');
+
     Route::resource('sectors', 'SectorAPIController');
 
+    Route::get('sectors/{id}/organizations', 'SectorAPIController@organizations');
+
     Route::resource('stages', 'StageAPIController');
+
+    Route::get('stages/{id}/organizations', 'StageAPIController@organizations');
 
     Route::resource('contacts', 'ContactAPIController');
 
@@ -52,6 +58,6 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('ecosystems', 'EcosystemAPIController');
 
     Route::get('ecosystems/{id}/organizations', 'EcosystemAPIController@organizations');
-    
+
     Route::get('ecosystems/{id}/locations', 'EcosystemAPIController@locations');
 });
