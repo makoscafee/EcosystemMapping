@@ -40,7 +40,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 						.state('app.home.pins', {
 				            url: '/pins',
 				            views: {
-				                'side@': {
+				                'side': {
 				                    templateUrl: getView('pins')
 				                }
 				            }
@@ -48,7 +48,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 								.state('app.home.events', {
 						            url: '/events',
 						            views: {
-						                'side@': {
+						                'side': {
 						                    templateUrl: getView('events')
 						                }
 						            }
@@ -56,7 +56,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 										.state('app.home.projects', {
 								            url: '/projects',
 								            views: {
-								                'side@': {
+								                'side': {
 								                    templateUrl: getView('projects')
 								                }
 								            }

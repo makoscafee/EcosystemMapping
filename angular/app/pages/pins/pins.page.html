@@ -1,3 +1,35 @@
-<md-content class="Page-container">
-<p>this is Pins page</p>
-</md-content>
+<!-- list of roles -->
+          <div flex style="background-color: #333">
+            <md-list>
+              <md-list-item ng-repeat="role in vm.roles">
+                <p>{{role.name}}</p>
+                <md-button>12</md-button>
+                <md-checkbox class="md-secondary" ng-change="vm.filterByRole(role.id)" ng-model="isChecked"></md-checkbox>
+                <md-divider></md-divider>
+              </md-list-item>
+              <md-divider></md-divider>
+            </md-list>
+          </div>
+            <!-- list of setors -->
+          <div flex style="background-color: grey">
+              <h1>Sector</h1>
+              <md-list>
+                <md-list-item ng-repeat="sector in vm.sectors">
+                  <md-checkbox></md-checkbox>
+                  <p>{{sector.name}}</p>
+                  </md-list-item>
+                 </md-list>
+
+                       <!-- this is slider -->
+              <div>
+                <md-slider-container>
+                  <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
+                  </md-slider>
+                  <md-input-container>
+                    <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+                  </md-input-container>
+                </md-slider-container>
+              </div>
+            </div>
+
+          </div>
