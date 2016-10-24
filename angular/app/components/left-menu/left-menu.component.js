@@ -1,14 +1,32 @@
 class LeftMenuController{
-    constructor($mdSidenav){
+    constructor(SidemenuDataService,$log,EcosystemFilterService){
         'ngInject';
 
-        //
-        this.$mdSidenav = $mdSidenav;
+        //Initilizing the services
+      this.SidemenuDataService = SidemenuDataService;
+      this.EcosystemFilterService = EcosystemFilterService;
+      this.$log = $log;
+
+        //getting all roles
+      this.SidemenuDataService.roles().then((response)=>{
+        this.roles = response.data;
+      });
+          //getting all sectors
+      this.SidemenuDataService.sectors().then((response)=>{
+        this.sectors = response.data;
+      });
     }
 
-      openLeftMenu() {
-               this.$mdSidenav('left').toggle();
-             };
+
+    //filtering organisations by role;
+    filterByRole(roleId){
+
+        this.EcosystemFilterService.role(roleId).then((response)=>{
+          this.$log.log(roleId);
+          this.$log.log(response.message);
+        });
+    }
+
 
     $onInit(){
     }

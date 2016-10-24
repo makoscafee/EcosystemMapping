@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel Angular Material Starter</title>
+    <title>Ecosystem Mapping Platform</title>
 
     <meta name="theme-color" content="#0690B7">
 
@@ -15,6 +15,7 @@
     <![endif]-->
 
     <style><?php require( public_path( "css/critical.css" ) ) ?></style>
+
 
 </head>
 <body>

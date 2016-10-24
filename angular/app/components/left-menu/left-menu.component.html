@@ -1,115 +1,82 @@
 <div layout="column"  layout-fill style="height:700px;" ng-cloak>
   <section layout="row" flex>
-    <md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
-      <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Tanzania StartUp Ecosystem</h1>
-      </md-toolbar>
+    <md-sidenav class="md-sidenav-left"  md-component-id="left"  md-is-locked-open="$mdMedia('gt-md')"  md-whiteframe="4">
         <!-- nav bar contents -->
       <md-content layout-padding>
-        <div>
-        <md-list>
-          <md-list-item>
-            <p> StartUp </p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-
-          <md-list-item>
-            <p> Co-working Spaces </p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-
-          <md-list-item>
-            <p> Funding Agencies </p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-
-          <md-list-item>
-            <p> Incubators</p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-
-          <md-list-item>
-            <p> R&D Centres </p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-
-          <md-list-item>
-            <p> Development Organisations </p>
-            <md-button>12</md-button>
-            <md-checkbox class="md-secondary"></md-checkbox>
-            <md-divider></md-divider>
-          </md-list-item>
-            <md-divider></md-divider>
-        </md-list>
-            <!-- these are the setors -->
-            <md-subheader>Sector</md-subheader>
-            <md-list>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Agriculture</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Finance</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Mining</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Fishing</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Utility</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Education</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Healthy</p>
-                       </md-list-item>
-                       <md-list-item>
-                         <md-checkbox></md-checkbox>
-                         <p>Sanitation</p>
-                       </md-list-item>
+        <div layout="row">
+          <!-- inner submenu for the side navigation bar -->
+          <div flex="15" style="background-color: blue">
+            <div layout="column">
+              <div flex>
+                <p>close</p>
+              </div>
+              <div flex>
+                <md-nav-bar md-selected-nav-item="currentNavItem">
+                  <md-nav-item md-nav-click="goto('page1')" name="page1"></md-nav-item>
+                </br>
+                  <md-nav-item md-nav-sref="app.page2" name="page2">2</md-nav-item>
+                </br>
+                  <md-nav-item md-nav-href="#page3" name="page3">3</md-nav-item>
+                </md-nav-bar>
+              </div>
+            </div>
+          </div>
+            <!-- inner contentents of side navigation bar -->
+          <div flex="90" style="background-color: red">
+            <div layout="column">
+                <!-- the icon and toolbar -->
+              <div layout="row" style="background-color: red">
+                <div flex="15">
+                  <p>icon</p>
+                </div>
+                <div flex="85">
+                  <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">Tanzania StartUp Ecosystem</h1>
+                  </md-toolbar>
+                </div>
+              </div>
+                <!-- list of roles -->
+              <div flex style="background-color: yellow">
+                <md-list>
+                  <md-list-item ng-repeat="role in vm.roles">
+                    <p>{{role.name}}</p>
+                    <md-button>12</md-button>
+                    <md-checkbox class="md-secondary" ng-change="vm.filterByRole(role.id)" ng-model="isChecked"></md-checkbox>
+                    <md-divider></md-divider>
+                  </md-list-item>
+                  <md-divider></md-divider>
+                </md-list>
+              </div>
+                <!-- list of setors -->
+              <div flex style="background-color: green">
+                  <h1>Sector</h1>
+                  <md-list>
+                    <md-list-item ng-repeat="sector in vm.sectors">
+                      <md-checkbox></md-checkbox>
+                      <p>{{sector.name}}</p>
+                      </md-list-item>
                      </md-list>
-                   </div>
-                   <!-- this is slider -->
-                   <div>
-                       <md-slider-container>
-                          <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
-                          </md-slider>
-                          <md-input-container>
-                            <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
-                          </md-input-container>
-                      </md-slider-container>
-                   </div>
 
+                           <!-- this is slider -->
+                  <div>
+                    <md-slider-container>
+                      <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
+                      </md-slider>
+                      <md-input-container>
+                        <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+                      </md-input-container>
+                    </md-slider-container>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
       </md-content>
     </md-sidenav>
-    <!-- the contents for the side navigation bar -->
-    <md-content flex layout-padding>
-      <div layout="column" layout-align="top center">
-        <p>Here is for the contents of side navigation bar</p>
-      </div>
+    <!-- outer contents for the side navigation bar -->
+    <md-content flex>
+      <ecosystem-map></ecosystem-map>
     </md-content>
   </section>
 
