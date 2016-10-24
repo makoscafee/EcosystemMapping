@@ -17,6 +17,5 @@ angular.module('app.config', []);
 angular.module('app.directives', []);
 angular.module('app.components', [
 	'ui.router', 'ngMaterial', 'angular-loading-bar',
-	'restangular', 'ngStorage', 'satellizer'
+	'restangular', 'ngStorage', 'satellizer','leaflet-directive'
 ]);
-

@@ -29,6 +29,38 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+				.state('app.home', {
+		            url: '/home',
+		            views: {
+		                'main@': {
+		                    templateUrl: getView('home')
+		                }
+		            }
+		        })
+						.state('app.home.pins', {
+				            url: '/pins',
+				            views: {
+				                'side': {
+				                    templateUrl: getView('pins')
+				                }
+				            }
+				        })
+								.state('app.home.events', {
+						            url: '/events',
+						            views: {
+						                'side': {
+						                    templateUrl: getView('events')
+						                }
+						            }
+						        })
+										.state('app.home.projects', {
+								            url: '/projects',
+								            views: {
+								                'side': {
+								                    templateUrl: getView('projects')
+								                }
+								            }
+								        })
         .state('app.login', {
 			url: '/login',
 			views: {

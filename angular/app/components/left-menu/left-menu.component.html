@@ -1,0 +1,55 @@
+<div layout="column"  layout-fill style="height:700px;" ng-cloak>
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left"  md-component-id="left"  md-is-locked-open="$mdMedia('gt-md')"  md-whiteframe="4">
+        <!-- nav bar contents -->
+      <md-content layout-padding>
+        <div layout="row">
+          <!-- inner submenu for the side navigation bar -->
+          <div flex="35" style="background-color: #00a380">
+            <div layout="column">
+              <div flex>
+                <p>close</p>
+              </div>
+              <div flex>
+                <md-nav-bar md-selected-nav-item="currentNavItem">
+                  <md-nav-item md-nav-click="goto('page1')" name="page1">
+                    <a ui-sref=".pins"><md-button>pins</md-button></a>
+                  </md-nav-item>
+                </br>
+                  <md-nav-item md-nav-sref="app.page2" name="page2">
+                    <a ui-sref=".events"><md-button>events</md-button></a>
+                  </md-nav-item>
+                </br>
+                  <md-nav-item md-nav-href="#page3" name="page3">
+                    <a ui-sref=".projects"><md-button>projects</md-button></a>
+                  </md-nav-item>
+                </md-nav-bar>
+              </div>
+            </div>
+          </div>
+            <!-- inner contentents of side navigation bar -->
+          <div flex="90">
+            <div layout="column">
+                 <!-- the icon and toolbar -->
+               <div layout="row" style="background-color: #00a380">
+                 <div flex="15">
+                   <p>icon</p>
+                 </div>
+                 <div flex="85">
+                     <h1 class="md-toolbar-tools">Tanzania StartUp Ecosystem</h1>
+                 </div>
+               </div>
+               <div ui-view="side"></div>
+              </div>
+             </div>
+
+        </div>
+      </md-content>
+    </md-sidenav>
+    <!-- outer contents for the side navigation bar -->
+    <md-content flex>
+      <ecosystem-map></ecosystem-map>
+    </md-content>
+  </section>
+
+</div>
