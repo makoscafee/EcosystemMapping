@@ -1,7 +1,7 @@
 class EcosystemMapController {
     constructor() {
         'ngInject';
-            this.london={
+            this.darEsSalaam={
                 lat: -6.792287,
                 lng: 39.2376063,
                 zoom: 12
