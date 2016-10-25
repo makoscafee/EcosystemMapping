@@ -22,8 +22,8 @@ class LeftMenuController{
     filterByRole(roleId){
 
         this.EcosystemFilterService.role(roleId).then((response)=>{
-          this.$log.log(roleId);
-          this.$log.log(response.message);
+          //this.$log.log(roleId);
+          this.$log.log(response.data);
         });
     }
 

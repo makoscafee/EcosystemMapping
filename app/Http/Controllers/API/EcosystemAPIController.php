@@ -11,6 +11,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;
 use Prettus\Repository\Criteria\RequestCriteria;
+use App\Ecosystem\Transformer\OrganizationTransformer;
+use League\Fractal;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
 use Response;
 
 /**
@@ -131,13 +135,16 @@ class EcosystemAPIController extends AppBaseController
     public function organizations($id)
     {
       $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+      $fractal    = new Manager();
 
       if (empty($ecosystem)) {
           return $this->sendError('Ecosystem not found');
       }
 
       $organizations = $ecosystem->organizations()->get();
-      return $this->sendResponse($organizations, 'organizations retrieved successfully');
+      $resource   = new Collection($ecosystem->organizations()->get(), new OrganizationTransformer);
+      $data_to_array = $fractal->createData($resource)->toArray();;
+      return $this->sendResponse($data_to_array, 'Organizations are successfully retrieved');
     }
 
     public function locations($id)

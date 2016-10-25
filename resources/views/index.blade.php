@@ -15,6 +15,7 @@
     <![endif]-->
 
     <style><?php require( public_path( "css/critical.css" ) ) ?></style>
+    <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 
 
 </head>

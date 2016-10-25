@@ -159,12 +159,11 @@ class RoleSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i=0; $i < sizeOf($roles); $i++) {
 
           DB::table('roles')->insert([
             'name' => $roles[$fake->numberBetween(0, 5)],
@@ -189,12 +188,11 @@ class SectorSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i=0; $i < sizeOf($sectors); $i++) {
 
           DB::table('sectors')->insert([
             'name' => $sectors[$fake->numberBetween(0, 7)],

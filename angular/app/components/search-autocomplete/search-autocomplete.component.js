@@ -1,5 +1,5 @@
-class SearchAutocompleteController{
-    constructor($timeout,$q,$log,DataService,EcosystemService,$state){
+class SearchAutocompleteController {
+    constructor($timeout, $q, $log, DataService, EcosystemService, $state) {
         'ngInject';
 
         //services
@@ -13,52 +13,53 @@ class SearchAutocompleteController{
         //global variables
         this.simulateQuery = false;
         this.isDisabled = false;
-        this.selectedItem=null;
+        this.selectedItem = null;
 
         //getting ecosystems
-         this.EcosystemService.getAll().then((response)=>{
-           this.states = response.data;
-         });
+        this.EcosystemService.getAll().then((response) => {
+            this.states = response.data;
+        });
 
     }
 
-            //getting organisations of a given ecosystem and
-            //changing the state to home state
-          home(ecosystemId){
-            this.EcosystemService.getOrganisation(ecosystemId.id).then((response)=>{
-              this.organisationData = response.data;
-              this.$log.log(this.organisationData);
-            });
-            this.$state.go('app.home');
+    //getting organisations of a given ecosystem and
+    //changing the state to home state
+    home(ecosystemId) {
+        this.EcosystemService.getOrganisation(ecosystemId.id).then((response) => {
+            this.organisationData = response.data;
+            this.$log.log(this.organisationData);
+        });
+        this.$state.go('app.home');
 
-          }
+    }
 
-          createFilterFor(query) {
-             var lowercaseQuery = angular.lowercase(query);
-             return (state)=> {
-               let value = state.name.toLowerCase()
-                this.$log.log(value);
-                return (value.indexOf(lowercaseQuery) === 0);
-             };
-          }
+    createFilterFor(query) {
+        var lowercaseQuery = angular.lowercase(query);
+        return (state) => {
+            let value = state.name.toLowerCase()
+            this.$log.log(value);
+            return (value.indexOf(lowercaseQuery) === 0);
+        };
+    }
 
-              querySearch (query) {
-              var results = query ? this.states.filter( this.createFilterFor(query) ) : this.states, deferred;
-              if (this.simulateQuery) {
-                 deferred = this.$q.defer();
-                 $timeout(()=> {
-                       deferred.resolve( results );
-                    },
-		            Math.random() * 1000, false);
-                 return deferred.promise;
-              } else {
-                 return results;
-              }
-           }
+    querySearch(query) {
+        var results = query ? this.states.filter(this.createFilterFor(query)) : this.states,
+            deferred;
+        if (this.simulateQuery) {
+            deferred = this.$q.defer();
+            this.$timeout(() => {
+                    deferred.resolve(results);
+                },
+                Math.random() * 1000, false);
+            return deferred.promise;
+        } else {
+            return results;
+        }
+    }
 
 
 
-    $onInit(){
+    $onInit() {
 
     }
 }
