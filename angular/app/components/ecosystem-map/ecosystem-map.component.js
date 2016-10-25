@@ -1,13 +1,14 @@
-class EcosystemMapController{
-    constructor(){
+class EcosystemMapController {
+    constructor() {
         'ngInject';
-
-
-    
+            this.london={
+                lat: -6.792287,
+                lng: 39.2376063,
+                zoom: 12
+            }
     }
 
-    $onInit(){
-    }
+    $onInit() {}
 }
 
 export const EcosystemMapComponent = {
