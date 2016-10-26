@@ -96,7 +96,7 @@ class LocationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 30;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -104,8 +104,8 @@ class LocationSeeder extends Seeder
         for ($i=0; $i < $limit; $i++) {
 
           DB::table('locations')->insert([
-            'long' => $fake->longitude,
-            'lat' => $fake->latitude,
+            'long' => $fake->longitude(29.673386,39.276638),
+            'lat' => $fake->latitude(-6.9, -3.386925),
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
           ]);

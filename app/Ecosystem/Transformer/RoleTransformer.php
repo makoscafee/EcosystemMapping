@@ -31,8 +31,6 @@ class RoleTransformer extends TransformerAbstract
             'id'        => (int) $role->id,
             'name'      => $role->name,
             'description'     => $role->description,
-            'created_at' => $role->created_at,
-            'updated_at' => $role->updated_at,
             'links'     => [
                 'rel' => 'self',
                 'uri' => '/organizations/'.$role->id,
