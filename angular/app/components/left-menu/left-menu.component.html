@@ -2,9 +2,10 @@
     <aside class="Sidebar">
         <nav role="navigation" class="Sidebar__nav">
             <ul class="Sidebar__nav-list">
-                <li class="Sidebar__nav-list__item ion-ios-home"></li>
-                <li class="Sidebar__nav-list__item ion-ios-calendar"></li>
-                <li class="Sidebar__nav-list__item Sidebar__nav-list__item--active ion-clipboard"></li>
+                <li class="Sidebar__nav-list__item ion-ios-home"  ui-sref=".pins"></li>
+                <li class="Sidebar__nav-list__item ion-ios-calendar"  ui-sref=".events"></li>
+                <li class="Sidebar__nav-list__item Sidebar__nav-list__item--active ion-clipboard"  ui-sref=".projects"></li>
+              </ul>
             </nav>
         </aside>
         <div ui-view="side"></div>
