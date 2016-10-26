@@ -6,22 +6,27 @@ export class EcosystemFilterService{
         this.EcosystemService = EcosystemService;
         this.API = API;
         this.$log = $log;
+
+        //initializing global vaariables
+        this.checkedOrg = null;
     }
     role(roleId){
       return this.API.one('roles',roleId).one('organizations').get('');
     }
 
     orgFilter(getData,allOrganisations){
+
+      //local variables for
+      // storing temporary results
       var myData=[];
       myData = getData;
        var filteredData=[];
-      //using angular foreach to filter organisations
+
+      //using angular forEach to filter organisations
     angular.forEach(allOrganisations,function(value,key){
       try{
-        if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 | myData.role.indexOf(value.roles.data[0].id) ){
+        if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 || myData.role.indexOf(value.roles.data[0].id) ){
           filteredData.push(value);
-          console.log("data is");
-          console.log(filteredData);
         }
         else{
            console.log("id :"+value.sectors.data[0].id+"not in filter object");
@@ -34,6 +39,11 @@ export class EcosystemFilterService{
 
 
       });
+      this.checkedOrg = filteredData;
+    }
 
+    //getting filtered organisations
+    getFilteredOrg(){
+      return this.checkedOrg;
     }
 }

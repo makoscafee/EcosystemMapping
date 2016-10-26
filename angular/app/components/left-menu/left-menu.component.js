@@ -57,7 +57,9 @@ class LeftMenuController{
     }
 
     filterOrganizations(){
-  this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.allOrganisations)
+  this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.allOrganisations);
+  this.$log.log("These are the returned organisations");
+  this.$log.log(this.EcosystemFilterService.getFilteredOrg());
 
 
     }
