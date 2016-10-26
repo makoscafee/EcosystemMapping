@@ -49,20 +49,22 @@ class LeftMenuController{
     }
 
     filterOrganizations(){
-       var myData=[];
-       var filteredData=[];
-      let i=0;
-    myData = this.organisationsFilter;
-      //using angular foreach to filter organisations
-    angular.forEach(this.allOrganisations,function(value,key){
-       if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 ||myData.role.indexOf(value.roles.data[0].id)){
-      filteredData.push(value.id);
-      console.log("this is the data");
-      console.log(filteredData);
-       }
-       i=i+1;
-      });
-      this.$log.log("the filtered Organisation");
+    //    var myData=[];
+    //    var filteredData=[];
+    //   let i=0;
+    // myData = this.organisationsFilter;
+    //   //using angular foreach to filter organisations
+    // angular.forEach(this.allOrganisations,function(value,key){
+    //    if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 ||myData.role.indexOf(value.roles.data[0].id)){
+    //   filteredData.push(value.id);
+    //   console.log("this is the data");
+    //   console.log(filteredData);
+    //    }
+    //    i=i+1;
+    //   });
+    //   this.$log.log("the filtered Organisation");
+
+  this.EcosystemFilterService.hello(this.organisationsFilter,this.allOrganisations)
 
 
     }
