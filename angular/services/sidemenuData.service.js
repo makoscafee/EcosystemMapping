@@ -13,4 +13,5 @@ export class SidemenuDataService{
     sectors(){
       return this.API.all('sectors').get('');
     }
+    
 }

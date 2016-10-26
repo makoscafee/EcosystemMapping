@@ -11,7 +11,7 @@ export class EcosystemFilterService{
       return this.API.one('roles',roleId).one('organizations').get('');
     }
 
-    hello(getData,allOrganisations){
+    orgFilter(getData,allOrganisations){
       var myData=[];
       myData = getData;
        var filteredData=[];

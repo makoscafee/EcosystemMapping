@@ -38,33 +38,26 @@ class LeftMenuController{
       if(this.roleData.indexOf(roleId) === -1){
         this.roleData.push(roleId);
       }
+      else{
+        this.roleData.splice(this.roleData.indexOf(roleId),1);
+      }
       this.organisationsFilter.role = this.roleData;
+      this.$log.log(this.roleData);
     }
 
     setSectorArray(sectorId){
       if(this.sectorData.indexOf(sectorId) === -1){
         this.sectorData.push(sectorId);
       }
+      else{
+        this.sectorData.splice(this.sectorData.indexOf(sectorId),1);
+      }
       this.organisationsFilter.sector = this.sectorData;
+      this.$log.log(this.sectorData);
     }
 
     filterOrganizations(){
-    //    var myData=[];
-    //    var filteredData=[];
-    //   let i=0;
-    // myData = this.organisationsFilter;
-    //   //using angular foreach to filter organisations
-    // angular.forEach(this.allOrganisations,function(value,key){
-    //    if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 ||myData.role.indexOf(value.roles.data[0].id)){
-    //   filteredData.push(value.id);
-    //   console.log("this is the data");
-    //   console.log(filteredData);
-    //    }
-    //    i=i+1;
-    //   });
-    //   this.$log.log("the filtered Organisation");
-
-  this.EcosystemFilterService.hello(this.organisationsFilter,this.allOrganisations)
+  this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.allOrganisations)
 
 
     }
