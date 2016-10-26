@@ -3,10 +3,10 @@
 namespace App\Ecosystem\Transformer;
 
 use League\Fractal\TransformerAbstract;
-use App\Ecosystem\Models\Stage;
+use App\Ecosystem\Models\Location;
 use DB;
 
-class StageTransformer extends TransformerAbstract
+class LocationTransformer extends TransformerAbstract
 {
     /**
      * List of resources to automatically include
@@ -25,15 +25,15 @@ class StageTransformer extends TransformerAbstract
      * @param User $user
      * @return array
      */
-    public function transform(Stage $stage)
+    public function transform(Location $location)
     {
         return [
-            'id'        => (int) $stage->id,
-            'name'      => $stage->name,
-            'description'     => $stage->description,
+            'id'        => (int) $location->id,
+            'lat'      => $location->lat,
+            'long'     => $location->long,
             'links'     => [
                 'rel' => 'self',
-                'uri' => '/organizations/'.$stage->id,
+                'uri' => '/locations/'.$location->id,
             ],
         ];
     }
