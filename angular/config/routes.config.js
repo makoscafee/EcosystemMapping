@@ -31,6 +31,9 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
         })
         .state('app.home', {
             url: '/home',
+            params: {
+              ecosystemId: null
+            },
             views: {
                 'main@': {
                     templateUrl: getView('home')
