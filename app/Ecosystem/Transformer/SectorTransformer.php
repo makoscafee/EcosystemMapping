@@ -31,8 +31,6 @@ class SectorTransformer extends TransformerAbstract
             'id'        => (int) $sector->id,
             'name'      => $sector->name,
             'description'     => $sector->description,
-            'created_at' => $sector->created_at,
-            'updated_at' => $sector->updated_at,
             'links'     => [
                 'rel' => 'self',
                 'uri' => '/organizations/'.$sector->id,
