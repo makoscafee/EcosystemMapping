@@ -8,10 +8,6 @@ export class OrganizationService{
     }
 
 
-    hello(){
-      this.$log.log('Iam OrganizationService and am doin just fine');
-    }
-
       //getting all organizations
     getAll(){
       this.API.all('organizations').get('').
@@ -20,6 +16,7 @@ export class OrganizationService{
         this.$log.log(this.organisationData);
       });
     }
+
 
       //getting one organization
     getOne(id){
@@ -30,10 +27,9 @@ export class OrganizationService{
       });
 
     }
-      //this returns an object containing location
-      //information of an object
-    getLocation(){
-      //waiting for an api
+
+    getLocation(orgData){
+
     }
 
     getContacts(){

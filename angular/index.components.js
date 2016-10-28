@@ -1,3 +1,4 @@
+import {HomeViewComponent} from './app/components/home-view/home-view.component';
 import {EcosystemMapComponent} from './app/components/ecosystem-map/ecosystem-map.component';
 import {SearchAutocompleteComponent} from './app/components/search-autocomplete/search-autocomplete.component';
 import {LeftMenuComponent} from './app/components/left-menu/left-menu.component';
@@ -11,6 +12,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('homeView', HomeViewComponent)
 	.component('ecosystemMap', EcosystemMapComponent)
 	.component('searchAutocomplete', SearchAutocompleteComponent)
 	.component('leftMenu', LeftMenuComponent)
