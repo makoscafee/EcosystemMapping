@@ -9,6 +9,7 @@ export class EcosystemFilterService{
 
         //initializing global vaariables
         this.checkedOrg = null;
+        this.allOrganisations = null;
     }
 
     //gets organisatios by roles
@@ -25,24 +26,28 @@ export class EcosystemFilterService{
       var myData=[];
       myData = getData;
        var filteredData=[];
-
+       var i = 0;
+       var sectorResult,roleResult;
+       this.$log.log(allOrganisations);
       //using angular forEach to filter organisations
-      angular.forEach(allOrganisations,function(value,key){
-        try{
-          if(myData.sector.indexOf(value.sectors.data[0].id)!=-1 || myData.role.indexOf(value.roles.data[0].id) ){
-            filteredData.push(value);
-          }
-          else{
-             console.log("id :"+value.sectors.data[0].id+"not in filter object");
-          }
-        }
-        catch(e){
-          console.log("some data is missing for organisation");
-        }
+      angular.forEach(allOrganisations.data,function(value,key){
 
+        if(value.sectors.data.length > 0 && value.roles.data.length > 0){
+            sectorResult = myData.sector.indexOf(value.sectors.data[0].id);
+            roleResult = myData.role.indexOf(value.roles.data[0].id);
+            if(sectorResult !== -1 || roleResult !==-1){
+              filteredData.push(value);
+            }
+
+        }
+        else {
+            console.log("missing role or sector information ");
+
+        }
 
         });
         this.checkedOrg = filteredData;
+        filteredData = [];
     }
 
 
@@ -50,4 +55,7 @@ export class EcosystemFilterService{
     getFilteredOrg(){
       return this.checkedOrg;
     }
+
+
+
 }

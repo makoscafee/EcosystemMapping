@@ -19,20 +19,8 @@ class EcosystemMapController {
 
                 //getting all Organisations in ecosystems
                 this.EcosystemService.getOrganisation(4).then((response)=>{
-                  var objB =[];
-                  var objA = response.data.data;
-                  angular.forEach(objA,function(value,key){
-                  objB.push(_.pick(objA,['car', 'age']));
-                  });
-
-                  // {"car": "suzuki", "age": 17}
-                  this.$log.log(objB);
-
+                  var obj = response.data.data;
                 });
-
-
-
-
 
     }
 

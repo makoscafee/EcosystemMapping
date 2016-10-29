@@ -1,5 +1,5 @@
 export class SidemenuDataService{
-    constructor(API,$log,EcosystemFilterService){
+    constructor(API,$log,EcosystemFilterService,EcosystemService){
         'ngInject';
 
         //initializing services
@@ -12,8 +12,11 @@ export class SidemenuDataService{
         this.sectorData = [];
         this.mapData = [];
         this.filteredOrganisations=null;
-        this.organisationsFilter ={role:null,sector:null};
+        this.organisationsFilter ={role:[],sector:[]};
         this.orgLocations = null;
+        this.allOrganisations = null;
+
+
     }
 
 
@@ -65,8 +68,8 @@ export class SidemenuDataService{
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
-      this.$log.log("These are the filtered Org");
-      this.$log.log(this.mapData);
+       this.$log.log("These are the filtered Org");
+       this.$log.log(this.mapData);
 
     }
 
@@ -86,9 +89,18 @@ export class SidemenuDataService{
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
-      this.$log.log("These are the filtered Org");
-      this.$log.log(this.mapData);
+       this.$log.log("These are the filtered Org");
+       this.$log.log(this.mapData);
     }
 
+    orgData(data){
+      this.allOrganisations = data;
+    }
+
+
+    //gets map data
+    getMapData(){
+      return this.mapData;
+    }
 
 }
