@@ -1,5 +1,5 @@
 class SearchAutocompleteController {
-    constructor($timeout, $q, $log, DataService, EcosystemService, $state) {
+    constructor($timeout, $q, $log, DataService, EcosystemService, $state, $scope) {
         'ngInject';
 
         //services
@@ -9,6 +9,7 @@ class SearchAutocompleteController {
         this.DataService = DataService;
         this.EcosystemService = EcosystemService;
         this.$state = $state;
+        this.$scope = $scope;
 
         //global variables
         this.simulateQuery = false;
@@ -25,11 +26,7 @@ class SearchAutocompleteController {
     //getting organisations of a given ecosystem and
     //changing the state to home state
     home(ecosystemId) {
-        this.EcosystemService.getOrganisation(ecosystemId.id).then((response) => {
-            this.organisationData = response.data;
-            this.$log.log(this.organisationData);
-        });
-        this.$state.go('app.home');
+        this.$state.go('app.home.pins', {id: ecosystemId.id});
 
     }
 
@@ -60,7 +57,6 @@ class SearchAutocompleteController {
 
 
     $onInit() {
-
     }
 }
 

@@ -1,14 +1,50 @@
 class EcosystemMapController {
-    constructor() {
+    constructor(MapDataService, $log, _, $rootScope) {
         'ngInject';
-            this.darEsSalaam={
-                lat: -6.792287,
-                lng: 39.2376063,
-                zoom: 12
-            }
+        this.$log = $log;
+        this.MapDataService = MapDataService;
+        this.ecosystemMap = {};
+        this.ecosystemMap.center = {
+            lat: -6.1630,
+            lng: 35.7516,
+            zoom: 6
+        };
+        this.$rootScope = $rootScope;
+        var consol = this.$log;
+        var foramt = this.formatLocationInformation;
+        var ecosystemMap = this.ecosystemMap;
+        this.$rootScope.$on('eventX', function(ev, args) {
+            var response = MapDataService.getOrganizationData();
+            ecosystemMap.markers = foramt(response);
+        });
+
     }
 
-    $onInit() {}
+    formatLocationInformation(data) {
+        var markers = [];
+        _.map(data, (value) => {
+            angular.forEach(value, (response) => {
+                if (response) {
+                    angular.forEach(response.locations.data, (locationData) => {
+                        var locationInfo = {
+                            lat: parseFloat(locationData.lat),
+                            lng: parseFloat(locationData.lng)
+                        }
+                        markers.push(locationInfo);
+                    });
+                }
+            });
+        });
+        return markers;
+    }
+
+    $onInit() {
+        this.MapDataService.getInitialData().then((response) => {
+            this.organisationData = response.data;
+            this.ecosystemMap.markers = this.formatLocationInformation(this.organisationData);
+
+        });
+    }
 }
 
 export const EcosystemMapComponent = {

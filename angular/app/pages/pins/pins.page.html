@@ -8,7 +8,7 @@
                             <div>{{role.name}}</div>
                             <div class="Media__side Media__side--right">
                               <md-chip>(12)</md-chip>
-                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.filterByRole(role.id)" ng-model="isChecked"></md-checkbox>
+                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.filterByRole(role.name)" ng-model="isChecked"></md-checkbox>
                             </div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                         <div class="Media__body Media u-flex-center--v">
                             <div>{{sector.name}}</div>
                             <div class="Media__side Media__side--right">
-                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-model="isChecked"></md-checkbox>
+                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.filterBySector(sector.name)" ng-model="isChecked"></md-checkbox>
                             </div>
                         </div>
                     </div>
