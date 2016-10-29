@@ -26,7 +26,7 @@ class SearchAutocompleteController {
     //getting organisations of a given ecosystem and
     //changing the state to home state
     home(ecosystemId) {
-        this.$state.go('app.home', {ecosystemId: ecosystemId.id});
+        this.$state.go('app.home.pins', {id: ecosystemId.id});
 
     }
 

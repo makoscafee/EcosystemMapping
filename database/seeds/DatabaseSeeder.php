@@ -166,7 +166,7 @@ class RoleSeeder extends Seeder
         for ($i=0; $i < sizeOf($roles); $i++) {
 
           DB::table('roles')->insert([
-            'name' => $roles[$fake->numberBetween(0, 5)],
+            'name' => $roles[$i],
             'description' => $fake->word,
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')

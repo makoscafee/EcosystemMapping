@@ -1,24 +1,20 @@
 class AppHomeController{
-    constructor($state, $log, EcosystemService){
+    constructor($state, $log, EcosystemService, MapDataService){
         'ngInject';
 
         this.$state = $state;
         this.$log = $log;
         this.EcosystemService = EcosystemService;
-        this.ecosystemId =this.$state.params.ecosystemId;
-        this.organisationData = null;
+        this.MapDataService = MapDataService;
+        this.ecosystemId =this.$state.params.id;
+        this.organizationData = null;
 
 
         //
     }
 
     $onInit(){
-      if (this.ecosystemId) {
-        this.EcosystemService.getOrganisation(this.ecosystemId).then((response) => {
-            this.organisationData = response.data.data;
-            this.$log.log(this.organisationData)
-        });
-      }
+      this.MapDataService.initialData(this.ecosystemId);
     }
 }
 
