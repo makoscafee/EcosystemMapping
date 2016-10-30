@@ -4,11 +4,12 @@ export class EcosystemFilterService{
 
         // initializing ecosystem
         this.EcosystemService = EcosystemService;
+
         this.API = API;
         this.$log = $log;
 
         //initializing global vaariables
-        this.checkedOrg = null;
+        this.checkedOrg = [];
         this.allOrganisations = null;
     }
 
@@ -20,7 +21,7 @@ export class EcosystemFilterService{
 
       //filters organisations
     orgFilter(getData,allOrganisations){
-
+      this.globalData = allOrganisations.data;
       //local variables for
       // storing temporary results
       var myData=[];
@@ -28,32 +29,45 @@ export class EcosystemFilterService{
        var filteredData=[];
        var i = 0;
        var sectorResult,roleResult;
-       this.$log.log(allOrganisations);
+
       //using angular forEach to filter organisations
-      angular.forEach(allOrganisations.data,function(value,key){
+      if(myData.sector.length > 0 || myData.role.length > 0 ){
+        angular.forEach(allOrganisations.data,function(value,key){
 
-        if(value.sectors.data.length > 0 && value.roles.data.length > 0){
-            sectorResult = myData.sector.indexOf(value.sectors.data[0].id);
-            roleResult = myData.role.indexOf(value.roles.data[0].id);
-            if(sectorResult !== -1 || roleResult !==-1){
-              filteredData.push(value);
-            }
+          try{
+              sectorResult = myData.sector.indexOf(value.sectors.data[0].id);
+              roleResult = myData.role.indexOf(value.roles.data[0].id);
+              if(sectorResult !== -1 || roleResult !==-1){
+                filteredData.push(value);
+              }
+              else{
+                this.$log.log("not selected");
+              }
 
-        }
-        else {
-            console.log("missing role or sector information ");
+          }
+          catch(e){
+              console.log("missing role or sector information ");
 
-        }
+          }
 
-        });
-        this.checkedOrg = filteredData;
+          });
+      }
+      else{
+          this.$log.log("wrong execution");
+          filteredData = allOrganisations.data
+      }
+
+      this.checkedOrg = filteredData;
+
+
+
         filteredData = [];
     }
 
 
     //getting filtered organisations
     getFilteredOrg(){
-      return this.checkedOrg;
+        return this.checkedOrg;
     }
 
 

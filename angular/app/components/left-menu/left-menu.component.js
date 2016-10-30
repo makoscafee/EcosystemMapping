@@ -1,11 +1,12 @@
 class LeftMenuController{
-    constructor(SidemenuDataService,$log,EcosystemFilterService,EcosystemService){
+    constructor(SidemenuDataService,$log,EcosystemFilterService,EcosystemService,MapDataService){
         'ngInject';
 
         //Initilizing the services
       this.EcosystemFilterService = EcosystemFilterService;
       this.SidemenuDataService = SidemenuDataService;
       this.EcosystemService = EcosystemService;
+      this.MapDataService = MapDataService;
       this.$log = $log;
 
         //getting all roles
@@ -17,30 +18,52 @@ class LeftMenuController{
       this.SidemenuDataService.sectors().then((response)=>{
         this.sectors = response.data;
       });
+      this.orgLocation = this.MapDataService.checkedOrganisations();
 
-      //getting all organisations
-      this.EcosystemService.getOrganisation(4).then((response)=>{
-        SidemenuDataService.orgData(response.data)
-
-      });
+      //displaying all organisations initially
+      this.selectedOrganisations();
     }
 
+
+
+      // updating makers
+      selectedOrganisations(){
+        this.orgMakers = this.SidemenuDataService.getMapData();
+        var markers = [];
+
+          //creating location objects
+          angular.forEach(this.orgMakers, (response)=> {
+            angular.forEach(response.locations, (locations)=>{
+              angular.forEach(locations, (location)=> {
+                var marker = {
+                  lat: parseFloat(location.lat),
+                  lng: parseFloat(location.long)
+                }
+                markers.push(marker);
+              })
+            })
+          });
+
+                this.markers = markers;
+                this.markers = this.MapDataService.checkedOrganisations();
+      }
 
     //creates an array of select sectors
     setRoleArray(roleId){
       this.SidemenuDataService.roleArray(roleId);
+      this.selectedOrganisations();
     }
 
 
       //creates an array of selected sectors
     setSectorArray(sectorId){
       this.SidemenuDataService.sectorArray(sectorId);
+      this.selectedOrganisations();
     }
 
 
     //testing the organisation filter
     test(){
-      this.$log.log("testing organision filter");
       this.$log.log(this.EcosystemFilterService.getFilteredOrg());
     }
 

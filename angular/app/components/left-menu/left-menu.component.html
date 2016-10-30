@@ -1,12 +1,18 @@
-<div class="Sidebar_wrapper">
-    <aside class="Sidebar">
-        <nav role="navigation" class="Sidebar__nav">
-            <ul class="Sidebar__nav-list">
-                <li class="Sidebar__nav-list__item ion-ios-home"  ui-sref=".pins"></li>
-                <li class="Sidebar__nav-list__item ion-ios-calendar"  ui-sref=".events"></li>
-                <li class="Sidebar__nav-list__item Sidebar__nav-list__item--active ion-clipboard"  ui-sref=".projects"></li>
-              </ul>
-            </nav>
-        </aside>
-        <div ui-view="side"></div>
+
+    <div class="wrapper">
+      <div class="Sidebar_wrapper">
+          <aside class="Sidebar">
+              <nav role="navigation" class="Sidebar__nav">
+                  <ul class="Sidebar__nav-list">
+                      <li class="Sidebar__nav-list__item ion-ios-home"  ui-sref=".pins"></li>
+                      <li class="Sidebar__nav-list__item ion-ios-calendar"  ui-sref=".events"></li>
+                      <li class="Sidebar__nav-list__item Sidebar__nav-list__item--active ion-clipboard"  ui-sref=".projects"></li>
+                    </ul>
+                  </nav>
+              </aside>
+              <div ui-view="side"></div>
+          </div>
+          <section class="Details__body-Content">
+            <ecosystem-map markers = vm.markers></ecosystem-map>
+          </section>
     </div>

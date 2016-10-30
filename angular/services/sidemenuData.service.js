@@ -6,6 +6,7 @@ export class SidemenuDataService{
         this.API = API;
         this.$log = $log;
         this.EcosystemFilterService = EcosystemFilterService;
+        this.EcosystemService = EcosystemService;
 
         //initializing global variables
         this.roleData = [];
@@ -14,11 +15,21 @@ export class SidemenuDataService{
         this.filteredOrganisations=null;
         this.organisationsFilter ={role:[],sector:[]};
         this.orgLocations = null;
-        this.allOrganisations = null;
 
+      this.dataOrg().then((response)=>{
+        this.allOrganisations = response.data;
+      });
 
+      //getting filtered organisations
+    this.mapData = this.EcosystemFilterService.getFilteredOrg();
     }
 
+
+      //get all org
+      dataOrg(){
+        //getting all organisations
+    return    this.EcosystemService.getOrganisation(4);
+      }
 
       //getting all roles
     roles(){
@@ -34,7 +45,6 @@ export class SidemenuDataService{
 
         //returns locations
     getOrgLocations(){
-        this.$log.log("the data is here");
       return this.orgLocations;
     }
 
@@ -68,8 +78,6 @@ export class SidemenuDataService{
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
-       this.$log.log("These are the filtered Org");
-       this.$log.log(this.mapData);
 
     }
 
@@ -89,7 +97,6 @@ export class SidemenuDataService{
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
-       this.$log.log("These are the filtered Org");
        this.$log.log(this.mapData);
     }
 
