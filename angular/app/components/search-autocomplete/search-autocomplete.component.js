@@ -25,6 +25,7 @@ class SearchAutocompleteController {
     //getting organisations of a given ecosystem and
     //changing the state to home state
     home(ecosystemId) {
+        this.DataService.setSelectedEcosystem(ecosystemId);
         this.EcosystemService.getOrganisation(ecosystemId.id).then((response) => {
             this.organisationData = response.data;
             this.$log.log(this.organisationData);

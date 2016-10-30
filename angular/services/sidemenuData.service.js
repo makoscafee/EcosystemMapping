@@ -1,10 +1,11 @@
 export class SidemenuDataService{
-    constructor(API,$log,EcosystemFilterService,EcosystemService){
+    constructor(API,$log,EcosystemFilterService,EcosystemService,DataService){
         'ngInject';
 
         //initializing services
         this.API = API;
         this.$log = $log;
+        this.DataService = DataService;
         this.EcosystemFilterService = EcosystemFilterService;
         this.EcosystemService = EcosystemService;
 
@@ -28,7 +29,9 @@ export class SidemenuDataService{
       //get all org
       dataOrg(){
         //getting all organisations
-    return    this.EcosystemService.getOrganisation(4);
+        let ecosystem =this.DataService.getSelectedEcosystem();
+        this.$log.log("this is the Id: "+ecosystem.id);
+    return    this.EcosystemService.getOrganisation(ecosystem.id);
       }
 
       //getting all roles
