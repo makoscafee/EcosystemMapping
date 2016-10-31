@@ -1,5 +1,5 @@
 export class SidemenuDataService{
-    constructor(API,$log,EcosystemFilterService,EcosystemService,DataService){
+    constructor(API,$log,EcosystemFilterService,EcosystemService,DataService,$localStorage){
         'ngInject';
 
         //initializing services
@@ -8,6 +8,7 @@ export class SidemenuDataService{
         this.DataService = DataService;
         this.EcosystemFilterService = EcosystemFilterService;
         this.EcosystemService = EcosystemService;
+        this.$localStorage = $localStorage;
 
         //initializing global variables
         this.roleData = [];
@@ -18,7 +19,7 @@ export class SidemenuDataService{
         this.orgLocations = null;
 
       this.dataOrg().then((response)=>{
-        this.allOrganisations = response.data;
+        this.$localStorage.allOrganisations = response.data;
       });
 
       //getting filtered organisations
@@ -29,8 +30,10 @@ export class SidemenuDataService{
       //get all org
       dataOrg(){
         //getting all organisations
-        let ecosystem =this.DataService.getSelectedEcosystem();
+        this.$log.log(this.$localStorage.ecosystem)
+        let ecosystem =this.$localStorage.ecosystem;
         this.$log.log("this is the Id: "+ecosystem.id);
+        this.$log.log(this.$localStorage.ecosystem);
     return    this.EcosystemService.getOrganisation(ecosystem.id);
       }
 
@@ -77,7 +80,7 @@ export class SidemenuDataService{
       this.organisationsFilter.role = this.roleData;
 
           //updating the filtered organisations
-      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.allOrganisations);
+      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.$localStorage.organisations);
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
@@ -96,7 +99,7 @@ export class SidemenuDataService{
       this.organisationsFilter.sector = this.sectorData;
 
         //updating the filtered organisations
-      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.allOrganisations);
+      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.$localStorage.organisations);
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
@@ -104,7 +107,7 @@ export class SidemenuDataService{
     }
 
     orgData(data){
-      this.allOrganisations = data;
+      this.allOrganisations = [];
     }
 
 

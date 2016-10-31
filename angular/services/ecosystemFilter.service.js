@@ -53,9 +53,8 @@ export class EcosystemFilterService{
           });
       }
       else{
-          this.$log.log("wrong execution");
-          this.$log.log(allOrganisations.data);
-          filteredData = allOrganisations.data
+
+          filteredData = allOrganisations.data;
       }
 
       this.checkedOrg = filteredData;

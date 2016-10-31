@@ -2,12 +2,13 @@
 
 
 class EcosystemMapController {
-    constructor(SidemenuDataService,EcosystemService,$log,MapDataService) {
+    constructor(SidemenuDataService,EcosystemService,$log,MapDataService,$localStorage) {
         'ngInject';
 
         this.SidemenuDataService = SidemenuDataService;
         this.EcosystemService = EcosystemService;
         this.MapDataService = MapDataService;
+        this.$localStorage = $localStorage;
         this.$log = $log;
         this.markers =[];
                 this.darEsSalaam={
@@ -18,9 +19,9 @@ class EcosystemMapController {
                 //getting org initially
                 this.SidemenuDataService.dataOrg().then((response)=>{
                   var markers = [];
-
+                    this.$localStorage.organisations = response.data;
                     //preparing initial location information
-                    angular.forEach(response.data.data, (response)=> {
+                    angular.forEach(this.$localStorage.organisations.data, (response)=> {
                       angular.forEach(response.locations, (locations)=>{
                         angular.forEach(locations, (location)=> {
                           var marker = {
