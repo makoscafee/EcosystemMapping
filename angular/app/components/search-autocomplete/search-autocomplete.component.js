@@ -30,7 +30,7 @@ class SearchAutocompleteController {
             this.organisationData = response.data;
             this.$log.log(this.organisationData);
         });
-        this.$state.go('app.home');
+        this.$state.go('app.home.pins');
 
     }
 
