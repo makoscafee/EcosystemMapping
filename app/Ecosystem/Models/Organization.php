@@ -67,7 +67,7 @@ class Organization extends Model
      **/
     public function events()
     {
-        return $this->belongsTo(\App\Ecosystem\Models\Event::class, 'event_infos')->withTimestamps();
+        return $this->belongsToMany(\App\Ecosystem\Models\Event::class, 'event_infos')->withTimestamps();
     }
 
     /**
@@ -125,4 +125,5 @@ class Organization extends Model
     {
         return $this->belongsToMany(\App\Ecosystem\Models\Project::class, 'project_infos')->withTimestamps();
     }
+
 }
