@@ -9,6 +9,10 @@ use App\Ecosystem\Models\Sector;
 use App\Ecosystem\Models\Location;
 use App\Ecosystem\Models\Role;
 use App\Ecosystem\Models\Organization;
+use App\Ecosystem\Models\Project;
+use App\Ecosystem\Models\ProjectRole;
+use App\Ecosystem\Models\Event;
+use App\Ecosystem\Models\EventRole;
 
 class DatabaseSeeder extends Seeder
 {
@@ -204,6 +208,82 @@ class SectorSeeder extends Seeder
     }
 }
 
+class ProjectSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this->call(UserTableSeeder::class);
+        $fake = Faker::create();
+        $limit = 50;
+        for ($i=0; $i < sizeOf($sectors); $i++) {
+
+          DB::table('projects')->insert([
+            'name' => $fake->word,
+            'description' => $fake->text,
+            'start_date' => $fake->date('Y-m-d H:i:s'),
+            'end_date'   => $fake->date('Y-m-d H:i:s'),
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+        }
+    }
+}
+
+class EventSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this->call(UserTableSeeder::class);
+        $fake = Faker::create();
+        $limit = 20;
+        for ($i=0; $i < $limit; $i++) {
+
+          DB::table('events')->insert([
+            'name' => $fake->word,
+            'description' => $fake->text,
+            'start_date' => $fake->date('Y-m-d H:i:s'),
+            'end_date'   => $fake->date('Y-m-d H:i:s'),
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+        }
+    }
+}
+
+class EventRoleSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this->call(UserTableSeeder::class);
+        $limit = 20;
+        $fake = Faker::create();
+        for ($i=0; $i < $limit; $i++) {
+
+          DB::table('event_roles')->insert([
+            'name' => $fake->word,
+            'description' => $fake->text,
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+        }
+    }
+}
+
 class DependencySeeder extends Seeder
 {
     /**
@@ -217,14 +297,16 @@ class DependencySeeder extends Seeder
         $fake = Faker::create();
         $limit = 20;
         $status = array("active", "inactive");
-        $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
         $ecosystem_parents = EcosystemParent::lists('id')->All();
         $organizations = Organization::lists('id')->All();
         $sectors = Sector::lists('id')->All();
         $locations = Location::lists('id')->All();
         $roles = Role::lists('id')->All();
         $ecosystems = Ecosystem::lists('id')->all();
+        $projects = Project::lists('id')->all();
+        $events = Event::lists('id')->all();
+        $event_roles = EventRole::lists('id')->all();
+        $project_roles = ProjectRole::lists('id')->all();
         for ($i=0; $i < $limit; $i++) {
           DB::table('organization_ecosystems')->insert([
             'ecosystem_id' => $fake->randomElement($ecosystems),
@@ -242,6 +324,20 @@ class DependencySeeder extends Seeder
           DB::table('organization_sectors')->insert([
             'sector_id' => $fake->randomElement($sectors),
             'organization_id' => $fake->randomElement($organizations),
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+          DB::table('event_infos')->insert([
+            'event_id' => $fake->randomElement($events),
+            'organization_id' => $fake->randomElement($organizations),
+            'event_role_id' => $fake->randomElement($event_roles),
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+          DB::table('project_infos')->insert([
+            'project_id' => $fake->randomElement($projects),
+            'organization_id' => $fake->randomElement($organizations),
+            'project_role_id' => $fake->randomElement($project_roles),
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
           ]);

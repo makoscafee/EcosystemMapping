@@ -14,7 +14,7 @@ class OrganizationTransformer extends TransformerAbstract
      *
      * @var array
      */
-    protected $defaultIncludes      = ['sectors', 'roles', 'stages', 'locations'];
+    protected $defaultIncludes      = ['sectors', 'roles', 'stages', 'locations','projects', 'events'];
     /**
      * List of resources possible to include
      *
@@ -25,6 +25,8 @@ class OrganizationTransformer extends TransformerAbstract
         'roles',
         'stages',
         'locations',
+        'projects',
+        'events'
     ];
 
     /**
@@ -97,6 +99,32 @@ class OrganizationTransformer extends TransformerAbstract
         $locations = $organization->locations;
 
         return $this->collection($locations, new LocationTransformer);
+    }
+
+    /**
+     * Include Projects
+     *
+     * @param Organization $organization
+     * @return \League\Fractal\Resource\Item
+     */
+    public function includeProjects(Organization $organization)
+    {
+        $projects = $organization->projects;
+
+        return $this->collection($projects, new ProjectTransformer);
+    }
+
+    /**
+     * Include Events
+     *
+     * @param Organization $organization
+     * @return \League\Fractal\Resource\Item
+     */
+    public function includeEvents(Organization $organization)
+    {
+        $events = $organization->events;
+
+        return $this->collection($events, new EventTransformer);
     }
 
 }
