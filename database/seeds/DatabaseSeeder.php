@@ -43,7 +43,7 @@ class EcosystemParentSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 5;
 
         for ($i=0; $i < $limit; $i++) {
           DB::table('ecosystem_parents')->insert([
@@ -67,7 +67,7 @@ class EcosystemSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 10;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -96,7 +96,7 @@ class LocationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 30;
+        $limit = 100;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -125,7 +125,7 @@ class OrganizationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 50;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -195,7 +195,7 @@ class SectorSeeder extends Seeder
         for ($i=0; $i < sizeOf($sectors); $i++) {
 
           DB::table('sectors')->insert([
-            'name' => $sectors[$fake->numberBetween(0, 7)],
+            'name' => $sectors[$i],
             'description' => $fake->word,
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
