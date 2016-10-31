@@ -35,7 +35,7 @@ class ProjectTransformer extends TransformerAbstract
             'end_date' => $project->end_date,
             'links'     => [
                 'rel' => 'self',
-                'uri' => '/projects/'.$location->id,
+                'uri' => '/projects/'.$project->id,
             ],
         ];
     }

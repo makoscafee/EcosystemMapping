@@ -34,7 +34,7 @@ class EventTransformer extends TransformerAbstract
             'end_date'  => $event->end_date,
             'links'     => [
                 'rel' => 'self',
-                'uri' => '/events/'.$location->id,
+                'uri' => '/events/'.$event->id,
             ],
         ];
     }
