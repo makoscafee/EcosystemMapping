@@ -29,6 +29,10 @@ class DatabaseSeeder extends Seeder
         $this->call(SectorSeeder::class);
         $this->call(LocationSeeder::class);
         $this->call(OrganizationSeeder::class);
+        $this->call(ProjectSeeder::class);
+        $this->call(EventSeeder::class);
+        $this->call(ProjectRoleSeeder::class);
+        $this->call(EventRoleSeeder::class);
         $this->call(DependencySeeder::class);
 
     }
@@ -220,7 +224,7 @@ class ProjectSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
         $limit = 50;
-        for ($i=0; $i < sizeOf($sectors); $i++) {
+        for ($i=0; $i < $limit; $i++) {
 
           DB::table('projects')->insert([
             'name' => $fake->word,
@@ -275,6 +279,30 @@ class EventRoleSeeder extends Seeder
         for ($i=0; $i < $limit; $i++) {
 
           DB::table('event_roles')->insert([
+            'name' => $fake->word,
+            'description' => $fake->text,
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s')
+          ]);
+        }
+    }
+}
+
+class ProjectRoleSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this->call(UserTableSeeder::class);
+        $limit = 20;
+        $fake = Faker::create();
+        for ($i=0; $i < $limit; $i++) {
+
+          DB::table('project_roles')->insert([
             'name' => $fake->word,
             'description' => $fake->text,
             'created_at' => $fake->date('Y-m-d H:i:s'),
