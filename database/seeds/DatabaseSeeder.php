@@ -51,7 +51,7 @@ class EcosystemParentSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 5;
 
         for ($i=0; $i < $limit; $i++) {
           DB::table('ecosystem_parents')->insert([
@@ -75,7 +75,7 @@ class EcosystemSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 5;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -104,7 +104,7 @@ class LocationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 30;
+        $limit = 300;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -133,7 +133,7 @@ class OrganizationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 200;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
         $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
@@ -223,7 +223,7 @@ class ProjectSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 50;
+        $limit = 200;
         for ($i=0; $i < $limit; $i++) {
 
           DB::table('projects')->insert([
@@ -249,7 +249,7 @@ class EventSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 200;
         for ($i=0; $i < $limit; $i++) {
 
           DB::table('events')->insert([
@@ -274,7 +274,7 @@ class EventRoleSeeder extends Seeder
     public function run()
     {
         // $this->call(UserTableSeeder::class);
-        $limit = 20;
+        $limit = 200;
         $fake = Faker::create();
         for ($i=0; $i < $limit; $i++) {
 
@@ -298,7 +298,7 @@ class ProjectRoleSeeder extends Seeder
     public function run()
     {
         // $this->call(UserTableSeeder::class);
-        $limit = 20;
+        $limit = 200;
         $fake = Faker::create();
         for ($i=0; $i < $limit; $i++) {
 
@@ -323,7 +323,7 @@ class DependencySeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 20;
+        $limit = 300;
         $status = array("active", "inactive");
         $ecosystem_parents = EcosystemParent::lists('id')->All();
         $organizations = Organization::lists('id')->All();

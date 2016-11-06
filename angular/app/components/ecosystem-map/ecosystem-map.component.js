@@ -20,7 +20,7 @@ class EcosystemMapController {
                 this.SidemenuDataService.dataOrg().then((response)=>{
                   var markers = [];
                     this.$localStorage.organisations = response.data;
-                    //preparing initial location information
+                  //  preparing initial location information
                     angular.forEach(this.$localStorage.organisations.data, (response)=> {
                       angular.forEach(response.locations, (locations)=>{
                         angular.forEach(locations, (location)=> {
@@ -34,6 +34,7 @@ class EcosystemMapController {
                     });
 
                           this.markers = markers;
+
                 });
 
 

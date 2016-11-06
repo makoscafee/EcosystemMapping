@@ -1,22 +1,28 @@
 <section class="Details">
   <div class="Details__body">
-    <section class="Details__body-side_bar mycolor" style="  background-color: #4c514d" >
+    <section class="Details__body-side_bar mycolor" >
       <h1>Events</h2>
-      <md-card>
-         <md-card-content layout="row">
-           <div flex>
-              <img src="card-image.png" class="md-card-image" alt="image caption">
+      <md-card class= "red lighten-5" ng-repeat="event in vm.markers ">
+         <md-card-content layout="row" layout-align="space-around">
+           <div flex="45">
+              <img  src="http://www.bodminroadchurch.com/wp-content/uploads/2015/04/Events.jpg" class="md-card-image" alt="image caption">
            </div>
            <div flex>
-              <h2 style="font-size: 14px">Card headline</h2>
-              <p>more details</p>
+              <h2 style="font-size: 14px">Event's name</h2>
+              <p>Events details</p>
            </div>
-
          </md-card-content>
-         <md-card-actions layout="row" layout-align="end center">
-           <p class="ion-ios-home">location</p>
-           <p class="ion-ios-home">Event Time</p>
-            <p class="ion-ios-home">Free</p>
+         <md-card-actions layout="row" layout-align="space-around center">
+           <div>
+             <i class="ion-ios-location"></i><p>location</p>
+           </div>
+           <div>
+             <i class="ion-ios-clock"></i><p>Event's Time</p>
+
+           </div>
+           <div>
+             <i class="ion-ios-cash"></i><p>Free</p>
+           </div>
          </md-card-actions>
         </md-card>
     </section>
