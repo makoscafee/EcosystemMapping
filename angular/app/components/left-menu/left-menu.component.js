@@ -11,18 +11,13 @@ class LeftMenuController{
       this.$log = $log;
 
         //getting all roles
-      this.SidemenuDataService.roles().then((response)=>{
-        this.roles = response.data;
-      });
+        this.roles = this.$localStorage.roles;
+
 
           //getting all sectors
-      this.SidemenuDataService.sectors().then((response)=>{
-        this.sectors = response.data;
-      });
-      this.orgLocation = this.MapDataService.checkedOrganisations();
+        this.sectors = this.$localStorage.sectors;
 
-      //displaying all organisations initially
-      // this.selectedOrganisations();
+      this.orgLocation = this.MapDataService.checkedOrganisations();
     }
 
 
@@ -46,7 +41,6 @@ class LeftMenuController{
           });
 
                 this.markers = markers;
-                this.markers = this.MapDataService.checkedOrganisations();
       }
 
     //creates an array of select sectors

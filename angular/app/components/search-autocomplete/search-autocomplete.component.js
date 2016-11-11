@@ -1,5 +1,5 @@
 class SearchAutocompleteController {
-    constructor($timeout, $q, $log, DataService, EcosystemService, $state,$localStorage) {
+    constructor($timeout, $q, $log, DataService, EcosystemService, $state,$localStorage,SidemenuDataService) {
         'ngInject';
 
         //services
@@ -8,6 +8,7 @@ class SearchAutocompleteController {
         this.$log = $log;
         this.DataService = DataService;
         this.EcosystemService = EcosystemService;
+        this.SidemenuDataService = SidemenuDataService;
         this.$state = $state;
         this.$localStorage = $localStorage;
 
@@ -20,6 +21,17 @@ class SearchAutocompleteController {
         this.EcosystemService.getAll().then((response) => {
             this.states = response.data;
         });
+
+
+        //getting all roles
+      this.SidemenuDataService.roles().then((response)=>{
+        this.$localStorage.roles = response.data;
+      });
+
+          //getting all sectors
+      this.SidemenuDataService.sectors().then((response)=>{
+        this.$localStorage.sectors = response.data;
+      });
 
     }
 
