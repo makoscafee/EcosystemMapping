@@ -24,26 +24,11 @@ class LeftMenuController{
 
       // updating makers
       selectedOrganisations(){
-        this.orgMakers = this.SidemenuDataService.getMapData();
-        var markers = [];
+        this.markers = this.MapDataService.createMarkers(this.SidemenuDataService.getMapData());
 
-          //creating location objects
-          angular.forEach(this.orgMakers, (response)=> {
-            angular.forEach(response.locations, (locations)=>{
-              angular.forEach(locations, (location)=> {
-                var marker = {
-                  lat: parseFloat(location.lat),
-                  lng: parseFloat(location.long)
-                }
-                markers.push(marker);
-              })
-            })
-          });
-
-                this.markers = markers;
       }
 
-    //creates an array of select sectors
+    //creates an array of select roles
     setRoleArray(roleId){
       this.SidemenuDataService.roleArray(roleId);
       this.selectedOrganisations();
@@ -57,51 +42,46 @@ class LeftMenuController{
     }
 
 
-    //testing the organisation filter
-    test(){
-      this.$log.log(this.EcosystemFilterService.getFilteredOrg());
-    }
 
 
       // show events
       showEvents(){
-      let eventHolder = this.MapDataService.checkedOrganisations();
+        let eventHolder = this.MapDataService.checkedOrganisations();
 
-        if(eventHolder.length > 0){
-          this.markers = valueHolder;
-        }
-        else {
-          this.markers = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
-        }
+          if(eventHolder.length > 0){
+            this.markers = valueHolder;
+          }
+          else {
+            this.markers = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
+          }
       }
 
 
       // show projects
       showProjects(){
 
-      let eventHolder = this.MapDataService.checkedOrganisations();
+        let eventHolder = this.MapDataService.checkedOrganisations();
 
-        if(eventHolder.length > 0){
-          this.markers = eventHolder;
-        }
-        else {
-          this.markers = this.MapDataService.createProjectMarkers(this.$localStorage.organisations.data);
-        }
-        this.$log.log("the show projects worked");
+          if(eventHolder.length > 0){
+            this.markers = eventHolder;
+          }
+          else {
+            this.markers = this.MapDataService.createProjectMarkers(this.$localStorage.organisations.data);
+          }
       }
 
       // show all organisations
       showOrganisations(){
 
-        let valueHolder = this.MapDataService.checkedOrganisations();
+          let valueHolder = this.MapDataService.checkedOrganisations();
 
 
-        if (valueHolder.length > 0){
-        this.markers = valueHolder;
-        }
-        else {
-          this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
-        }
+          if (valueHolder.length > 0){
+          this.markers = valueHolder;
+          }
+          else {
+            this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
+          }
 
       }
 

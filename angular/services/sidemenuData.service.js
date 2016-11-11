@@ -29,12 +29,8 @@ export class SidemenuDataService{
 
       //get all org
       dataOrg(){
-        //getting all organisations
-        this.$log.log(this.$localStorage.ecosystem)
-        let ecosystem =this.$localStorage.ecosystem;
-        this.$log.log("this is the Id: "+ecosystem.id);
-        this.$log.log(this.$localStorage.ecosystem);
-    return    this.EcosystemService.getOrganisation(ecosystem.id);
+
+        return this.EcosystemService.getOrganisation(this.$localStorage.ecosystem.id);
       }
 
       //getting all roles
@@ -103,7 +99,7 @@ export class SidemenuDataService{
 
         //getting filtered organisations
       this.mapData = this.EcosystemFilterService.getFilteredOrg();
-       this.$log.log(this.mapData);
+
     }
 
     orgData(data){
