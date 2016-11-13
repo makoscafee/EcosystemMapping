@@ -37,7 +37,7 @@ export class MapDataService{
             })
           }
           else {
-                console.log("no events");
+                this.$log.log("no events");
           }
 
         });
@@ -54,7 +54,7 @@ export class MapDataService{
       let markers = [];
       //creating location information
       angular.forEach(data, (response)=> {
-        console.log(response);
+        this.$log.log(response);
         angular.forEach(response.locations, (locations)=>{
           angular.forEach(locations, (location)=> {
             var marker = {
@@ -98,7 +98,7 @@ export class MapDataService{
                     })
                   }
                   else {
-                        console.log("no events");
+                        this.$log.log("no events");
                   }
 
                 });

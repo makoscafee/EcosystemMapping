@@ -28,7 +28,7 @@ export class OrganizationService{
 
     }
 
-    getLocation(orgData){
+    getLocation(){
 
     }
 

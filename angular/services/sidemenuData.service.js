@@ -57,7 +57,7 @@ export class SidemenuDataService {
     //initializing the location object
     setOrgLocations(locationData) {
         let myData = [];
-        angular.forEach(locationData, function(value, key) {
+        angular.forEach(locationData, function(value) {
             myData.push(value.locations.data);
         });
         this.orgLocations = myData;
@@ -100,7 +100,7 @@ export class SidemenuDataService {
 
     }
 
-    orgData(data) {
+    orgData() {
         this.allOrganisations = [];
     }
 
