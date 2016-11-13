@@ -1,5 +1,5 @@
-export class SidemenuDataService{
-    constructor(API,$log,EcosystemFilterService,EcosystemService,DataService,$localStorage){
+export class SidemenuDataService {
+    constructor(API, $log, EcosystemFilterService, EcosystemService, DataService, $localStorage) {
         'ngInject';
 
         //initializing services
@@ -14,102 +14,99 @@ export class SidemenuDataService{
         this.roleData = [];
         this.sectorData = [];
         this.mapData = [];
-        this.filteredOrganisations=null;
-        this.organisationsFilter ={role:[],sector:[]};
+        this.filteredOrganisations = null;
+        this.organisationsFilter = {
+            role: [],
+            sector: []
+        };
         this.orgLocations = null;
 
-      this.dataOrg().then((response)=>{
-        this.$localStorage.allOrganisations = response.data;
-      });
-
-      //getting filtered organisations
-    this.mapData = this.EcosystemFilterService.getFilteredOrg();
+        //getting filtered organisations
+        this.mapData = this.EcosystemFilterService.getFilteredOrg();
     }
 
+    //get all org
+    dataOrg() {
 
-      //get all org
-      dataOrg(){
-
-        return this.EcosystemService.getOrganisation(this.$localStorage.ecosystem.id);
-      }
-
-      //getting all roles
-    roles(){
-      return  this.API.all('roles').get('');
-    }
-
-
-      //getting all sectors
-    sectors(){
-      return this.API.all('sectors').get('');
-    }
-
-
-        //returns locations
-    getOrgLocations(){
-      return this.orgLocations;
-    }
-
-
-      //initializing the location object
-    setOrgLocations(locationData){
-        let myData =[];
-        angular.forEach(locationData,function(value,key){
-          myData.push(value.locations.data);
+        this._dataOrgHelper().then((response) => {
+            this.$localStorage.allOrganisations = response.data;
         });
-        this.orgLocations=myData;
+
+        return this._dataOrgHelper();
     }
 
+    _dataOrgHelper() {
+        return this.EcosystemService.getOrganisation(this.$localStorage.ecosystem.id);
+    }
 
+    //getting all roles
+    roles() {
+        return this.API.all('roles').get('');
+    }
+
+    //getting all sectors
+    sectors() {
+        return this.API.all('sectors').get('');
+    }
+
+    //returns locations
+    getOrgLocations() {
+        return this.orgLocations;
+    }
+
+    //initializing the location object
+    setOrgLocations(locationData) {
+        let myData = [];
+        angular.forEach(locationData, function(value, key) {
+            myData.push(value.locations.data);
+        });
+        this.orgLocations = myData;
+    }
 
     //filtering organisation by selected role
-    roleArray(roleId){
+    roleArray(roleId) {
 
         //add id if not in array else remove id
-      if(this.roleData.indexOf(roleId) === -1){
-        this.roleData.push(roleId);
-      }
-      else{
-        this.roleData.splice(this.roleData.indexOf(roleId),1);
-      }
+        if (this.roleData.indexOf(roleId) === -1) {
+            this.roleData.push(roleId);
+        } else {
+            this.roleData.splice(this.roleData.indexOf(roleId), 1);
+        }
         //saving the array of roles
-      this.organisationsFilter.role = this.roleData;
-
-          //updating the filtered organisations
-      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.$localStorage.organisations);
-
-        //getting filtered organisations
-      this.mapData = this.EcosystemFilterService.getFilteredOrg();
-
-    }
-
-
-        //filteres organisations by selected sectors
-    sectorArray(sectorId){
-      if(this.sectorData.indexOf(sectorId) === -1){
-        this.sectorData.push(sectorId);
-      }
-      else{
-        this.sectorData.splice(this.sectorData.indexOf(sectorId),1);
-      }
-      this.organisationsFilter.sector = this.sectorData;
+        this.organisationsFilter.role = this.roleData;
 
         //updating the filtered organisations
-      this.EcosystemFilterService.orgFilter(this.organisationsFilter,this.$localStorage.organisations);
+        this.EcosystemFilterService.orgFilter(this.organisationsFilter, this.$localStorage.organisations);
 
         //getting filtered organisations
-      this.mapData = this.EcosystemFilterService.getFilteredOrg();
+        this.mapData = this.EcosystemFilterService.getFilteredOrg();
 
     }
 
-    orgData(data){
-      this.allOrganisations = [];
+    //filteres organisations by selected sectors
+    sectorArray(sectorId) {
+        if (this.sectorData.indexOf(sectorId) === -1) {
+            this.sectorData.push(sectorId);
+        } else {
+            this.sectorData.splice(this.sectorData.indexOf(sectorId), 1);
+        }
+        this.organisationsFilter.sector = this.sectorData;
+
+        //updating the filtered organisations
+        this.EcosystemFilterService.orgFilter(this.organisationsFilter, this.$localStorage.organisations);
+
+        //getting filtered organisations
+        this.mapData = this.EcosystemFilterService.getFilteredOrg();
+
     }
 
+    orgData(data) {
+        this.allOrganisations = [];
+    }
 
     //gets map data
-    getMapData(){
-      return this.mapData;
+    getMapData() {
+        return this.mapData;
     }
 
 }
