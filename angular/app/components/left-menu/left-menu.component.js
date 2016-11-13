@@ -76,7 +76,7 @@
 
           }
           else {
-            this.$log.log("now else block is touched in projects");
+            this.$log.log("now else block is touched in project");
             let data = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
             this.markers = data.markers;
             this.events = data.events;
