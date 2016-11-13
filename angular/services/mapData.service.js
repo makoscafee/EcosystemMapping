@@ -13,13 +13,19 @@ export class MapDataService{
     createEventMarkers(holdEvents){
 
       var markers = [];
-      this.$log.log("Zero should be printed her");
-      this.$log.log(holdEvents.length);
+      var evts = [];
+      var eventMarkers = {markers:[],events:[]}
 
         //creating location information
         angular.forEach(holdEvents, (response)=> {
 
-          if(response.events.data.length !==0){
+          if(response.events.data.length > 0){
+            angular.forEach(response.events,(events)=>{
+              angular.forEach(events,(event)=>{
+                evts.push(event);
+              })
+            });
+
             angular.forEach(response.locations, (locations)=>{
               angular.forEach(locations, (location)=> {
                 var marker = {
@@ -36,8 +42,9 @@ export class MapDataService{
 
         });
 
-              holdEvents = markers;
-              return holdEvents;
+              eventMarkers.markers = markers;
+              eventMarkers.events = evts;
+              return eventMarkers;
     }
 
 
@@ -66,29 +73,39 @@ export class MapDataService{
       //creating markers for Projects
       createProjectMarkers(holdEvents){
 
-        var markers = [];
-        this.$log.log("Zero should be printed her");
-        this.$log.log(holdEvents.length);
+              var markers = [];
+              var evts = [];
+              var eventMarkers = {markers:[],events:[]}
 
-          //creating location information
-          angular.forEach(holdEvents, (response)=> {
+                //creating location information
+                angular.forEach(holdEvents, (response)=> {
 
-            if(response.projects.data.length !==0){
-              angular.forEach(response.locations, (locations)=>{
-                angular.forEach(locations, (location)=> {
-                  var marker = {
-                    lat: parseFloat(location.lat),
-                    lng: parseFloat(location.long)
+                  if(response.projects.data.length > 0){
+                    angular.forEach(response.projects,(events)=>{
+                      angular.forEach(events,(event)=>{
+                        evts.push(event);
+                      })
+                    });
+
+                    angular.forEach(response.locations, (locations)=>{
+                      angular.forEach(locations, (location)=> {
+                        var marker = {
+                          lat: parseFloat(location.lat),
+                          lng: parseFloat(location.long)
+                        }
+                        markers.push(marker);
+                      })
+                    })
                   }
-                  markers.push(marker);
-                })
-              })
-            }
-            else {
-                  console.log("no events");
-            }
+                  else {
+                        console.log("no events");
+                  }
 
-          });
+                });
+
+                      eventMarkers.markers = markers;
+                      eventMarkers.events = evts;
+                      return eventMarkers;
         }
 
     checkedOrganisations(){

@@ -1,4 +1,4 @@
-class LeftMenuController{
+   class LeftMenuController{
     constructor(SidemenuDataService,$log,EcosystemFilterService,EcosystemService,MapDataService,$localStorage){
         'ngInject';
 
@@ -46,13 +46,19 @@ class LeftMenuController{
 
       // show events
       showEvents(){
-        let eventHolder = this.MapDataService.checkedOrganisations();
 
-          if(eventHolder.length > 0){
-            this.markers = valueHolder;
+        let test = this.MapDataService.createEventMarkers(this.SidemenuDataService.getMapData());
+
+          if(test.markers.length > 0){
+            this.markers =test.markers;
+            this.events = test.events;
+            this.$log.log(this.markers);
+
           }
           else {
-            this.markers = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
+            let data = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
+            this.markers = data.markers;
+            this.events = data.events;
           }
       }
 
@@ -60,13 +66,20 @@ class LeftMenuController{
       // show projects
       showProjects(){
 
-        let eventHolder = this.MapDataService.checkedOrganisations();
+        let test = this.MapDataService.createProjectMarkers(this.SidemenuDataService.getMapData());
 
-          if(eventHolder.length > 0){
-            this.markers = eventHolder;
+          if(test.markers.length > 0){
+            this.$log.log("if block executing in projects");
+            this.markers =test.markers;
+            this.events = test.events;
+            this.$log.log(this.markers);
+
           }
           else {
-            this.markers = this.MapDataService.createProjectMarkers(this.$localStorage.organisations.data);
+            this.$log.log("now else block is touched in projects");
+            let data = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
+            this.markers = data.markers;
+            this.events = data.events;
           }
       }
 
@@ -88,7 +101,6 @@ class LeftMenuController{
     $onInit(){
     }
 }
-
 export const LeftMenuComponent = {
     templateUrl: './views/app/components/left-menu/left-menu.component.html',
     controller: LeftMenuController,

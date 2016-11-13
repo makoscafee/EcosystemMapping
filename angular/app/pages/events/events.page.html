@@ -2,14 +2,14 @@
   <div class="Details__body">
     <section class="Details__body-side_bar mycolor" >
       <h1>Events</h2>
-      <md-card class= "red lighten-5" ng-repeat="event in vm.markers ">
+      <md-card class= "red lighten-5" ng-repeat="event in vm.events">
          <md-card-content layout="row" layout-align="space-around">
            <div flex="45">
               <img  src="http://www.bodminroadchurch.com/wp-content/uploads/2015/04/Events.jpg" class="md-card-image" alt="image caption">
            </div>
            <div flex>
-              <h2 style="font-size: 14px">Event's name</h2>
-              <p>Events details</p>
+              <h2 style="font-size: 14px">{{event.name}}</h2>
+              <p>{{event.name}}</p>
            </div>
          </md-card-content>
          <md-card-actions layout="row" layout-align="space-around center">
