@@ -1,5 +1,5 @@
-export class EcosystemFilterService{
-    constructor(API,$log,EcosystemService){
+export class EcosystemFilterService {
+    constructor(API, $log, EcosystemService) {
         'ngInject';
 
         // initializing ecosystem
@@ -14,62 +14,53 @@ export class EcosystemFilterService{
     }
 
     //gets organisatios by roles
-    role(roleId){
-      return this.API.one('roles',roleId).one('organizations').get('');
+    role(roleId) {
+        return this.API.one('roles', roleId).one('organizations').get('');
     }
 
+    //filters organisations
+    orgFilter(getData, allOrganisations) {
+        this.globalData = allOrganisations.data;
+        //local variables for
+        // storing temporary results
+        var myData = [];
+        myData = getData;
+        var filteredData = [];
+        var sectorResult,
+            roleResult;
 
-      //filters organisations
-    orgFilter(getData,allOrganisations){
-      this.globalData = allOrganisations.data;
-      //local variables for
-      // storing temporary results
-      var myData=[];
-      myData = getData;
-       var filteredData=[];
-       var i = 0;
-       var sectorResult,roleResult;
+        //using angular forEach to filter organisations
+        if (myData.sector.length > 0 || myData.role.length > 0) {
+            angular.forEach(allOrganisations.data, function(value) {
 
-      //using angular forEach to filter organisations
-      if(myData.sector.length > 0 || myData.role.length > 0 ){
-        angular.forEach(allOrganisations.data,function(value,key){
+                try {
+                    sectorResult = myData.sector.indexOf(value.sectors.data[0].id);
+                    roleResult = myData.role.indexOf(value.roles.data[0].id);
+                    if (sectorResult !== -1 || roleResult !== -1) {
+                        filteredData.push(value);
+                    } else {
+                        this.$log.log("not selected");
+                    }
 
-          try{
-              sectorResult = myData.sector.indexOf(value.sectors.data[0].id);
-              roleResult = myData.role.indexOf(value.roles.data[0].id);
-              if(sectorResult !== -1 || roleResult !==-1){
-                filteredData.push(value);
-              }
-              else{
-                this.$log.log("not selected");
-              }
+                } catch (e) {
+                    this.$log.log("missing role or sector information ");
 
-          }
-          catch(e){
-              console.log("missing role or sector information ");
+                }
 
-          }
+            });
+        } else {
 
-          });
-      }
-      else{
+            filteredData = allOrganisations.data;
+        }
 
-          filteredData = allOrganisations.data;
-      }
-
-      this.checkedOrg = filteredData;
-
-
+        this.checkedOrg = filteredData;
 
         filteredData = [];
     }
 
-
     //getting filtered organisations
-    getFilteredOrg(){
+    getFilteredOrg() {
         return this.checkedOrg;
     }
-
-
 
 }
