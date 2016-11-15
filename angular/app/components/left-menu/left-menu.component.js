@@ -10,6 +10,15 @@ class LeftMenuController {
         this.$localStorage = $localStorage;
         this.$log = $log;
 
+        //marker icons
+        this.eventIcon = {
+                   type: 'extraMarker',
+                   icon: 'fa-star',
+                   markerColor: '#f00',
+                   prefix: 'fa',
+                   shape: 'circle'
+        }
+
         //getting all roles
         this.roles = this.$localStorage.roles;
 

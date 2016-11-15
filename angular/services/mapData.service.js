@@ -30,7 +30,10 @@ export class MapDataService{
               angular.forEach(locations, (location)=> {
                 var marker = {
                   lat: parseFloat(location.lat),
-                  lng: parseFloat(location.long)
+                  lng: parseFloat(location.long),
+                 icon: 'fa-star',
+                  message:'Iam an event'
+
                 }
                 markers.push(marker);
               })
@@ -59,7 +62,8 @@ export class MapDataService{
           angular.forEach(locations, (location)=> {
             var marker = {
               lat: parseFloat(location.lat),
-              lng: parseFloat(location.long)
+              lng: parseFloat(location.long),
+              message:'Iam an Organisation'
             }
             markers.push(marker);
           })
@@ -91,7 +95,8 @@ export class MapDataService{
                       angular.forEach(locations, (location)=> {
                         var marker = {
                           lat: parseFloat(location.lat),
-                          lng: parseFloat(location.long)
+                          lng: parseFloat(location.long),
+                          message:'Iam a project'
                         }
                         markers.push(marker);
                       })
