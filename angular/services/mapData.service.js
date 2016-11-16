@@ -64,7 +64,6 @@ export class MapDataService{
       let markers = [];
       //creating location information
       angular.forEach(data, (response)=> {
-        this.$log.log(response);
         angular.forEach(response.locations, (locations)=>{
           angular.forEach(locations, (location)=> {
             var marker = {

@@ -1,10 +1,11 @@
 export class OrganizationService{
-    constructor(API,$log){
+    constructor(API,$log,$localStorage){
         'ngInject';
 
         //
         this.API =API;
         this.$log = $log;
+        this.$localStorage = $localStorage;
     }
 
 
@@ -23,7 +24,6 @@ export class OrganizationService{
       this.API.one('organizations',id).get('').
       then((response)=>{
         this.organisationOne = response.data;
-        this.$log.log(this.organisationOne);
       });
 
     }
@@ -36,12 +36,23 @@ export class OrganizationService{
 
     }
 
-    getRole(){
+    getSector(){
 
     }
 
-    getSector(){
+    getRoleCount(roleName){
+      let roleData = [];
+        angular.forEach(this.$localStorage.organisations.data,(org)=>{
+            angular.forEach(org.roles,(roleArray)=>{
+                angular.forEach(roleArray,(role)=>{
+                    if(role.name == roleName){
+                      roleData.push(role.name);
+                    }
+                })
+            })
+        });
 
+        return roleData.length;
     }
 
     getStage(){

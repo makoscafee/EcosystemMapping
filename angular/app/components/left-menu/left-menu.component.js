@@ -1,28 +1,37 @@
 class LeftMenuController {
-    constructor(SidemenuDataService, $log, EcosystemFilterService, EcosystemService, MapDataService, $localStorage,$state) {
+    constructor(SidemenuDataService, $log, EcosystemFilterService,
+       EcosystemService, MapDataService, $localStorage,$state,OrganizationService) {
         'ngInject';
 
         //Initilizing the services
         this.EcosystemFilterService = EcosystemFilterService;
         this.SidemenuDataService = SidemenuDataService;
+        this.OrganizationService = OrganizationService;
         this.EcosystemService = EcosystemService;
         this.MapDataService = MapDataService;
         this.$localStorage = $localStorage;
         this.$log = $log;
         this.$state = $state;
 
-        //marker icons
-        this.eventIcon = {
-                   type: 'extraMarker',
-                   icon: 'fa-star',
-                   markerColor: '#f00',
-                   prefix: 'fa',
-                   shape: 'circle'
-        }
 
-        this.$log.log("inside left-menu");
+          //global variable
+          this.isRoleChecked = {};
+          this.isSectorChecked = {};
+
+
         //getting all roles
         this.roles = this.$localStorage.roles;
+
+          //creating a role count object
+            let roleCount = {};
+        angular.forEach(this.roles,(role)=>{
+          roleCount[role.id] =this.OrganizationService.getRoleCount(role.name);
+            })
+
+            this.countedRoles = roleCount;
+
+
+
 
         //getting all sectors
         this.sectors = this.$localStorage.sectors;
@@ -33,8 +42,7 @@ class LeftMenuController {
 
       //showing Organisations,events,projects initially
       this.showOrganisations();
-      this.showEvents();
-      this.showProjects();
+
     }
 
     // updating makers
@@ -87,6 +95,11 @@ class LeftMenuController {
             this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
         }
         this.$state.go('app.home.pins');
+    }
+
+    //showing number of organisions per role
+    showRoleCount(roleName){
+    return this.OrganizationService.getRoleCount(roleName);
     }
 
     $onInit() {}

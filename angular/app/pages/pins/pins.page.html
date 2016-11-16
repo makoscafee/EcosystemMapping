@@ -2,13 +2,13 @@
     <div class="Details__body">
         <section class="Details__body-side_bar">
             <ul class="Details__options-list">
-                <li class="Details__options-list__item" ng-repeat="role in vm.roles track by $index">
-                    <div class="Media">
+                <li class="Details__options-list__item" ng-model = "vm.countedRoles" ng-repeat="role in vm.roles track by $index">
+                    <div class="Media" ng-model = "vm.roleCount">
                         <div class="Media__body Media u-flex-center--v">
                             <div>{{role.name}}</div>
                             <div class="Media__side Media__side--right">
-                              <md-chip>(12)</md-chip>
-                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setRoleArray(role.id)" ng-model="isChecked"></md-checkbox>
+                              <md-chip>({{vm.countedRoles[role.id]}})</md-chip>
+                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setRoleArray(role.id)" ng-model="vm.isRoleChecked[role.id]"  ></md-checkbox>
                             </div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                         <div class="Media__body Media u-flex-center--v">
                             <div>{{sector.name}}</div>
                             <div class="Media__side Media__side--right">
-                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="isChecked"></md-checkbox>
+                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="vm.isSectorChecked[sector.id]"></md-checkbox>
                             </div>
                         </div>
                     </div>
