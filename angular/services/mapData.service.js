@@ -31,8 +31,15 @@ export class MapDataService{
                 var marker = {
                   lat: parseFloat(location.lat),
                   lng: parseFloat(location.long),
-                 icon: 'fa-star',
-                  message:'Iam an event'
+                  message:'Iam an event',
+                  icon: {
+                           iconUrl: 'img/icons/calendar.png',
+                           shadowUrl: 'img/leaf-shadow.png',
+                           iconSize:     [38, 95],
+                           shadowSize:   [50, 64],
+                           iconAnchor:   [22, 94],
+                           shadowAnchor: [4, 62]
+                       }
 
                 }
                 markers.push(marker);

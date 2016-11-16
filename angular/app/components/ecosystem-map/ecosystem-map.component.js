@@ -16,29 +16,11 @@ class EcosystemMapController {
                     lng: 39.2376063,
                     zoom: 6
                 }
-                //getting org initially
-                this.SidemenuDataService.dataOrg().then((response)=>{
-                  var markers = [];
-                    this.$localStorage.organisations = response.data;
-                  //  preparing initial location information
-                    angular.forEach(this.$localStorage.organisations.data, (response)=> {
-                      angular.forEach(response.locations, (locations)=>{
-                        angular.forEach(locations, (location)=> {
-                          var marker = {
-                            lat: parseFloat(location.lat),
-                            lng: parseFloat(location.long)
-                          }
-                          markers.push(marker);
-                        })
-                      })
-                    });
-
-                          this.markers = markers;
-
-                });
-
+this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
 
     }
+
+
 
       // returns an array of selected org
     selectedOrganisations(){

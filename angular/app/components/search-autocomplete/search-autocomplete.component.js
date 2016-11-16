@@ -37,15 +37,8 @@ class SearchAutocompleteController {
 
     //getting organisations of a given ecosystem and
     //changing the state to home state
-    home(ecosystemId) {
-        this.DataService.setSelectedEcosystem(ecosystemId);
-        this.$localStorage.ecosystem = ecosystemId;
-        this.EcosystemService.getOrganisation(ecosystemId.id).then((response) => {
-            this.organisationData = response.data;
-            this.$log.log(this.organisationData);
-        });
+    home() {
         this.$state.go('app.home.pins');
-
     }
 
     createFilterFor(query) {
@@ -70,6 +63,16 @@ class SearchAutocompleteController {
         } else {
             return results;
         }
+    }
+
+    //getting all organizations of a selected ecosystem
+    selectedItemChange(ecosystemId){
+      this.DataService.setSelectedEcosystem(ecosystemId);
+      this.$localStorage.ecosystem = ecosystemId;
+      this.EcosystemService.getOrganisation(ecosystemId.id).then((response) => {
+          this.$localStorage.organisations = response.data;
+          this.$log.log(this.$localStorage.organisations);
+      });
     }
 
 

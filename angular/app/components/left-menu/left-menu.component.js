@@ -1,5 +1,5 @@
 class LeftMenuController {
-    constructor(SidemenuDataService, $log, EcosystemFilterService, EcosystemService, MapDataService, $localStorage) {
+    constructor(SidemenuDataService, $log, EcosystemFilterService, EcosystemService, MapDataService, $localStorage,$state) {
         'ngInject';
 
         //Initilizing the services
@@ -9,6 +9,7 @@ class LeftMenuController {
         this.MapDataService = MapDataService;
         this.$localStorage = $localStorage;
         this.$log = $log;
+        this.$state = $state;
 
         //marker icons
         this.eventIcon = {
@@ -19,6 +20,7 @@ class LeftMenuController {
                    shape: 'circle'
         }
 
+        this.$log.log("inside left-menu");
         //getting all roles
         this.roles = this.$localStorage.roles;
 
@@ -26,6 +28,13 @@ class LeftMenuController {
         this.sectors = this.$localStorage.sectors;
 
         this.orgLocation = this.MapDataService.checkedOrganisations();
+
+
+
+      //showing Organisations,events,projects initially
+      this.showOrganisations();
+      this.showEvents();
+      this.showProjects();
     }
 
     // updating makers
@@ -49,37 +58,22 @@ class LeftMenuController {
     // show events
     showEvents() {
 
-        let test = this.MapDataService.createEventMarkers(this.SidemenuDataService.getMapData());
-
-        if (test.markers.length > 0) {
-            this.markers = test.markers;
-            this.events = test.events;
-            this.$log.log(this.markers);
-
-        } else {
             let data = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
             this.markers = data.markers;
             this.events = data.events;
-        }
+            this.$state.go('app.home.events');
+
+
     }
 
     // show projects
     showProjects() {
 
-        let test = this.MapDataService.createProjectMarkers(this.SidemenuDataService.getMapData());
-
-        if (test.markers.length > 0) {
-            this.$log.log("if block executing in projects");
-            this.markers = test.markers;
-            this.events = test.events;
-            this.$log.log(this.markers);
-
-        } else {
-            this.$log.log("now else block is touched in project");
-            let data = this.MapDataService.createEventMarkers(this.$localStorage.organisations.data);
+            let data = this.MapDataService.createProjectMarkers(this.$localStorage.organisations.data);
             this.markers = data.markers;
             this.events = data.events;
-        }
+            this.$state.go('app.home.projects');
+
     }
 
     // show all organisations
@@ -92,7 +86,7 @@ class LeftMenuController {
         } else {
             this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
         }
-
+        this.$state.go('app.home.pins');
     }
 
     $onInit() {}
