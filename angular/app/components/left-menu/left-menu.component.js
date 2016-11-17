@@ -18,6 +18,13 @@ class LeftMenuController {
           this.isRoleChecked = {};
           this.isSectorChecked = {};
 
+          //intersection
+          let a = new Set([1,2,3]);
+          let b = new Set([4,3,2]);
+          let intersection = new Set(
+        [1,2,3].filter(x => b.has(x)));
+        this.$log.log("intersection");
+        this.$log.log(intersection);
 
         //getting all roles
         this.roles = this.$localStorage.roles;

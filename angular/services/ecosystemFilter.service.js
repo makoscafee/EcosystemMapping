@@ -30,7 +30,9 @@ export class EcosystemFilterService {
             roleResult;
 
         //using angular forEach to filter organisations
-        if (myData.sector.length > 0 || myData.role.length > 0) {
+        let sectorLength = myData.sector.length > 0;
+        let roleLength = myData.role.length > 0;
+        if ((sectorLength && !roleLength) || (!sectorLength && roleLength)) {
             angular.forEach(allOrganisations.data, function(value) {
 
                 try {
@@ -48,7 +50,59 @@ export class EcosystemFilterService {
                 }
 
             });
-        } else {
+        }
+        else if (sectorLength && roleLength) {
+          // creating array of organisation id's by roles
+          let roleOrgId = [];
+          let sectorOrgId = [];
+          angular.forEach(allOrganisations.data,(org)=>{
+          try{
+          let  roleInfo = myData.role.indexOf(org.roles.data[0].id);
+            if(roleInfo > -1){
+              roleOrgId.push(org.id);
+            }
+            this.$log.log("no stress role");
+          }
+            catch(e){
+              this.$log.log("missing role");
+              this.$log.log(e);
+            }
+
+          });
+
+          // for sectors
+          angular.forEach(allOrganisations.data,(org)=>{
+            try{
+              let sectorInfo = myData.sector.indexOf(org.sectors.data[0].id);
+              if(sectorInfo > -1){
+                  sectorOrgId.push(org.id);
+              }
+              this.$log.log("no stress sector");
+            }
+              catch(e){
+                this.$log.log("missing sector");
+
+            }
+          });
+
+          //find the intersecting organisations
+          let foundOrg = []
+          let intersectingOrg = this.getIntersecting(sectorOrgId,roleOrgId);
+          angular.forEach(allOrganisations.data,(org) =>{
+            if(org.roles.length !== 0 && org.sectors.length !== 0){
+              if(intersectingOrg.indexOf(org.id) > -1){
+                foundOrg.push(org);
+            }
+            }
+            else {
+              this.$log.log("missing info in new Logic");
+            }
+          });
+
+          filteredData = foundOrg;
+
+        }
+         else {
 
             filteredData = allOrganisations.data;
         }
@@ -62,5 +116,18 @@ export class EcosystemFilterService {
     getFilteredOrg() {
         return this.checkedOrg;
     }
+
+      //getting intersecting values from two arrays
+      getIntersecting(arrayA,arrayB){
+        let values = [];
+        let setA = new Set(arrayA);
+        let intersectingValues = new Set(arrayB.filter(x => setA.has(x)));
+
+        for(let x of intersectingValues){
+            values.push(x);
+        }
+
+        return values;
+      }
 
 }
