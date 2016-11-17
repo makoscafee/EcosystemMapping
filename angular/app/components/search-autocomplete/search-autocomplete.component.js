@@ -38,7 +38,8 @@ class SearchAutocompleteController {
     //getting organisations of a given ecosystem and
     //changing the state to home state
     home() {
-        this.$state.go('app.home.pins');
+      let ecosystemId = this.$localStorage.ecosystem;
+        this.$state.go('app.home.pins',{id: ecosystemId.id});
     }
 
     createFilterFor(query) {

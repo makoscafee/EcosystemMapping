@@ -38,7 +38,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
         })
         .state('app.home', {
-            abstract: true,
+            url: '/home/:id',
             views: {
                 'main@': {
                     templateUrl: getView('home')
