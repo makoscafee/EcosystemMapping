@@ -2,7 +2,7 @@
   <div class="Details__body">
     <section class="Details__body-side_bar mycolor" >
       <h1>Projects</h2>
-      <md-card class= "red lighten-5" ng-repeat="event in vm.events">
+      <md-card class= "red lighten-5" ng-repeat="event in vm.events | orderBy : 'start_date.date'">
          <md-card-content layout="row" layout-align="space-around">
            <div flex="45">
               <img  src="http://math.mercyhurst.edu/~satwater/images/projects.jpg" class="md-card-image" alt="image caption">
@@ -17,7 +17,7 @@
              <i class="ion-ios-location"></i><p>location</p>
            </div>
            <div>
-             <i class="ion-ios-clock"></i><p>Duration</p>
+             <i class="ion-ios-clock"></i><p>{{event.start_date.date}}</p>
 
            </div>
          </md-card-actions>
