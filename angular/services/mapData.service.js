@@ -1,50 +1,72 @@
 export class MapDataService{
-    constructor(SidemenuDataService,$log,$localStorage){
+    constructor(SidemenuDataService,$log,$localStorage,$rootScope){
         'ngInject';
 
         //
         this.SidemenuDataService = SidemenuDataService;
         this.$localStorage = $localStorage;
+        this.$rootScope = $rootScope;
         this.$log = $log;
+
+        this.markerIcons ={
+          startup:{
+            iconUrl: 'img/icons/startup.png',
+             iconSize:     [25, 41]
+          },
+          coworkingSpaces:{
+            iconUrl: 'img/icons/coworking.png',
+             iconSize:     [25, 41]
+          },
+          fundingAgencies:{
+            iconUrl: 'img/icons/investor.png',
+             iconSize:     [25, 41]
+          },
+          randD:{
+            iconUrl: 'img/icons/incubator.png',
+             iconSize:     [25, 41]
+          }
+        };
 
 
     }
       // displaying all the events
     createEventMarkers(holdEvents){
-
+        this.$rootScope.jaribu ={data:"Wow it works"};
       var markers = [];
       var evts = [];
       var eventMarkers = {markers:[],events:[]}
 
         //creating location information
         angular.forEach(holdEvents, (response)=> {
-
           if(response.events.data.length > 0){
             angular.forEach(response.events,(events)=>{
               angular.forEach(events,(event)=>{
                 evts.push(event);
+
+                  //creating markers
+                angular.forEach(response.locations, (locations)=>{
+                  angular.forEach(locations, (location)=> {
+                    var marker = {
+                      lat: parseFloat(location.lat),
+                      lng: parseFloat(location.long),
+                      getMessageScope: () =>{return this},
+                      message:'<div>' + event.name + '</div>',
+                      icon: {
+                               iconUrl: 'img/icons/event.png',
+                                iconSize:     [25, 41]
+
+                           }
+
+                    }
+                    markers.push(marker);
+                  })
+                })
+
+
               })
             });
 
-            angular.forEach(response.locations, (locations)=>{
-              angular.forEach(locations, (location)=> {
-                var marker = {
-                  lat: parseFloat(location.lat),
-                  lng: parseFloat(location.long),
-                  message:'Iam an event',
-                  icon: {
-                           iconUrl: 'img/icons/calendar.png',
-                           shadowUrl: 'img/leaf-shadow.png',
-                           iconSize:     [38, 95],
-                           shadowSize:   [50, 64],
-                           iconAnchor:   [22, 94],
-                           shadowAnchor: [4, 62]
-                       }
 
-                }
-                markers.push(marker);
-              })
-            })
           }
           else {
                 this.$log.log("no events");
@@ -62,6 +84,7 @@ export class MapDataService{
         //create markers
     createMarkers(data){
       let markers = [];
+      let role = {};
       //creating location information
       angular.forEach(data, (response)=> {
         angular.forEach(response.locations, (locations)=>{
@@ -69,9 +92,37 @@ export class MapDataService{
             var marker = {
               lat: parseFloat(location.lat),
               lng: parseFloat(location.long),
-              message:'Iam an Organisation'
-            }
-            markers.push(marker);
+              message:'Iam an Organisation',
+                  icon: {}
+                }
+                try{
+                  let roleName = response.roles.data[0].name;
+                  if(roleName == "R&D"){
+                      marker.icon = this.markerIcons.randD;
+                      markers.push(marker);
+                  }
+                  else if (roleName == "Funding Agencies" ) {
+                    marker.icon = this.markerIcons.fundingAgencies;
+                    markers.push(marker);
+                  }
+                  else if (roleName == "Startup") {
+                    marker.icon = this.markerIcons.startup;
+                    markers.push(marker);
+                  }
+                  else if (roleName == "Coworking Space") {
+                    marker.icon = this.markerIcons.coworkingSpaces;
+                    markers.push(marker);
+                  }
+                  else {
+                    this.$log.log("no such a role");
+                  }
+
+
+                }
+                catch(e){
+                  this.$log.log("no role info in this org");
+                }
+
           })
         })
       });

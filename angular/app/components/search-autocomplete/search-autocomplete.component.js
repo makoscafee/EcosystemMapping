@@ -16,6 +16,22 @@ class SearchAutocompleteController {
         this.simulateQuery = false;
         this.isDisabled = false;
         this.selectedItem = null;
+        this.markerIconsUrl ={
+          startup:{
+            iconUrl: 'img/icons/startup.png'
+          },
+          coworkingSpaces:{
+            iconUrl: 'img/icons/coworking.png'
+          },
+          fundingAgencies:{
+            iconUrl: 'img/icons/investor.png'
+          },
+          randD:{
+            iconUrl: 'img/icons/incubator.png'
+          }
+        };
+
+
 
         //getting ecosystems
         this.EcosystemService.getAll().then((response) => {
@@ -25,7 +41,44 @@ class SearchAutocompleteController {
 
         //getting all roles
       this.SidemenuDataService.roles().then((response)=>{
-        this.$localStorage.roles = response.data;
+
+        let collectedRoles=[];
+        angular.forEach(response.data,(roleData) => {
+        if(roleData.name == "R&D"){
+          let modifyRoles ={id:null,name:null,description:null,icon:null};
+          modifyRoles.id = roleData.id;
+          modifyRoles.name = roleData.name;
+          modifyRoles.description = roleData.description;
+          modifyRoles.icon = this.markerIconsUrl.randD.iconUrl;
+          collectedRoles.push(modifyRoles);
+        }
+        else if (roleData.name == "Funding Agencies") {
+          let modifyRoles ={id:null,name:null,description:null,icon:null};
+          modifyRoles.id = roleData.id;
+          modifyRoles.name = roleData.name;
+          modifyRoles.description = roleData.description;
+          modifyRoles.icon = this.markerIconsUrl.fundingAgencies.iconUrl;
+          collectedRoles.push(modifyRoles);
+        }
+        else if (roleData.name == "Startup") {
+          let modifyRoles ={id:null,name:null,description:null,icon:null};
+          modifyRoles.id = roleData.id;
+          modifyRoles.name = roleData.name;
+          modifyRoles.description = roleData.description;
+          modifyRoles.icon = this.markerIconsUrl.startup.iconUrl;
+          collectedRoles.push(modifyRoles);
+        }
+        else if (roleData.name == "Coworking Space") {
+          let modifyRoles ={id:null,name:null,description:null,icon:null};
+          modifyRoles.id = roleData.id;
+          modifyRoles.name = roleData.name;
+          modifyRoles.description = roleData.description;
+          modifyRoles.icon = this.markerIconsUrl.coworkingSpaces.iconUrl;
+          collectedRoles.push(modifyRoles);
+        }
+      });
+        this.$localStorage.roles = collectedRoles;
+        this.$log.log(this.$localStorage.roles);
       });
 
           //getting all sectors

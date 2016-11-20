@@ -1,3 +1,4 @@
+import {MessageComponent} from './app/components/message/message.component';
 import {CreateOrganisationComponent} from './app/components/create-organisation/create-organisation.component';
 import {HomeViewComponent} from './app/components/home-view/home-view.component';
 import {EcosystemMapComponent} from './app/components/ecosystem-map/ecosystem-map.component';
@@ -13,6 +14,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('message', MessageComponent)
 	.component('createOrganisation', CreateOrganisationComponent)
 	.component('homeView', HomeViewComponent)
 	.component('ecosystemMap', EcosystemMapComponent)

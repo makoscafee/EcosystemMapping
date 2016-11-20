@@ -2,10 +2,10 @@
     <div class="Details__body">
         <section class="Details__body-side_bar">
             <ul class="Details__options-list">
-                <li class="Details__options-list__item" ng-model = "vm.countedRoles" ng-repeat="role in vm.roles track by $index">
+                <li class="Details__options-list__item" ng-model = "vm.countedRoles" ng-repeat="role in vm.roles track by $index" >
                     <div class="Media" ng-model = "vm.roleCount">
                         <div class="Media__body Media u-flex-center--v">
-                            <div>{{role.name}}</div>
+                            <div><img class="role-icon" ng-src="{{role.icon}}" ></img> {{role.name}}</div>
                             <div class="Media__side Media__side--right">
                               <md-chip>({{vm.countedRoles[role.id]}})</md-chip>
                               <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setRoleArray(role.id)" ng-model="vm.isRoleChecked[role.id]"  ></md-checkbox>
