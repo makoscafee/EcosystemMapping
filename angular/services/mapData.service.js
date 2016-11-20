@@ -24,6 +24,14 @@ export class MapDataService{
           randD:{
             iconUrl: 'img/icons/incubator.png',
              iconSize:     [25, 41]
+          },
+          event:{
+            iconUrl: 'img/icons/event.png',
+             iconSize:     [25, 41]
+          },
+          project:{
+            iconUrl: 'img/icons/accelerator.png',
+             iconSize:     [25, 41]
           }
         };
 
@@ -31,7 +39,6 @@ export class MapDataService{
     }
       // displaying all the events
     createEventMarkers(holdEvents){
-        this.$rootScope.jaribu ={data:"Wow it works"};
       var markers = [];
       var evts = [];
       var eventMarkers = {markers:[],events:[]}
@@ -51,13 +58,10 @@ export class MapDataService{
                       lng: parseFloat(location.long),
                       getMessageScope: () =>{return this},
                       message:'<div>' + event.name + '</div>',
-                      icon: {
-                               iconUrl: 'img/icons/event.png',
-                                iconSize:     [25, 41]
-
-                           }
+                      icon: {}
 
                     }
+                    marker.icon = this.markerIcons.event;
                     markers.push(marker);
                   })
                 })
@@ -153,8 +157,10 @@ export class MapDataService{
                         var marker = {
                           lat: parseFloat(location.lat),
                           lng: parseFloat(location.long),
-                          message:'Iam a project'
+                          message:'Iam a project',
+                          icon:{}
                         }
+                        marker.icon = this.markerIcons.project;
                         markers.push(marker);
                       })
                     })
