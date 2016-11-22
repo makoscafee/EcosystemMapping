@@ -3,7 +3,10 @@ class MessageController{
         'ngInject';
 
         //
-        this.data = {}
+
+    }
+    click(){
+      this.$log.log("click function works");
     }
 
     $onInit(){
@@ -15,6 +18,6 @@ export const MessageComponent = {
     controller: MessageController,
     controllerAs: 'vm',
     bindings: {
-      data: '<'
+
     }
 }

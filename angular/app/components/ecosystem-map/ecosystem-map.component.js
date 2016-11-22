@@ -18,6 +18,7 @@ class EcosystemMapController {
                 }
 this.markers = this.MapDataService.createMarkers(this.$localStorage.organisations.data);
 
+
     }
 
 

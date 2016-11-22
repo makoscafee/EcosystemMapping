@@ -1,12 +1,13 @@
 export class MapDataService{
-    constructor(SidemenuDataService,$log,$localStorage,$rootScope){
+    constructor(SidemenuDataService,$log,$localStorage,$compile){
         'ngInject';
 
         //
         this.SidemenuDataService = SidemenuDataService;
         this.$localStorage = $localStorage;
-        this.$rootScope = $rootScope;
+        this.$compile = $compile;
         this.$log = $log;
+
 
         this.markerIcons ={
           startup:{
@@ -43,6 +44,8 @@ export class MapDataService{
       var evts = [];
       var eventMarkers = {markers:[],events:[]}
 
+      var divTemplate = '<div><h1>Events name</h1><p>Events description</p><a ng-click="click()">click me</a></div>';
+
         //creating location information
         angular.forEach(holdEvents, (response)=> {
           if(response.events.data.length > 0){
@@ -56,8 +59,8 @@ export class MapDataService{
                     var marker = {
                       lat: parseFloat(location.lat),
                       lng: parseFloat(location.long),
-                      getMessageScope: () =>{return this},
-                      message:'<div>' + event.name + '</div>',
+                      getMessageScope: function(){ return this},
+                      message:divTemplate,
                       icon: {}
 
                     }
@@ -133,6 +136,11 @@ export class MapDataService{
 
 
             return markers;
+    }
+
+
+    click(){
+      this.$log.log("click function works");
     }
 
       //creating markers for Projects
