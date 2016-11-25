@@ -61,6 +61,14 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('app.home.events.details', {
+            url: '/details',
+            views: {
+                'details': {
+                    templateUrl: getView('details')
+                }
+            }
+        })
         .state('app.home.projects', {
             url: '/projects',
             views: {

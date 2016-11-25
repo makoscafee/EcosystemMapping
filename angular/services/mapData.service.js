@@ -44,7 +44,7 @@ export class MapDataService{
       var evts = [];
       var eventMarkers = {markers:[],events:[]}
 
-      var divTemplate = '<div><h1>Events name</h1><p>Events description</p><a ng-click="click()">click me</a></div>';
+      var divTemplate = '<message></message>';
 
         //creating location information
         angular.forEach(holdEvents, (response)=> {
@@ -59,7 +59,6 @@ export class MapDataService{
                     var marker = {
                       lat: parseFloat(location.lat),
                       lng: parseFloat(location.long),
-                      getMessageScope: function(){ return this},
                       message:divTemplate,
                       icon: {}
 

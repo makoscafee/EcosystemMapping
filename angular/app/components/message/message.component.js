@@ -5,8 +5,8 @@ class MessageController{
         //
 
     }
-    click(){
-      this.$log.log("click function works");
+    say(){
+      this.$log.log("say function works");
     }
 
     $onInit(){
