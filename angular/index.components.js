@@ -1,3 +1,5 @@
+import {MarkerDetailsComponent} from './app/components/marker-details/marker-details.component';
+import {InfoWindowComponent} from './app/components/info-window/info-window.component';
 import {AppHomeComponent} from './app/components/app-home/app-home.component';
 import {EcosystemMapComponent} from './app/components/ecosystem-map/ecosystem-map.component';
 import {SearchAutocompleteComponent} from './app/components/search-autocomplete/search-autocomplete.component';
@@ -12,6 +14,8 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('markerDetails', MarkerDetailsComponent)
+	.component('infoWindow', InfoWindowComponent)
 	.component('appHome', AppHomeComponent)
 	.component('ecosystemMap', EcosystemMapComponent)
 	.component('searchAutocomplete', SearchAutocompleteComponent)

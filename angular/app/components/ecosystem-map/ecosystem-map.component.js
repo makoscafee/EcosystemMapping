@@ -1,14 +1,16 @@
 class EcosystemMapController {
-    constructor(MapDataService, $log, _, $rootScope) {
+    constructor(MapDataService, $log, _, $rootScope,$scope) {
         'ngInject';
         this.$log = $log;
         this.MapDataService = MapDataService;
+        this.$scope = $scope;
         this.ecosystemMap = {};
         this.ecosystemMap.center = {
             lat: -6.1630,
             lng: 35.7516,
             zoom: 6
         };
+
         this.$rootScope = $rootScope;
         var consol = this.$log;
         var foramt = this.formatLocationInformation;
@@ -25,10 +27,17 @@ class EcosystemMapController {
         _.map(data, (value) => {
             angular.forEach(value, (response) => {
                 if (response) {
+                    var scope = this.$scope;
                     angular.forEach(response.locations.data, (locationData) => {
                         var locationInfo = {
                             lat: parseFloat(locationData.lat),
-                            lng: parseFloat(locationData.lng)
+                            lng: parseFloat(locationData.lng),
+                            message: '<info-window></info-window>',
+                            getMessageScope: function() {
+                              var infowindowScope = scope.$new(true);
+                              infowindowScope.data = response;
+                              return infowindowScope;
+                            },
                         }
                         markers.push(locationInfo);
                     });
@@ -51,5 +60,5 @@ export const EcosystemMapComponent = {
     templateUrl: './views/app/components/ecosystem-map/ecosystem-map.component.html',
     controller: EcosystemMapController,
     controllerAs: 'vm',
-    bindings: {}
+    bindings: {},
 }
