@@ -61,14 +61,11 @@ export class MapDataService{
                       lng: parseFloat(location.long),
                       message:divTemplate,
                       icon: {}
-
                     }
                     marker.icon = this.markerIcons.event;
                     markers.push(marker);
                   })
                 })
-
-
               })
             });
 
