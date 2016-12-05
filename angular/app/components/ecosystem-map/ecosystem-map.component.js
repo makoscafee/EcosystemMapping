@@ -21,6 +21,8 @@ this.markers = this.MapDataService.createMarkers(this.$localStorage.organisation
 
     }
 
+    
+
 
 
       // returns an array of selected org

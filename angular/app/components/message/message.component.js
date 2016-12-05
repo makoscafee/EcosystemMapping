@@ -1,13 +1,20 @@
 class MessageController{
-    constructor(){
+    constructor($scope,$log,$state,$localStorage){
         'ngInject';
 
         //
+        this.$scope = $scope;
+        this.$log = $log;
+        this.$state = $state;
+        this.$localStorage = $localStorage;
+        this.myMarkerData = this.$scope.$parent.data;
+
 
     }
-    say(){
-      this.$log.log("say function works");
-    }
+    getClicked() {
+    this.$log.log("this is clicked");
+    this.$state.go('app.home.events.details', {detailId: this.myMarkerData.id});
+  }
 
     $onInit(){
     }

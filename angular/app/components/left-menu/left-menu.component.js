@@ -1,6 +1,7 @@
 class LeftMenuController {
     constructor(SidemenuDataService, $log, EcosystemFilterService,
-       EcosystemService, MapDataService, $localStorage,$state,OrganizationService,$rootScope,$scope) {
+       EcosystemService, MapDataService, $localStorage,$state,
+       OrganizationService,$rootScope,$scope,$stateParams) {
         'ngInject';
 
         //Initilizing the services
@@ -14,11 +15,14 @@ class LeftMenuController {
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
+        this.$stateParams = $stateParams;
+        this.id = this.$stateParams.detailId;
 
 
           //global variable
           this.isRoleChecked = {};
           this.isSectorChecked = {};
+          this.scopeData = this.$localStorage.scopeEvent;
           this.markerIcons ={
             startup:{
               iconUrl: 'img/icons/startup.png',
@@ -72,6 +76,11 @@ class LeftMenuController {
       //showing Organisations,events,projects initially
       this.showOrganisations();
 
+
+
+
+
+
     }
 
     // updating makers
@@ -102,6 +111,8 @@ class LeftMenuController {
             var eventMarkers = {markers:[],events:[]}
 
             var divTemplate = '<message></message>';
+            var link = "#/home/5/events/details";
+
 
               //creating location information
               angular.forEach(this.$localStorage.organisations.data, (response)=> {
@@ -116,10 +127,12 @@ class LeftMenuController {
                           var marker = {
                             lat: parseFloat(location.lat),
                             lng: parseFloat(location.long),
-                            getMessageScope: function() {
-                             return scope;
-                           },
-                            message:divTemplate,
+                            getMessageScope: function () {
+                                            var infowindowScope = scope.$new(true);
+                                            infowindowScope.data = event;
+                                            return infowindowScope;
+                                        },
+                            message:'<message></message>',
                             icon: {}
                           }
                           marker.icon = this.markerIcons.event;
