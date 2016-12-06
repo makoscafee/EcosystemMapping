@@ -1,14 +1,14 @@
 class MessageController{
-    constructor($scope,$log,$state){
+    constructor($scope,$log,$state,DataService){
         'ngInject';
 
         //
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
+        this.DataService = DataService;
         this.myMarkerData = this.$scope.$parent.data;
-        this.$log.log("an event marker is clicked");
-        this.$log.log(this.myMarkerData);
+        this.DataService.setEventFromMarker(this.myMarkerData);
 
 
     }
