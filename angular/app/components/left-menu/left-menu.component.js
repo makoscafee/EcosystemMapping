@@ -118,22 +118,28 @@ class LeftMenuController {
                     angular.forEach(events,(event)=>{
                       evts.push(event);
 
+
                         //creating markers
-                        let location = response.locations.data[0];
-                        this.$log.log(location);
-                        var marker = {
-                          lat: parseFloat(location.lat),
-                          lng: parseFloat(location.long),
-                          getMessageScope: function () {
-                                          var infowindowScope = scope.$new(true);
-                                          infowindowScope.data = event;
-                                          return infowindowScope;
-                                      },
-                          message:'<message></message>',
-                          icon: {}
-                        }
-                        marker.icon = this.markerIcons.event;
-                        markers.push(marker);
+                          angular.forEach(response.locations,(locations)=>{
+                            angular.forEach(locations,(location)=>{
+                              this.$log.log(location);
+                              var marker = {
+                                lat: parseFloat(location.lat),
+                                lng: parseFloat(location.long),
+                                getMessageScope: function () {
+                                                var infowindowScope = scope.$new(true);
+                                                infowindowScope.data = event;
+                                                return infowindowScope;
+                                            },
+                                message:'<message></message>',
+                                icon: {}
+                              }
+                              marker.icon = this.markerIcons.event;
+                              markers.push(marker);
+                              this.$log.log(event);
+                            })
+                          })
+
                     })
                   });
 

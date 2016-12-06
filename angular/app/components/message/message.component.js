@@ -1,13 +1,14 @@
 class MessageController{
-    constructor($scope,$log,$state,$localStorage){
+    constructor($scope,$log,$state){
         'ngInject';
 
         //
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
-        this.$localStorage = $localStorage;
         this.myMarkerData = this.$scope.$parent.data;
+        this.$log.log("an event marker is clicked");
+        this.$log.log(this.myMarkerData);
 
 
     }
