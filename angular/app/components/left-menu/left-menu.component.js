@@ -1,7 +1,7 @@
 class LeftMenuController {
     constructor(SidemenuDataService, $log, EcosystemFilterService,
        EcosystemService, MapDataService, $localStorage,$state,
-       OrganizationService,$rootScope,$scope,$stateParams) {
+       OrganizationService,$rootScope,$scope) {
         'ngInject';
 
         //Initilizing the services
@@ -15,14 +15,11 @@ class LeftMenuController {
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
-        this.$stateParams = $stateParams;
-        this.id = this.$stateParams.detailId;
 
 
           //global variable
           this.isRoleChecked = {};
           this.isSectorChecked = {};
-          this.scopeData = this.$localStorage.scopeEvent;
           this.markerIcons ={
             startup:{
               iconUrl: 'img/icons/startup.png',
@@ -116,36 +113,34 @@ class LeftMenuController {
 
               //creating location information
               angular.forEach(this.$localStorage.organisations.data, (response)=> {
-                if(response.events.data.length > 0){
+                if(response.events.data.length > 0 && response.locations.data.length > 0){
                   angular.forEach(response.events,(events)=>{
                     angular.forEach(events,(event)=>{
                       evts.push(event);
 
                         //creating markers
-                      angular.forEach(response.locations, (locations)=>{
-                        angular.forEach(locations, (location)=> {
-                          var marker = {
-                            lat: parseFloat(location.lat),
-                            lng: parseFloat(location.long),
-                            getMessageScope: function () {
-                                            var infowindowScope = scope.$new(true);
-                                            infowindowScope.data = event;
-                                            return infowindowScope;
-                                        },
-                            message:'<message></message>',
-                            icon: {}
-                          }
-                          marker.icon = this.markerIcons.event;
-                          markers.push(marker);
-                        })
-                      })
+                        let location = response.locations.data[0];
+                        this.$log.log(location);
+                        var marker = {
+                          lat: parseFloat(location.lat),
+                          lng: parseFloat(location.long),
+                          getMessageScope: function () {
+                                          var infowindowScope = scope.$new(true);
+                                          infowindowScope.data = event;
+                                          return infowindowScope;
+                                      },
+                          message:'<message></message>',
+                          icon: {}
+                        }
+                        marker.icon = this.markerIcons.event;
+                        markers.push(marker);
                     })
                   });
 
 
                 }
                 else {
-                      this.$log.log("no events");
+                      this.$log.log("no events or locations");
                 }
 
               });
@@ -157,7 +152,7 @@ class LeftMenuController {
               let data = eventMarkers;
             this.markers = data.markers;
             this.events = data.events;
-            this.$state.go('app.home.events');
+            this.$state.go('app.home.events.all');
 
 
     }

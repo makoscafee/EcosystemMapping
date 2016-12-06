@@ -3,7 +3,7 @@
     <section class="Details__body-side_bar mycolor" >
 
       <h1>Events</h2>
-        <div ui-view="details">
+        <div>
           <md-card class= "red lighten-5" ng-repeat="event in vm.events | orderBy : 'start_date.date'">
              <md-card-content layout="row" layout-align="space-around">
                <div flex="45">
@@ -27,9 +27,7 @@
                </div>
              </md-card-actions>
             </md-card>
-        </div>
-
-
+          </div>
     </section>
-  </div>
+</div>
 </section>

@@ -12,8 +12,7 @@ class MessageController{
 
     }
     getClicked() {
-    this.$log.log("this is clicked");
-    this.$state.go('app.home.events.details', {detailId: this.myMarkerData.id});
+    this.$state.go('app.home.events.details');
   }
 
     $onInit(){

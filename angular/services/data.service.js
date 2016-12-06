@@ -2,7 +2,7 @@ export class DataService{
     constructor(){
         'ngInject';
 
-        
+
         this.selectedEcosystem = null;
         this.markerIconsUrl ={
           startup:{
@@ -27,5 +27,8 @@ export class DataService{
     //returns selected Ecosystem
   getSelectedEcosystem(){
     return this.selectedEcosystem;
+  }
+  setEvent(info){
+    this.eventSet = info
   }
 }

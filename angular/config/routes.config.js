@@ -57,6 +57,14 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             url: '/events',
             views: {
                 'side': {
+                    templateUrl: getView('event-view')
+                }
+            }
+        })
+        .state('app.home.events.all', {
+            url: '/all',
+            views: {
+                'details': {
                     templateUrl: getView('events')
                 }
             }
