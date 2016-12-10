@@ -1,3 +1,6 @@
+import {OrganisationMsgComponent} from './app/components/organisation-msg/organisation-msg.component';
+import {ProjectDetailsComponent} from './app/components/project-details/project-details.component';
+import {ProjectMsgComponent} from './app/components/project-msg/project-msg.component';
 import {MessageDetailsComponent} from './app/components/message-details/message-details.component';
 import {MessageComponent} from './app/components/message/message.component';
 import {CreateOrganisationComponent} from './app/components/create-organisation/create-organisation.component';
@@ -15,6 +18,9 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('organisationMsg', OrganisationMsgComponent)
+	.component('projectDetails', ProjectDetailsComponent)
+	.component('projectMsg', ProjectMsgComponent)
 	.component('messageDetails', MessageDetailsComponent)
 	.component('message', MessageComponent)
 	.component('createOrganisation', CreateOrganisationComponent)

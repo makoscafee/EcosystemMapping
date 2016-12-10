@@ -81,7 +81,23 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             url: '/projects',
             views: {
                 'side': {
+                    templateUrl: getView('project-view')
+                }
+            }
+        })
+        .state('app.home.projects.all', {
+            url: '/all',
+            views: {
+                'projects': {
                     templateUrl: getView('projects')
+                }
+            }
+        })
+        .state('app.home.projects.details', {
+            url: '/details',
+            views: {
+                'projects': {
+                    templateUrl: getView('project-d')
                 }
             }
         })

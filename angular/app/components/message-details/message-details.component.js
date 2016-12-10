@@ -1,13 +1,19 @@
 class MessageDetailsController{
-    constructor($scope,$log,DataService){
+    constructor($scope,$log,DataService,$state){
         'ngInject';
 
         //
         this.$scope = $scope;
         this.$log = $log;
+        this.$state = $state;
         this.DataService = DataService;
         this.scopeData = this.DataService.getEventFromMarkers();
 
+    }
+
+
+    back(){
+      this.$state.go('app.home.events.all');
     }
 
     $onInit(){
