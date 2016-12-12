@@ -71,13 +71,67 @@ class LeftMenuController {
 
 
       //showing Organisations,events,projects initially
-    //  this.showOrganisations();
+      this.showOrganisations();
 
     }
 
     // updating makers
     selectedOrganisations() {
-        this.markers = this.MapDataService.createMarkers(this.SidemenuDataService.getMapData());
+
+        var data = this.SidemenuDataService.getMapData();
+        var scope = this.$scope;
+        let markers = [];
+        let role = {};
+        //creating location information
+        angular.forEach(data, (response)=> {
+          angular.forEach(response.locations, (locations)=>{
+            angular.forEach(locations, (location)=> {
+              var marker = {
+                lat: parseFloat(location.lat),
+                lng: parseFloat(location.long),
+                getMessageScope: function () {
+                                var infowindowScope = scope.$new(true);
+                                infowindowScope.data = response;
+                                return infowindowScope;
+                            },
+                message:'<organisation-msg></organisatio-msg>',
+                    icon: {}
+                  }
+                  try{
+                    let roleName = response.roles.data[0].name;
+                    if(roleName == "R&D"){
+                        marker.icon = this.markerIcons.randD;
+                        markers.push(marker);
+                    }
+                    else if (roleName == "Funding Agencies" ) {
+                      marker.icon = this.markerIcons.fundingAgencies;
+                      markers.push(marker);
+                    }
+                    else if (roleName == "Startup") {
+                      marker.icon = this.markerIcons.startup;
+                      markers.push(marker);
+                    }
+                    else if (roleName == "Coworking Space") {
+                      marker.icon = this.markerIcons.coworkingSpaces;
+                      markers.push(marker);
+                    }
+                    else {
+                      this.$log.log("no such a role");
+                    }
+
+
+                  }
+                  catch(e){
+                    this.$log.log("no role info in this org");
+                  }
+
+            })
+          })
+        });
+
+
+              this.markers = markers;
+
 
     }
 
