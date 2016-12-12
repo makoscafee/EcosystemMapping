@@ -95,7 +95,7 @@ export class MapDataService{
             var marker = {
               lat: parseFloat(location.lat),
               lng: parseFloat(location.long),
-              message:'Changed the marker message again',
+              message:'Ishould not see this',
                   icon: {}
                 }
                 try{

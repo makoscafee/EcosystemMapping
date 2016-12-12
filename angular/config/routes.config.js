@@ -49,7 +49,23 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             url: '/pins',
             views: {
                 'side': {
+                    templateUrl: getView('organisation-view')
+                }
+            }
+        })
+        .state('app.home.pins.all', {
+            url: '/all',
+            views: {
+                'organisation': {
                     templateUrl: getView('pins')
+                }
+            }
+        })
+        .state('app.home.pins.details', {
+            url: '/details',
+            views: {
+                'organisation': {
+                    templateUrl: getView('organisation-d')
                 }
             }
         })

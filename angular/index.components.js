@@ -1,3 +1,4 @@
+import {OrganisationDetailsComponent} from './app/components/organisation-details/organisation-details.component';
 import {OrganisationMsgComponent} from './app/components/organisation-msg/organisation-msg.component';
 import {ProjectDetailsComponent} from './app/components/project-details/project-details.component';
 import {ProjectMsgComponent} from './app/components/project-msg/project-msg.component';
@@ -18,6 +19,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('organisationDetails', OrganisationDetailsComponent)
 	.component('organisationMsg', OrganisationMsgComponent)
 	.component('projectDetails', ProjectDetailsComponent)
 	.component('projectMsg', ProjectMsgComponent)

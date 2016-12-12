@@ -146,7 +146,7 @@ class LeftMenuController {
 
     // show projects
     showProjects() {
-this.$state.go('app.home.projects.all');
+      this.$state.go('app.home.projects.all');
 
       var scope = this.$scope;
       var markers = [];
@@ -199,72 +199,74 @@ this.$state.go('app.home.projects.all');
     }
 
     // show all organisations
-    showOrganisations() {
-        // this.$state.go('app.home.pins');
-        //
-        //
-        // let valueHolder = this.MapDataService.checkedOrganisations();
-        //
-        // if (valueHolder.length > 0) {
-        //     this.markers = valueHolder;
-        // } else {
-        //
-        //     let markers = [];
-        //     let role = {};
-        //     //creating location information
-        //     angular.forEach(this.$localStorage.organisations.data, (response)=> {
-        //       angular.forEach(response.locations, (locations)=>{
-        //         angular.forEach(locations, (location)=> {
-        //           var marker = {
-        //             lat: parseFloat(location.lat),
-        //             lng: parseFloat(location.long),
-        //             message:'this will not be displayed',
-        //                 icon: {}
-        //               }
-        //               try{
-        //                 let roleName = response.roles.data[0].name;
-        //                 if(roleName == "R&D"){
-        //                     marker.icon = this.markerIcons.randD;
-        //                     markers.push(marker);
-        //                 }
-        //                 else if (roleName == "Funding Agencies" ) {
-        //                   marker.icon = this.markerIcons.fundingAgencies;
-        //                   markers.push(marker);
-        //                 }
-        //                 else if (roleName == "Startup") {
-        //                   marker.icon = this.markerIcons.startup;
-        //                   markers.push(marker);
-        //                 }
-        //                 else if (roleName == "Coworking Space") {
-        //                   marker.icon = this.markerIcons.coworkingSpaces;
-        //                   markers.push(marker);
-        //                 }
-        //                 else {
-        //                   this.$log.log("no such a role");
-        //                 }
-        //
-        //
-        //               }
-        //               catch(e){
-        //                 this.$log.log("no role info in this org");
-        //               }
-        //
-        //         })
-        //       })
-        //     });
-        //
-        //           this.markers = markers;
-        // }
-    }
+   showOrganisations() {
+        this.$state.go('app.home.pins.all');
+
+
+
+        let valueHolder = this.MapDataService.checkedOrganisations();
+
+        if (valueHolder.length > 0) {
+            this.markers = valueHolder;
+        } else {
+            var scope = this.$scope;
+            let markers = [];
+            let role = {};
+            //creating location information
+            angular.forEach(this.$localStorage.organisations.data, (response)=> {
+              angular.forEach(response.locations, (locations)=>{
+                angular.forEach(locations, (location)=> {
+                  var marker = {
+                    lat: parseFloat(location.lat),
+                    lng: parseFloat(location.long),
+                    getMessageScope: function () {
+                                    var infowindowScope = scope.$new(true);
+                                    infowindowScope.data = response;
+                                    return infowindowScope;
+                                },
+                    message:'<organisation-msg></organisation-msg>',
+                        icon: {}
+                      }
+                      try{
+                        let roleName = response.roles.data[0].name;
+                        if(roleName == "R&D"){
+                            marker.icon = this.markerIcons.randD;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Funding Agencies" ) {
+                          marker.icon = this.markerIcons.fundingAgencies;
+                          markers.push(marker);
+                        }
+                        else if (roleName == "Startup") {
+                          marker.icon = this.markerIcons.startup;
+                          markers.push(marker);
+                        }
+                        else if (roleName == "Coworking Space") {
+                          marker.icon = this.markerIcons.coworkingSpaces;
+                          markers.push(marker);
+                        }
+                        else {
+                          this.$log.log("no such a role");
+                        }
+
+
+                      }
+                      catch(e){
+                        this.$log.log("no role info in this org");
+                      }
+
+                })
+              })
+            });
+
+                  this.markers = markers;
+        }
+   }
 
     //showing number of organisions per role
     showRoleCount(roleName){
     return this.OrganizationService.getRoleCount(roleName);
     }
-
-
-    // displaying all the events
-
 
 
     $onInit() {}

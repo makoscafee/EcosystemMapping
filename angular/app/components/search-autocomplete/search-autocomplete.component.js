@@ -92,7 +92,7 @@ class SearchAutocompleteController {
     //changing the state to home state
     home() {
       let ecosystemId = this.$localStorage.ecosystem;
-        this.$state.go('app.home.pins',{id: ecosystemId.id});
+        this.$state.go('app.home.pins.all',{id: ecosystemId.id});
     }
 
     createFilterFor(query) {
