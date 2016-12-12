@@ -1,9 +1,17 @@
 class OrganisationDetailsController{
-    constructor($state){
+    constructor($state,$scope,$log,DataService){
         'ngInject';
 
         //
         this.$state = $state;
+        this.$scope = $scope;
+        this.DataService = DataService;
+        this.$log = $log;
+
+
+                this.menuOrganisation = this.DataService.getOrgFromMarkers();
+                this.$log.log("this is the  organision");
+                this.$log.log(this.menuOrganisation);
     }
 
     back(){

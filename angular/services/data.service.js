@@ -3,6 +3,8 @@ export class DataService{
         'ngInject';
 
         this.eventFromMarker={};
+        this.orgFromMarker={};
+        this.projFromMarker={};
         this.selectedEcosystem = null;
         this.markerIconsUrl ={
           startup:{
@@ -37,4 +39,19 @@ export class DataService{
   getEventFromMarkers(){
     return this.eventFromMarker;
   }
+
+  setOrgFromMarker(orgMarker){
+    this.orgFromMarker=orgMarker;
+  }
+  getOrgFromMarkers(){
+    return this.orgFromMarker;
+  }
+
+  setProjFromMarker(projMarker){
+    this.projFromMarker=projMarker;
+  }
+  getProjFromMarkers(){
+    return this.projFromMarker;
+  }
+
 }

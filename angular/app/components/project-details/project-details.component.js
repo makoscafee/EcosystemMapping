@@ -1,9 +1,12 @@
 class ProjectDetailsController{
-    constructor($state){
+    constructor($state,DataService){
         'ngInject';
 
         //
         this.$state = $state;
+        this.DataService = DataService;
+
+        this.mapProject = this.DataService.getProjFromMarkers();
     }
 
 

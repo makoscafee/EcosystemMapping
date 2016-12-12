@@ -1,15 +1,16 @@
 class OrganisationMsgController{
-    constructor($scope,$log,$state){
+    constructor($scope,$log,$state,DataService){
         'ngInject';
 
         //
         this.$scope = $scope;
         this.$state = $state;
+        this.DataService = DataService;
         this.$log = $log;
 
         this.mapOrganisation = this.$scope.$parent.data;
-        this.$log.log("this is the clicked organision");
-        this.$log.log(this.mapOrganisation);
+        this.DataService.setOrgFromMarker(this.mapOrganisation);
+
     }
 
     viewOrganisation(){
