@@ -16,7 +16,7 @@ class ProjectMsgController{
 
     projectDetails(){
 
-        this.$state.go('app.home.projects.details');
+        this.$state.go('app.home.projects.details',{projectId:this.myMarkerData.id});
     }
 
     $onInit(){

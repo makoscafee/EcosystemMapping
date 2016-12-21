@@ -86,7 +86,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
         })
         .state('app.home.events.details', {
-            url: '/details',
+            url: '/details/:eventId',
             views: {
                 'details': {
                     templateUrl: getView('details')
@@ -110,7 +110,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
         })
         .state('app.home.projects.details', {
-            url: '/details',
+            url: '/details/:projectId',
             views: {
                 'projects': {
                     templateUrl: getView('project-d')

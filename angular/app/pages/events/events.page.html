@@ -5,7 +5,7 @@
       <h1>Events</h2>
         <div>
           <md-card class= "red lighten-5" ng-repeat="event in vm.events | orderBy : 'start_date.date'">
-             <md-card-content layout="row" layout-align="space-around">
+             <md-card-content layout="row" layout-align="space-around" ng-click="vm.viewEvent(event)">
                <div flex="45">
                   <img  src="http://www.bodminroadchurch.com/wp-content/uploads/2015/04/Events.jpg" class="md-card-image" alt="image caption">
                </div>

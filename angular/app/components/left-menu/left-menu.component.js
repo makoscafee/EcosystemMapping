@@ -1,7 +1,7 @@
 class LeftMenuController {
     constructor(SidemenuDataService, $log, EcosystemFilterService,
        EcosystemService, MapDataService, $localStorage,$state,
-       OrganizationService,$rootScope,$scope) {
+       OrganizationService,$rootScope,$scope,DataService) {
         'ngInject';
 
         //Initilizing the services
@@ -12,12 +12,14 @@ class LeftMenuController {
         this.MapDataService = MapDataService;
         this.$localStorage = $localStorage;
         this.$rootScope = $rootScope;
+        this.DataService = DataService;
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
 
 
           //global variable
+          this.selectedEcosystem = this.$localStorage.ecosystem;
           this.isRoleChecked = {};
           this.isSectorChecked = {};
           this.markerIcons ={
@@ -258,7 +260,7 @@ class LeftMenuController {
 
 
 
-        let valueHolder = this.MapDataService.checkedOrganisations();
+        let valueHolder = this.makeMarkers(this.SidemenuDataService.getMapData());
 
         if (valueHolder.length > 0) {
             this.markers = valueHolder;
@@ -319,7 +321,74 @@ class LeftMenuController {
 
     //showing number of organisions per role
     showRoleCount(roleName){
-    return this.OrganizationService.getRoleCount(roleName);
+      return this.OrganizationService.getRoleCount(roleName);
+    }
+
+
+    makeMarkers(data){
+      let markers = [];
+      let role = {};
+      //creating location information
+      angular.forEach(data, (response)=> {
+        angular.forEach(response.locations, (locations)=>{
+          angular.forEach(locations, (location)=> {
+            var marker = {
+              lat: parseFloat(location.lat),
+              lng: parseFloat(location.long),
+              getMessageScope: function () {
+                              var infowindowScope = scope.$new(true);
+                              infowindowScope.data = response;
+                              return infowindowScope;
+                          },
+              message:'<organisation-msg></organisation-msg>',
+                  icon: {}
+                }
+                try{
+                  let roleName = response.roles.data[0].name;
+                  if(roleName == "R&D"){
+                      marker.icon = this.markerIcons.randD;
+                      markers.push(marker);
+                  }
+                  else if (roleName == "Funding Agencies" ) {
+                    marker.icon = this.markerIcons.fundingAgencies;
+                    markers.push(marker);
+                  }
+                  else if (roleName == "Startup") {
+                    marker.icon = this.markerIcons.startup;
+                    markers.push(marker);
+                  }
+                  else if (roleName == "Coworking Space") {
+                    marker.icon = this.markerIcons.coworkingSpaces;
+                    markers.push(marker);
+                  }
+                  else {
+                    this.$log.log("no such a role");
+                  }
+
+
+                }
+                catch(e){
+                  this.$log.log("no role info in this org");
+                }
+
+          })
+        })
+      });
+
+
+            return markers;
+    }
+
+
+    viewEvent(event){
+      this.DataService.setEventFromMarker(event);
+      this.$state.go('app.home.events.details',{eventId:event.id});
+
+    }
+    viewProject(project){
+      this.DataService.setProjFromMarker(project);
+      this.$state.go('app.home.projects.details',{projectId:project.id});
+
     }
 
 

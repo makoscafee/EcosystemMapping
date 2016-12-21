@@ -10,8 +10,11 @@
                     </ul>
                   </nav>
               </aside>
+              <div layout="column">
+                <div><h3>{{vm.selectedEcosystem.name}}</h3></div>
+                  <div ui-view="side"></div>
+              </div>
 
-              <div ui-view="side"></div>
 
 
           </div>

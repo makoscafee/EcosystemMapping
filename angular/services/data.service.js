@@ -3,6 +3,7 @@ export class DataService{
         'ngInject';
 
         this.eventFromMarker={};
+        this.ecosystem = {};
         this.orgFromMarker={};
         this.projFromMarker={};
         this.selectedEcosystem = null;
@@ -52,6 +53,13 @@ export class DataService{
   }
   getProjFromMarkers(){
     return this.projFromMarker;
+  }
+  setEcosystem(selectedEcosystem){
+    this.ecosystem = selectedEcosystem;
+  }
+
+  getEcosystem(){
+    return this.ecosystem;
   }
 
 }
