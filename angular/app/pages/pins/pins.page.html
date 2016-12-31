@@ -1,11 +1,11 @@
 <section class="Details">
     <div class="Details__body">
         <section class="Details__body-side_bar">
-            <ul class="Details__options-list">
-                <li class="Details__options-list__item" ng-model = "vm.countedRoles" ng-repeat="role in vm.roles track by $index" >
+            <ul class="List-menu" >
+                <li class=" List-item" ng-model = "vm.countedRoles" ng-repeat="role in vm.roles track by $index" >
                     <div class="Media" ng-model = "vm.roleCount">
                         <div class="Media__body Media u-flex-center--v">
-                            <div><img class="role-icon" ng-src="{{role.icon}}" ></img> {{role.name}}</div>
+                            <div layout="row"><img class="role-icon" ng-src="{{role.icon}}" ></img> <h5 class="Role-description">{{role.name}}</h5></div>
                             <div class="Media__side Media__side--right">
                               <md-chip>({{vm.countedRoles[role.id]}})</md-chip>
                               <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setRoleArray(role.id)" ng-model="vm.isRoleChecked[role.id]"  ></md-checkbox>
@@ -14,15 +14,16 @@
                     </div>
                 </li>
             </ul>
-            <md-divider class="divide-sector-role"></md-divider>
-            <ul class="Details__options-list">
+            <!-- <md-divider class="divide-sector-role"></md-divider> -->
+            <ul class=" List-menu-sector">
                 <li class="Details__options-list__item" ng-repeat="sector in vm.sectors track by $index">
                     <div class="Media">
                         <div class="Media__body Media u-flex-center--v">
-                            <div>{{sector.name}}</div>
-                            <div class="Media__side Media__side--right">
-                              <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="vm.isSectorChecked[sector.id]"></md-checkbox>
-                            </div>
+                          <div class="Media__side Media__side--right">
+                            <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="vm.isSectorChecked[sector.id]"></md-checkbox>
+                          </div>
+                            <div class="Sector-name">{{sector.name}}</div>
+
                         </div>
                     </div>
                 </li>
