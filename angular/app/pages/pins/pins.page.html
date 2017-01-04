@@ -15,19 +15,22 @@
                 </li>
             </ul>
             <!-- <md-divider class="divide-sector-role"></md-divider> -->
-            <ul class=" List-menu-sector">
+            <div class=" List-menu-sector">
+              <h1 class="Sector-heading">Sector</h1>
+            <ul>
                 <li class="Details__options-list__item" ng-repeat="sector in vm.sectors track by $index">
                     <div class="Media">
-                        <div class="Media__body Media u-flex-center--v">
-                          <div class="Media__side Media__side--right">
+
+                        <div layout="row">
+                          <div>
                             <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="vm.isSectorChecked[sector.id]"></md-checkbox>
                           </div>
                             <div class="Sector-name">{{sector.name}}</div>
-
                         </div>
                     </div>
                 </li>
             </ul>
+          </div>
         </section>
     </div>
 </section>

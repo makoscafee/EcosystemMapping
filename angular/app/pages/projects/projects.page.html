@@ -1,4 +1,4 @@
-<section class="Details">
+<!-- <section class="Details">
   <div class="Details__body">
     <section class="Details__body-side_bar mycolor" >
       <h1>Projects</h2>
@@ -24,4 +24,38 @@
         </md-card>
     </section>
   </div>
+</section> -->
+
+
+
+<section class="Details">
+  <div class="Details__body">
+    <section class="Details__body-side_bar Event-section" >
+
+      <h1 class="Events-title">Projects</h2>
+        <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
+          <md-card class= " Project-card" ng-click="vm.viewEvent(event)">
+             <md-card-content layout="row">
+               <div flex="55" class="Project_title_description">
+                 <h1 class="Card-title">{{event.name}}</h1>
+                 <p class="Event-description">{{event.description}}</p>
+               </div>
+               <div flex="45" class="Project_sector_targetGroup">
+                <h5>Sector: Education</h5>
+                <h5>Target Group: Youth</h5>
+               </div>
+             </md-card-content>
+             <md-card-actions layout="row">
+               <div layout="row">
+                 <i class="Card-icon ion-ios-clock"></i><p>Duration</p>
+               </div>
+               <div layout="row">
+                 <i class=" Card-icon ion-ios-location"></i><p>Location</p>
+
+               </div>
+             </md-card-actions>
+            </md-card>
+          </div>
+    </section>
+</div>
 </section>

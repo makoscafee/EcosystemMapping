@@ -1,5 +1,45 @@
 
-img{
-  height: 80px;
-  width: 100px;
+.Event-image {
+  height: inherit;
+  width: 150px;
+  padding-right: 20px;
+}
+
+.Events-title {
+  color: white;
+  padding: 5px 0px 0px 20px;
+
+}
+
+.Event-section {
+  background-color: #807F7F;
+}
+
+.Event-description {
+    width: 180px;
+    // white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+
+}
+
+.Event-card {
+  background-color: #A3A3A3;
+}
+
+.Card-icon {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 1.7rem;
+}
+
+.Card-title {
+  text-transform: uppercase;
+  color: white;
+}
+
+md-card-actions div p {
+  color: white;
 }
