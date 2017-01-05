@@ -1,6 +1,41 @@
-<div class="details">
+<!-- <div class="details">
   <p>This shows project name and description</p>
   <p>{{vm.mapProject.name}}</p>
   <p>{{vm.mapProject.description}}</p>
   <md-button ng-click="vm.back()">back</md-button>
+</div> -->
+
+
+
+
+
+<section class="Details">
+  <div class="Details__body">
+    <section class="Details__body-side_bar Event-section" >
+
+      <h1 class="Events-title">{{vm.mapProject.name}}</h2>
+          <md-card class= " Event-card">
+             <md-card-content>
+               <div>
+                  <h1 class="Card-title">Sector: Education</h1>
+                  <h1 class="Card-title">Target Group: Youth</h1>
+                  <h1 class="Card-title">Partners: </h1>
+                  <p class="Event-description">{{vm.mapProject.description}}</p>
+               </div>
+             </md-card-content>
+             <md-card-actions layout="column">
+               <div layout="row">
+                 <i class="Card-icon ion-ios-location"></i><p>location</p>
+               </div>
+               <div layout="row">
+                 <i class=" Card-icon ion-ios-clock"></i><p>Event Time</p>
+
+               </div>
+               <div layout="row">
+                 <i class=" Card-icon ion-ios-clock"></i><p>Free</p>
+               </div>
+             </md-card-actions>
+            </md-card>
+    </section>
 </div>
+</section>

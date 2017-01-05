@@ -34,7 +34,7 @@
 
       <h1 class="Events-title">Projects</h2>
         <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
-          <md-card class= " Project-card" ng-click="vm.viewEvent(event)">
+          <md-card class= " Project-card" ng-click="vm.viewProject(event)">
              <md-card-content layout="row">
                <div flex="55" class="Project_title_description">
                  <h1 class="Card-title">{{event.name}}</h1>
