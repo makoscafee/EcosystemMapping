@@ -29,14 +29,6 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('app.create', {
-            url: '/create',
-            views: {
-                'main@': {
-                    templateUrl: getView('createOrganisation')
-                }
-            }
-        })
         .state('app.home', {
             url: '/home/:id',
             views: {
@@ -116,6 +108,39 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                     templateUrl: getView('project-d')
                 }
             }
+        })
+        .state('app.create', {
+          url: '/create',
+          views: {
+            'main@': {
+              templateUrl: getView('create')
+            }
+          }
+        })
+        .state('app.create.organisation', {
+          url: '/organisation',
+          views: {
+            'create': {
+              abstract: true,
+              templateUrl: getView('createOrganisation')
+            }
+          }
+        })
+        .state('app.create.event', {
+          url: '/event',
+          views: {
+            'create': {
+              templateUrl: getView('create-event')
+            }
+          }
+        })
+        .state('app.create.project', {
+          url: '/project',
+          views: {
+            'create': {
+              templateUrl: getView('create-project')
+            }
+          }
         })
         .state('app.login', {
             url: '/login',
