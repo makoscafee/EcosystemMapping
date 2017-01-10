@@ -14,8 +14,8 @@ class EcosystemMapController {
         this.$rootScope = $rootScope;
         this.markers =[];
                 this.darEsSalaam={
-                    lat: -6.792287,
-                    lng: 39.2376063,
+                    lat: -6.1630,
+                    lng: 35.7516,
                     zoom: 6
                 }
 
