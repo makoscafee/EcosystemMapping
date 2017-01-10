@@ -7,7 +7,7 @@
 .Sidebar_heading {
   background-color: #739999;
   padding: 20px 0px 50px 0px;
-  height: 300px;
+  max-height: 60px;
 }
 
 .Sidebar_heading img {
@@ -85,4 +85,8 @@
 }
 .Sidebar__nav-list__item--active {
   color: white;
+}
+
+.mycontainer {
+  min-height: 600px;
 }
