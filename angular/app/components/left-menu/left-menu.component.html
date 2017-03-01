@@ -1,7 +1,7 @@
 
     <div class="wrapper">
       <div class="Sidebar_wrapper">
-          <aside class="Sidebar">
+          <aside class="Sidebar" layout="column">
               <nav role="navigation" class="Sidebar__nav">
                   <ul class="Sidebar__nav-list">
                       <li class="Sidebar__nav-list__item Sidebar-menu ion-ios-drag" ng-click="vm.showOrganisations()"></li>
@@ -10,11 +10,12 @@
                       <li class="Sidebar__nav-list__item Sidebar__nav-list__item ion-clipboard" ng-click="vm.showProjects()"></li>
                     </ul>
                   </nav>
+                    <md-button class="md-fab" aria-label="Eat cake" ui-sref=".create">+</md-button>
               </aside>
               <div layout="column" class="Sidebar_data">
                 <div class="Sidebar_heading" layout="row">
                   <img src="img/icons/home.png"/>
-                  <h3>{{vm.selectedEcosystem.name}}</h3>
+                  <h3>Tanzania Startup Ecosystem</h3>
                 </div>
                   <div  ui-view="side"></div>
                 </div>
