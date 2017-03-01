@@ -1,14 +1,25 @@
 
-<div class="create">
-<ul>
-  <li><a ui-sref=".organisation">Create An Organisation</a></li>
-  <li><a ui-sref=".event">Add Event to An Organisation</a></li>
-  <li><a class="active" ui-sref=".project">Add Project to an Organisation</a></li>
-
-</ul>
-
-<div style="margin-left:25%;padding:1px 16px;height:1000px;">
-
-<div ui-view="create"></div>
-</div>
+<div ng-cloak class="create">
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Organisation">
+        <md-content class="md-padding">
+          <!-- <h4 class="md-display-1">Create New Organisation</h4> -->
+          <create-organisation></create-organisation>
+        </md-content>
+      </md-tab>
+      <md-tab label="Event">
+        <md-content class="md-padding">
+          <!-- <h1 class="md-display-2">Tab Two</h1> -->
+        <create-event></create-event>
+          </md-content>
+      </md-tab>
+      <md-tab label="Project">
+        <md-content class="md-padding">
+          <!-- <h1 class="md-display-2">Tab Three</h1> -->
+        <create-project></create-project>
+          </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
 </div>

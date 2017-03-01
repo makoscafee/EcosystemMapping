@@ -1,65 +1,33 @@
-<section id="container">
-	<h1>CREATE AN ORGANISATION</h1>
-		<form name="hongkiat" id="hongkiat-form" method="post" action="#">
-		<div id="wrapping" class="clearfix">
-			<section id="aligned">
-			<input type="text" name="name" id="name" placeholder="Organisation name" autocomplete="off" tabindex="1" class="txtinput">
+<md-input-container>
+  <label>Organisation Name</label>
+  <input type="text" ng-model="color">
+</md-input-container>
 
-				<input type="url" name="website" id="website" placeholder="Website URL" autocomplete="off" tabindex="3" class="txtinput">
+<md-input-container>
+  <label>Organisation Website</label>
+  <input type="text" ng-model="color">
+</md-input-container>
 
-			<input type="email" name="email" id="email" placeholder="Organisation Location Latitude" autocomplete="off" tabindex="2" class="txtinput">
-				<input type="email" name="email" id="email" placeholder="Organisation Location Longitude" autocomplete="off" tabindex="2" class="txtinput">
+<md-input-container>
+  <label>Organisation Description</label>
+  <input type="text" ng-model="color">
+</md-input-container>
 
-			<textarea name="message" id="message" placeholder="Enter organisation description..." tabindex="5" class="txtblock"></textarea>
-			</section>
+<md-input-container>
+  <label>Organisation Partner</label>
+  <input type="text" ng-model="color">
+</md-input-container>
 
-			<section id="aside" class="clearfix">
-				<section id="recipientcase">
-					<h3>Ecosystem:</h3>
-						<select id="recipient" name="ecosystem" tabindex="6" class="selmenu">
-	  						<option value="staff">Site Staff</option>
-	  						<option value="editor">Editor-in-Chief</option>
-	  						<option value="technical">Tech Department</option>
-	  						<option value="pr">Public Relations</option>
-	  						<option value="support">General Support</option>
-						</select>
-				</section>
+<md-input-container>
+  <md-select ng-model="someModel" placeholder="Select a Sector">
+    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  </md-select>
+</md-input-container>
 
-				<section id="recipientcase">
-					<h3>Sector:</h3>
-						<select id="recipient" name="ecosystem" tabindex="6" class="selmenu">
-	  						<option value="staff">Site Staff</option>
-	  						<option value="editor">Editor-in-Chief</option>
-	  						<option value="technical">Tech Department</option>
-	  						<option value="pr">Public Relations</option>
-	  						<option value="support">General Support</option>
-						</select>
-				</section>
+<md-input-container>
+  <md-select ng-model="someModel" placeholder="Select a Target Group">
+    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  </md-select>
+</md-input-container>
 
-				<section id="recipientcase">
-					<h3>Target Group:</h3>
-						<select id="recipient" name="ecosystem" tabindex="6" class="selmenu">
-	  						<option value="staff">Site Staff</option>
-	  						<option value="editor">Editor-in-Chief</option>
-	  						<option value="technical">Tech Department</option>
-	  						<option value="pr">Public Relations</option>
-	  						<option value="support">General Support</option>
-						</select>
-				</section>
-
-				<section id="recipientcase">
-					<h3>Date Founded:</h3>
-						<input type="date" name="bday" max="1979-12-31">
-				</section>
-
-			</section>
-		</div>
-
-
-		<section id="buttons">
-			<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
-			<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Submit this!">
-			<br style="clear:both;">
-		</section>
-		</form>
-	</section>
+<md-datepicker ng-model="birthday"></md-datepicker>

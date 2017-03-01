@@ -109,14 +109,22 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('app.create', {
-          url: '/create',
-          views: {
-            'main@': {
-              templateUrl: getView('create')
+        .state('app.home.create', {
+            url: '/create',
+            views: {
+                'side': {
+                    templateUrl: getView('create')
+                }
             }
-          }
         })
+        // .state('app.create', {
+        //   url: '/create',
+        //   views: {
+        //     'main@': {
+        //       templateUrl: getView('create')
+        //     }
+        //   }
+        // })
         .state('app.create.organisation', {
           url: '/organisation',
           views: {

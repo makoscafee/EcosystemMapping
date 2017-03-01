@@ -1,1 +1,37 @@
-<p>Projects form to be added</p>
+<md-input-container>
+  <label>Projects's Name</label>
+  <input type="text" ng-model="color">
+</md-input-container>
+
+<!-- <md-input-container>
+  <label>Organisation Website</label>
+  <input type="text" ng-model="color">
+</md-input-container> -->
+
+<md-input-container>
+  <label>Project Description</label>
+  <input type="text" ng-model="color">
+</md-input-container>
+
+<md-input-container>
+  <label>Project Location</label>
+  <input type="text" ng-model="color">
+</md-input-container>
+<md-input-container>
+  <label>Project Parterns</label>
+  <input type="text" ng-model="color">
+</md-input-container>
+
+<md-input-container>
+  <md-select ng-model="someModel" placeholder="Project Sector">
+    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  </md-select>
+</md-input-container>
+
+<md-input-container>
+  <md-select ng-model="someModel" placeholder="Select a Target Group">
+    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  </md-select>
+</md-input-container>
+
+<md-datepicker ng-model="birthday"></md-datepicker>
