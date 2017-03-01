@@ -8,33 +8,48 @@
 
 
 
-<section class="Details">
+
+<!-- <div>
+  <p>Displaying organisation</p>
+  <p>{{vm.menuOrganisation.name}}</p>
+  <p>{{vm.menuOrganisation.description}}</p>
+  <md-button ng-click="vm.back()"> go back</md-button>
+</div> -->
+
+
+
+
+<section class="Details Detail-height">
   <div class="Details__body">
     <section class="Details__body-side_bar Event-section" >
 
-      <h1 class="Events-title">{{vm.menuOrganisation.name}}</h2>
+      <h2 class="Events-title">{{vm.menuOrganisation.name}}</h2>
+      <h4 class="Events-title"><a>www.organisation.com</a></h4>
           <md-card class= " Event-card">
-             <md-card-content>
+
+             <md-card-actions layout="column">
+
                <div>
-                  <h1 class="Card-title">Sector: Education</h1>
+                  <h1 class="Card-title">Sector: Education,Agriculture</h1>
                   <h1 class="Card-title">Target Group: Youth</h1>
                   <h1 class="Card-title">Partners: </h1>
-                  <p class="Event-description">{{vm.menuOrganisation.description}}</p>
                </div>
-             </md-card-content>
-             <md-card-actions layout="column">
-               <div layout="row">
-                 <i class="Card-icon ion-ios-location"></i><p>location</p>
-               </div>
-               <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>Event Time</p>
 
-               </div>
                <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>Free</p>
+                 <div layout="row">
+                   <i class="Card-icon ion-ios-location"></i><p>location</p>
+                 </div>
+                 <div layout="row">
+                   <i class=" Card-icon ion-ios-clock"></i><p>Event Time</p>
+                 </div>
                </div>
              </md-card-actions>
+             <md-card-content>
+                <p class="Organisation-description">{{vm.menuOrganisation.description}}</p>
+             </md-card-content>
+
             </md-card>
+
     </section>
 </div>
 </section>
