@@ -59,5 +59,9 @@ Route::group(['namespace' => 'API'], function() {
 
     Route::get('ecosystems/{id}/organizations', 'EcosystemAPIController@organizations');
 
+    Route::post('ecosystems/{id}/attach-organizations', 'EcosystemAPIController@attachOrganization');
+
+    Route::post('ecosystems/{id}/detach-organizations', 'EcosystemAPIController@detachOrganization');
+
     Route::get('ecosystems/{id}/locations', 'EcosystemAPIController@locations');
 });
