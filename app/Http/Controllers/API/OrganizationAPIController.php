@@ -191,4 +191,208 @@ class OrganizationAPIController extends AppBaseController
       $stages = $organization->stages()->get();
       return $this->sendResponse($stages, 'Organisation stages retrieved successfully');
     }
+
+
+    public function projects($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $projects = $organization->projects()->get();
+      return $this->sendResponse($projects, 'Organisation projects retrieved successfully');
+    }
+
+
+    public function events($id)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $events = $organization->events()->get();
+      return $this->sendResponse($events, 'Organisation events retrieved successfully');
+    }
+
+
+
+    public function attachProjects($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $projectId = $input['project_id'];
+
+      $organization->projects()->attach($projectId);
+
+      return $this->sendResponse('success', 'Organisation projects attached successfully');
+    }
+
+
+    public function detachProjects($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $projectId = $input['project_id'];
+
+      $organization->projects()->detach($projectId);
+
+      return $this->sendResponse('success', 'Organisation projects detached successfully');
+    }
+
+    public function attachRoles($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $roleId = $input['role_id'];
+
+      $organization->roles()->attach($roleId);
+
+      return $this->sendResponse('success', 'Organisation roles attached successfully');
+    }
+
+    public function detachRoles($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $roleId = $input['role_id'];
+
+      $organization->roles()->detach($roleId);
+
+      return $this->sendResponse('success', 'Organisation roles detached successfully');
+    }
+
+
+    public function attachSectors($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $sectorId = $input['sector_id'];
+
+      $organization->sectors()->attach($sectorId);
+
+      return $this->sendResponse('success', 'Organisation sectors attached successfully');
+    }
+
+    public function detachSectors($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $sectorId = $input['sector_id'];
+
+      $organization->sectors()->detach($sectorId);
+
+      return $this->sendResponse('success', 'Organisation sectors detached successfully');
+    }
+
+
+    public function attachStages($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $stageId = $input['stage_id'];
+
+      $organization->stages()->attach($stageId);
+
+      return $this->sendResponse('success', 'Organisation stages attached successfully');
+    }
+
+    public function detachStages($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $stageId = $input['stage_id'];
+
+      $organization->stages()->detach($stageId);
+
+      return $this->sendResponse('success', 'Organisation stages detached successfully');
+    }
+
+    public function attachEvents($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $eventId = $input['event_id'];
+
+      $organization->events()->attach($eventId);
+
+      return $this->sendResponse('success', 'Organisation events attached successfully');
+    }
+
+    public function detachEvents($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $eventId = $input['event_id'];
+
+      $organization->events()->detach($eventId);
+
+      return $this->sendResponse('success', 'Organisation events detached successfully');
+    }
+
 }

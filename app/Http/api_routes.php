@@ -23,7 +23,22 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('locations', 'LocationAPIController');
 
     Route::resource('organizations', 'OrganizationAPIController');
+
     Route::get('organizations/{id}/locations', 'OrganizationAPIController@locations');
+
+    Route::get('organizations/{id}/projects', 'OrganizationAPIController@projects');
+
+    Route::get('organizations/{id}/events', 'OrganizationAPIController@events');
+
+    Route::post('organizations/{id}/attach-projects', 'OrganizationAPIController@attachProjects');
+
+    Route::post('organizations/{id}/attach-events', 'OrganizationAPIController@attachEvents');
+
+    Route::post('organizations/{id}/attach-sectors', 'OrganizationAPIController@attachSectors');
+
+    Route::post('organizations/{id}/attach-roles', 'OrganizationAPIController@attachRoles');
+
+    Route::post('organizations/{id}/attach-stages', 'OrganizationAPIController@attachStages');
 
     Route::get('organizations/{id}/contacts', 'OrganizationAPIController@contacts');
 

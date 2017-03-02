@@ -181,7 +181,8 @@ class EcosystemAPIController extends AppBaseController
 
       $organizationId = $input['organization_id'];
 
-      $ecosystem->organizations()->attach($organizationId);
+
+      $ecosystem->organizations()->attach($organizationId, ['status' => $input['status']]);
 
       return $this->sendResponse('success', 'Ecosystem organization(s) is attached successfully');
 
