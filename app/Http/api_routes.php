@@ -40,6 +40,18 @@ Route::group(['namespace' => 'API'], function() {
 
     Route::post('organizations/{id}/attach-stages', 'OrganizationAPIController@attachStages');
 
+
+    Route::post('organizations/{id}/detach-projects', 'OrganizationAPIController@detachProjects');
+
+    Route::post('organizations/{id}/detach-events', 'OrganizationAPIController@detachEvents');
+
+    Route::post('organizations/{id}/detach-sectors', 'OrganizationAPIController@detachSectors');
+
+    Route::post('organizations/{id}/detach-roles', 'OrganizationAPIController@detachRoles');
+
+    Route::post('organizations/{id}/detach-stages', 'OrganizationAPIController@detachStages');
+
+
     Route::get('organizations/{id}/contacts', 'OrganizationAPIController@contacts');
 
     Route::get('organization/{id}/roles', 'OrganizationAPIController@roles');
