@@ -28,15 +28,45 @@ export class OrganizationService{
 
     }
 
-    getLocation(){
+
+    // creating an organisation
+    createOrganisation(data){
+        this.API.all('organizations').post(data).then(
+            (response) => {
+                this.$log.log(response.data);
+                this.$log.log("organisation created successifully ");
+            }
+        );
+    }
+
+    // creating a new location
+    createLocation(data){
+        this.API.all('locations').post(data).then(
+            (response) => {
+                this.$log.log(response.data);
+                this.$log.log("A location has been created succefully");
+            }
+        );
+    }
+
+
+        // gets all sectors
+    getSectors(){
+      return  this.API.all('sectors').get('');
 
     }
 
-    getContacts(){
+
+    // gets all roles
+    getRoles(){
+        return  this.API.all('roles').get('');
 
     }
 
-    getSector(){
+
+    // gets all stages
+    getStages(){
+        return  this.API.all('stages').get('');
 
     }
 
