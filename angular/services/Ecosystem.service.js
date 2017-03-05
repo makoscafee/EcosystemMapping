@@ -13,14 +13,14 @@ export class EcosystemService{
 
       //getting all ecosystems
     getAll(){
-    return  this.API.all('ecosystem_parents').get('');
+    return  this.API.all('ecosystems').get('');
 
 
     }
 
       //getting one ecosystem
     getOne(id){
-        this.API.one('ecosystem_parents',id).get('')
+        this.API.one('ecosystems',id).get('')
         .then((response)=>{
           this.ecosystemOne = response.data;
           this.$log.log('this is just one ecosystem');
