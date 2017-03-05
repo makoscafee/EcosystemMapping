@@ -155,7 +155,7 @@ class EcosystemAPIController extends AppBaseController
           return $this->sendError('Ecosystem not found');
       }
       $organizations = $ecosystem->organizations();
-      //return $this->sendResponse($organizations, 'organizations retrieved successfully');
+
       $organizationIds = $organizations->lists('organization_id')->all();
       $locations = array();
       foreach ($organizationIds as $key => $value) {
@@ -167,5 +167,42 @@ class EcosystemAPIController extends AppBaseController
       }
 
       return $this->sendResponse($locations, 'ecosystem locations retrieved successfully');
+    }
+
+    public function attachOrganization($id, Request $request)
+    {
+      $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+      $input = $request->all();
+
+      if (empty($ecosystem)) {
+          return $this->sendError('Ecosystem not found');
+      }
+
+      $organizationId = $input['organization_id'];
+
+
+      $ecosystem->organizations()->attach($organizationId, ['status' => $input['status']]);
+
+      return $this->sendResponse('success', 'Ecosystem organization(s) is attached successfully');
+
+    }
+
+    public function detachOrganization($id, Request $request)
+    {
+      $ecosystem = $this->ecosystemRepository->findWithoutFail($id);
+
+      $input = $request->all();
+
+      if (empty($ecosystem)) {
+          return $this->sendError('Ecosystem not found');
+      }
+
+      $organizationId = $input['organization_id'];
+
+      $ecosystem->organizations()->detach($organizationId);
+
+      return $this->sendResponse('success', 'Ecosystem organization(s) is detached successfully');
+
     }
 }

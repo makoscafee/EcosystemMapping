@@ -23,7 +23,34 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('locations', 'LocationAPIController');
 
     Route::resource('organizations', 'OrganizationAPIController');
+
     Route::get('organizations/{id}/locations', 'OrganizationAPIController@locations');
+
+    Route::get('organizations/{id}/projects', 'OrganizationAPIController@projects');
+
+    Route::get('organizations/{id}/events', 'OrganizationAPIController@events');
+
+    Route::post('organizations/{id}/attach-projects', 'OrganizationAPIController@attachProjects');
+
+    Route::post('organizations/{id}/attach-events', 'OrganizationAPIController@attachEvents');
+
+    Route::post('organizations/{id}/attach-sectors', 'OrganizationAPIController@attachSectors');
+
+    Route::post('organizations/{id}/attach-roles', 'OrganizationAPIController@attachRoles');
+
+    Route::post('organizations/{id}/attach-stages', 'OrganizationAPIController@attachStages');
+
+
+    Route::post('organizations/{id}/detach-projects', 'OrganizationAPIController@detachProjects');
+
+    Route::post('organizations/{id}/detach-events', 'OrganizationAPIController@detachEvents');
+
+    Route::post('organizations/{id}/detach-sectors', 'OrganizationAPIController@detachSectors');
+
+    Route::post('organizations/{id}/detach-roles', 'OrganizationAPIController@detachRoles');
+
+    Route::post('organizations/{id}/detach-stages', 'OrganizationAPIController@detachStages');
+
 
     Route::get('organizations/{id}/contacts', 'OrganizationAPIController@contacts');
 
@@ -58,6 +85,10 @@ Route::group(['namespace' => 'API'], function() {
     Route::resource('ecosystems', 'EcosystemAPIController');
 
     Route::get('ecosystems/{id}/organizations', 'EcosystemAPIController@organizations');
+
+    Route::post('ecosystems/{id}/attach-organizations', 'EcosystemAPIController@attachOrganization');
+
+    Route::post('ecosystems/{id}/detach-organizations', 'EcosystemAPIController@detachOrganization');
 
     Route::get('ecosystems/{id}/locations', 'EcosystemAPIController@locations');
 });
