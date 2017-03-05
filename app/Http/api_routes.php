@@ -32,6 +32,8 @@ Route::group(['namespace' => 'API'], function() {
 
     Route::post('organizations/{id}/attach-projects', 'OrganizationAPIController@attachProjects');
 
+    Route::post('organizations/{id}/attach-locations', 'OrganizationAPIController@attachLocations');
+
     Route::post('organizations/{id}/attach-events', 'OrganizationAPIController@attachEvents');
 
     Route::post('organizations/{id}/attach-sectors', 'OrganizationAPIController@attachSectors');

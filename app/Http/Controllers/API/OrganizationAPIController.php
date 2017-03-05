@@ -378,6 +378,7 @@ class OrganizationAPIController extends AppBaseController
       return $this->sendResponse('success', 'Organisation events attached successfully');
     }
 
+
     public function detachEvents($id, Request $request)
     {
       /** @var Organization $organization */
@@ -393,6 +394,42 @@ class OrganizationAPIController extends AppBaseController
       $organization->events()->detach($eventId);
 
       return $this->sendResponse('success', 'Organisation events detached successfully');
+    }
+
+
+    public function attachLocations($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $locationId = $input['location_id'];
+
+      $organization->locations()->attach($locationId);
+
+      return $this->sendResponse('success', 'Organisation locations attached successfully');
+    }
+
+
+    public function detachLocations($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+      $locationId = $input['location_id'];
+
+      $organization->locations()->detach($locationId);
+
+      return $this->sendResponse('success', 'Organisation locations detached successfully');
     }
 
 }
