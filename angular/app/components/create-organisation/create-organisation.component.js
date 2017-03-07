@@ -1,44 +1,71 @@
-class CreateOrganisationController{
+class CreateOrganisationController {
 
-
-
-    constructor(OrganizationService,EcosystemService,$log){
+    constructor(OrganizationService, EcosystemService, $log) {
         'ngInject';
 
         // Initializing services
         this.organisationService = OrganizationService;
         this.ecosystemService = EcosystemService;
         this.$log = $log;
-      
+
+
+
+
     }
 
-        // adds a new organisation
-    addOrganisation(data){
+    // adds a new organisation
+    addOrganisation() {
+
+        let makeOrganisation = this.forOrganisation;
+
+        this.organisationService.createOrganisation(makeOrganisation.organisation).then(
+            (response) =>{
+                this.organisationId = response.data.id;
+                this.orgInfo = {organization_id: this.organisationId, status:"active"};
+
+                this.$log.log(response.data);
+                this.$log.log("organisation created successifully ");
+
+
+            }
+        );
+
+        this.addLocation(makeOrganisation.location).then(
+            (response) => {
+                this.locationId = {location_id: response.data.id};
+                this.$log.log("location created succesfully");
+
+
+                this.attachData = {
+                    ecosystemId: makeOrganisation.ecosystemId,
+                    organisationId: this.organisationId,
+                    orgInfo: this.orgInfo,
+                    sectorId: {sector_id: makeOrganisation.sectorId},
+                    roleId: {role_id: makeOrganisation.roleId},
+                    locationId: this.locationId
+                };
+
+                this.attachEveryThing(this.attachData);
+            }
+        );
+
+
+    }
+
+    // adds a new Location
+    addLocation(data) {
+
         // let data = {
-        //     name: "Can you Post me",
-        //     description: "Checking if this method can post organisation to the database",
-        //     date_founded: "1996-06-29 00:00:00",
-        //     date_registered: "2013-07-29 00:00:00",
-        //     tin_number: "9792256147875"
+        //     long: "33.8020",
+        //     lat: "-1.5102"
         // };
 
-        this.organisationService.createOrganisation(data);
+        return this.organisationService.createLocation(data);
     }
 
 
-        // adds a new Location
-    addLocation(data){
-
-        // let data = {
-        //     long: "39.698249",
-        //     lat: "-9.987608"
-        // };
-
-        this.organisationService.createLocation(data);
-    }
-
-        // displays all ecosystems
-    displayEcosystems(){
+    // displays all ecosystems
+    displayEcosystems() {
         this.ecosystemService.getAll().then(
             (response) => {
                 this.allEcosystems = response.data;
@@ -50,8 +77,9 @@ class CreateOrganisationController{
         );
     }
 
-        // displays all sectors
-    displaySectors(){
+    // displays all sectors
+    displaySectors() {
+
         this.organisationService.getSectors().then(
             (response) => {
                 this.allSectors = response.data;
@@ -65,8 +93,8 @@ class CreateOrganisationController{
 
 
 
-            // displays all roles
-    displayRoles(){
+    // displays all roles
+    displayRoles() {
         this.organisationService.getRoles().then(
             (response) => {
                 this.allRoles = response.data;
@@ -80,7 +108,7 @@ class CreateOrganisationController{
 
 
     // displays all stages
-    displayStages(){
+    displayStages() {
         this.organisationService.getStages().then(
             (response) => {
                 this.allRoles = response.data;
@@ -93,7 +121,53 @@ class CreateOrganisationController{
     }
 
 
-    $onInit(){
+    // attaches necessary objects to the organisation and ecosystem
+    attachEveryThing(attach) {
+
+         this.$log.log(attach.orgInfo);
+        // attaching organisation to an ecosystem
+        this.ecosystemService.attachOrganisationToEcosystem(attach.ecosystemId, attach.orgInfo).then(
+            (response) => {
+                this.$log.log("organisation attached successfully");
+
+            },
+        (error) =>{
+                this.$log.log(error);
+                this.$log.log("an error has occured");
+        }
+        );
+
+        // attaching a location to an organisation
+        this.organisationService.attachLocationToOrganisation(attach.organisationId, attach.locationId).then(
+            (response) => {
+                this.$log.log("location attached ");
+            }
+        );
+
+        // attaching a role to an organisation
+        this.organisationService.attachRoleToOrganisation(attach.organisationId, attach.roleId).then(
+            (response) => {
+                this.$log.log(response);
+                this.$log.log("role attached to organisation succesfully");
+            }
+        );
+
+        // attaching a sector to an organisation
+        this.organisationService.attachSectorToOrganisation(attach.organisationId, attach.sectorId).then(
+            (response) => {
+                this.$log.log(response);
+                this.$log.log("sector attached to organisation succesfully");
+            }
+        );
+
+    }
+
+
+    $onInit() {
+        this.displayEcosystems();
+        this.displayRoles();
+        this.displaySectors();
+
 
     }
 }

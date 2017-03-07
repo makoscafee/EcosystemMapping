@@ -41,6 +41,12 @@ export class EcosystemService{
       });
     }
 
+    attachOrganisationToEcosystem(ecosystemId,organisationId){
+        let DataAPI = this.API.one('ecosystems',ecosystemId);
+          return  DataAPI.all('attach-organizations').post(organisationId);
+
+    }
+
 
 
 }

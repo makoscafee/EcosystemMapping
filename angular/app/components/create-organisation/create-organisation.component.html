@@ -1,33 +1,46 @@
 <md-input-container>
   <label>Organisation Name</label>
-  <input type="text" ng-model="color">
+  <input type="text" ng-model="vm.forOrganisation.organisation.name">
 </md-input-container>
 
-<md-input-container>
-  <label>Organisation Website</label>
-  <input type="text" ng-model="color">
-</md-input-container>
+
 
 <md-input-container>
   <label>Organisation Description</label>
-  <input type="text" ng-model="color">
+  <input type="text" ng-model="vm.forOrganisation.organisation.description">
 </md-input-container>
 
 <md-input-container>
-  <label>Organisation Partner</label>
-  <input type="text" ng-model="color">
+  <label>Organisation Tin Number</label>
+  <input type="text" ng-model="vm.forOrganisation.organisation.tin_number">
 </md-input-container>
 
 <md-input-container>
-  <md-select ng-model="someModel" placeholder="Select a Sector">
-    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  <label>Location Latitude</label>
+  <input type="text" ng-model="vm.forOrganisation.location.lat">
+</md-input-container>
+
+<md-input-container>
+<label>Location Longitude</label>
+<input type="text" ng-model="vm.forOrganisation.location.long">
+</md-input-container>
+
+<md-input-container>
+  <md-select ng-model="vm.forOrganisation.ecosystemId" placeholder="Select an Ecosystem">
+    <md-option ng-value="opt.id" ng-repeat="opt in vm.allEcosystems">{{ opt.name }}</md-option>
   </md-select>
 </md-input-container>
 
 <md-input-container>
-  <md-select ng-model="someModel" placeholder="Select a Target Group">
-    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+  <md-select ng-model="vm.forOrganisation.sectorId" placeholder="Select a Sector">
+    <md-option ng-value="opt.id" ng-repeat="opt in vm.allSectors">{{ opt.name }}</md-option>
   </md-select>
 </md-input-container>
+<md-select ng-model="vm.forOrganisation.roleId" placeholder="Select a Role">
+  <md-option ng-value="opt.id" ng-repeat="opt in vm.allRoles">{{ opt.name }}</md-option>
+</md-select>
+</md-input-container>
 
-<md-datepicker ng-model="birthday"></md-datepicker>
+<md-datepicker ng-model="vm.forOrganisation.organisation.date_founded"></md-datepicker>
+<md-datepicker ng-model="vm.forOrganisation.organisation.date_registered"></md-datepicker>
+<md-button ng-click="vm.addOrganisation()">submit</md-button>

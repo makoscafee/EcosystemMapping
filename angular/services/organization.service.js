@@ -31,22 +31,23 @@ export class OrganizationService{
 
     // creating an organisation
     createOrganisation(data){
-        this.API.all('organizations').post(data).then(
-            (response) => {
-                this.$log.log(response.data);
-                this.$log.log("organisation created successifully ");
-            }
-        );
+       return this.API.all('organizations').post(data);
     }
+
+
 
     // creating a new location
     createLocation(data){
-        this.API.all('locations').post(data).then(
-            (response) => {
-                this.$log.log(response.data);
-                this.$log.log("A location has been created succefully");
-            }
-        );
+      return  this.API.all('locations').post(data);
+    }
+
+    // Attach location to an organisation
+    attachLocationToOrganisation(organisationId,locationId){
+        let DataAPI =this.API.one('organizations',organisationId);
+
+       return DataAPI.all('attach-locations').post(locationId);
+
+
     }
 
 
@@ -54,6 +55,21 @@ export class OrganizationService{
     getSectors(){
       return  this.API.all('sectors').get('');
 
+    }
+
+    attachSectorToOrganisation(organisationId,sectorId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-sectors').post(sectorId);
+    }
+
+    attachRoleToOrganisation(organisationId,roleId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-roles').post(roleId);
+    }
+
+    attachStageToOrganisation(organisationId,stageId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-stages').post(stageId);
     }
 
 
@@ -70,6 +86,8 @@ export class OrganizationService{
 
     }
 
+
+        // counts all role of a Organisations under a particular ecosystem
     getRoleCount(roleName){
       let roleData = [];
         angular.forEach(this.$localStorage.organisations.data,(org)=>{
@@ -85,7 +103,4 @@ export class OrganizationService{
         return roleData.length;
     }
 
-    getStage(){
-
-    }
 }
