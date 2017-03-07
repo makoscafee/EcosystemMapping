@@ -17,8 +17,15 @@ class CreateOrganisationController {
     addOrganisation() {
 
         let makeOrganisation = this.forOrganisation;
+        let modifiedOrg = {
+            name: makeOrganisation.organisation.name,
+            description:makeOrganisation.organisation.description,
+            date_founded: makeOrganisation.organisation.date_founded.toJSON,
+            date_registered: makeOrganisation.organisation.date_registered.toJSON,
+            tin_number:makeOrganisation.organisation.tin_number
+        }
 
-        this.organisationService.createOrganisation(makeOrganisation.organisation).then(
+        this.organisationService.createOrganisation(modifiedOrg).then(
             (response) =>{
                 this.organisationId = response.data.id;
                 this.orgInfo = {organization_id: this.organisationId, status:"active"};

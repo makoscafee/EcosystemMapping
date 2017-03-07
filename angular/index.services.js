@@ -1,3 +1,4 @@
+import {EventService} from './services/event.service';
 import {MapDataService} from './services/mapData.service';
 import {SidemenuDataService} from './services/sidemenuData.service';
 import {EcosystemFilterService} from './services/ecosystemFilter.service';
@@ -9,6 +10,7 @@ import {DialogService} from './services/dialog.service';
 import {ToastService} from './services/toast.service';
 
 angular.module('app.services')
+	.service('EventService', EventService)
 	.service('MapDataService', MapDataService)
 	.service('SidemenuDataService', SidemenuDataService)
 	.service('EcosystemFilterService', EcosystemFilterService)
