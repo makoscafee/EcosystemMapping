@@ -18,6 +18,11 @@ export class OrganizationService{
       });
     }
 
+    getByEcosystem(ecosystemId){
+        let DataAPI = this.API.one('ecosystems',ecosystemId);
+        return DataAPI.all('organizations').get('');
+
+    }
 
       //getting one organization
     getOne(id){

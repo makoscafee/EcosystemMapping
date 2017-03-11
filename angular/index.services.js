@@ -1,3 +1,5 @@
+import {ProjectsService} from './services/projects.service';
+import {ProjectService} from './services/project.service';
 import {EventService} from './services/event.service';
 import {MapDataService} from './services/mapData.service';
 import {SidemenuDataService} from './services/sidemenuData.service';
@@ -10,6 +12,8 @@ import {DialogService} from './services/dialog.service';
 import {ToastService} from './services/toast.service';
 
 angular.module('app.services')
+	.service('ProjectsService', ProjectsService)
+	.service('ProjectService', ProjectService)
 	.service('EventService', EventService)
 	.service('MapDataService', MapDataService)
 	.service('SidemenuDataService', SidemenuDataService)

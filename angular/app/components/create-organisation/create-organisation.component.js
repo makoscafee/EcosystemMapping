@@ -1,21 +1,53 @@
 class CreateOrganisationController {
 
-    constructor(OrganizationService, EcosystemService, $log) {
+    constructor(OrganizationService, EcosystemService,
+                $log,$localStorage,DataService,$rootScope,$state) {
         'ngInject';
 
         // Initializing services
         this.organisationService = OrganizationService;
         this.ecosystemService = EcosystemService;
+        this.$localStorage = $localStorage;
+        this.DataService = DataService;
+        this.$rootScope = $rootScope;
+        this.$state = $state;
         this.$log = $log;
+
+
+
+        this.$rootScope.$on('leafletDirectiveMap.click', function(event, args){
+            let data = {
+                lat:args.leafletEvent.latlng.lat,
+                long:args.leafletEvent.latlng.lng
+            }
+             $rootScope.newLocation = data;
+             alert(data);
+            console.log("this is happening from where I want");
+            // console.log(args.leafletEvent.latlng);
+            console.log($rootScope.newLocation);
+
+        });
 
 
 
 
     }
 
+    testScope(){
+        this.$log.log("testing accessbility");
+        this.$log.log(this.$rootScope.newLocation);
+        this.addLocation(this.$rootScope.newLocation).then(
+            (response) => {
+                this.$log.log("this is the new location");
+                this.$log.log(response);
+            }
+        );
+    }
+
     // adds a new organisation
     addOrganisation() {
 
+            // Initializing some objects and data conversions
         let makeOrganisation = this.forOrganisation;
         let modifiedOrg = {
             name: makeOrganisation.organisation.name,
@@ -23,8 +55,14 @@ class CreateOrganisationController {
             date_founded: makeOrganisation.organisation.date_founded.toJSON,
             date_registered: makeOrganisation.organisation.date_registered.toJSON,
             tin_number:makeOrganisation.organisation.tin_number
-        }
+        };
 
+        let newLocation = this.$rootScope.newLocation;
+        this.$log.log("this is the new Location");
+        this.$log.log(newLocation);
+
+
+                // creating a new organisation
         this.organisationService.createOrganisation(modifiedOrg).then(
             (response) =>{
                 this.organisationId = response.data.id;
@@ -37,12 +75,17 @@ class CreateOrganisationController {
             }
         );
 
-        this.addLocation(makeOrganisation.location).then(
+
+                // creating new location
+        this.addLocation(newLocation).then(
             (response) => {
                 this.locationId = {location_id: response.data.id};
                 this.$log.log("location created succesfully");
+                this.$log.log(response.data);
 
 
+
+                // object containing information for attachment of data
                 this.attachData = {
                     ecosystemId: makeOrganisation.ecosystemId,
                     organisationId: this.organisationId,
@@ -52,6 +95,7 @@ class CreateOrganisationController {
                     locationId: this.locationId
                 };
 
+                    // attaching  all data
                 this.attachEveryThing(this.attachData);
             }
         );
@@ -61,11 +105,6 @@ class CreateOrganisationController {
 
     // adds a new Location
     addLocation(data) {
-
-        // let data = {
-        //     long: "33.8020",
-        //     lat: "-1.5102"
-        // };
 
         return this.organisationService.createLocation(data);
     }
@@ -148,6 +187,7 @@ class CreateOrganisationController {
         this.organisationService.attachLocationToOrganisation(attach.organisationId, attach.locationId).then(
             (response) => {
                 this.$log.log("location attached ");
+
             }
         );
 
@@ -164,6 +204,14 @@ class CreateOrganisationController {
             (response) => {
                 this.$log.log(response);
                 this.$log.log("sector attached to organisation succesfully");
+                this.ecosystemService.getOrganisation(attach.ecosystemId).then((response) => {
+                    this.$localStorage.organisations = response.data;
+                    this.$log.log(this.$localStorage.organisations);
+                    this.$state.go('app.home.pins.all',{id: attach.ecosystemId});
+                });
+
+
+
             }
         );
 

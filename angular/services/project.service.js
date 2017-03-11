@@ -1,4 +1,4 @@
-export class EventService{
+export class Service{
     constructor($log,API){
         'ngInject';
 

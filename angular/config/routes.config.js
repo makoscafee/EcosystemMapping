@@ -117,14 +117,14 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        // .state('app.create', {
-        //   url: '/create',
-        //   views: {
-        //     'main@': {
-        //       templateUrl: getView('create')
-        //     }
-        //   }
-        // })
+        .state('app.get-location', {
+          url: '/get-location',
+          views: {
+            'main@': {
+              templateUrl: getView('create')
+            }
+          }
+        })
         .state('app.create.organisation', {
           url: '/organisation',
           views: {
