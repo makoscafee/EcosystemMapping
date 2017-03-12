@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" afterPath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" afterPath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/search-autocomplete/search-autocomplete.component.js" afterPath="$PROJECT_DIR$/angular/app/components/search-autocomplete/search-autocomplete.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/pages/create/create.page.html" afterPath="$PROJECT_DIR$/angular/app/pages/create/create.page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/pages/create/create.scss" afterPath="$PROJECT_DIR$/angular/app/pages/create/create.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/config/routes.config.js" afterPath="$PROJECT_DIR$/angular/config/routes.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/index.components.js" afterPath="$PROJECT_DIR$/angular/index.components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/index.services.js" afterPath="$PROJECT_DIR$/angular/index.services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/services/data.service.js" afterPath="$PROJECT_DIR$/angular/services/data.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/services/event.service.js" afterPath="$PROJECT_DIR$/angular/services/event.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/services/organization.service.js" afterPath="$PROJECT_DIR$/angular/services/organization.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js" afterPath="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" afterPath="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
     </list>
     <ignored path="EcosystemMapping.iws" />
@@ -51,7 +37,18 @@
     <favorites_list name="EcosystemMapping" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="create-event.component.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,22 +65,23 @@
         <option value="$PROJECT_DIR$/angular/app/pages/get-location/get-location.page.html" />
         <option value="$PROJECT_DIR$/angular/config/routes.config.js" />
         <option value="$PROJECT_DIR$/angular/app/pages/create/create.scss" />
-        <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.html" />
         <option value="$PROJECT_DIR$/angular/app/pages/create/create.page.html" />
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
         <option value="$PROJECT_DIR$/angular/services/organization.service.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/OrganizationAPIController.php" />
         <option value="$PROJECT_DIR$/angular/services/event.service.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
         <option value="$PROJECT_DIR$/angular/services/project.service.js" />
         <option value="$PROJECT_DIR$/angular/services/projects.service.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
       </list>
     </option>
   </component>
@@ -218,7 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,13 +319,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="create-project" />
+              <option name="myItemId" value="create-organisation" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,11 +425,12 @@
       <workItem from="1489151526915" duration="2133000" />
       <workItem from="1489160429934" duration="2066000" />
       <workItem from="1489220655174" duration="309000" />
+      <workItem from="1489299054785" duration="4297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128123000" />
+    <option name="totallyTimeSpent" value="132420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,27 +443,47 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31792828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30517927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.71981424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.71981424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30517927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -479,6 +498,9 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -604,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/app-shell/app-shell.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -667,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/get-location/get-location.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -692,13 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="393" column="0" lean-forward="true" selection-start-line="393" selection-start-column="0" selection-end-line="393" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -765,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/angular/app/components/create-event.component.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -783,13 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -821,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/services/projects.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-140">
@@ -839,6 +819,213 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <marker date="1489309014643" expanded="true" signature="35:6877" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="159:980" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="580:968" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="605:720" ph="{&quot;lat&quot;: args.leafletEvent.latlng.lat...}" />
+            <marker date="1489309014643" expanded="true" signature="997:1316" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="1184:1299" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="1371:3349" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="1515:1871" ph="{&quot;name&quot;: makeOrganisation.organisation.name...}" />
+            <marker date="1489309014643" expanded="true" signature="2161:2439" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="2564:3330" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="2851:3215" ph="{&quot;ecosystemId&quot;: makeOrganisation.ecosystemId...}" />
+            <marker date="1489309014643" expanded="true" signature="3400:3470" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="3528:3868" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="3601:3785" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="3798:3851" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="3919:4258" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4000:4175" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4188:4241" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4307:4637" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4385:4554" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4567:4620" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4687:5020" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4766:4937" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="4950:5003" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="5120:6755" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="5341:5426" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="5446:5550" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="5750:5819" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="6007:6139" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="6333:6737" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="6547:6718" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="6772:6875" ph="{...}" />
+            <marker date="1489309014643" expanded="true" signature="6922:7110" ph="{&quot;templateUrl&quot;: './views/app/components/create-organisation/create-organisation.component.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <marker date="1489309644899" expanded="true" signature="32:3548" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="140:1671" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="512:627" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="664:1583" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="692:811" ph="{&quot;iconUrl&quot;: 'img/icons/startup.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="847:968" ph="{&quot;iconUrl&quot;: 'img/icons/coworking.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="1004:1124" ph="{&quot;iconUrl&quot;: 'img/icons/investor.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="1150:1271" ph="{&quot;iconUrl&quot;: 'img/icons/incubator.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="1297:1414" ph="{&quot;iconUrl&quot;: 'img/icons/event.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="1442:1565" ph="{&quot;iconUrl&quot;: 'img/icons/accelerator.png'...}" />
+            <marker date="1489309644899" expanded="true" signature="1715:3376" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="1852:3346" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="1907:3341" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="1955:3334" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="1978:2398" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisatio-msg&gt;'...}" />
+            <marker date="1489309644899" expanded="true" signature="2102:2302" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="2414:3232" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="2509:2622" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="2679:2798" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="2845:2956" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3011:3130" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3150:3216" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3253:3325" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3450:3521" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3538:3546" ph="{...}" />
+            <marker date="1489309644899" expanded="true" signature="3587:3781" ph="{&quot;templateUrl&quot;: './views/app/components/ecosystem-map/ecosystem-map.component.html'...}" />
+            <marker date="1489309644899" expanded="true" signature="3753:3779" ph="{&quot;markers&quot;: '&lt;'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <marker date="1489309645543" expanded="true" signature="27:679" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="95:654" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="343:426" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="452:644" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="474:634" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="497:620" ph="{&quot;logic&quot;: 'emit'...}" />
+            <marker date="1489309645543" expanded="true" signature="670:677" ph="{...}" />
+            <marker date="1489309645543" expanded="true" signature="717:884" ph="{&quot;templateUrl&quot;: './views/app/components/get-location/get-location.component.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="99" lean-forward="false" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="99" />
+          <folding>
+            <marker date="1489127179958" expanded="true" signature="25:1358" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="61:1211" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="111:878" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="170:745" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="219:720" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="935:1190" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="994:1121" ph="..." />
+            <marker date="1489127179958" expanded="true" signature="1261:1347" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding>
+            <marker date="1489045029407" expanded="true" signature="25:13422" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="215:2309" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="946:1715" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="968:1069" ph="{&quot;iconUrl&quot;: 'img/icons/startup.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1099:1202" ph="{&quot;iconUrl&quot;: 'img/icons/coworking.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1232:1334" ph="{&quot;iconUrl&quot;: 'img/icons/investor.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1354:1457" ph="{&quot;iconUrl&quot;: 'img/icons/incubator.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1477:1576" ph="{&quot;iconUrl&quot;: 'img/icons/event.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1598:1703" ph="{&quot;iconUrl&quot;: 'img/icons/accelerator.png'...}" />
+            <marker date="1489045029407" expanded="true" signature="1912:2007" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="2362:4378" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="2588:4328" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="2649:4317" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="2703:4304" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="2732:3212" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisatio-msg&gt;'...}" />
+            <marker date="1489045029407" expanded="true" signature="2874:3098" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="3234:4178" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="3341:3472" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="3535:3672" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="3725:3854" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="3915:4052" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="4078:4156" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="4205:4289" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="4444:4541" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="4615:4716" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="4754:6764" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5080:6536" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5171:6416" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5233:6396" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5287:6375" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5448:6352" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5516:6323" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="5561:6173" ph="{&quot;message&quot;: '&lt;message&gt;&lt;/message&gt;'...}" />
+            <marker date="1489045029407" expanded="true" signature="5751:6036" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="6438:6520" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="6806:8631" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7097:8395" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7184:8298" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7242:8282" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7290:8267" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7432:8250" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7494:8227" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="7533:8093" ph="{&quot;message&quot;: '&lt;project-msg&gt;&lt;/project-msg&gt;'...}" />
+            <marker date="1489045029407" expanded="true" signature="7705:7966" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="8314:8384" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="8686:11098" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="8856:8907" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="8913:11093" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9133:11038" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9198:11023" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9256:11006" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9289:9810" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisation-msg&gt;'...}" />
+            <marker date="1489045029407" expanded="true" signature="9443:9683" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9836:10864" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="9951:10094" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="10161:10310" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="10367:10508" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="10573:10722" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="10752:10838" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="10895:10987" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11172:11241" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11265:13088" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11391:13050" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11450:13041" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11502:13030" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="11529:11990" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisation-msg&gt;'...}" />
+            <marker date="1489045029407" expanded="true" signature="11665:11881" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12010:12912" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12113:12238" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12299:12430" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12481:12604" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12663:12794" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12818:12892" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="12937:13017" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="13111:13237" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="13262:13395" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="13412:13420" ph="{...}" />
+            <marker date="1489045029407" expanded="true" signature="13456:13614" ph="{&quot;templateUrl&quot;: './views/app/components/left-menu/left-menu.component.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>

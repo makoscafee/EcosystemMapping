@@ -17,7 +17,7 @@ class EcosystemMapController {
                     lat: -6.1630,
                     lng: 35.7516,
                     zoom: 6
-                }
+                };
 
                 this.markerIcons ={
                   startup:{

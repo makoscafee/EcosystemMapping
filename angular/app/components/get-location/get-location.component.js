@@ -15,7 +15,7 @@ class GetLocationController{
         this.darEsSalaam={
             lat: -6.1630,
             lng: 35.7516,
-            zoom: 5
+            zoom: 6
         };
 
 
