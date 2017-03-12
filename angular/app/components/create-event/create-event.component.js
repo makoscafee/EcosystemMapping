@@ -38,7 +38,7 @@ class CreateEventController{
 
                         this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
                             this.$localStorage.organisations = response.data;
-                            this.$state.go('app.home.events.all',{id:1});
+                            this.$state.go('app.home.events.all',{id:this.$localStorage.ecosystem.id});
                         });
 
 

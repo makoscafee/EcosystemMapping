@@ -1,9 +1,10 @@
 class CreateProjectController{
-    constructor(ProjectsService,$log,OrganizationService,$localStorage,$state){
+    constructor(ProjectsService,$log,OrganizationService,$localStorage,$state,EcosystemService){
         'ngInject';
 
         // Initializing services
         this.organisationService = OrganizationService;
+        this.ecosystemService = EcosystemService;
         this.projectService = ProjectsService;
         this.$localStorage = $localStorage;
         this.$state = $state;
@@ -32,8 +33,12 @@ class CreateProjectController{
                 this.projectService.attachProject(data.organisationId,this.attachId).
                 then(
                     (response) =>{
-                        this.$log.log("project attached succefully");
-                        this.$state.go('app.home.pins.all',{id: this.$localStorage.ecosystem.id});
+                        this.$log.log("project attached successfully");
+
+                        this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
+                            this.$localStorage.organisations = response.data;
+                            this.$state.go('app.home.projects.all',{id:this.$localStorage.ecosystem.id});
+                        });
                     }
                 );
 
