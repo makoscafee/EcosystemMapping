@@ -16,14 +16,12 @@ class CreateOrganisationController {
 
 
         this.$rootScope.$on('leafletDirectiveMap.click', function(event, args){
-            let data = {
-                lat:args.leafletEvent.latlng.lat,
-                long:args.leafletEvent.latlng.lng
-            }
-             $rootScope.newLocation = data;
-             alert(data);
-            console.log("this is happening from where I want");
-            // console.log(args.leafletEvent.latlng);
+
+             $rootScope.newLocation = {
+                 lat:args.leafletEvent.latlng.lat,
+                 long:args.leafletEvent.latlng.lng
+             };
+             alert('Location added successfully');
             console.log($rootScope.newLocation);
 
         });
@@ -71,34 +69,36 @@ class CreateOrganisationController {
                 this.$log.log(response.data);
                 this.$log.log("organisation created successifully ");
 
-
-            }
-        );
-
-
                 // creating new location
-        this.addLocation(newLocation).then(
-            (response) => {
-                this.locationId = {location_id: response.data.id};
-                this.$log.log("location created succesfully");
-                this.$log.log(response.data);
+                this.addLocation(newLocation).then(
+                    (response) => {
+                        this.locationId = {location_id: response.data.id};
+                        this.$log.log("location created succesfully");
+                        this.$log.log(response.data);
 
 
 
-                // object containing information for attachment of data
-                this.attachData = {
-                    ecosystemId: makeOrganisation.ecosystemId,
-                    organisationId: this.organisationId,
-                    orgInfo: this.orgInfo,
-                    sectorId: {sector_id: makeOrganisation.sectorId},
-                    roleId: {role_id: makeOrganisation.roleId},
-                    locationId: this.locationId
-                };
+                        // object containing information for attachment of data
+                        this.attachData = {
+                            ecosystemId: makeOrganisation.ecosystemId,
+                            organisationId: this.organisationId,
+                            orgInfo: this.orgInfo,
+                            sectorId: {sector_id: makeOrganisation.sectorId},
+                            roleId: {role_id: makeOrganisation.roleId},
+                            locationId: this.locationId
+                        };
 
-                    // attaching  all data
-                this.attachEveryThing(this.attachData);
+                        // attaching  all data
+                        this.attachEveryThing(this.attachData);
+                    }
+                );
+
+
             }
         );
+
+
+
 
 
     }
