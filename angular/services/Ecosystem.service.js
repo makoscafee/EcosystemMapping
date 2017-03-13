@@ -13,14 +13,14 @@ export class EcosystemService{
 
       //getting all ecosystems
     getAll(){
-    return  this.API.all('ecosystem_parents').get('');
+    return  this.API.all('ecosystems').get('');
 
 
     }
 
       //getting one ecosystem
     getOne(id){
-        this.API.one('ecosystem_parents',id).get('')
+        this.API.one('ecosystems',id).get('')
         .then((response)=>{
           this.ecosystemOne = response.data;
           this.$log.log('this is just one ecosystem');
@@ -39,6 +39,12 @@ export class EcosystemService{
       then((response)=> {
         this.$log.log(response);
       });
+    }
+
+    attachOrganisationToEcosystem(ecosystemId,organisationId){
+        let DataAPI = this.API.one('ecosystems',ecosystemId);
+          return  DataAPI.all('attach-organizations').post(organisationId);
+
     }
 
 

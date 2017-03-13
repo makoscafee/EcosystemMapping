@@ -18,7 +18,7 @@ class CreateOrganizationEcosystemsTable extends Migration
             $table->foreign('ecosystem_id')->references('id')->on('ecosystems')->onDelete('cascade');
             $table->integer('organization_id')->unsigned()->nullable()->default(null);
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
-            $table->enum('status', array('active', 'inactive'))->nullable();
+            $table->enum('status', array('active', 'inactive'))->nullable()->default('active');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -1,3 +1,4 @@
+import {GetLocationComponent} from './app/components/get-location/get-location.component';
 import {CreateProjectComponent} from './app/components/create-project/create-project.component';
 import {CreateEventComponent} from './app/components/create-event/create-event.component';
 import {OrganisationDetailsComponent} from './app/components/organisation-details/organisation-details.component';
@@ -21,6 +22,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('getLocation', GetLocationComponent)
 	.component('createProject', CreateProjectComponent)
 	.component('createEvent', CreateEventComponent)
 	.component('organisationDetails', OrganisationDetailsComponent)

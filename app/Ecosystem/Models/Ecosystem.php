@@ -53,7 +53,7 @@ class Ecosystem extends Model
      **/
     public function parent()
     {
-        return $this->belongsTo(\App\Ecosystem\Models\Parent::class);
+        return $this->belongsTo('App\Ecosystem\Models\Parent', 'ecosystem_parent_id');
     }
 
     /**
@@ -61,6 +61,6 @@ class Ecosystem extends Model
      **/
     public function organizations()
     {
-        return $this->belongsToMany(\App\Ecosystem\Models\Organization::class, 'organization_ecosystems')->withPivot('status')->withTimestamps();
+        return $this->belongsToMany('App\Ecosystem\Models\Organization', 'organization_ecosystems', 'ecosystem_id', 'organization_id')->withPivot('status')->withTimestamps();
     }
 }
