@@ -37,7 +37,7 @@ class CreateProjectController{
 
                         this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
                             this.$localStorage.organisations = response.data;
-                            this.$state.go('app.home.projects.all',{id:this.$localStorage.ecosystem.id});
+                            this.$state.go('app.home.pins.all',{id:this.$localStorage.ecosystem.id});
                         });
                     }
                 );
