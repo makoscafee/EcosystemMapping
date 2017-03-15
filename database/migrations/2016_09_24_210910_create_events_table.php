@@ -17,7 +17,8 @@ class CreateEventsTable extends Migration
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
+            $table->string('free_or_paid')->nullable();
+            $table->date('end_date');
             $table->softDeletes();
             $table->timestamps();
         });

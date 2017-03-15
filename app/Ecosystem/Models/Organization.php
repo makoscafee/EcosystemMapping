@@ -24,6 +24,8 @@ class Organization extends Model
     public $fillable = [
         'ecosystem_parent_id',
         'name',
+        'website',
+        'target_group',
         'description',
         'date_founded',
         'date_registered',
@@ -39,6 +41,8 @@ class Organization extends Model
         'id' => 'integer',
         'ecosystem_parent_id' => 'integer',
         'name' => 'string',
+        'website' => 'string',
+        'target_group' => 'string',
         'description' => 'string',
         'date_founded' => 'date',
         'date_registered' => 'date',
