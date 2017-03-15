@@ -27,13 +27,14 @@ class DatabaseSeeder extends Seeder
         $this->call(EcosystemSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(SectorSeeder::class);
-        $this->call(LocationSeeder::class);
-        $this->call(OrganizationSeeder::class);
-        $this->call(ProjectSeeder::class);
-        $this->call(EventSeeder::class);
-        $this->call(ProjectRoleSeeder::class);
-        $this->call(EventRoleSeeder::class);
-        $this->call(DependencySeeder::class);
+        //$this->call(LocationSeeder::class);
+        //this will be fed manually
+        //$this->call(OrganizationSeeder::class);
+        //$this->call(ProjectSeeder::class);
+        //$this->call(EventSeeder::class);
+        //$this->call(ProjectRoleSeeder::class);
+        //$this->call(EventRoleSeeder::class);
+        //$this->call(DependencySeeder::class);
 
     }
 }
@@ -49,17 +50,12 @@ class EcosystemParentSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserTableSeeder::class);
-        $fake = Faker::create();
-        $limit = 5;
 
-        for ($i=0; $i < $limit; $i++) {
           DB::table('ecosystem_parents')->insert([
-            'name' => $fake->company,
+            'name' => 'Technology Ecosystem',
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s'),
           ]);
-        }
     }
 }
 
@@ -75,20 +71,14 @@ class EcosystemSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 5;
-        $status = array("active", "inactive");
-        $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
         $ecosystem_parents = EcosystemParent::lists('id')->All();
-        for ($i=0; $i < $limit; $i++) {
           DB::table('ecosystems')->insert([
-            'name' => $fake->company,
+            'name' => 'Innovation Ecoystem',
             'ecosystem_parent_id' => $fake->randomElement($ecosystem_parents),
-            'edition' => $i,
+            'edition' => '1',
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s'),
           ]);
-        }
     }
 }
 
@@ -104,10 +94,7 @@ class LocationSeeder extends Seeder
     {
         // $this->call(UserTableSeeder::class);
         $fake = Faker::create();
-        $limit = 300;
-        $status = array("active", "inactive");
-        $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
+        $limit = 200;
 
         for ($i=0; $i < $limit; $i++) {
 
@@ -174,7 +161,7 @@ class RoleSeeder extends Seeder
         for ($i=0; $i < sizeOf($roles); $i++) {
 
           DB::table('roles')->insert([
-            'name' => $roles[$fake->numberBetween(0, 5)],
+            'name' => $roles[$i],
             'description' => $fake->word,
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
@@ -203,7 +190,7 @@ class SectorSeeder extends Seeder
         for ($i=0; $i < sizeOf($sectors); $i++) {
 
           DB::table('sectors')->insert([
-            'name' => $sectors[$fake->numberBetween(0, 7)],
+            'name' => $sectors[$i],
             'description' => $fake->word,
             'created_at' => $fake->date('Y-m-d H:i:s'),
             'updated_at' => $fake->date('Y-m-d H:i:s')
