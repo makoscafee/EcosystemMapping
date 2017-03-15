@@ -18,6 +18,11 @@ export class OrganizationService{
       });
     }
 
+    getByEcosystem(ecosystemId){
+        let DataAPI = this.API.one('ecosystems',ecosystemId);
+        return DataAPI.all('organizations').get('');
+
+    }
 
       //getting one organization
     getOne(id){
@@ -28,18 +33,66 @@ export class OrganizationService{
 
     }
 
-    getLocation(){
+
+    // creating an organisation
+    createOrganisation(data){
+       return this.API.all('organizations').post(data);
+    }
+
+
+
+    // creating a new location
+    createLocation(data){
+      return  this.API.all('locations').post(data);
+    }
+
+    // Attach location to an organisation
+    attachLocationToOrganisation(organisationId,locationId){
+        let DataAPI =this.API.one('organizations',organisationId);
+
+       return DataAPI.all('attach-locations').post(locationId);
+
 
     }
 
-    getContacts(){
+
+        // gets all sectors
+    getSectors(){
+      return  this.API.all('sectors').get('');
 
     }
 
-    getSector(){
+    attachSectorToOrganisation(organisationId,sectorId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-sectors').post(sectorId);
+    }
+
+    attachRoleToOrganisation(organisationId,roleId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-roles').post(roleId);
+    }
+
+    attachStageToOrganisation(organisationId,stageId){
+        let DataAPI = this.API.one('organizations',organisationId);
+        return DataAPI.all('attach-stages').post(stageId);
+    }
+
+
+    // gets all roles
+    getRoles(){
+        return  this.API.all('roles').get('');
 
     }
 
+
+    // gets all stages
+    getStages(){
+        return  this.API.all('stages').get('');
+
+    }
+
+
+        // counts all role of a Organisations under a particular ecosystem
     getRoleCount(roleName){
       let roleData = [];
         angular.forEach(this.$localStorage.organisations.data,(org)=>{
@@ -55,7 +108,4 @@ export class OrganizationService{
         return roleData.length;
     }
 
-    getStage(){
-
-    }
 }

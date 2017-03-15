@@ -392,7 +392,9 @@ class LeftMenuController {
     }
 
 
-    $onInit() {}
+    $onInit() {
+
+    }
 }
 export const LeftMenuComponent = {
     templateUrl: './views/app/components/left-menu/left-menu.component.html',

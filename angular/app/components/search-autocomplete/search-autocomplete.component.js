@@ -1,5 +1,6 @@
 class SearchAutocompleteController {
-    constructor($timeout, $q, $log, DataService, EcosystemService, $state,$localStorage,SidemenuDataService) {
+    constructor($timeout, $q, $log, DataService, EcosystemService,
+                $state,$localStorage,SidemenuDataService) {
         'ngInject';
 
         //services
