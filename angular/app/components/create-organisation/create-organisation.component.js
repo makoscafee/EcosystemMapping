@@ -1,7 +1,7 @@
 class CreateOrganisationController {
 
     constructor(OrganizationService, EcosystemService,
-                $log,$localStorage,DataService,$rootScope,$state) {
+                $log,$localStorage,DataService,$rootScope,$state,$location) {
         'ngInject';
 
         // Initializing services
@@ -16,13 +16,20 @@ class CreateOrganisationController {
 
 
         this.$rootScope.$on('leafletDirectiveMap.click', function(event, args){
+            let lcn = $location.path();
 
-             $rootScope.newLocation = {
-                 lat:args.leafletEvent.latlng.lat,
-                 long:args.leafletEvent.latlng.lng
-             };
-             alert('Location added successfully');
-            console.log($rootScope.newLocation);
+            if(lcn == "/home/1/create"){
+                alert('Location added successfully');
+                $rootScope.newLocation = {
+                    lat:args.leafletEvent.latlng.lat,
+                    long:args.leafletEvent.latlng.lng
+                };
+                alert('Location added successfully');
+                console.log(lcn);
+                console.log($rootScope.newLocation);
+
+            }
+
 
         });
 
