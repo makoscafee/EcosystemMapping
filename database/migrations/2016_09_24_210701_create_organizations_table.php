@@ -16,7 +16,9 @@ class CreateOrganizationsTable extends Migration
             $table->increments('id');
             $table->integer('ecosystem_parent_id')->unsigned()->nullable()->default(null);
             $table->foreign('ecosystem_parent_id')->references('id')->on('ecosystem_parents')->onDelete('cascade');
-            $table->string('name')->nullable();
+            $table->string('name');
+            $table->string('website')->nullable();
+            $table->string('target_group')->nullable();
             $table->string('description')->nullable();
             $table->date('date_founded')->nullable();
             $table->date('date_registered')->nullable();

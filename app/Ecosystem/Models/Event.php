@@ -25,6 +25,7 @@ class Event extends Model
         'name',
         'description',
         'start_date',
+        'free_or_paid',
         'end_date'
     ];
 
