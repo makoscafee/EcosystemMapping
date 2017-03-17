@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="" />
+    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" afterPath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
+    </list>
     <ignored path="EcosystemMapping.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -32,58 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create-organisation.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
+      <file leaf-file-name="left-menu.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="209" column="92" lean-forward="false" selection-start-line="209" selection-start-column="92" selection-end-line="209" selection-end-column="92" />
-              <folding>
-                <marker date="1489730894548" expanded="true" signature="35:7061" ph="{...}" />
-                <marker date="1489730894548" expanded="true" signature="5145:6838" ph="{...}" />
-                <marker date="1489730894548" expanded="true" signature="6358:6820" ph="{...}" />
-                <marker date="1489730894548" expanded="true" signature="6572:6801" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_09_24_210831_create_projects_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-              <folding>
-                <element signature="e#7#38#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="laravel.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="6776" column="179" lean-forward="false" selection-start-line="6776" selection-start-column="177" selection-end-line="6776" selection-end-column="179" />
+            <state relative-caret-position="162">
+              <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -107,14 +67,10 @@
         <option value="$PROJECT_DIR$/angular/config/routes.config.js" />
         <option value="$PROJECT_DIR$/angular/app/pages/create/create.scss" />
         <option value="$PROJECT_DIR$/angular/services/organization.service.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/OrganizationAPIController.php" />
         <option value="$PROJECT_DIR$/angular/services/event.service.js" />
         <option value="$PROJECT_DIR$/angular/services/project.service.js" />
         <option value="$PROJECT_DIR$/angular/services/projects.service.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
-        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.html" />
@@ -126,6 +82,10 @@
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
         <option value="$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
       </list>
     </option>
   </component>
@@ -283,25 +243,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,12 +356,12 @@
       <workItem from="1489481980837" duration="1418000" />
       <workItem from="1489501739996" duration="8000" />
       <workItem from="1489518448115" duration="606000" />
-      <workItem from="1489727685273" duration="5875000" />
+      <workItem from="1489727685273" duration="13394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149420000" />
+    <option name="totallyTimeSpent" value="156939000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,7 +377,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12270916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23585658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -453,6 +395,26 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72136223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22788845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -630,20 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/search-autocomplete/search-autocomplete.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="125" column="34" lean-forward="false" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/config/routes.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="119" column="32" lean-forward="false" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/jlapp/swaggervel/src/Jlapp/Swaggervel/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -700,20 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/services/projects.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-140">
@@ -756,20 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/pages/create/create.page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -793,10 +713,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="6776" column="179" lean-forward="false" selection-start-line="6776" selection-start-column="177" selection-end-line="6776" selection-end-column="179" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-470">
+          <caret line="100" column="42" lean-forward="true" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/search-autocomplete/search-autocomplete.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="209" column="92" lean-forward="false" selection-start-line="209" selection-start-column="92" selection-end-line="209" selection-end-column="92" />
+          <folding>
+            <marker date="1489730894548" expanded="true" signature="35:7061" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="159:863" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="580:851" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="621:739" ph="{&quot;lat&quot;: args.leafletEvent.latlng.lat...}" />
+            <marker date="1489730894548" expanded="true" signature="880:1199" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="1067:1182" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="1254:3374" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="1398:1754" ph="{&quot;name&quot;: makeOrganisation.organisation.name...}" />
+            <marker date="1489730894548" expanded="true" signature="2044:3352" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="2435:3317" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="2762:3182" ph="{&quot;ecosystemId&quot;: makeOrganisation.ecosystemId...}" />
+            <marker date="1489730894548" expanded="true" signature="3425:3495" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="3553:3893" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="3626:3810" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="3823:3876" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="3944:4283" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4025:4200" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4213:4266" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4332:4662" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4410:4579" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4592:4645" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4712:5045" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4791:4962" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="4975:5028" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="5145:6838" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="5366:5451" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="5471:5575" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="5775:5844" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6032:6164" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6358:6820" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6572:6801" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6861:6939" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6956:7059" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="7106:7294" ph="{&quot;templateUrl&quot;: './views/app/components/create-organisation/create-organisation.component.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="567">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <marker date="1489729582492" expanded="true" signature="25:13619" ph="{...}" />
             <marker date="1489729582492" expanded="true" signature="215:2506" ph="{...}" />
@@ -881,50 +886,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="209" column="92" lean-forward="false" selection-start-line="209" selection-start-column="92" selection-end-line="209" selection-end-column="92" />
+        <state relative-caret-position="245">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
-            <marker date="1489730894548" expanded="true" signature="35:7061" ph="{...}" />
-            <marker date="1489730894548" expanded="true" signature="5145:6838" ph="{...}" />
-            <marker date="1489730894548" expanded="true" signature="6358:6820" ph="{...}" />
-            <marker date="1489730894548" expanded="true" signature="6572:6801" ph="{...}" />
+            <marker date="1489743664858" expanded="true" signature="17:2115" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="53:1991" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="84:1980" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="118:285" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="318:499" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="533:712" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="746:1025" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="850:991" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="1059:1328" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="1156:1294" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="1361:1624" ph="..." />
+            <marker date="1489743664858" expanded="true" signature="1454:1590" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php">
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="6776" column="179" lean-forward="false" selection-start-line="6776" selection-start-column="177" selection-end-line="6776" selection-end-column="179" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="486">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
-            <element signature="e#7#38#0#PHP" expanded="true" />
+            <marker date="1489743664958" expanded="true" signature="19:128" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="135:256" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="280:401" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="423:615" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="492:593" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="638:864" ph="..." />
+            <marker date="1489743664958" expanded="true" signature="728:842" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <marker date="1489743665026" expanded="true" signature="19:134" ph="..." />
+            <marker date="1489743665026" expanded="true" signature="141:262" ph="..." />
+            <marker date="1489743665026" expanded="true" signature="286:413" ph="..." />
+            <marker date="1489743665026" expanded="true" signature="437:665" ph="..." />
+            <marker date="1489743665026" expanded="true" signature="529:643" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/config/routes.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <marker date="1488995717118" expanded="true" signature="65:4891" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="116:193" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="277:628" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="386:618" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="412:482" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="508:578" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="660:825" ph="{&quot;url&quot;: '/'...}" />
+            <marker date="1488995717118" expanded="true" signature="703:815" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="730:801" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="854:1024" ph="{&quot;url&quot;: '/home/:id'...}" />
+            <marker date="1488995717118" expanded="true" signature="905:1014" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="932:1000" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1058:1236" ph="{&quot;url&quot;: '/pins'...}" />
+            <marker date="1488995717118" expanded="true" signature="1105:1226" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1131:1212" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1274:1446" ph="{&quot;url&quot;: '/all'...}" />
+            <marker date="1488995717118" expanded="true" signature="1320:1436" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1354:1422" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1488:1674" ph="{&quot;url&quot;: '/details'...}" />
+            <marker date="1488995717118" expanded="true" signature="1538:1664" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1572:1650" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1710:1883" ph="{&quot;url&quot;: '/events'...}" />
+            <marker date="1488995717118" expanded="true" signature="1759:1873" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1785:1859" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1923:2092" ph="{&quot;url&quot;: '/all'...}" />
+            <marker date="1488995717118" expanded="true" signature="1969:2082" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="1998:2068" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2136:2319" ph="{&quot;url&quot;: '/details/:eventId'...}" />
+            <marker date="1488995717118" expanded="true" signature="2195:2309" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2224:2295" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2357:2534" ph="{&quot;url&quot;: '/projects'...}" />
+            <marker date="1488995717118" expanded="true" signature="2408:2524" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2434:2510" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2576:2748" ph="{&quot;url&quot;: '/all'...}" />
+            <marker date="1488995717118" expanded="true" signature="2622:2738" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2652:2724" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2794:2982" ph="{&quot;url&quot;: '/details/:projectId'...}" />
+            <marker date="1488995717118" expanded="true" signature="2855:2972" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="2885:2958" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3018:3187" ph="{&quot;url&quot;: '/create'...}" />
+            <marker date="1488995717118" expanded="true" signature="3067:3177" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3093:3163" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3224:3380" ph="{&quot;url&quot;: '/get-location'...}" />
+            <marker date="1488995717118" expanded="true" signature="3275:3370" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3298:3358" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3424:3623" ph="{&quot;url&quot;: '/organisation'...}" />
+            <marker date="1488995717118" expanded="true" signature="3475:3613" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3499:3601" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3660:3816" ph="{&quot;url&quot;: '/event'...}" />
+            <marker date="1488995717118" expanded="true" signature="3704:3806" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3728:3794" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3855:4015" ph="{&quot;url&quot;: '/project'...}" />
+            <marker date="1488995717118" expanded="true" signature="3901:4005" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="3925:3993" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4045:4213" ph="{&quot;url&quot;: '/login'...}" />
+            <marker date="1488995717118" expanded="true" signature="4093:4203" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4120:4189" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4246:4420" ph="{&quot;url&quot;: '/register'...}" />
+            <marker date="1488995717118" expanded="true" signature="4297:4410" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4324:4396" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4460:4648" ph="{&quot;url&quot;: '/forgot-password'...}" />
+            <marker date="1488995717118" expanded="true" signature="4518:4638" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4545:4624" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4687:4887" ph="{&quot;url&quot;: '/reset-password/:email/:token'...}" />
+            <marker date="1488995717118" expanded="true" signature="4758:4877" ph="{...}" />
+            <marker date="1488995717118" expanded="true" signature="4785:4863" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
