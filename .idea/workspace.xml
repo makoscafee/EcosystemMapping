@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
-    </list>
+    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="" />
     <ignored path="EcosystemMapping.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -33,7 +31,65 @@
     <favorites_list name="EcosystemMapping" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="create-organisation.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="209" column="92" lean-forward="false" selection-start-line="209" selection-start-column="92" selection-end-line="209" selection-end-column="92" />
+              <folding>
+                <marker date="1489730894548" expanded="true" signature="35:7061" ph="{...}" />
+                <marker date="1489730894548" expanded="true" signature="5145:6838" ph="{...}" />
+                <marker date="1489730894548" expanded="true" signature="6358:6820" ph="{...}" />
+                <marker date="1489730894548" expanded="true" signature="6572:6801" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_09_24_210831_create_projects_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelFactory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+              <folding>
+                <element signature="e#7#38#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="laravel.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="6776" column="179" lean-forward="false" selection-start-line="6776" selection-start-column="177" selection-end-line="6776" selection-end-column="179" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +106,6 @@
         <option value="$PROJECT_DIR$/angular/app/pages/get-location/get-location.page.html" />
         <option value="$PROJECT_DIR$/angular/config/routes.config.js" />
         <option value="$PROJECT_DIR$/angular/app/pages/create/create.scss" />
-        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
         <option value="$PROJECT_DIR$/angular/services/organization.service.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/OrganizationAPIController.php" />
@@ -58,8 +113,6 @@
         <option value="$PROJECT_DIR$/angular/services/project.service.js" />
         <option value="$PROJECT_DIR$/angular/services/projects.service.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.html" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
-        <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.html" />
@@ -67,7 +120,12 @@
         <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" />
         <option value="$PROJECT_DIR$/angular/app/pages/create/create.page.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" />
+        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       </list>
     </option>
   </component>
@@ -180,9 +238,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -202,6 +260,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,7 +283,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,66 +301,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EcosystemMapping" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="left-menu" />
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,12 +411,15 @@
       <workItem from="1489331185267" duration="28000" />
       <workItem from="1489390930897" duration="5247000" />
       <workItem from="1489404128285" duration="1145000" />
-      <workItem from="1489481980837" duration="35000" />
+      <workItem from="1489481980837" duration="1418000" />
+      <workItem from="1489501739996" duration="8000" />
+      <workItem from="1489518448115" duration="606000" />
+      <workItem from="1489727685273" duration="5875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141548000" />
+    <option name="totallyTimeSpent" value="149420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,17 +431,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="7" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3561753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12270916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.71981424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.72136223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -436,7 +450,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -463,34 +476,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EcosystemController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Resource/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Ecosystem/Transformer/SectorTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/EcosystemAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="144" column="98" lean-forward="false" selection-start-line="144" selection-start-column="75" selection-end-line="144" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Ecosystem/Models/Organization.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -743,20 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/ecosystem-map/ecosystem-map.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -785,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="404" column="0" lean-forward="true" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -803,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,11 +777,154 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <marker date="1489729582492" expanded="true" signature="25:13619" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="215:2506" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="946:1715" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="968:1069" ph="{&quot;iconUrl&quot;: 'img/icons/startup.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1099:1202" ph="{&quot;iconUrl&quot;: 'img/icons/coworking.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1232:1334" ph="{&quot;iconUrl&quot;: 'img/icons/investor.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1354:1457" ph="{&quot;iconUrl&quot;: 'img/icons/incubator.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1477:1576" ph="{&quot;iconUrl&quot;: 'img/icons/event.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1598:1703" ph="{&quot;iconUrl&quot;: 'img/icons/accelerator.png'...}" />
+            <marker date="1489729582492" expanded="true" signature="1912:2007" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2159:2248" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2559:4575" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2785:4525" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2846:4514" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2900:4501" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="2929:3409" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisatio-msg&gt;'...}" />
+            <marker date="1489729582492" expanded="true" signature="3071:3295" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="3431:4375" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="3538:3669" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="3732:3869" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="3922:4051" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4112:4249" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4275:4353" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4402:4486" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4641:4738" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4812:4913" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="4951:6961" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5277:6733" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5368:6613" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5430:6593" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5484:6572" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5645:6549" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5713:6520" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="5758:6370" ph="{&quot;message&quot;: '&lt;message&gt;&lt;/message&gt;'...}" />
+            <marker date="1489729582492" expanded="true" signature="5948:6233" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="6635:6717" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7003:8828" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7294:8592" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7381:8495" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7439:8479" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7487:8464" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7629:8447" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7691:8424" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="7730:8290" ph="{&quot;message&quot;: '&lt;project-msg&gt;&lt;/project-msg&gt;'...}" />
+            <marker date="1489729582492" expanded="true" signature="7902:8163" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="8511:8581" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="8883:11295" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9053:9104" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9110:11290" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9330:11235" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9395:11220" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9453:11203" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="9486:10007" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisation-msg&gt;'...}" />
+            <marker date="1489729582492" expanded="true" signature="9640:9880" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10033:11061" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10148:10291" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10358:10507" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10564:10705" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10770:10919" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="10949:11035" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11092:11184" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11369:11438" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11462:13285" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11588:13247" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11647:13238" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11699:13227" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="11726:12187" ph="{&quot;message&quot;: '&lt;organisation-msg&gt;&lt;/organisation-msg&gt;'...}" />
+            <marker date="1489729582492" expanded="true" signature="11862:12078" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="12207:13109" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="12310:12435" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="12496:12627" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="12678:12801" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="12860:12991" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13015:13089" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13134:13214" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13308:13434" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13459:13592" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13609:13617" ph="{...}" />
+            <marker date="1489729582492" expanded="true" signature="13653:13811" ph="{&quot;templateUrl&quot;: './views/app/components/left-menu/left-menu.component.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="159" column="14" lean-forward="false" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        <state relative-caret-position="324">
+          <caret line="209" column="92" lean-forward="false" selection-start-line="209" selection-start-column="92" selection-end-line="209" selection-end-column="92" />
+          <folding>
+            <marker date="1489730894548" expanded="true" signature="35:7061" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="5145:6838" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6358:6820" ph="{...}" />
+            <marker date="1489730894548" expanded="true" signature="6572:6801" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_24_210831_create_projects_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="6776" column="179" lean-forward="false" selection-start-line="6776" selection-start-column="177" selection-end-line="6776" selection-end-column="179" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

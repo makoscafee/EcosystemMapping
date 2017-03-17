@@ -206,7 +206,8 @@ class CreateOrganisationController {
                 this.$log.log("sector attached to organisation succesfully");
                 this.ecosystemService.getOrganisation(attach.ecosystemId).then((response) => {
                     this.$localStorage.organisations = response.data;
-                    this.$state.go('app.home.pins.all',{id: attach.ecosystemId});
+                    this.createdOrgEvent();
+                    this.$state.go('app.home.pins.all',{id: attach.ecosystemId},{reload:true});
                 });
 
 
@@ -214,6 +215,10 @@ class CreateOrganisationController {
             }
         );
 
+    }
+
+    createdOrgEvent(){
+        this.$rootScope.$emit('newOrganisation','a new organisation');
     }
 
 
