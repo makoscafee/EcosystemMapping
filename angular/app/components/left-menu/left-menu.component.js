@@ -58,10 +58,18 @@ class LeftMenuController {
             let roleCount = {};
         angular.forEach(this.roles,(role)=>{
           roleCount[role.id] =this.OrganizationService.getRoleCount(role.name);
-            })
+            });
 
             this.countedRoles = roleCount;
 
+            //listening to an event
+        this.$rootScope.$on('newOrganisation', function(event, args){
+
+
+            console.log(args);
+            console.log("it worked event");
+
+        });
 
 
 
