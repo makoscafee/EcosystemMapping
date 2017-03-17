@@ -50,7 +50,7 @@ class EcosystemParentSeeder extends Seeder
      */
     public function run()
     {
-
+        $fake = Faker::create();
           DB::table('ecosystem_parents')->insert([
             'name' => 'Technology Ecosystem',
             'created_at' => $fake->date('Y-m-d H:i:s'),
