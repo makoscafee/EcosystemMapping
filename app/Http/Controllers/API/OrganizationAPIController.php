@@ -5,12 +5,16 @@ namespace App\Http\Controllers\API;
 use App\Http\Requests\API\CreateOrganizationAPIRequest;
 use App\Http\Requests\API\UpdateOrganizationAPIRequest;
 use App\Ecosystem\Models\Organization;
+use App\Ecosystem\Models\Location;
+use App\Ecosystem\Models\Ecosystem;
 use App\Ecosystem\Repositories\OrganizationRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use DB;
+use Input;
 
 /**
  * Class OrganizationController
@@ -55,9 +59,44 @@ class OrganizationAPIController extends AppBaseController
     {
         $input = $request->all();
 
-        $organizations = $this->organizationRepository->create($input);
+        DB::beginTransaction();
 
-        return $this->sendResponse($organizations->toArray(), 'Organization saved successfully');
+        try {
+            $location = Location::create([
+              'long' => $input['long'],
+              'lat'  => $input['lat']
+            ]);
+
+            $organization = $this->organizationRepository->create([
+              'name' => Input::get('name'),
+              'website'=> Input::get('website'),
+              'target_group' => Input::get('target_group'),
+              'description' => Input::get('description'),
+              'date_founded' => Input::get('date_founded'),
+              'date_registered' => Input::get('date_registered'),
+              'tin_number' => Input::get('tin_number')
+            ]);
+
+            $organization->roles()->attach(Input::get('role_id'));
+
+            $organization->sectors()->attach(Input::get('sector_id'));
+
+            $organization->locations()->attach($location->id);
+
+            $ecosystem = Ecosystem::find(Input::get('ecosystem_id'));
+
+            $ecosystem->organizations()->attach($organization->id, ['status' => 'active']);
+
+            DB::commit();
+            // all good
+        } catch (\Exception $e) {
+            DB::rollback();
+            // something went wrong
+
+            return response()->error($e->errorInfo[2], 500);
+        }
+
+        return $this->sendResponse($organization->toArray(), 'Organization saved successfully');
     }
 
     /**
