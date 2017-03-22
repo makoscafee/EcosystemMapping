@@ -272,8 +272,10 @@ class LeftMenuController {
 
         if (valueHolder.length > 0) {
             this.markers = valueHolder;
+            this.$log.log("value holder");
+            this.$log.log(valueHolder);
         } else {
-            var scope = this.$scope;
+            let scope = this.$scope;
             let markers = [];
             let role = {};
             //creating location information

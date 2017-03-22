@@ -97,7 +97,7 @@ class SearchAutocompleteController {
     }
 
     createFilterFor(query) {
-        var lowercaseQuery = angular.lowercase(query);
+        let lowercaseQuery = angular.lowercase(query);
         return (state) => {
             let value = state.name.toLowerCase()
             this.$log.log(value);
@@ -106,7 +106,7 @@ class SearchAutocompleteController {
     }
 
     querySearch(query) {
-        var results = query ? this.states.filter(this.createFilterFor(query)) : this.states,
+        let results = query ? this.states.filter(this.createFilterFor(query)) : this.states,
             deferred;
         if (this.simulateQuery) {
             deferred = this.$q.defer();
