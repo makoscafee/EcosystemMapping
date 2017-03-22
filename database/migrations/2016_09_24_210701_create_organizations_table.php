@@ -14,8 +14,6 @@ class CreateOrganizationsTable extends Migration
     {
         Schema::create('organizations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ecosystem_parent_id')->unsigned()->nullable()->default(null);
-            $table->foreign('ecosystem_parent_id')->references('id')->on('ecosystem_parents')->onDelete('cascade');
             $table->string('name');
             $table->string('website')->nullable();
             $table->string('target_group')->nullable();
