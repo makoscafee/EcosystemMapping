@@ -44,7 +44,7 @@ class LeftMenuController {
                 iconSize: [25, 41]
             },
             randD: {
-                iconUrl: 'img/icons/incubator.png',
+                iconUrl: 'img/icons/hackerspace.png',
                 iconSize: [25, 41]
             },
             event: {
