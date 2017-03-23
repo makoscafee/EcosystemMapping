@@ -51,18 +51,18 @@ class CreateOrganisationController {
     addOrganisation() {
 
         let data = {
-            name:this.org.name,
-            description:this.org.description,
-            tin_number:this.org.tin_number,
-            website:this.org.website,
+            name:this.or.name,
+            description:this.or.description,
+            tin_number:this.or.tin_number,
+            website:this.or.website,
             lat: this.$rootScope.newLocation.lat,
             long:this.$rootScope.newLocation.long,
             date_founded:"1992-04-28 22:21:44",
             date_registered:"1992-04-28 22:21:44",
-            target_group:this.org.target_group,
-            sector_id:this.org.sector_id,
-            role_id:this.org.role_id,
-            ecosystem_id:this.org.ecosystem_id,
+            target_group:this.or.target_group,
+            sector_id:this.or.sector_id,
+            role_id:this.or.role_id,
+            ecosystem_id:this.or.ecosystem_id,
 
 
         };
