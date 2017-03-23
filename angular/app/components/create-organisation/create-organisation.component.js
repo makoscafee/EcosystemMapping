@@ -73,7 +73,13 @@ class CreateOrganisationController {
                    console.log("organisation created successfully");
                    console.log(res);
                    alert('Organisation added successfully');
-                   this.$state.go('app.home.pins.all',{id:1},{reload:true});
+
+                   this.ecosystemService.getOrganisation(1).then((response) => {
+                       this.$localStorage.organisations = response.data;
+                       this.$log.log(this.$localStorage.organisations);
+                       this.$state.go('app.home.pins.all',{id:1},{reload:true});
+                   });
+
                }
            );
     }
