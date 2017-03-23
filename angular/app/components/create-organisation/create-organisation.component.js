@@ -13,22 +13,29 @@ class CreateOrganisationController {
         this.$state = $state;
         this.$log = $log;
 
+        let that = this;
+
+
+
 
 
         this.$rootScope.$on('leafletDirectiveMap.click', function(event, args){
             let lcn = $location.path();
 
             if(lcn == "/home/1/create"){
-                alert('Location added successfully');
+                that.org = {
+                    lat:args.leafletEvent.latlng.lat,
+                    long:args.leafletEvent.latlng.lng
+                };
+
                 $rootScope.newLocation = {
                     lat:args.leafletEvent.latlng.lat,
                     long:args.leafletEvent.latlng.lng
                 };
-                alert('Location added successfully');
-                console.log(lcn);
-                console.log($rootScope.newLocation);
 
             }
+
+
 
 
         });
@@ -38,38 +45,35 @@ class CreateOrganisationController {
 
     }
 
-    testScope(){
-        this.$log.log("testing accessbility");
-        this.$log.log(this.$rootScope.newLocation);
-        this.addLocation(this.$rootScope.newLocation).then(
-            (response) => {
-                this.$log.log("this is the new location");
-                this.$log.log(response);
-            }
-        );
-    }
+
 
     // adds a new organisation
     addOrganisation() {
-        this.org = {
-            name:"For testing resons",
-            website:"benitoite.co.tz",
-            target_group:"vijana",
-            tin_number:1234567898,
-            description:"am triying to post this organisation",
-            date_founded:"2002-06-15 07:55:02",
-            date_registered:"2002-06-15 07:55:02",
-            lat: -10.6463,
-            lng:35.6424,
-            sector_id:1,
-            role_id:1,
-            ecosystem_id:1
+
+        let data = {
+            name:this.org.name,
+            description:this.org.description,
+            tin_number:this.org.tin_number,
+            website:this.org.website,
+            lat: this.$rootScope.newLocation.lat,
+            long:this.$rootScope.newLocation.long,
+            date_founded:"1992-04-28 22:21:44",
+            date_registered:"1992-04-28 22:21:44",
+            target_group:this.org.target_group,
+            sector_id:this.org.sector_id,
+            role_id:this.org.role_id,
+            ecosystem_id:this.org.ecosystem_id,
+
+
         };
-       this.organisationService.createOrganisation(this.org)
+
+       this.organisationService.createOrganisation(data)
            .then(
                res => {
                    console.log("organisation created successfully");
                    console.log(res);
+                   alert('Organisation added successfully');
+                   this.$state.go('app.home.pins.all',{id:1},{reload:true});
                }
            );
     }
@@ -139,10 +143,9 @@ class CreateOrganisationController {
 
 
     $onInit() {
-        /*this.displayEcosystems();
+        this.displayEcosystems();
         this.displayRoles();
-        this.displaySectors();*/
-        this.addOrganisation();
+        this.displaySectors();
 
 
     }

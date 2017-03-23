@@ -5,53 +5,58 @@
 
             <md-input-container>
                 <label>Organisation Name</label>
-                <input type="text" ng-model="vm.forOrganisation.organisation.name">
+                <input type="text" ng-model="vm.org.name">
             </md-input-container>
 
             <md-input-container>
                 <label>Organisation Website</label>
-                <input type="text" ng-model="vm.forOrganisation.organisation.name">
+                <input type="text" ng-model="vm.org.website">
             </md-input-container>
 
 
             <md-input-container>
                 <label>Organisation Description</label>
-                <input type="text" ng-model="vm.forOrganisation.organisation.description">
+                <input type="text" ng-model="vm.org.description">
             </md-input-container>
 
             <md-input-container>
                 <label>Organisation Tin Number</label>
-                <input type="text" ng-model="vm.forOrganisation.organisation.tin_number">
+                <input type="text" ng-model="vm.org.tin_number">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Target Group</label>
+                <input type="text" ng-model="vm.org.target_group">
             </md-input-container>
 
                <div layout="row">
                    <md-input-container >
                        <label>latitude</label>
-                       <input type="text" ng-model="vm.forOrganisation.organisation.tin_number">
+                       <input type="text" ng-model="vm.org.lat">
                    </md-input-container>
                    <md-input-container >
                        <label>longitude</label>
-                       <input type="text" ng-model="vm.forOrganisation.organisation.tin_number">
+                       <input type="text" ng-model="vm.org.long">
                    </md-input-container>
                </div>
 
 
-            <md-datepicker ng-model="vm.forOrganisation.organisation.date_founded" md-placeholder="Date Founded"></md-datepicker>
-            <md-datepicker ng-model="vm.forOrganisation.organisation.date_registered" md-placeholder="Data Registered"></md-datepicker>
+            <md-datepicker ng-model="vm.org.date_founded" md-placeholder="Date Founded"></md-datepicker>
+            <md-datepicker ng-model="vm.org.organisation.date_registered" md-placeholder="Data Registered"></md-datepicker>
 
             <md-input-container>
-                <md-select ng-model="vm.forOrganisation.sectorId" placeholder="Select a Sector">
+                <md-select ng-model="vm.org.sector_id" placeholder="Select a Sector">
                     <md-option ng-value="opt.id" ng-repeat="opt in vm.allSectors">{{ opt.name }}</md-option>
                 </md-select>
             </md-input-container>
             <md-input-container>
-                <md-select ng-model="vm.forOrganisation.roleId" placeholder="Select a Role">
+                <md-select ng-model="vm.org.role_id" placeholder="Select a Role">
                     <md-option ng-value="opt.id" ng-repeat="opt in vm.allRoles">{{ opt.name }}</md-option>
                 </md-select>
             </md-input-container>
 
             <md-input-container>
-                <md-select ng-model="vm.forOrganisation.ecosystemId" placeholder="Select an Ecosystem">
+                <md-select ng-model="vm.org.ecosystem_id" placeholder="Select an Ecosystem">
                     <md-option ng-value="opt.id" ng-repeat="opt in vm.allEcosystems">{{ opt.name }}</md-option>
                 </md-select>
             </md-input-container>
