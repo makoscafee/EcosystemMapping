@@ -8,6 +8,18 @@
                 <input type="text" ng-model="vm.or.name">
             </md-input-container>
 
+
+            <div layout="row">
+                <md-input-container >
+                    <label>latitude</label>
+                    <input type="text" ng-model="vm.org.lat">
+                </md-input-container>
+                <md-input-container >
+                    <label>longitude</label>
+                    <input type="text" ng-model="vm.org.long">
+                </md-input-container>
+            </div>
+
             <md-input-container>
                 <label>Organisation Website</label>
                 <input type="text" ng-model="vm.or.website">
@@ -28,18 +40,6 @@
                 <label>Target Group</label>
                 <input type="text" ng-model="vm.or.target_group">
             </md-input-container>
-
-               <div layout="row">
-                   <md-input-container >
-                       <label>latitude</label>
-                       <input type="text" ng-model="vm.org.lat">
-                   </md-input-container>
-                   <md-input-container >
-                       <label>longitude</label>
-                       <input type="text" ng-model="vm.org.long">
-                   </md-input-container>
-               </div>
-
 
             <md-datepicker ng-model="vm.or.date_founded" md-placeholder="Date Founded"></md-datepicker>
             <md-datepicker ng-model="vm.or.organisation.date_registered" md-placeholder="Data Registered"></md-datepicker>
