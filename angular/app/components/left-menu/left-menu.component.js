@@ -1,5 +1,5 @@
 class LeftMenuController {
-    constructor(SidemenuDataService, $log, EcosystemFilterService, _, MapDataService, $rootScope) {
+    constructor(SidemenuDataService, $log, EcosystemFilterService, _, MapDataService, $rootScope, $scope) {
         'ngInject';
 
         //Initilizing the services
@@ -10,6 +10,7 @@ class LeftMenuController {
         this.initialOrganizationData = null;
         this.$rootScope = $rootScope;
         this.$log = $log;
+        this.$scope = $scope;
         this.selectedRoles = [];
         this.selectedSectors = [];
 
@@ -57,8 +58,9 @@ class LeftMenuController {
       }else {
         this.MapDataService.setOrganizationData(this.initialOrganizationData);
       }
-
-      this.$rootScope.$emit('eventX');
+      var args = {};
+      args.scope = this.$scope;
+      this.$rootScope.$emit('eventX', args);
 
     }
 

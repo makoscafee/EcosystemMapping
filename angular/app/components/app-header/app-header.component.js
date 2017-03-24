@@ -14,9 +14,7 @@ class AppHeaderController{
     }
 
     $onInit(){
-        //defer iframe loading
-        let url = 'https://ghbtns.com/github-btn.html?user=jadjoubran&repo=laravel5-angular-material-starter&type=star&count=true&size=large';
-        this.githubWidget = this.$sce.trustAsResourceUrl(url);
+      
     }
 
 }

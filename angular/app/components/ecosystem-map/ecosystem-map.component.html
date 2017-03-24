@@ -1,4 +1,49 @@
+<div layout="column" class="full-map">
+  <leaflet lf-center="vm.ecosystemMap.center" defaults="vm.ecosystemMap.defaults" markers="vm.ecosystemMap.markers" width="100%" height="100%"></leaflet>
+  <md-fab-speed-dial ng-hide="false" md-direction="down" md-open="false" class="md-scale md-fab-top-left-map" ng-class="{ 'md-hover-full': false }" ng-mouseenter="vm.fab.isOpen=true" ng-mouseleave="vm.fab.isOpen=false">
+      <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn">
+          <md-icon md-svg-src="img/icons/add.svg" aria-label="menu"></md-icon>
+        </md-button>
+      </md-fab-trigger>
 
-<div layout="column" >
-  <leaflet lf-center="vm.ecosystemMap.center" markers="vm.ecosystemMap.markers" width="100%" height="100vh"></leaflet>
+      <md-fab-actions>
+        <md-list-item ng-repeat="item in vm.fab.items" class="choice-list">
+          <span ng-click="vm.openDialog($event, item)">
+            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini md-primary" ng-click="demo.openDialog($event, item)">
+              <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+            </md-button>
+            <span class="bug"> {{ item.name }} </span>
+          </span>
+        </md-list-item>
+        <!-- <div ng-repeat="item in vm.fab.items">
+          <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini md-primary" ng-click="demo.openDialog($event, item)">
+            <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+          </md-button>
+        </div> -->
+      </md-fab-actions>
+    </md-fab-speed-dial>
 </div>
+
+
+<script type="text/ng-template" id="dialog.html">
+  <md-dialog>
+    <md-toolbar>
+      <div class="md-toolbar-tools">Cool Dialog!</div>
+    </md-toolbar>
+
+    <md-dialog-content layout-padding>
+      Hello user! you clicked {{dialog.item.name}}.
+    </md-dialog-content>
+
+    <div class="md-dialog-actions">
+      <md-button aria-label="Close dialog" ng-click="dialog.close()" class="md-primary">
+        Close Greeting
+      </md-button>
+
+      <md-button aria-label="Submit dialog" ng-click="dialog.submit()" class="md-primary">
+        Submit
+      </md-button>
+    </div>
+  </md-dialog>
+</script>

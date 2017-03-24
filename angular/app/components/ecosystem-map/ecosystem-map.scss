@@ -1,1 +1,36 @@
 #mapid { height: 100vh; }
+
+.full-map {
+  height: 100%;
+  display: flex;
+}
+
+
+.md-fab-top-left-map{
+    top: 5px;
+    right: auto;
+    bottom: auto;
+    position: absolute;
+}
+
+md-fab-speed-dial {
+  align-items: flex-start;
+}
+
+.choice-list {
+  margin: 0 8px;
+}
+
+
+.bug {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 25px;
+    background: #373E46;
+    padding: 8px 16px;
+}
