@@ -169,12 +169,10 @@
           <root url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
           <root url="file://$MODULE_DIR$/vendor/infyomlabs/laravel-generator" />
           <root url="file://$MODULE_DIR$/vendor/infyomlabs/metronic-templates" />
-          <root url="file://$MODULE_DIR$/vendor/infyomlabs/swagger-generator" />
           <root url="file://$MODULE_DIR$/vendor/ircmaxell/password-compat" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
           <root url="file://$MODULE_DIR$/vendor/jeremeamia/SuperClosure" />
-          <root url="file://$MODULE_DIR$/vendor/jlapp/swaggervel" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/flash" />
           <root url="file://$MODULE_DIR$/vendor/laravel/framework" />
           <root url="file://$MODULE_DIR$/vendor/laravelangular/generators" />
@@ -232,7 +230,6 @@
           <root url="file://$MODULE_DIR$/vendor/tymon/jwt-auth" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://$MODULE_DIR$/vendor/zircote/swagger-php" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
@@ -254,12 +251,10 @@
           <root url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
           <root url="file://$MODULE_DIR$/vendor/infyomlabs/laravel-generator" />
           <root url="file://$MODULE_DIR$/vendor/infyomlabs/metronic-templates" />
-          <root url="file://$MODULE_DIR$/vendor/infyomlabs/swagger-generator" />
           <root url="file://$MODULE_DIR$/vendor/ircmaxell/password-compat" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
           <root url="file://$MODULE_DIR$/vendor/jeremeamia/SuperClosure" />
-          <root url="file://$MODULE_DIR$/vendor/jlapp/swaggervel" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/flash" />
           <root url="file://$MODULE_DIR$/vendor/laravel/framework" />
           <root url="file://$MODULE_DIR$/vendor/laravelangular/generators" />
@@ -317,7 +312,6 @@
           <root url="file://$MODULE_DIR$/vendor/tymon/jwt-auth" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://$MODULE_DIR$/vendor/zircote/swagger-php" />
         </SOURCES>
       </library>
     </orderEntry>
