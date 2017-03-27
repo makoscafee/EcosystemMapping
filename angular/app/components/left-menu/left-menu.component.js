@@ -1,7 +1,7 @@
 class LeftMenuController {
     constructor(SidemenuDataService, $log, EcosystemFilterService,
-       EcosystemService, MapDataService, $localStorage,$state,
-       OrganizationService,$rootScope,$scope,DataService) {
+                EcosystemService, MapDataService, $localStorage, $state,
+                OrganizationService, $rootScope, $scope, DataService) {
         'ngInject';
 
         //Initilizing the services
@@ -18,52 +18,59 @@ class LeftMenuController {
         this.$state = $state;
 
 
-          //global variable
-          this.selectedEcosystem = this.$localStorage.ecosystem;
-          this.isRoleChecked = {};
-          this.isSectorChecked = {};
-          this.markerIcons ={
-            startup:{
-              iconUrl: 'img/icons/startup.png',
-               iconSize:     [25, 41]
+        //global variable
+        this.selectedEcosystem = this.$localStorage.ecosystem;
+        this.isRoleChecked = {};
+        this.isSectorChecked = {};
+        this.markerIcons = {
+            startup: {
+                iconUrl: 'img/icons/startup.png',
+                iconSize: [25, 41]
             },
-            coworkingSpaces:{
-              iconUrl: 'img/icons/coworking.png',
-               iconSize:     [25, 41]
+            incubators: {
+                iconUrl: 'img/icons/incubator.png',
+                iconSize: [25, 41]
             },
-            fundingAgencies:{
-              iconUrl: 'img/icons/investor.png',
-               iconSize:     [25, 41]
+            developmentOrganization: {
+                iconUrl: 'img/icons/service.png',
+                iconSize: [25, 41]
             },
-            randD:{
-              iconUrl: 'img/icons/incubator.png',
-               iconSize:     [25, 41]
+            coworkingSpaces: {
+                iconUrl: 'img/icons/coworking.png',
+                iconSize: [25, 41]
             },
-            event:{
-              iconUrl: 'img/icons/event.png',
-               iconSize:     [25, 41]
+            fundingAgencies: {
+                iconUrl: 'img/icons/investor.png',
+                iconSize: [25, 41]
             },
-            project:{
-              iconUrl: 'img/icons/accelerator.png',
-               iconSize:     [25, 41]
+            randD: {
+                iconUrl: 'img/icons/hackerspace.png',
+                iconSize: [25, 41]
+            },
+            event: {
+                iconUrl: 'img/icons/event.png',
+                iconSize: [25, 41]
+            },
+            project: {
+                iconUrl: 'img/icons/accelerator.png',
+                iconSize: [25, 41]
             }
-          };
-
+        };
 
 
         //getting all roles
         this.roles = this.$localStorage.roles;
 
-          //creating a role count object
-            let roleCount = {};
-        angular.forEach(this.roles,(role)=>{
-          roleCount[role.id] =this.OrganizationService.getRoleCount(role.name);
-            });
+        //creating a role count object
+        let roleCount = {};
+        angular.forEach(this.roles, (role) => {
+            roleCount[role.id] = this.OrganizationService.getRoleCount(role.name);
+        });
 
-            this.countedRoles = roleCount;
+        this.countedRoles = roleCount;
 
-            //listening to an event
-        this.$rootScope.$on('newOrganisation', function(event, args){
+        //listening to an event
+        this.$rootScope.$on('newOrganisation', function (event, args) {
 
 
             console.log(args);
@@ -72,16 +79,14 @@ class LeftMenuController {
         });
 
 
-
         //getting all sectors
         this.sectors = this.$localStorage.sectors;
 
-      //  this.orgLocation = this.MapDataService.checkedOrganisations();
+        //  this.orgLocation = this.MapDataService.checkedOrganisations();
 
 
-
-      //showing Organisations,events,projects initially
-      this.showOrganisations();
+        //showing Organisations,events,projects initially
+        this.showOrganisations();
 
     }
 
@@ -93,54 +98,62 @@ class LeftMenuController {
         let markers = [];
         let role = {};
         //creating location information
-        angular.forEach(data, (response)=> {
-          angular.forEach(response.locations, (locations)=>{
-            angular.forEach(locations, (location)=> {
-              var marker = {
-                lat: parseFloat(location.lat),
-                lng: parseFloat(location.long),
-                getMessageScope: function () {
-                                var infowindowScope = scope.$new(true);
-                                infowindowScope.data = response;
-                                return infowindowScope;
-                            },
-                message:'<organisation-msg></organisatio-msg>',
-                    icon: {}
-                  }
-                  try{
-                    let roleName = response.roles.data[0].name;
-                    if(roleName == "R&D"){
-                        marker.icon = this.markerIcons.randD;
-                        markers.push(marker);
+        angular.forEach(data, (response) => {
+            angular.forEach(response.locations, (locations) => {
+                angular.forEach(locations, (location) => {
+                    var marker = {
+                        lat: parseFloat(location.lat),
+                        lng: parseFloat(location.long),
+                        getMessageScope: function () {
+                            var infowindowScope = scope.$new(true);
+                            infowindowScope.data = response;
+                            return infowindowScope;
+                        },
+                        message: '<organisation-msg></organisatio-msg>',
+                        icon: {}
                     }
-                    else if (roleName == "Funding Agencies" ) {
-                      marker.icon = this.markerIcons.fundingAgencies;
-                      markers.push(marker);
-                    }
-                    else if (roleName == "Startup") {
-                      marker.icon = this.markerIcons.startup;
-                      markers.push(marker);
-                    }
-                    else if (roleName == "Coworking Space") {
-                      marker.icon = this.markerIcons.coworkingSpaces;
-                      markers.push(marker);
-                    }
-                    else {
-                      this.$log.log("no such a role");
-                    }
+                    try {
+                        let roleName = response.roles.data[0].name;
+                        if (roleName == "R&D") {
+                            marker.icon = this.markerIcons.randD;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Funding Agencies") {
+                            marker.icon = this.markerIcons.fundingAgencies;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Incubators") {
+                            marker.icon = this.markerIcons.incubators;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Development Organization") {
+                            marker.icon = this.markerIcons.developmentOrganization;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Startup") {
+                            marker.icon = this.markerIcons.startup;
+                            markers.push(marker);
+                        }
+                        else if (roleName == "Coworking Space") {
+                            marker.icon = this.markerIcons.coworkingSpaces;
+                            markers.push(marker);
+                        }
+                        else {
+                            this.$log.log("no such a role");
+                        }
 
 
-                  }
-                  catch(e){
-                    this.$log.log("no role info in this org");
-                  }
+                    }
+                    catch (e) {
+                        this.$log.log("no role info in this org");
+                    }
 
+                })
             })
-          })
         });
 
 
-              this.markers = markers;
+        this.markers = markers;
 
 
     }
@@ -159,113 +172,112 @@ class LeftMenuController {
 
     // show events
     showEvents() {
-      this.$state.go('app.home.events.all');
+        this.$state.go('app.home.events.all');
 
-            var scope = this.$scope;
-            var markers = [];
-            var evts = [];
-            var eventMarkers = {markers:[],events:[]}
+        var scope = this.$scope;
+        var markers = [];
+        var evts = [];
+        var eventMarkers = {markers: [], events: []}
 
 
-              //creating location information
-              angular.forEach(this.$localStorage.organisations.data, (response)=> {
-                if(response.events.data.length > 0 && response.locations.data.length > 0){
-                  angular.forEach(response.events,(events)=>{
-                    angular.forEach(events,(event)=>{
-                      evts.push(event);
+        //creating location information
+        angular.forEach(this.$localStorage.organisations.data, (response) => {
+            if (response.events.data.length > 0 && response.locations.data.length > 0) {
+                angular.forEach(response.events, (events) => {
+                    angular.forEach(events, (event) => {
+                        evts.push(event);
 
 
                         //creating markers
-                          angular.forEach(response.locations,(locations)=>{
-                            angular.forEach(locations,(location)=>{
-                              var marker = {
-                                lat: parseFloat(location.lat),
-                                lng: parseFloat(location.long),
-                                getMessageScope: function () {
-                                                var infowindowScope = scope.$new(true);
-                                                infowindowScope.data = event;
-                                                return infowindowScope;
-                                            },
-                                message:'<message></message>',
-                                icon: {}
-                              }
-                              marker.icon = this.markerIcons.event;
-                              markers.push(marker);
+                        angular.forEach(response.locations, (locations) => {
+                            angular.forEach(locations, (location) => {
+                                var marker = {
+                                    lat: parseFloat(location.lat),
+                                    lng: parseFloat(location.long),
+                                    getMessageScope: function () {
+                                        var infowindowScope = scope.$new(true);
+                                        infowindowScope.data = event;
+                                        return infowindowScope;
+                                    },
+                                    message: '<message></message>',
+                                    icon: {}
+                                }
+                                marker.icon = this.markerIcons.event;
+                                markers.push(marker);
                             })
-                          })
+                        })
                     })
-                  });
-                }
-                else {
-                      this.$log.log("no events or locations");
-                }
-              });
+                });
+            }
+            else {
+                this.$log.log("no events or locations");
+            }
+        });
 
-                    eventMarkers.markers = markers;
-                    eventMarkers.events = evts;
-              let data = eventMarkers;
-            this.markers = data.markers;
-            this.events = data.events;
+        eventMarkers.markers = markers;
+        eventMarkers.events = evts;
+        let data = eventMarkers;
+        this.markers = data.markers;
+        this.events = data.events;
     }
 
     // show projects
     showProjects() {
-      this.$state.go('app.home.projects.all');
+        this.$state.go('app.home.projects.all');
 
-      var scope = this.$scope;
-      var markers = [];
-      var evts = [];
-      var eventMarkers = {markers:[],events:[]}
+        var scope = this.$scope;
+        var markers = [];
+        var evts = [];
+        var eventMarkers = {markers: [], events: []}
 
         //creating location information
-        angular.forEach(this.$localStorage.organisations.data, (response)=> {
-          if(response.projects.data.length > 0 && response.locations.data.length > 0){
-            angular.forEach(response.projects,(events)=>{
-              angular.forEach(events,(event)=>{
-                evts.push(event);
+        angular.forEach(this.$localStorage.organisations.data, (response) => {
+            if (response.projects.data.length > 0 && response.locations.data.length > 0) {
+                angular.forEach(response.projects, (events) => {
+                    angular.forEach(events, (event) => {
+                        evts.push(event);
 
-                  //creating markers
-                    angular.forEach(response.locations,(locations)=>{
-                      angular.forEach(locations,(location)=>{
-                        var marker = {
-                          lat: parseFloat(location.lat),
-                          lng: parseFloat(location.long),
-                          getMessageScope: function () {
-                                          var infowindowScope = scope.$new(true);
-                                          infowindowScope.data = event;
-                                          return infowindowScope;
-                                      },
-                          message:'<project-msg></project-msg>',
-                          icon: {}
-                        }
-                        marker.icon = this.markerIcons.project;
-                        markers.push(marker);
-                      })
+                        //creating markers
+                        angular.forEach(response.locations, (locations) => {
+                            angular.forEach(locations, (location) => {
+                                var marker = {
+                                    lat: parseFloat(location.lat),
+                                    lng: parseFloat(location.long),
+                                    getMessageScope: function () {
+                                        var infowindowScope = scope.$new(true);
+                                        infowindowScope.data = event;
+                                        return infowindowScope;
+                                    },
+                                    message: '<project-msg></project-msg>',
+                                    icon: {}
+                                }
+                                marker.icon = this.markerIcons.project;
+                                markers.push(marker);
+                            })
+                        })
                     })
-              })
-            });
+                });
 
 
-          }
-          else {
+            }
+            else {
                 this.$log.log("no events or locations");
-          }
+            }
 
         });
-                    eventMarkers.markers = markers;
-                    eventMarkers.events = evts;
+        eventMarkers.markers = markers;
+        eventMarkers.events = evts;
 
-                    let data = eventMarkers;
+        let data = eventMarkers;
 
-            this.markers = data.markers;
-            this.events = data.events;
+        this.markers = data.markers;
+        this.events = data.events;
 
     }
 
     // show all organisations
-   showOrganisations() {
+    showOrganisations() {
         this.$state.go('app.home.pins.all');
-
 
 
         let valueHolder = this.makeMarkers(this.SidemenuDataService.getMapData());
@@ -279,125 +291,126 @@ class LeftMenuController {
             let markers = [];
             let role = {};
             //creating location information
-            angular.forEach(this.$localStorage.organisations.data, (response)=> {
-              angular.forEach(response.locations, (locations)=>{
-                angular.forEach(locations, (location)=> {
-                  var marker = {
-                    lat: parseFloat(location.lat),
-                    lng: parseFloat(location.long),
-                    getMessageScope: function () {
-                                    var infowindowScope = scope.$new(true);
-                                    infowindowScope.data = response;
-                                    return infowindowScope;
-                                },
-                    message:'<organisation-msg></organisation-msg>',
+            angular.forEach(this.$localStorage.organisations.data, (response) => {
+                angular.forEach(response.locations, (locations) => {
+                    angular.forEach(locations, (location) => {
+                        var marker = {
+                            lat: parseFloat(location.lat),
+                            lng: parseFloat(location.long),
+                            getMessageScope: function () {
+                                var infowindowScope = scope.$new(true);
+                                infowindowScope.data = response;
+                                return infowindowScope;
+                            },
+                            message: '<organisation-msg></organisation-msg>',
+                            icon: {}
+                        }
+                        try {
+                            let roleName = response.roles.data[0].name;
+                            if (roleName == "R&D") {
+                                marker.icon = this.markerIcons.randD;
+                                markers.push(marker);
+                            }
+                            else if (roleName == "Funding Agencies") {
+                                marker.icon = this.markerIcons.fundingAgencies;
+                                markers.push(marker);
+                            }
+                            else if (roleName == "Startup") {
+                                marker.icon = this.markerIcons.startup;
+                                markers.push(marker);
+                            }
+                            else if (roleName == "Coworking Space") {
+                                marker.icon = this.markerIcons.coworkingSpaces;
+                                markers.push(marker);
+                            }
+                            else {
+                                this.$log.log("no such a role");
+                            }
+
+
+                        }
+                        catch (e) {
+                            this.$log.log("no role info in this org");
+                        }
+
+                    })
+                })
+            });
+
+            this.markers = markers;
+        }
+    }
+
+    //showing number of organisions per role
+    showRoleCount(roleName) {
+        return this.OrganizationService.getRoleCount(roleName);
+    }
+
+
+    makeMarkers(data) {
+        let markers = [];
+        let role = {};
+        //creating location information
+        angular.forEach(data, (response) => {
+            angular.forEach(response.locations, (locations) => {
+                angular.forEach(locations, (location) => {
+                    var marker = {
+                        lat: parseFloat(location.lat),
+                        lng: parseFloat(location.long),
+                        getMessageScope: function () {
+                            var infowindowScope = scope.$new(true);
+                            infowindowScope.data = response;
+                            return infowindowScope;
+                        },
+                        message: '<organisation-msg></organisation-msg>',
                         icon: {}
-                      }
-                      try{
+                    }
+                    try {
                         let roleName = response.roles.data[0].name;
-                        if(roleName == "R&D"){
+                        if (roleName == "R&D") {
                             marker.icon = this.markerIcons.randD;
                             markers.push(marker);
                         }
-                        else if (roleName == "Funding Agencies" ) {
-                          marker.icon = this.markerIcons.fundingAgencies;
-                          markers.push(marker);
+                        else if (roleName == "Funding Agencies") {
+                            marker.icon = this.markerIcons.fundingAgencies;
+                            markers.push(marker);
                         }
                         else if (roleName == "Startup") {
-                          marker.icon = this.markerIcons.startup;
-                          markers.push(marker);
+                            marker.icon = this.markerIcons.startup;
+                            markers.push(marker);
                         }
                         else if (roleName == "Coworking Space") {
-                          marker.icon = this.markerIcons.coworkingSpaces;
-                          markers.push(marker);
+                            marker.icon = this.markerIcons.coworkingSpaces;
+                            markers.push(marker);
                         }
                         else {
-                          this.$log.log("no such a role");
+                            this.$log.log("no such a role");
                         }
 
 
-                      }
-                      catch(e){
+                    }
+                    catch (e) {
                         this.$log.log("no role info in this org");
-                      }
+                    }
 
                 })
-              })
-            });
+            })
+        });
 
-                  this.markers = markers;
-        }
-   }
 
-    //showing number of organisions per role
-    showRoleCount(roleName){
-      return this.OrganizationService.getRoleCount(roleName);
+        return markers;
     }
 
 
-    makeMarkers(data){
-      let markers = [];
-      let role = {};
-      //creating location information
-      angular.forEach(data, (response)=> {
-        angular.forEach(response.locations, (locations)=>{
-          angular.forEach(locations, (location)=> {
-            var marker = {
-              lat: parseFloat(location.lat),
-              lng: parseFloat(location.long),
-              getMessageScope: function () {
-                              var infowindowScope = scope.$new(true);
-                              infowindowScope.data = response;
-                              return infowindowScope;
-                          },
-              message:'<organisation-msg></organisation-msg>',
-                  icon: {}
-                }
-                try{
-                  let roleName = response.roles.data[0].name;
-                  if(roleName == "R&D"){
-                      marker.icon = this.markerIcons.randD;
-                      markers.push(marker);
-                  }
-                  else if (roleName == "Funding Agencies" ) {
-                    marker.icon = this.markerIcons.fundingAgencies;
-                    markers.push(marker);
-                  }
-                  else if (roleName == "Startup") {
-                    marker.icon = this.markerIcons.startup;
-                    markers.push(marker);
-                  }
-                  else if (roleName == "Coworking Space") {
-                    marker.icon = this.markerIcons.coworkingSpaces;
-                    markers.push(marker);
-                  }
-                  else {
-                    this.$log.log("no such a role");
-                  }
-
-
-                }
-                catch(e){
-                  this.$log.log("no role info in this org");
-                }
-
-          })
-        })
-      });
-
-
-            return markers;
-    }
-
-
-    viewEvent(event){
-      this.DataService.setEventFromMarker(event);
-      this.$state.go('app.home.events.details',{eventId:event.id});
+    viewEvent(event) {
+        this.DataService.setEventFromMarker(event);
+        this.$state.go('app.home.events.details', {eventId: event.id});
 
     }
-    viewProject(project){
-      this.DataService.setProjFromMarker(project);
-      this.$state.go('app.home.projects.details',{projectId:project.id});
+
+    viewProject(project) {
+        this.DataService.setProjFromMarker(project);
+        this.$state.go('app.home.projects.details', {projectId: project.id});
 
     }
 
