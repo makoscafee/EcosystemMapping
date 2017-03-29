@@ -1,5 +1,6 @@
 class CreateEventController{
-    constructor(EventService,$log,OrganizationService,$localStorage,$state,EcosystemService){
+    constructor(EventService,$log,OrganizationService,$localStorage,
+                $state,EcosystemService,$rootScope){
         'ngInject';
 
         // Initializing services
@@ -7,6 +8,7 @@ class CreateEventController{
         this.ecosystemService = EcosystemService;
         this.eventService = EventService;
         this.$localStorage = $localStorage;
+        this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
     }
@@ -38,7 +40,7 @@ class CreateEventController{
 
                         this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
                             this.$localStorage.organisations = response.data;
-                            this.$state.go('app.home.pins.all',{id:this.$localStorage.ecosystem.id});
+                            this.$rootScope.$emit('newEvent', 'stop change of state');
                         });
 
 

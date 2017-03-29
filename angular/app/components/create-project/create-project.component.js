@@ -1,5 +1,5 @@
 class CreateProjectController{
-    constructor(ProjectsService,$log,OrganizationService,$localStorage,$state,EcosystemService){
+    constructor(ProjectsService,$log,OrganizationService,$localStorage,$state,EcosystemService,$rootScope){
         'ngInject';
 
         // Initializing services
@@ -7,6 +7,7 @@ class CreateProjectController{
         this.ecosystemService = EcosystemService;
         this.projectService = ProjectsService;
         this.$localStorage = $localStorage;
+        this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
     }
@@ -26,6 +27,7 @@ class CreateProjectController{
 
         this.projectService.createProject(modifiedProject).then(
             (response) => {
+                /*this.$rootScope.$emit('stop', 'stop change of state');*/
                 this.attachId = {project_id: response.data.id};
                 this.projectId = response.data.id;
                 this.$log.log(response.data);
@@ -37,7 +39,8 @@ class CreateProjectController{
 
                         this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
                             this.$localStorage.organisations = response.data;
-                            this.$state.go('app.home.pins.all',{id:this.$localStorage.ecosystem.id});
+                            /*this.$state.go('app.home.projects.all',{id:this.$localStorage.ecosystem.id},{reload:true});*/
+                            this.$rootScope.$emit('stop', 'stop change of state');
                         });
                     }
                 );
@@ -69,6 +72,7 @@ class CreateProjectController{
 
     $onInit(){
         this.displayOrganisations();
+
     }
 }
 

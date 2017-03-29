@@ -16,6 +16,7 @@ class LeftMenuController {
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
+        let that = this;
 
 
         //global variable
@@ -70,12 +71,13 @@ class LeftMenuController {
         this.countedRoles = roleCount;
 
         //listening to an event
-        this.$rootScope.$on('newOrganisation', function (event, args) {
-
-
-            console.log(args);
-            console.log("it worked event");
-
+        this.$rootScope.$on('stop', function (event, args) {
+            that.$localStorage.booleanData = true;
+            that.showProjects();
+        });
+        this.$rootScope.$on('newEvent', function (event, args) {
+            that.$localStorage.booleanData = true;
+            that.showEvents();
         });
 
 
@@ -84,9 +86,6 @@ class LeftMenuController {
 
         //  this.orgLocation = this.MapDataService.checkedOrganisations();
 
-
-        //showing Organisations,events,projects initially
-        this.showOrganisations();
 
     }
 
@@ -277,8 +276,22 @@ class LeftMenuController {
 
     // show all organisations
     showOrganisations() {
-        this.$state.go('app.home.pins.all');
 
+
+        this.$log.log("now in initialize");
+        this.$log.log(this.$localStorage.booleanData);
+        if (true) {
+            this.$state.go('app.home.pins.all');
+
+        }
+        else {
+            this.$log.log("may be it will work ");
+            this.$log.log(this.$localStorage.booleanData);
+        }
+        this.$localStorage.booleanData = false;
+
+
+        /*this.$state.go('app.home.pins.all');*/
 
         let valueHolder = this.makeMarkers(this.SidemenuDataService.getMapData());
 
@@ -414,9 +427,12 @@ class LeftMenuController {
 
     }
 
+    initialize() {
+      this.showOrganisations();
+    }
 
     $onInit() {
-
+        this.initialize()
     }
 }
 export const LeftMenuComponent = {
