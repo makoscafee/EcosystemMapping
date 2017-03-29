@@ -328,6 +328,14 @@ class LeftMenuController {
                                 marker.icon = this.markerIcons.fundingAgencies;
                                 markers.push(marker);
                             }
+                            else if (roleName == "Incubators") {
+                                marker.icon = this.markerIcons.incubators;
+                                markers.push(marker);
+                            }
+                            else if (roleName == "Development Organization") {
+                                marker.icon = this.markerIcons.developmentOrganization;
+                                markers.push(marker);
+                            }
                             else if (roleName == "Startup") {
                                 marker.icon = this.markerIcons.startup;
                                 markers.push(marker);

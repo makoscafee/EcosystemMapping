@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" afterPath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
-    </list>
+    <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="" />
     <ignored path="EcosystemMapping.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="left-menu.component.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="left-menu.component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="-6156">
+              <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -58,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-event.component.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create-event.component.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -505,12 +499,12 @@
       <workItem from="1490245055118" duration="7019000" />
       <workItem from="1490258753616" duration="6660000" />
       <workItem from="1490704611664" duration="10087000" />
-      <workItem from="1490769543164" duration="3982000" />
+      <workItem from="1490769543164" duration="5833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208042000" />
+    <option name="totallyTimeSpent" value="209893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +516,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -891,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/components/create-project/create-project.component.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -911,6 +897,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6156">
+          <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
           <folding />
         </state>
       </provider>
