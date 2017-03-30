@@ -10,18 +10,19 @@
                       <li class="Sidebar__nav-list__item Sidebar__nav-list__item ion-clipboard" ng-click="vm.showProjects()"></li>
                     </ul>
                   </nav>
-                    <md-button class="md-fab" aria-label="Eat cake"  ui-sref=".create">+</md-button>
               </aside>
               <div layout="column" class="Sidebar_data">
+
+               <!-- Heading Container -->
                 <div class="Sidebar_heading" layout="row">
-                  <img src="img/icons/home.png"/>
+                 <!-- <img src="img/icons/home.png"/>-->
                   <h3>{{vm.selectedEcosystem.name}}</h3>
+                  <md-button class="md-fab" aria-label="Eat cake"  ui-sref=".create">+</md-button>
                 </div>
-                  <div  ui-view="side"></div>
+               <!-- Heading Container -->
+
+                <div  ui-view="side"></div>
                 </div>
-
-
-
 
           </div>
           <section class="Details__body-Content">
