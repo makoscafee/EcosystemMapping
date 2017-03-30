@@ -13,11 +13,11 @@
   <input type="text" ng-model="vm.makeEvent.event.description">
 </md-input-container>
 
-<md-input-container>
-  <md-select ng-model="someModel" placeholder="Nature of the Event">
-    <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
-  </md-select>
-</md-input-container>
+
+<md-radio-group ng-model="vm.makeEvent.event.free_or_paid">
+    <md-radio-button value="Free" class="md-primary">Free</md-radio-button>
+    <md-radio-button value="Paid" class="md-primary"> Paid </md-radio-button>
+</md-radio-group>
 
  <md-input-container>
   <md-select ng-model="vm.makeEvent.organisationId" placeholder="Select an Organisation">

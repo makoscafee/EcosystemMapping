@@ -10,7 +10,7 @@ class OrganisationDetailsController{
 
 
                 this.menuOrganisation = this.DataService.getOrgFromMarkers();
-                this.$log.log("this is the  organision");
+                this.$log.log("this is the  organision hello");
                 this.$log.log(this.menuOrganisation);
     }
 
