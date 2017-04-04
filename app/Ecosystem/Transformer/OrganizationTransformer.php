@@ -41,6 +41,8 @@ class OrganizationTransformer extends TransformerAbstract
             'description'     => $organization->description,
             'date_founded' => $organization->date_founded,
             'date_registered' => $organization->date_registered,
+            'website' => $organization->website,
+            'target_group' => $organization->target_group,
             'tin_number' => $organization->tin_number,
             'links'     => [
                 'rel' => 'self',
