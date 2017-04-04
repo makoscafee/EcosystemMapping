@@ -63,6 +63,7 @@ class OrganizationAPIController extends AppBaseController
 
         try {
             $location = Location::create([
+              'address' => $input['address'],
               'long' => $input['long'],
               'lat'  => $input['lat']
             ]);
