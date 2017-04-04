@@ -9,8 +9,6 @@ md-divider.divide-sector-role {
   padding: 5px;
 }
 
-
-
 .Details {
   box-shadow: -5px 0px 70px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-flex: 1;
@@ -105,14 +103,14 @@ md-divider.divide-sector-role {
 
 .List-menu {
   background-color: #807F7F;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
 
 }
 
 .List-menu-sector {
   padding:5px 2px 50px 10px;
-  background-color: #C6C6C6;
-  border: 3px solid #807F7F;
+  background-color: #ffffff;
+  /*border: 3px solid #807F7F;*/
 }
 
 
@@ -199,5 +197,9 @@ md-divider.divide-sector-role {
 }
 
 .Sector-name {
+}
 
+.md-checkbox
+{
+ margin-bottom:5px !important;
 }

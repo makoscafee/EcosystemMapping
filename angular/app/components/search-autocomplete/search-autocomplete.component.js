@@ -21,14 +21,20 @@ class SearchAutocompleteController {
           startup:{
             iconUrl: 'img/icons/startup.png'
           },
+            developmentOrganization: {
+                iconUrl: 'img/icons/service.png'
+            },
           coworkingSpaces:{
             iconUrl: 'img/icons/coworking.png'
           },
+            incubators:{
+                iconUrl: 'img/icons/incubator.png'
+            },
           fundingAgencies:{
             iconUrl: 'img/icons/investor.png'
           },
           randD:{
-            iconUrl: 'img/icons/incubator.png'
+            iconUrl: 'img/icons/hackerspace.png'
           }
         };
 
@@ -76,6 +82,22 @@ class SearchAutocompleteController {
           modifyRoles.description = roleData.description;
           modifyRoles.icon = this.markerIconsUrl.coworkingSpaces.iconUrl;
           collectedRoles.push(modifyRoles);
+        }
+        else if (roleData.name == "Incubators") {
+            let modifyRoles ={id:null,name:null,description:null,icon:null};
+            modifyRoles.id = roleData.id;
+            modifyRoles.name = roleData.name;
+            modifyRoles.description = roleData.description;
+            modifyRoles.icon = this.markerIconsUrl.incubators.iconUrl;
+            collectedRoles.push(modifyRoles);
+        }
+        else if (roleData.name == "Development Organization") {
+            let modifyRoles ={id:null,name:null,description:null,icon:null};
+            modifyRoles.id = roleData.id;
+            modifyRoles.name = roleData.name;
+            modifyRoles.description = roleData.description;
+            modifyRoles.icon = this.markerIconsUrl.developmentOrganization.iconUrl;
+            collectedRoles.push(modifyRoles);
         }
       });
         this.$localStorage.roles = collectedRoles;

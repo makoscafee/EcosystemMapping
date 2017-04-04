@@ -20,7 +20,6 @@
             <ul>
                 <li class="Details__options-list__item" ng-repeat="sector in vm.sectors track by $index">
                     <div class="Media">
-
                         <div layout="row">
                           <div>
                             <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setSectorArray(sector.id)" ng-model="vm.isSectorChecked[sector.id]"></md-checkbox>

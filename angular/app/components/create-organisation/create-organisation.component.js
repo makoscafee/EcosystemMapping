@@ -50,6 +50,16 @@ class CreateOrganisationController {
     // adds a new organisation
     addOrganisation() {
 
+        if (!this.or){
+            alert("please fill the required fields");
+            return;
+        }
+
+        if (!this.org){
+            alert("please click on map to add location");
+            return;
+        }
+
         let data = {
             name:this.or.name,
             description:this.or.description,
@@ -62,7 +72,7 @@ class CreateOrganisationController {
             target_group:this.or.target_group,
             sector_id:this.or.sector_id,
             role_id:this.or.role_id,
-            ecosystem_id:this.or.ecosystem_id,
+            ecosystem_id:1,
 
 
         };
@@ -70,10 +80,7 @@ class CreateOrganisationController {
        this.organisationService.createOrganisation(data)
            .then(
                res => {
-                   console.log("organisation created successfully");
-                   console.log(res);
                    alert('Organisation added successfully');
-
                    this.ecosystemService.getOrganisation(1).then((response) => {
                        this.$localStorage.organisations = response.data;
                        this.$log.log(this.$localStorage.organisations);
@@ -149,7 +156,6 @@ class CreateOrganisationController {
 
 
     $onInit() {
-        this.displayEcosystems();
         this.displayRoles();
         this.displaySectors();
 

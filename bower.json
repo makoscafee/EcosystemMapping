@@ -24,6 +24,7 @@
     "Leaflet.awesome-markers": "^2.0.2"
   },
   "resolutions": {
-    "leaflet": "0.7.x"
+    "leaflet": "0.7.x",
+    "angular": "1.6.3"
   }
 }
