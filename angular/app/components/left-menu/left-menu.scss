@@ -33,6 +33,14 @@
   display: inherit;
   height: inherit;
   min-width: inherit;
+  max-width: 350px;
+}
+.md-content{
+ /*overflow: inherit;*/
+}
+.organization_form_container
+{
+ overflow:hidden;
 }
 
 .Sidebar {
@@ -51,6 +59,10 @@
 }
 .Sidebar__nav {
   top: 0;
+}
+.descriptionlabel{
+ color: rgb(3,169,244);
+ font-size: 14px;
 }
 
 .Sidebar__nav-list {
@@ -95,7 +107,7 @@
 {
  /*position:fixed;*/
  top:0;
- left: 15px;
+ //left: 15px;
  margin:0;
  font-size:x-large;
  color:#ffffff ;
