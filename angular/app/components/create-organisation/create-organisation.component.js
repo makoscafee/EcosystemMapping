@@ -72,7 +72,7 @@ class CreateOrganisationController {
             target_group:this.or.target_group,
             sector_id:this.or.sector_id,
             role_id:this.or.role_id,
-            ecosystem_id:this.or.ecosystem_id,
+            ecosystem_id:1,
 
 
         };
@@ -156,7 +156,6 @@ class CreateOrganisationController {
 
 
     $onInit() {
-        this.displayEcosystems();
         this.displayRoles();
         this.displaySectors();
 
