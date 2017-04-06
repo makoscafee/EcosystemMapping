@@ -52,6 +52,10 @@
 .Sidebar__nav {
   top: 0;
 }
+.descriptionlabel{
+ color: rgb(3,169,244);
+ font-size: 14px;
+}
 
 .Sidebar__nav-list {
   -webkit-box-align: center;
@@ -95,7 +99,7 @@
 {
  /*position:fixed;*/
  top:0;
- left: 15px;
+ //left: 15px;
  margin:0;
  font-size:x-large;
  color:#ffffff ;
