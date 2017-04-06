@@ -31,6 +31,7 @@ class LocationTransformer extends TransformerAbstract
             'id'        => (int) $location->id,
             'lat'      => $location->lat,
             'long'     => $location->long,
+            'address'  => $location->address,
             'links'     => [
                 'rel' => 'self',
                 'uri' => '/locations/'.$location->id,
