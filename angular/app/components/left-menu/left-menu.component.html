@@ -6,25 +6,24 @@
                   <ul class="Sidebar__nav-list">
                       <li class="Sidebar__nav-list__item Sidebar-menu ion-ios-drag" ng-click="vm.showOrganisations()"></li>
                       <li class="Sidebar__nav-list__item ion-ios-home"  ng-click="vm.showOrganisations()"></li>
+                      <label class="Sidebar_label">Home</label>
                       <li class="Sidebar__nav-list__item ion-ios-calendar" ng-click ="vm.showEvents()"></li>
+                      <label class="Sidebar_label">Events</label>
                       <li class="Sidebar__nav-list__item Sidebar__nav-list__item ion-clipboard" ng-click="vm.showProjects()"></li>
+                      <label class="Sidebar_label">Projects</label>
                     </ul>
                   </nav>
               </aside>
               <div layout="column" class="Sidebar_data">
-
                <!-- Heading Container -->
                 <div class="Sidebar_heading" layout="row">
                  <!-- <img src="img/icons/home.png"/>-->
                  <md-button class="md-fab" aria-label="Eat cake"  ui-sref=".create">+</md-button>
                   <h3>{{vm.selectedEcosystem.name}}</h3>
-
                 </div>
                <!-- Heading Container -->
-
                 <div  ui-view="side"></div>
                 </div>
-
           </div>
           <section class="Details__body-Content">
             <ecosystem-map markers = vm.markers></ecosystem-map>
