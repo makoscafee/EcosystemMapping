@@ -59,9 +59,9 @@ class OrganizationAPIController extends AppBaseController
     {
         $input = $request->all();
 
-        // DB::beginTransaction();
-        //
-        // try {
+        DB::beginTransaction();
+
+        try {
             $location = Location::create([
               'address' => Input::get('address'),
               'long' => Input::get('long'),
@@ -88,14 +88,14 @@ class OrganizationAPIController extends AppBaseController
 
             $ecosystem->organizations()->attach($organization->id, ['status' => 'active']);
 
-        //     DB::commit();
-        //     // all good
-        // } catch (\Exception $e) {
-        //     DB::rollback();
-        //     // something went wrong
-        //
-        //     return response()->error($e->errorInfo[2], 500);
-        // }
+            DB::commit();
+            // all good
+        } catch (\Exception $e) {
+            DB::rollback();
+            // something went wrong
+
+            return response()->error($e->errorInfo[2], 500);
+        }
 
         return $this->sendResponse($organization->toArray(), 'Organization saved successfully');
     }
