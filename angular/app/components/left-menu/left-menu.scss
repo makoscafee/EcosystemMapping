@@ -4,6 +4,7 @@
     min-width: 350px;
 }
 
+
 .Sidebar_heading {
   background-color: #2C7AB9;
   padding: 5px 0px 10px 5px;
@@ -39,6 +40,7 @@
   height: inherit;
   min-width: inherit;
   max-width: 350px;
+  /*box-shadow: -5px 0px 70px 0 rgba(0, 0, 0, 0.4);*/
 }
 .md-content{
  /*overflow: inherit;*/
@@ -115,6 +117,7 @@
  //left: 15px;
  margin:0;
  font-size:x-large;
- color:#ffffff ;
+ color:#ffffff !important;
+ background-color: rgb(255,138,128) !important;
 
 }
