@@ -24,7 +24,8 @@ class Location extends Model
 
     public $fillable = [
         'long',
-        'lat'
+        'lat',
+        'address'
     ];
 
     /**

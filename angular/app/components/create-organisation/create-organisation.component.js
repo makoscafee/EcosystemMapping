@@ -65,6 +65,7 @@ class CreateOrganisationController {
             description:this.or.description,
             tin_number:this.or.tin_number,
             website:this.or.website,
+            address:this.or.address,
             lat: this.$rootScope.newLocation.lat,
             long:this.$rootScope.newLocation.long,
             date_founded:"1992-04-28 22:21:44",

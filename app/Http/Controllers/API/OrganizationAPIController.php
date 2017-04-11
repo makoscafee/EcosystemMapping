@@ -63,9 +63,9 @@ class OrganizationAPIController extends AppBaseController
 
         try {
             $location = Location::create([
-              'address' => $input['address'],
-              'long' => $input['long'],
-              'lat'  => $input['lat']
+              'address' => Input::get('address'),
+              'long' => Input::get('long'),
+              'lat'  => Input::get('lat')
             ]);
 
             $organization = $this->organizationRepository->create([

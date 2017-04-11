@@ -10,6 +10,13 @@
                   <div ng-message="required">Organisation's name is required!</div>
                 </div>
             </md-input-container>
+            <md-input-container>
+                <label>Organisation Adress</label>
+                <input type="text" ng-model="vm.or.address" required>
+                <div ng-messages="colorForm.favoriteColor.$error">
+                  <div ng-message="required">Organisation's address is required!</div>
+                </div>
+            </md-input-container>
 
             <label class="descriptionlabel">Click on the Map, to obtain Organisation's Location</label>
             <div layout="row">
