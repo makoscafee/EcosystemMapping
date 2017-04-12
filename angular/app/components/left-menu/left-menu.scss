@@ -36,12 +36,24 @@
 }
 
 .Sidebar_data {
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-start;
+ min-width: inherit;
+ max-width: 350px;
+ /*
   display: inherit;
   height: inherit;
   min-width: inherit;
   max-width: 350px;
+  */
   /*box-shadow: -5px 0px 70px 0 rgba(0, 0, 0, 0.4);*/
 }
+.Sidebar_content{
+/*flex-grow: 1;*/
+flex: 1
+}
+
 .md-content{
  /*overflow: inherit;*/
 }
