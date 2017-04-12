@@ -16,7 +16,7 @@
 
                <div layout="row">
                  <div layout="row">
-                   <i class="Card-icon ion-ios-location"></i><p>{{vm.menuOrganisation.address}}</p>
+                     <i class="Card-icon ion-ios-location"></i><p><span ng-repeat="location in vm.menuOrganisation.locations.data">{{location.address}}</span></p>
                  </div>
                  <div layout="row">
                    <i class=" Card-icon ion-ios-clock"></i><p>{{vm.menuOrganisation.date_founded.date}}</p>
