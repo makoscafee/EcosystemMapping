@@ -1,19 +1,23 @@
 
 .Event-image {
   height: inherit;
-  width: 150px;
+  width: 100px;
   padding-right: 20px;
 }
 
 .Events-title {
-  color: white;
+  color: #807F7F;
   padding: 5px 0px 0px 20px;
 
 }
 
 .Event-section {
-  background-color: #807F7F;
+  /*background-color: #807F7F;*/
   width:100%;
+}
+
+.Event_data{
+  margin:0px;
 }
 
 .Event-description {

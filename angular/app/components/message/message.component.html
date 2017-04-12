@@ -1,8 +1,6 @@
 
 <div>
-    <div ng-repeat="event in vm.myMarkerData.events.data">
-        <h2> {{event.name}} </h2>
-        <p>{{event.description}}</p>
-    </div>
-    <md-button ng-click="vm.getClicked()">more</md-button>
+  <h2> {{vm.myMarkerData.events.name}} </h2>
+  <p>{{vm.myMarkerData.description}}</p>
+   <md-button ng-click="vm.getClicked()">more</md-button>
 </div>

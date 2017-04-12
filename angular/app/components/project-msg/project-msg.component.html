@@ -1,8 +1,6 @@
 
 <div>
-  <div ng-repeat="project in vm.myMarkerData.projects.data">
-    <h2> {{project.name}} </h2>
-    <p>{{project.description}}</p>
-  </div>
+  <h2> {{vm.myMarkerData.name}} </h2>
+  <p>{{vm.myMarkerData.description}}</p>
   <md-button ng-click="vm.projectDetails()">view details</md-button>
 </div>
