@@ -21,7 +21,7 @@ md-divider.divide-sector-role {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  min-height:100%;
+  height:inherit;
 }
 
 .Details__header {
@@ -81,7 +81,9 @@ md-divider.divide-sector-role {
 }
 
 .Details__body-side_bar {
-   flex :2;
+   display: flex;
+   flex-direction:column;
+   height: inherit;
 }
 
 .Details__body-Content {
@@ -98,7 +100,7 @@ md-divider.divide-sector-role {
 .List-item {
   border-bottom: 0.25px solid #CCCDC2;
   height: 30px;
-  padding-bottom: 5px;
+  padding: 5px 0px 5px 0px;
 }
 
 .List-menu {
@@ -108,8 +110,9 @@ md-divider.divide-sector-role {
 }
 
 .List-menu-sector {
-  padding:5px 2px 50px 10px;
+  padding:5px 2px 45px 10px;
   background-color: #ffffff;
+  flex: auto;
   /*border: 3px solid #807F7F;*/
 }
 
