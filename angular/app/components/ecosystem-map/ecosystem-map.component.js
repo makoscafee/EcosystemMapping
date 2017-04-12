@@ -1,130 +1,157 @@
-
-
-
 class EcosystemMapController {
-    constructor(SidemenuDataService,EcosystemService,$log,MapDataService,$localStorage,$scope,$rootScope) {
+    constructor(SidemenuDataService, EcosystemService, $log, MapDataService, $localStorage, $scope, $rootScope, $mdDialog, $timeout) {
         'ngInject';
 
         this.SidemenuDataService = SidemenuDataService;
         this.EcosystemService = EcosystemService;
         this.MapDataService = MapDataService;
         this.$localStorage = $localStorage;
+        this.$mdDialog = $mdDialog;
         this.$log = $log;
         this.$scope = $scope;
         this.$rootScope = $rootScope;
-        this.markers =[];
-                this.darEsSalaam={
-                    lat: -6.1630,
-                    lng: 35.7516,
-                    zoom: 6
-                };
+        this.markers = [];
+        this.darEsSalaam = {
+            lat: -6.1630,
+            lng: 35.7516,
+            zoom: 6
+        };
+        this.defaults = {
+            zoomControlPosition: 'bottomright'
+        };
 
-                this.markerIcons ={
-                  startup:{
-                    iconUrl: 'img/icons/startup.png',
-                     iconSize:     [25, 41]
-                  },
-                  coworkingSpaces:{
-                    iconUrl: 'img/icons/coworking.png',
-                     iconSize:     [25, 41]
-                  },
-                  fundingAgencies:{
-                    iconUrl: 'img/icons/investor.png',
-                     iconSize:     [25, 41]
-                  },
-                  randD:{
-                    iconUrl: 'img/icons/incubator.png',
-                     iconSize:     [25, 41]
-                  },
-                  event:{
-                    iconUrl: 'img/icons/event.png',
-                     iconSize:     [25, 41]
-                  },
-                  project:{
-                    iconUrl: 'img/icons/accelerator.png',
-                     iconSize:     [25, 41]
-                  }
-                };
+        this.markerIcons = {
+            startup: {
+                iconUrl: 'img/icons/startup.png',
+                iconSize: [25, 41]
+            },
+            coworkingSpaces: {
+                iconUrl: 'img/icons/coworking.png',
+                iconSize: [25, 41]
+            },
+            fundingAgencies: {
+                iconUrl: 'img/icons/investor.png',
+                iconSize: [25, 41]
+            },
+            randD: {
+                iconUrl: 'img/icons/incubator.png',
+                iconSize: [25, 41]
+            },
+            event: {
+                iconUrl: 'img/icons/event.png',
+                iconSize: [25, 41]
+            },
+            project: {
+                iconUrl: 'img/icons/accelerator.png',
+                iconSize: [25, 41]
+            }
+        };
 
+        this.fab = {
+            topDirections: '',
+            bottomDirections: 'down',
+            isOpen: false,
+            selectedMode: 'md-fling',
+            selectedDirection: 'down',
+            items: [
+                {
+                    name: "Organization",
+                    icon: "img/icons/insert_drive.svg",
+                    direction: "right"
+                }, {
+                    name: "Event",
+                    icon: "img/icons/insert_drive.svg",
+                    direction: "top"
+                }, {
+                    name: "Project",
+                    icon: "img/icons/insert_drive.svg",
+                    direction: "right"
+                }
+            ]
+        };
 
-
-
-
-this.markers = this.createMarkers(this.$localStorage.organisations.data);
-
+        this.markers = this.createMarkers(this.$localStorage.organisations.data);
 
     }
-
 
     //create markers
 
-createMarkers(data){
-  var scope = this.$scope;
-  let markers = [];
-  let role = {};
-  //creating location information
-  angular.forEach(data, (response)=> {
-    angular.forEach(response.locations, (locations)=>{
-      angular.forEach(locations, (location)=> {
-        var marker = {
-          lat: parseFloat(location.lat),
-          lng: parseFloat(location.long),
-          getMessageScope: function () {
-                          var infowindowScope = scope.$new(true);
-                          infowindowScope.data = response;
-                          return infowindowScope;
-                      },
-          message:'<organisation-msg></organisatio-msg>',
-              icon: {}
-            }
-            try{
-              let roleName = response.roles.data[0].name;
-              if(roleName == "R&D"){
-                  marker.icon = this.markerIcons.randD;
-                  markers.push(marker);
-              }
-              else if (roleName == "Funding Agencies" ) {
-                marker.icon = this.markerIcons.fundingAgencies;
-                markers.push(marker);
-              }
-              else if (roleName == "Startup") {
-                marker.icon = this.markerIcons.startup;
-                markers.push(marker);
-              }
-              else if (roleName == "Coworking Space") {
-                marker.icon = this.markerIcons.coworkingSpaces;
-                markers.push(marker);
-              }
-              else {
-                this.$log.log("no such a role");
-              }
+    createMarkers(data) {
+        var scope = this.$scope;
+        let markers = [];
+        let role = {};
+        //creating location information
+        angular.forEach(data, (response) => {
+            angular.forEach(response.locations, (locations) => {
+                angular.forEach(locations, (location) => {
+                    var marker = {
+                        lat: parseFloat(location.lat),
+                        lng: parseFloat(location.long),
+                        getMessageScope: function() {
+                            var infowindowScope = scope.$new(true);
+                            infowindowScope.data = response;
+                            return infowindowScope;
+                        },
+                        message: '<organisation-msg></organisatio-msg>',
+                        icon: {}
+                    }
+                    try {
+                        let roleName = response.roles.data[0].name;
+                        if (roleName == "R&D") {
+                            marker.icon = this.markerIcons.randD;
+                            markers.push(marker);
+                        } else if (roleName == "Funding Agencies") {
+                            marker.icon = this.markerIcons.fundingAgencies;
+                            markers.push(marker);
+                        } else if (roleName == "Startup") {
+                            marker.icon = this.markerIcons.startup;
+                            markers.push(marker);
+                        } else if (roleName == "Coworking Space") {
+                            marker.icon = this.markerIcons.coworkingSpaces;
+                            markers.push(marker);
+                        } else {
+                            this.$log.log("no such a role");
+                        }
 
+                    } catch (e) {
+                        this.$log.log("no role info in this org");
+                    }
 
-            }
-            catch(e){
-              this.$log.log("no role info in this org");
-            }
-
-      })
-    })
-  });
-
+                })
+            })
+        });
 
         return markers;
-}
-
-
-
-
-      // returns an array of selected org
-    selectedOrganisations(){
-      this.markers = this.MapDataService.checkedOrganisations()
     }
 
+    openDialog($event, item) {
+        // Show the dialog
+        this.$mdDialog.show({
+            clickOutsideToClose: true,
+            controller: ['$mdDialog', function($mdDialog) {
+                // Save the clicked item
+                this.item = item;
 
-    $onInit() {
+                // Setup some handlers
+                this.close = function() {
+                    $mdDialog.cancel();
+                };
+                this.submit = function() {
+                    $mdDialog.hide();
+                };
+            }],
+            controllerAs: 'dialog',
+            templateUrl: 'dialog.html',
+            targetEvent: $event
+        });
+    };
 
+    // returns an array of selected org
+    selectedOrganisations() {
+        this.markers = this.MapDataService.checkedOrganisations()
     }
+
+    $onInit() {}
 }
 
 export const EcosystemMapComponent = {
@@ -132,6 +159,6 @@ export const EcosystemMapComponent = {
     controller: EcosystemMapController,
     controllerAs: 'vm',
     bindings: {
-      markers: '<'
+        markers: '<'
     }
 }
