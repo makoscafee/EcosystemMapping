@@ -3,3 +3,11 @@
   background-color: red;
   width: 50%;
 }
+.Input_required:after{
+ content:" *";
+ color:red;
+}
+
+md-radio-button{
+ color: rgba(0,0,0,0.26);
+}
