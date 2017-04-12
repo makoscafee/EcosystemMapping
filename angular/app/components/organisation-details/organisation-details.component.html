@@ -11,12 +11,12 @@
 
                <div>
                   <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.menuOrganisation.sectors.data">{{sector.name}}</span></h1>
-                  <h1 class="Card-title">Target Group: Youth</h1>
+                  <h1 class="Card-title">Target Group: <span>{{vm.menuOrganisation.target_group}}</span></h1>
                </div>
 
                <div layout="row">
                  <div layout="row">
-                   <i class="Card-icon ion-ios-location"></i><p>location</p>
+                   <i class="Card-icon ion-ios-location"></i><p>{{vm.menuOrganisation.address}}</p>
                  </div>
                  <div layout="row">
                    <i class=" Card-icon ion-ios-clock"></i><p>{{vm.menuOrganisation.date_founded.date}}</p>

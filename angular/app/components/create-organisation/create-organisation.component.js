@@ -49,7 +49,9 @@ class CreateOrganisationController {
 
     // adds a new organisation
     addOrganisation() {
-
+      if(!confirm){
+          return;
+      }
         if (!this.or){
             alert("please fill the required fields");
             return;
