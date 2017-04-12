@@ -14,6 +14,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;
 use Prettus\Repository\Criteria\RequestCriteria;
+use League\Fractal;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Resource\Item;
+use App\Ecosystem\Transformer\OrganizationTransformer;
 use Response;
 use DB;
 use Input;
@@ -46,7 +51,11 @@ class OrganizationAPIController extends AppBaseController
         $this->organizationRepository->pushCriteria(new LimitOffsetCriteria($request));
         $organizations = $this->organizationRepository->all();
 
-        return $this->sendResponse($organizations->toArray(), 'Organizations retrieved successfully');
+        $fractal    = new Manager();
+        $resource   = new Collection($organizations, new OrganizationTransformer);
+        $data_to_array = $fractal->createData($resource)->toArray();
+
+        return $this->sendResponse($data_to_array, 'Organizations retrieved successfully');
     }
 
     /**
@@ -118,8 +127,11 @@ class OrganizationAPIController extends AppBaseController
         if (empty($organization)) {
             return $this->sendError('Organization not found');
         }
+        $fractal    = new Manager();
+        $resource   = new Item($organization, new OrganizationTransformer);
+        $data_to_array = $fractal->createData($resource)->toArray();
 
-        return $this->sendResponse($organization->toArray(), 'Organization retrieved successfully');
+        return $this->sendResponse($data_to_array, 'Organization retrieved successfully');
     }
 
     /**
