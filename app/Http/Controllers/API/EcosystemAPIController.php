@@ -143,7 +143,7 @@ class EcosystemAPIController extends AppBaseController
 
       $organizations = $ecosystem->organizations()->get();
       $resource   = new Collection($ecosystem->organizations()->get(), new OrganizationTransformer);
-      $data_to_array = $fractal->createData($resource)->toArray();;
+      $data_to_array = $fractal->createData($resource)->toArray();
       return $this->sendResponse($data_to_array, 'Organizations are successfully retrieved');
     }
 
