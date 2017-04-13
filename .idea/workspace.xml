@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2ad4cc3a-8ba8-4e7c-9e79-d5901662d84b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" afterPath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" afterPath="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" afterPath="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/message-details/message-details.component.html" afterPath="$PROJECT_DIR$/angular/app/components/message-details/message-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/message/message.component.html" afterPath="$PROJECT_DIR$/angular/app/components/message/message.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html" afterPath="$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/components/project-msg/project-msg.component.html" afterPath="$PROJECT_DIR$/angular/app/components/project-msg/project-msg.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
     </list>
     <ignored path="EcosystemMapping.iws" />
@@ -40,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OrganizationTransformer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Ecosystem/Transformer/OrganizationTransformer.php">
+      <file leaf-file-name="message.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/app/components/message/message.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="162">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,15 +83,18 @@
         <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js" />
-        <option value="$PROJECT_DIR$/angular/app/pages/events/events.page.html" />
         <option value="$PROJECT_DIR$/angular/app/pages/projects/projects.page.html" />
         <option value="$PROJECT_DIR$/angular/app/pages/pins/pins.page.html" />
         <option value="$PROJECT_DIR$/angular/config/routes.config.js" />
         <option value="$PROJECT_DIR$/angular/app/components/message-details/message-details.component.html" />
-        <option value="$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html" />
-        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.js" />
         <option value="$PROJECT_DIR$/angular/app/components/create-organisation/create-organisation.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/project-details/project-details.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/pages/events/events.page.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/project-msg/project-msg.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html" />
+        <option value="$PROJECT_DIR$/angular/app/components/message/message.component.html" />
       </list>
     </option>
   </component>
@@ -206,9 +207,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -228,8 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +283,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcosystemMapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcosystemMapping" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -298,15 +315,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Ecosystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transformer" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,16 +337,52 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Ecosystem" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-msg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcosystemMapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcosystemMapping" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="message" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,7 +395,7 @@
     <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-organisation/create-organisation.component.js&#10;lef&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/left-menu/left-menu.component.html&#10;det&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/message-details/message-details.component.html&#10;pins.&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/pages/pins/pins.page.html&#10;create&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-organisation/create-organisation.component.js&#10;left&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/left-menu/left-menu.component.html&#10;routes.config&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/config/routes.config.js&#10;creat&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-organisation/create-organisation.component.js" />
+    <property name="SearchEverywhereHistoryKey" value="cre&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-event/create-event.component.js&#10;left&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/left-menu/left-menu.component.html&#10;lef&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/left-menu/left-menu.component.html&#10;mess&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/message/message.component.html&#10;det&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/message-details/message-details.component.html&#10;pins.&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/pages/pins/pins.page.html&#10;create&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-organisation/create-organisation.component.js&#10;routes.config&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/config/routes.config.js&#10;creat&#9;FILE&#9;file:///home/edgar/my-projects/studio19/EcosystemMapping/angular/app/components/create-organisation/create-organisation.component.js" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -458,12 +511,15 @@
       <workItem from="1491889077217" duration="2894000" />
       <workItem from="1491893781879" duration="4221000" />
       <workItem from="1491917887190" duration="15000" />
-      <workItem from="1491941455343" duration="6176000" />
+      <workItem from="1491941455343" duration="9756000" />
+      <workItem from="1491978765493" duration="4374000" />
+      <workItem from="1491991809151" duration="6251000" />
+      <workItem from="1492000317883" duration="181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243141000" />
+    <option name="totallyTimeSpent" value="257527000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,11 +531,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.283628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.283628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -520,9 +576,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/app/components/get-location/get-location.component.html" />
-    <entry file="file://$PROJECT_DIR$/angular/app/components/get-location/get-location.component.js" />
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log" />
     <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -615,15 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js" />
-    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html" />
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="220" column="33" lean-forward="false" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/pages/event-view/event-view.page.html" />
     <entry file="file://$PROJECT_DIR$/angular/app/pages/details/details.page.html" />
     <entry file="file://$PROJECT_DIR$/angular/app/pages/organisation-d/organisation-d.page.html" />
@@ -631,13 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/pages/events/events.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -673,22 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <marker date="1491787960335" expanded="true" signature="24:1866" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="56:1855" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="105:1844" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="140:1012" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="255:994" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="322:972" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="395:945" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="622:914" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1130:1825" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1200:1808" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1306:1790" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1346:1768" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1389:1741" ph="..." />
-            <marker date="1491787960335" expanded="true" signature="1421:1635" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,19 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <marker date="1491897940723" expanded="true" signature="4:198" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="227:1434" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="257:1423" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="316:1416" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="417:1401" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="448:895" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="469:863" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="942:1378" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="976:1089" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="1123:1221" ph="..." />
-            <marker date="1491897940723" expanded="true" signature="1255:1346" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,28 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1491787960323" expanded="true" signature="4:163" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <marker date="1491944987327" expanded="true" signature="39:1281" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="69:1270" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="128:1263" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="311:1247" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="359:1068" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="381:651" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="686:1036" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="722:846" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="882:1014" ph="..." />
-            <marker date="1491944987327" expanded="true" signature="1099:1223" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -745,33 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1491787960471" expanded="true" signature="47:1260" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="54:658" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="340:461" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="665:1252" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="682:877" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="718:817" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="919:1172" ph="..." />
-            <marker date="1491787960471" expanded="true" signature="936:1155" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <marker date="1491948516937" expanded="true" signature="25:1680" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="61:1533" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="111:1010" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="170:987" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="219:962" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="1067:1515" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="1169:1405" ph="..." />
-            <marker date="1491948516937" expanded="true" signature="1583:1669" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,37 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1491950326069" expanded="true" signature="35:4298" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="169:1069" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="618:1057" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="700:1043" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="729:856" ph="{&quot;lat&quot;: args.leafletEvent.latlng.lat...}" />
-            <marker date="1491950326069" expanded="true" signature="900:1027" ph="{&quot;lat&quot;: args.leafletEvent.latlng.lat...}" />
-            <marker date="1491950326069" expanded="true" signature="1126:2503" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="1146:1173" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="1195:1280" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="1304:1393" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="1414:1973" ph="{&quot;date_founded&quot;: &quot;1992-04-28 22:21:44&quot;...}" />
-            <marker date="1491950326069" expanded="true" signature="2073:2483" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="2215:2463" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="2560:2900" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="2633:2817" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="2830:2883" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="2951:3290" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3032:3207" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3220:3273" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3339:3669" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3417:3586" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3599:3652" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3719:4052" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3798:3969" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="3982:4035" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="4060:4110" ph="/*...*/" />
-            <marker date="1491950326069" expanded="true" signature="4132:4210" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="4227:4296" ph="{...}" />
-            <marker date="1491950326069" expanded="true" signature="4343:4531" ph="{&quot;templateUrl&quot;: './views/app/components/create-organisation/create-organisation.component.html'...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,29 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <marker date="1491973241645" expanded="true" signature="53:3523" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="89:3516" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="120:3505" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="154:478" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="337:444" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="511:843" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="699:809" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="979:1399" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="1016:1178" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="1215:1380" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="1433:1581" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="1615:1983" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="1835:1949" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="2017:2170" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="2204:2348" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="2610:2991" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="2735:2956" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="2854:2925" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="3025:3417" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="3159:3382" ph="..." />
-            <marker date="1491973241645" expanded="true" signature="3280:3351" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,23 +752,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <marker date="1491787960355" expanded="false" signature="49:127" ph="..." />
-            <marker date="1491787960355" expanded="true" signature="182:911" ph="{...}" />
-            <marker date="1491787960355" expanded="true" signature="192:273" ph=" List of resources to automatically include ..." />
-            <marker date="1491787960355" expanded="true" signature="325:401" ph=" List of resources possible to include ..." />
-            <marker date="1491787960355" expanded="true" signature="454:506" ph=" @param User $user ..." />
-            <marker date="1491787960355" expanded="true" signature="558:908" ph="{...}" />
-            <marker date="1491787960355" expanded="true" signature="581:900" ph="..." />
-            <marker date="1491787960355" expanded="true" signature="789:889" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Ecosystem/Transformer/OrganizationTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="189">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/project-details/project-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/pages/events/events.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="242" column="5" lean-forward="true" selection-start-line="242" selection-start-column="5" selection-end-line="242" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/left-menu/left-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/create-event/create-event.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/project-msg/project-msg.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <marker date="1491999440154" expanded="true" signature="5:156" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/organisation-details/organisation-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <marker date="1492000508187" expanded="true" signature="39:1344" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="69:1333" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="128:1326" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="311:1310" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="359:1131" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="381:651" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="686:1099" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="722:909" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="945:1077" ph="..." />
+            <marker date="1492000508187" expanded="true" signature="1162:1286" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/components/message/message.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>

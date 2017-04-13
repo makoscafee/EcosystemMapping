@@ -7,11 +7,18 @@ use App\Http\Requests\API\UpdateOrganizationAPIRequest;
 use App\Ecosystem\Models\Organization;
 use App\Ecosystem\Models\Location;
 use App\Ecosystem\Models\Ecosystem;
+use App\Ecosystem\Models\Project;
+use App\Ecosystem\Models\Event;
 use App\Ecosystem\Repositories\OrganizationRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;
 use Prettus\Repository\Criteria\RequestCriteria;
+use League\Fractal;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Resource\Item;
+use App\Ecosystem\Transformer\OrganizationTransformer;
 use Response;
 use DB;
 use Input;
@@ -44,7 +51,11 @@ class OrganizationAPIController extends AppBaseController
         $this->organizationRepository->pushCriteria(new LimitOffsetCriteria($request));
         $organizations = $this->organizationRepository->all();
 
-        return $this->sendResponse($organizations->toArray(), 'Organizations retrieved successfully');
+        $fractal    = new Manager();
+        $resource   = new Collection($organizations, new OrganizationTransformer);
+        $data_to_array = $fractal->createData($resource)->toArray();
+
+        return $this->sendResponse($data_to_array, 'Organizations retrieved successfully');
     }
 
     /**
@@ -116,8 +127,11 @@ class OrganizationAPIController extends AppBaseController
         if (empty($organization)) {
             return $this->sendError('Organization not found');
         }
+        $fractal    = new Manager();
+        $resource   = new Item($organization, new OrganizationTransformer);
+        $data_to_array = $fractal->createData($resource)->toArray();
 
-        return $this->sendResponse($organization->toArray(), 'Organization retrieved successfully');
+        return $this->sendResponse($data_to_array, 'Organization retrieved successfully');
     }
 
     /**
@@ -470,6 +484,78 @@ class OrganizationAPIController extends AppBaseController
       $organization->locations()->detach($locationId);
 
       return $this->sendResponse('success', 'Organisation locations detached successfully');
+    }
+
+
+    public function attachEventOrgazanization($id, Request $request)
+    {
+      /** @var Organization $organization */
+      $organization = $this->organizationRepository->findWithoutFail($id);
+
+      if (empty($organization)) {
+          return $this->sendError('Organization not found');
+      }
+
+      $input = $request->all();
+
+      DB::beginTransaction();
+
+      try {
+          $event = Event::create([
+            'name' => Input::get('name'),
+            'description' => Input::get('description'),
+            'start_date' => Input::get('start_date'),
+            'free_or_paid' => Input::get('free_or_paid'),
+            'end_date' => Input::get('end_date')
+          ]);
+
+          $organization->events()->attach($event->id);
+
+          DB::commit();
+          // all good
+      } catch (\Exception $e) {
+          DB::rollback();
+          // something went wrong
+
+          return response()->error($e->errorInfo[2], 500);
+      }
+      return $this->sendResponse($event->toArray(), 'Organisation event created successfully');
+    }
+
+
+      public function attachProjectOrgazanization($id, Request $request)
+      {
+        /** @var Organization $organization */
+        $organization = $this->organizationRepository->findWithoutFail($id);
+
+        if (empty($organization)) {
+            return $this->sendError('Organization not found');
+        }
+
+        //$input = $request->all();
+
+        DB::beginTransaction();
+
+        try {
+            $project = Project::create([
+              'name' => Input::get('name'),
+              'description' => Input::get('description'),
+              'start_date' => Input::get('start_date'),
+              'end_date' => Input::get('end_date')
+            ]);
+
+            $organization->events()->attach($project->id);
+
+            DB::commit();
+            // all good
+        } catch (\Exception $e) {
+            DB::rollback();
+            // something went wrong
+
+            return response()->error($e->errorInfo[2], 500);
+        }
+
+        return $this->sendResponse($project->toArray(), 'Organisation project created successfully');
     }
 
 }
