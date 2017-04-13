@@ -6,10 +6,10 @@
         <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
           <md-card class= " Event-card" ng-click="vm.viewEvent(event)">
              <md-card-content layout="row">
-               <div flex="45">
+               <div flex="40">
                  <img class="Event-image"  src="img/events100x84.jpg" class="md-card-image" alt="image caption" />
                </div>
-               <div flex="55">
+               <div flex="60">
                   <h1 class="Card-title">{{event.name}}</h1>
                   <p class="Event-description">{{event.description}}</p>
                </div>
