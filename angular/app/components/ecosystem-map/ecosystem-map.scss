@@ -10,6 +10,7 @@
     top: 5px;
     right: auto;
     bottom: auto;
+    margin-left:5px;
     position: absolute;
 }
 
@@ -31,6 +32,7 @@ md-fab-speed-dial {
     font-size: 1rem;
     text-align: center;
     border-radius: 25px;
-    background: #373E46;
+    //background: #373E46;
+    background:rgb(75, 83, 138);
     padding: 8px 16px;
 }

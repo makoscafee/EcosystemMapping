@@ -10,7 +10,7 @@
                               <h5 class="Role-description">{{role.name}}</h5>
                             </div>
                             <div class="Media__side Media__side--right">
-                              <md-chip>({{vm.countedRoles[role.id]}})</md-chip>
+                              <md-chip>{{vm.countedRoles[role.id]}}</md-chip>
                               <md-checkbox aria-label="checkbox" class="md-secondary" ng-change="vm.setRoleArray(role.id)" ng-model="vm.isRoleChecked[role.id]"  ></md-checkbox>
                             </div>
                         </div>
