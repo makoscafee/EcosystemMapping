@@ -41,11 +41,11 @@ export class EcosystemFilterService {
                     if (sectorResult !== -1 || roleResult !== -1) {
                         filteredData.push(value);
                     } else {
-                        console.log("not selected");
+                        this.$log.log("not selected");
                     }
 
                 } catch (e) {
-                    console.log("missing role or sector information ");
+                    this.$log.log("missing role or sector information ");
 
                 }
 

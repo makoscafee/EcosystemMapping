@@ -87,7 +87,7 @@ export class MapDataService{
         //create markers
     createMarkers(data){
       let markers = [];
-      let role = {};
+      //let role = {};
       //creating location information
       angular.forEach(data, (response)=> {
         angular.forEach(response.locations, (locations)=>{

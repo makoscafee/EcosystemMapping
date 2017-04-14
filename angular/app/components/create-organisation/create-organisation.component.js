@@ -1,7 +1,7 @@
 class CreateOrganisationController {
 
     constructor(OrganizationService, EcosystemService,
-                $log,$localStorage,DataService,$rootScope,$state,$location) {
+                $log,$localStorage,DataService,$rootScope,$state,$location, ToastService) {
         'ngInject';
 
         // Initializing services
@@ -12,6 +12,8 @@ class CreateOrganisationController {
         this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
+        this.ToastService = ToastService;
+
 
         let that = this;
 
@@ -22,7 +24,7 @@ class CreateOrganisationController {
         this.$rootScope.$on('leafletDirectiveMap.click', function(event, args){
             let lcn = $location.path();
 
-            if(lcn == "/home/1/create"){
+            if(lcn == "/home/1/create/organisation"){
                 that.org = {
                     lat:args.leafletEvent.latlng.lat,
                     long:args.leafletEvent.latlng.lng
@@ -53,12 +55,12 @@ class CreateOrganisationController {
           return;
       }
         if (!this.or){
-            alert("please fill the required fields");
+            this.ToastService.show("please fill the required fields");
             return;
         }
 
         if (!this.org){
-            alert("please click on map to add location");
+            this.ToastService.show("please click on map to add location");
             return;
         }
 
@@ -75,7 +77,7 @@ class CreateOrganisationController {
             target_group:this.or.target_group,
             sector_id:this.or.sector_id,
             role_id:this.or.role_id,
-            ecosystem_id:1,
+            ecosystem_id:1
 
 
         };
@@ -83,10 +85,11 @@ class CreateOrganisationController {
        this.organisationService.createOrganisation(data)
            .then(
                res => {
-                   alert('Organisation added successfully');
+                   this.ToastService.show('Organisation added successfully');
+                   this.$log.log(res);
                    this.ecosystemService.getOrganisation(1).then((response) => {
                        this.$localStorage.organisations = response.data;
-                       this.$log.log(this.$localStorage.organisations);
+                       //this.$log.log(this.$localStorage.organisations);
                        this.$state.go('app.home.pins.all',{id:1},{reload:true});
                    });
 

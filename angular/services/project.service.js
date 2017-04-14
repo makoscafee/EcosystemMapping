@@ -20,9 +20,9 @@ export class Service{
     }
 
     // attaches location to an event
-    attachLocation(eventId,lacationId){
-        let dataAPI = this.API.one('events',eventId);
-        return this.dataAPI.all()
+    attachLocation(locationId){
+        let dataAPI = this.API.one('projects',locationId);
+        return dataAPI.all()
 
     }
 
@@ -33,4 +33,3 @@ export class Service{
         return DataAPI.all('attach-events').post(eventId);
     }
 }
-

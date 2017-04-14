@@ -71,11 +71,11 @@ class LeftMenuController {
         this.countedRoles = roleCount;
 
         //listening to an event
-        this.$rootScope.$on('stop', function (event, args) {
+        this.$rootScope.$on('stop', function () {
             that.$localStorage.booleanData = true;
             that.showProjects();
         });
-        this.$rootScope.$on('newEvent', function (event, args) {
+        this.$rootScope.$on('newEvent', function () {
             that.$localStorage.booleanData = true;
             that.showEvents();
         });
@@ -95,7 +95,7 @@ class LeftMenuController {
         var data = this.SidemenuDataService.getMapData();
         var scope = this.$scope;
         let markers = [];
-        let role = {};
+        //let role = {};
         //creating location information
         angular.forEach(data, (response) => {
             angular.forEach(response.locations, (locations) => {
@@ -281,14 +281,7 @@ class LeftMenuController {
 
         this.$log.log("now in initialize");
         this.$log.log(this.$localStorage.booleanData);
-        if (true) {
-            this.$state.go('app.home.pins.all');
-
-        }
-        else {
-            this.$log.log("may be it will work ");
-            this.$log.log(this.$localStorage.booleanData);
-        }
+        this.$state.go('app.home.pins.all',{id: 1});
         this.$localStorage.booleanData = false;
 
 
@@ -303,7 +296,7 @@ class LeftMenuController {
         } else {
             let scope = this.$scope;
             let markers = [];
-            let role = {};
+            //let role = {};
             //creating location information
             angular.forEach(this.$localStorage.organisations.data, (response) => {
                 angular.forEach(response.locations, (locations) => {
@@ -371,7 +364,7 @@ class LeftMenuController {
 
     makeMarkers(data) {
         let markers = [];
-        let role = {};
+        //let role = {};
         //creating location information
         angular.forEach(data, (response) => {
             angular.forEach(response.locations, (locations) => {

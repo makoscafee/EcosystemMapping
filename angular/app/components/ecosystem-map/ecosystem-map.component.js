@@ -80,7 +80,7 @@ class EcosystemMapController {
     createMarkers(data) {
         var scope = this.$scope;
         let markers = [];
-        let role = {};
+        //let role = {};
         //creating location information
         angular.forEach(data, (response) => {
             angular.forEach(response.locations, (locations) => {
@@ -126,7 +126,7 @@ class EcosystemMapController {
     }
 
     openCreatePage($event, item) {
-      
+
         let organization_id = this.$localStorage.ecosystem.id;
         if (item.name == 'Organization') {
 
@@ -141,7 +141,7 @@ class EcosystemMapController {
             this.$state.go('app.home.create.project', {id: organization_id});
 
         }
-    };
+    }
 
     // returns an array of selected org
     selectedOrganisations() {
