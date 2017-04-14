@@ -5,3 +5,8 @@ div.header {
     font-weight: bold;
     background: cornflowerblue;
 }
+.Create_event_content{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
