@@ -36,7 +36,7 @@
             </div>
 
             <md-input-container>
-             <label class="Input_required">Select a role</label>
+             <label class="Input_required Input_header_label">Select a role</label>
              <md-radio-group ng-model="vm.or.role_id" placeholder="Select a role">
                <md-radio-button ng-repeat="opt in vm.allRoles" ng-value="opt.id" aria-label="{{ opt.name }}" required>
                       {{ opt.name }}
@@ -74,7 +74,7 @@
             <md-datepicker ng-model="vm.or.organisation.date_registered" md-placeholder="Data Registered"></md-datepicker>
 
 
-         <md-button ng-click="vm.addOrganisation()" >submit</md-button>
+         <md-button ng-click="vm.addOrganisation()" class="md_button_submit">submit</md-button>
         </div>
     </div>
 </div>

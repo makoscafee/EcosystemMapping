@@ -13,11 +13,13 @@
   <input type="text" ng-model="vm.makeEvent.event.description">
 </md-input-container>
 
-
+<md-input-container>
+ <label class="Input_header_label md-container-ignore">Event Type</label>
 <md-radio-group ng-model="vm.makeEvent.event.free_or_paid">
     <md-radio-button value="Free" class="md-primary">Free</md-radio-button>
     <md-radio-button value="Paid" class="md-primary"> Paid </md-radio-button>
 </md-radio-group>
+</md-input-container>
 
  <md-input-container>
   <md-select ng-model="vm.makeEvent.organisationId" placeholder="Select an Organisation">
@@ -27,6 +29,4 @@
 
 <md-datepicker ng-model="vm.makeEvent.event.start_date" md-placeholder="Start Date"></md-datepicker>
 <md-datepicker ng-model="vm.makeEvent.event.end_date" md-placeholder=" End Date"></md-datepicker>
-<md-button ng-click="vm.addEvent()">submit</md-button>
-
-
+<md-button ng-click="vm.addEvent()" class="md_button_submit">submit</md-button>
