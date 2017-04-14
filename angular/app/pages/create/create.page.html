@@ -1,24 +1,4 @@
 
 <div ng-cloak>
-  <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="Organisation">
-        <md-content class="md-padding">
-          <create-organisation></create-organisation>
-        </md-content>
-      </md-tab>
-      <md-tab label="Event">
-        <md-content class="md-padding create">
-          <!-- <h1 class="md-display-2">Tab Two</h1> -->
-        <create-event></create-event>
-          </md-content>
-      </md-tab>
-      <md-tab label="Project">
-        <md-content class="md-padding create">
-          <!-- <h1 class="md-display-2">Tab Three</h1> -->
-        <create-project></create-project>
-          </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+  <div ui-view="create"></div>
 </div>

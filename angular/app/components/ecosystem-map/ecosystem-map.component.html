@@ -9,41 +9,13 @@
 
       <md-fab-actions>
         <md-list-item ng-repeat="item in vm.fab.items" class="choice-list">
-          <span ng-click="vm.openDialog($event, item)">
-            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini md-primary" ng-click="demo.openDialog($event, item)">
+          <span ng-click="vm.openCreatePage($event, item)">
+            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini md-primary">
               <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
             </md-button>
             <span class="bug"> {{ item.name }} </span>
           </span>
         </md-list-item>
-        <!-- <div ng-repeat="item in vm.fab.items">
-          <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini md-primary" ng-click="demo.openDialog($event, item)">
-            <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
-          </md-button>
-        </div> -->
       </md-fab-actions>
     </md-fab-speed-dial>
 </div>
-
-
-<script type="text/ng-template" id="dialog.html">
-  <md-dialog>
-    <md-toolbar>
-      <div class="md-toolbar-tools">Cool Dialog!</div>
-    </md-toolbar>
-
-    <md-dialog-content layout-padding>
-      Hello user! you clicked {{dialog.item.name}}.
-    </md-dialog-content>
-
-    <div class="md-dialog-actions">
-      <md-button aria-label="Close dialog" ng-click="dialog.close()" class="md-primary">
-        Close Greeting
-      </md-button>
-
-      <md-button aria-label="Submit dialog" ng-click="dialog.submit()" class="md-primary">
-        Submit
-      </md-button>
-    </div>
-  </md-dialog>
-</script>

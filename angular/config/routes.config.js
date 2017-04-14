@@ -125,7 +125,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
           }
         })
-        .state('app.create.organisation', {
+        .state('app.home.create.organisation', {
           url: '/organisation',
           views: {
             'create': {
@@ -134,7 +134,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
           }
         })
-        .state('app.create.event', {
+        .state('app.home.create.event', {
           url: '/event',
           views: {
             'create': {
@@ -142,7 +142,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
           }
         })
-        .state('app.create.project', {
+        .state('app.home.create.project', {
           url: '/project',
           views: {
             'create': {

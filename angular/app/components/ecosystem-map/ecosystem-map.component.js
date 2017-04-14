@@ -1,5 +1,5 @@
 class EcosystemMapController {
-    constructor(SidemenuDataService, EcosystemService, $log, MapDataService, $localStorage, $scope, $rootScope, $mdDialog, $timeout) {
+    constructor(SidemenuDataService, EcosystemService, $log, MapDataService, $localStorage, $scope, $rootScope, $mdDialog, $timeout, $state) {
         'ngInject';
 
         this.SidemenuDataService = SidemenuDataService;
@@ -10,6 +10,7 @@ class EcosystemMapController {
         this.$log = $log;
         this.$scope = $scope;
         this.$rootScope = $rootScope;
+        this.$state = $state;
         this.markers = [];
         this.darEsSalaam = {
             lat: -6.1630,
@@ -124,26 +125,22 @@ class EcosystemMapController {
         return markers;
     }
 
-    openDialog($event, item) {
-        // Show the dialog
-        this.$mdDialog.show({
-            clickOutsideToClose: true,
-            controller: ['$mdDialog', function($mdDialog) {
-                // Save the clicked item
-                this.item = item;
+    openCreatePage($event, item) {
+      
+        let organization_id = this.$localStorage.ecosystem.id;
+        if (item.name == 'Organization') {
 
-                // Setup some handlers
-                this.close = function() {
-                    $mdDialog.cancel();
-                };
-                this.submit = function() {
-                    $mdDialog.hide();
-                };
-            }],
-            controllerAs: 'dialog',
-            templateUrl: 'dialog.html',
-            targetEvent: $event
-        });
+            this.$state.go('app.home.create.organisation', {id: organization_id});
+
+        } else if (item.name == 'Event') {
+
+            this.$state.go('app.home.create.event', {id: organization_id});
+
+        } else if (item.name == 'Project') {
+
+            this.$state.go('app.home.create.project', {id: organization_id});
+
+        }
     };
 
     // returns an array of selected org
