@@ -41,68 +41,63 @@ export class EcosystemFilterService {
                     if (sectorResult !== -1 || roleResult !== -1) {
                         filteredData.push(value);
                     } else {
-                        this.$log.log("not selected");
+                        console.log("not selected");
                     }
 
                 } catch (e) {
-                    this.$log.log("missing role or sector information ");
+                    console.log("missing role or sector information ");
 
                 }
 
             });
-        }
-        else if (sectorLength && roleLength) {
-          // creating array of organisation id's by roles
-          let roleOrgId = [];
-          let sectorOrgId = [];
-          angular.forEach(allOrganisations.data,(org)=>{
-          try{
-          let  roleInfo = myData.role.indexOf(org.roles.data[0].id);
-            if(roleInfo > -1){
-              roleOrgId.push(org.id);
-            }
-            this.$log.log("no stress role");
-          }
-            catch(e){
-              this.$log.log("missing role");
-              this.$log.log(e);
-            }
+        } else if (sectorLength && roleLength) {
+            // creating array of organisation id's by roles
+            let roleOrgId = [];
+            let sectorOrgId = [];
+            angular.forEach(allOrganisations.data, (org) => {
+                try {
+                    let roleInfo = myData.role.indexOf(org.roles.data[0].id);
+                    if (roleInfo > -1) {
+                        roleOrgId.push(org.id);
+                    }
+                    console.log("no stress role");
+                } catch (e) {
+                    console.log("missing role");
+                    console.log(e);
+                }
 
-          });
+            });
 
-          // for sectors
-          angular.forEach(allOrganisations.data,(org)=>{
-            try{
-              let sectorInfo = myData.sector.indexOf(org.sectors.data[0].id);
-              if(sectorInfo > -1){
-                  sectorOrgId.push(org.id);
-              }
-              this.$log.log("no stress sector");
-            }
-              catch(e){
-                this.$log.log("missing sector");
+            // for sectors
+            angular.forEach(allOrganisations.data, (org) => {
+                try {
+                    let sectorInfo = myData.sector.indexOf(org.sectors.data[0].id);
+                    if (sectorInfo > -1) {
+                        sectorOrgId.push(org.id);
+                    }
+                    console.log("no stress sector");
+                } catch (e) {
+                    console.log("missing sector");
 
-            }
-          });
+                }
+            });
 
-          //find the intersecting organisations
-          let foundOrg = []
-          let intersectingOrg = this.getIntersecting(sectorOrgId,roleOrgId);
-          angular.forEach(allOrganisations.data,(org) =>{
-            if(org.roles.length !== 0 && org.sectors.length !== 0){
-              if(intersectingOrg.indexOf(org.id) > -1){
-                foundOrg.push(org);
-            }
-            }
-            else {
-              this.$log.log("missing info in new Logic");
-            }
-          });
+            //find the intersecting organisations
+            let foundOrg = []
+            let intersectingOrg = this.getIntersecting(sectorOrgId, roleOrgId);
+            angular.forEach(allOrganisations.data, (org) => {
+                if (org.roles.length !== 0 && org.sectors.length !== 0) {
+                    if (intersectingOrg.indexOf(org.id) > -1) {
+                        foundOrg.push(org);
+                    }
+                } else {
+                    console.log("missing info in new Logic");
+                }
+            });
 
-          filteredData = foundOrg;
+            filteredData = foundOrg;
 
-        }
-         else {
+        } else {
 
             filteredData = allOrganisations.data;
         }
@@ -117,17 +112,17 @@ export class EcosystemFilterService {
         return this.checkedOrg;
     }
 
-      //getting intersecting values from two arrays
-      getIntersecting(arrayA,arrayB){
+    //getting intersecting values from two arrays
+    getIntersecting(arrayA, arrayB) {
         let values = [];
         let setA = new Set(arrayA);
         let intersectingValues = new Set(arrayB.filter(x => setA.has(x)));
 
-        for(let x of intersectingValues){
+        for (let x of intersectingValues) {
             values.push(x);
         }
 
         return values;
-      }
+    }
 
 }

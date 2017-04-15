@@ -74,7 +74,6 @@ export class SidemenuDataService {
         }
         //saving the array of roles
         this.organisationsFilter.role = this.roleData;
-
         //updating the filtered organisations
         this.EcosystemFilterService.orgFilter(this.organisationsFilter, this.$localStorage.organisations);
 

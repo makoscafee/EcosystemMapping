@@ -19,8 +19,8 @@ class CreateEventController {
             name: this.makeEvent.event.name,
             description: this.makeEvent.event.description,
             free_or_paid: this.makeEvent.event.free_or_paid,
-            start_date: this.makeEvent.event.start_date.toJSON,
-            end_date: this.makeEvent.event.end_date.toJSON
+            start_date: this.makeEvent.event.start_date,
+            end_date: this.makeEvent.event.end_date
 
         };
         this.$log.log(modifiedEvent);
@@ -32,7 +32,7 @@ class CreateEventController {
             this.eventId = response.data.id;
             this.$log.log(response.data);
             this.$log.log("an event was created successfully");
-            this.eventService.attachEvent(data.organisationId, this.attachId).then((/*response*/) => {
+            this.eventService.attachEvent(data.organisationId, this.attachId).then((response) => {
                 this.$log.log("event attached succefully");
 
                 this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
@@ -60,6 +60,10 @@ class CreateEventController {
             this.$log.log("organisations retrived successfully");
         });
 
+    }
+
+    saveChanges(){
+      console.log(this.dateTime);
     }
 
     $onInit() {

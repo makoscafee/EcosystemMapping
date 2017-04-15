@@ -47,6 +47,7 @@
     "gulp-util": "^3.0.3",
     "laravel-elixir": "^5.0.0",
     "main-bower-files": "^2.1.0",
+    "ng-material-datetimepicker": "^1.5.11",
     "sw-toolbox": "^3.2.1",
     "underscore": "^1.8.3",
     "webpack": "^1.12.11",
