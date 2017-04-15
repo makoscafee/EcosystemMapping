@@ -19,3 +19,33 @@ md-input-container{
 .Input_header_label{
  font-size: 18px;
 }
+md-radio-button.md-checked .md-on{
+ background:rgba(3, 155, 229, 0.87);
+}
+md-radio-button.md-checked .md-off{
+ border-color: rgba(3, 155, 229, 0.87);
+}
+
+md-radio-group md-radio-button:not(:first-child){
+ margin-top:inherit;
+}
+.Organization_sector_checkbox{
+ color: rgba(0, 0, 0, 0.26);
+}
+
+md-checkbox.md-checked.Organization_sector_checkbox .md-icon{
+
+}
+
+md-checkbox.md-checked .md-icon{
+ border: none;
+background: rgba(3, 155, 229, 0.87);
+}
+
+md-checkbox.md-checked .md-icon:after{
+border-color:#FFFFFF;
+}
+
+md-input-container .md-char-counter{
+ color:#ff8a80;
+}
