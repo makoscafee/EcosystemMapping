@@ -1,23 +1,21 @@
-
 .Event-image {
-  height: inherit;
-  width: 100px;
-  padding-right: 20px;
+    height: inherit;
+    width: 100px;
+    padding-right: 20px;
 }
 
 .Events-title {
-  color: #807F7F;
-  padding: 5px 0px 0px 20px;
-
+    color: black;
+    padding: 5px 0 0 20px;
 }
 
 .Event-section {
-  /*background-color: #807F7F;*/
-  width:100%;
+    /*background-color: #807F7F;*/
+    width: 100%;
 }
 
-.Event_data{
-  margin:0px;
+.Event_data {
+    margin: 0;
 }
 
 .Event-description {
@@ -26,26 +24,157 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: white;
-    margin:5px 1px;
+    margin: 5px 1px;
 }
 
 .Event-card {
-  //background-color: #A3A3A3;
-  background-color: #4b538a;
+    //background-color: #A3A3A3;
+    background-color: #4b538a;
 }
 
 .Card-icon {
-  color: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  padding: 10px 15px;
-  font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1.7rem;
 }
 
 .Card-title {
-  //text-transform: uppercase;
-  color: white;
+    //text-transform: uppercase;
+    color: white;
 }
 
 md-card-actions div p {
-  color: white;
+    color: white;
+}
+$fab-color: #E91E63;
+$fab-size: 50px;
+$link-color: #1976D2;
+/* End defaults*/
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 94%;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #272727;
+    border-radius: 2px;
+}
+
+.card .fab {
+    position: absolute;
+    bottom: -$fab-size/2.5;
+    right: 10px;
+    height: $fab-size;
+    width: $fab-size;
+    padding: 1rem;
+    border-radius: $fab-size/2;
+    background-color: $fab-color;
+    color: white;
+    border: 0;
+    font-size: 1.4rem;
+    line-height: 10px;
+    outline: none;
+
+    &:active {
+        animation: squish 0.75s ease;
+    }
+}
+
+.card .title {
+    font-size: 18px;
+}
+
+.card .free_or_paid {
+    font-size: 18px;
+}
+
+.card .content {
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 20px;
+}
+
+.card a {
+    color: $link-color;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.card .image {
+    min-height: 100px;
+    position: relative;
+    background: #3949AB;
+}
+
+.card .image img {
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.card .image .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px;
+    color: #FFF;
+}
+
+.card .image .free_or_paid {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px;
+    color: #FFF;
+}
+
+.content .title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+span.Event_date {
+    font-size: 12px;
+    color: black;
+    padding: 2px;
+    font-weight: 400;
+}
+
+md-divider.event_divider {
+    border-right-color: black;
+}
+
+.Date_time_actions.layout-row {
+    margin-bottom: 10px;
+}
+
+.Social_actions.flex-30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Full_page {
+  height: 100%;
 }

@@ -1,7 +1,7 @@
 class LeftMenuController {
     constructor(SidemenuDataService, $log, EcosystemFilterService,
                 EcosystemService, MapDataService, $localStorage, $state,
-                OrganizationService, $rootScope, $scope, DataService) {
+                OrganizationService, $rootScope, $scope, DataService, $filter) {
         'ngInject';
 
         //Initilizing the services
@@ -16,6 +16,7 @@ class LeftMenuController {
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
+        this.$filter = $filter;
         let that = this;
 
 
@@ -426,6 +427,20 @@ class LeftMenuController {
     viewProject(project) {
         this.DataService.setProjFromMarker(project);
         this.$state.go('app.home.projects.details', {projectId: project.id});
+
+    }
+
+    filterDate(dateValue1,dateValue2) {
+      let new_date_values = { };
+      let new_date_start = this.$filter('date')(new Date(dateValue1),'MMM d');
+      let new_time_start = this.$filter('date')(new Date(dateValue1),'h:mm a');
+      let new_date_end = this.$filter('date')(new Date(dateValue2),'MMM d');
+      let new_time_end = this.$filter('date')(new Date(dateValue2),'h:mm a');
+
+      return new_date_values = {
+        event_date: new_date_start + '-' + new_date_end,
+        event_time: new_time_start + '-' + new_time_end
+      }
 
     }
 

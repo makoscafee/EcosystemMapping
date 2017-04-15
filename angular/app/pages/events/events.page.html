@@ -1,32 +1,38 @@
 <section class="Details">
-  <div class="Details__body">
-    <section class="Details__body-side_bar Event-section" >
+    <div class="Details__body">
+        <section class="Details__body-side_bar Event-section">
 
-      <h2 class="Events-title">Events</h2>
-        <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
-          <md-card class= " Event-card" ng-click="vm.viewEvent(event)">
-             <md-card-content layout="row">
-               <div flex="40">
-                 <img class="Event-image"  src="img/events100x84.jpg" class="md-card-image" alt="image caption" />
-               </div>
-               <div flex="60">
-                  <h1 class="Card-title">{{event.name}}</h1>
-                  <p class="Event-description">{{event.description}}</p>
-               </div>
-             </md-card-content>
-             <md-card-actions layout="row" class="Event_data">
-               <div layout="row">
-                 <i class="Card-icon ion-ios-location"></i><p>location</p>
-               </div>
-               <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>{{event.start_date}}</p>
-               </div>
-               <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>{{event.free_or_paid}}</p>
-               </div>
-             </md-card-actions>
-            </md-card>
-          </div>
-    </section>
-</div>
+            <h3 class="Events-title">Events</h3>
+            <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
+                <md-card class="card" ng-click="vm.viewEvent(event)">
+                    <div class="image">
+                        <!-- <img src="http://i.imgur.com/td7pKHw.jpg"> -->
+                        <span class="title">
+                          <md-icon md-svg-src="{{'img/icons/location.svg'}}" aria-label="location"></md-icon>
+                           Mlimani City
+                        </span>
+                        <span class="free_or_paid">{{event.free_or_paid}}</span>
+                    </div>
+                    <div class="content">
+                        <div class="Date_time_actions" layout="row">
+                            <div class="" flex="30">
+                                <span class="Event_date">{{vm.filterDate(event.start_date.date, event.end_date.date).event_date}}</span>
+                            </div>
+                            <md-divider class="event_divider"></md-divider>
+                            <div class="" flex="40">
+                                <span class="Event_date">{{vm.filterDate(event.start_date.date, event.end_date.date).event_time}}</span>
+                            </div>
+                            <md-divider class="event_divider"></md-divider>
+                            <div class="Social_actions" flex="30">
+                                <md-icon md-svg-src="{{'img/icons/share.svg'}}" aria-label="share"></md-icon>
+                                <md-icon md-svg-src="{{'img/icons/favourite.svg'}}" aria-label="favourite"></md-icon>
+                            </div>
+                        </div>
+                        <h4 class="title">{{event.name}}</h4>
+                        <p>{{event.description}}</p>
+                    </div>
+                    <md-card>
+            </div>
+        </section>
+    </div>
 </section>
