@@ -9,13 +9,15 @@
     background-color: #2C7AB9;
     height: 60px;
     display: flex;
-    justify-content: center;
+    //justify-content: center;
+    padding-left: 10px;
     align-items: center;
 }
 
 .Sidebar_label {
     color: #FFFFFF;
     font-size: small;
+    font-weight: normal;
     margin-top: -10px;
 }
 

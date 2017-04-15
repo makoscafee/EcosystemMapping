@@ -46,7 +46,7 @@
             </md-input-container>
 
             <md-input-container>
-             <label class="Input_required">Select a sector(s)</label>
+             <label class="Input_required Input_header_label">Select a sector(s)</label>
              <md-radio-group ng-model="vm.or.sector_id" placeholder="Select a sector">
                <md-radio-button ng-repeat="opt in vm.allSectors" ng-value="opt.id" aria-label="{{ opt.name }}" required>
                       {{ opt.name }}
