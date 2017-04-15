@@ -27,6 +27,27 @@
   </md-select>
 </md-input-container>
 
-<md-datepicker ng-model="vm.makeEvent.event.start_date" md-placeholder="Start Date"></md-datepicker>
-<md-datepicker ng-model="vm.makeEvent.event.end_date" md-placeholder=" End Date"></md-datepicker>
+<!-- <md-datepicker ng-model="vm.makeEvent.event.start_date" md-placeholder="Start Date"></md-datepicker> -->
+<md-input-container>
+        <label class="Input_header_label md-container-ignore">Start Date</label>
+        <input mdc-datetime-picker="" date="true" time="true" type="text" id="datetime"
+               placeholder="Date"
+               show-todays-date="true"
+               min-date="vm.date"
+               format='MMMM Do YYYY, h:mm:ss a'
+               ng-model="vm.makeEvent.event.start_date"
+               class="md-input"
+               readonly="vm.readonly">
+</md-input-container>
+<md-input-container>
+        <label class="Input_header_label md-container-ignore">End Date</label>
+        <input mdc-datetime-picker="" date="true" time="true" type="text" id="datetime"
+               placeholder="Date"
+               show-todays-date="true"
+               min-date="vm.date"
+               format='MMMM Do YYYY, h:mm:ss a'
+               ng-model="vm.makeEvent.event.end_date"
+               class="md-input"
+               readonly="vm.readonly">
+</md-input-container>
 <md-button ng-click="vm.addEvent()" class="md_button_submit">submit</md-button>
