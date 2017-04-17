@@ -1,6 +1,7 @@
-
 <div>
-  <h2> {{vm.myMarkerData.name}} </h2>
-  <p>{{vm.myMarkerData.description}}</p>
-  <md-button ng-click="vm.projectDetails()"> details</md-button>
+  <p class="Project_tooltip_header"> {{vm.myMarkerData.name}} </p>
+  <p class="Project_tooltip_description">{{vm.myMarkerData.description}}</p>
+  <p class="Project_tooltip_readmore">
+   <md-button ng-click="vm.projectDetails()" class="Project_tooltip_readmore_button">Read more ...</md-button>
+  </p>
 </div>

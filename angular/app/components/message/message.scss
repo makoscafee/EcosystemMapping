@@ -1,0 +1,28 @@
+.Event_tooltip_header{
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #ff9d93;
+    margin: 0px;
+    padding: 18px 19px;
+    color:#ffffff;
+}
+
+.Event_tooltip_readmore_button{
+ padding: 0 13px;
+ margin:0px;
+//margin-top: 5px;
+ color:#ff9d93;
+}
+.Event_tooltip_readmore_button:hover{
+ color:#ff9d93;
+ font-weight: 600;
+ background-color: #ffffff;
+}
+.Event_tooltip_description{
+padding: 0px 18px;
+}
+p.Event_tooltip_readmore{
+    text-align: right;
+    margin-top: -13px;
+    padding-bottom: 10px;
+}
