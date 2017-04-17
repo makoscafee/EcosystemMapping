@@ -1,5 +1,5 @@
 class CreateProjectController {
-    constructor(ProjectsService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope) {
+    constructor(ProjectsService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope, $q, $timeout) {
         'ngInject';
 
         // Initializing services
@@ -10,10 +10,18 @@ class CreateProjectController {
         this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
+        this.$q = $q;
+        this.$timeout = $timeout;
+
+        // list of `state` value/display objects
+        this.states = this.allOrganisations;
+        this.selectedItem = null;
+        this.searchText = null;
     }
     // adds an event to the database
     addProject() {
         let data = this.makeProject;
+        let selectedOrg = this.selectedItem;
         let modifiedProject = {
             name: this.makeProject.project.name,
             description: this.makeProject.project.description,
@@ -32,7 +40,7 @@ class CreateProjectController {
             this.projectId = response.data.id;
             this.$log.log(response.data);
             this.$log.log("a project was created successfully");
-            this.projectService.attachProject(data.organisationId, this.attachId).then(() => {
+            this.projectService.attachProject(selectedOrg.id, this.attachId).then(() => {
                 this.$log.log("project attached successfully");
 
                 this.ecosystemService.getOrganisation(this.$localStorage.ecosystem.id).then((response) => {
@@ -52,6 +60,33 @@ class CreateProjectController {
             this.$log.log("organisations retrived successfully");
         });
 
+    }
+
+    querySearch(query) {
+        let results = query
+            ? this.allOrganisations.filter(this.createFilterFor(query))
+            : this.allOrganisations;
+        let deferred = this.$q.defer();
+        this.$timeout(() => {
+            deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+    }
+
+    /**
+    * Create filter function for a query string
+    */
+    createFilterFor(query) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (state) => {
+            let _state_name_lower_case = angular.lowercase(state.name);
+            return (_state_name_lower_case.indexOf(lowercaseQuery) === 0);
+        };
+    }
+
+    selectedItemChange(item) {
+      this.selectedItem = item;
     }
 
     $onInit() {
