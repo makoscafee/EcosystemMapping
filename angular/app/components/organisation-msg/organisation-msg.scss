@@ -21,6 +21,11 @@
 .Organization_tooltip_description{
 padding: 0px 18px;
 }
+p.Organization_readmore{
+    text-align: right;
+    margin-top: -13px;
+    padding-bottom: 10px;
+}
 .leaflet-popup-content-wrapper
 {
  padding:0px;
@@ -28,9 +33,4 @@ padding: 0px 18px;
 .leaflet-popup-content
 {
  margin:0px;
-}
-p.Organization_readmore{
-    text-align: right;
-    margin-top: -13px;
-    padding-bottom: 10px;
 }
