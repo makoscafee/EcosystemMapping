@@ -1,5 +1,5 @@
 class CreateEventController {
-    constructor(EventService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope) {
+    constructor(EventService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope, $filter) {
         'ngInject';
 
         // Initializing services
@@ -10,6 +10,7 @@ class CreateEventController {
         this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
+        this.$filter = $filter;
     }
 
     // adds an event to the database
@@ -19,8 +20,8 @@ class CreateEventController {
             name: this.makeEvent.event.name,
             description: this.makeEvent.event.description,
             free_or_paid: this.makeEvent.event.free_or_paid,
-            start_date: this.makeEvent.event.start_date,
-            end_date: this.makeEvent.event.end_date
+            start_date: this._filterDate(this.makeEvent.event.start_date),
+            end_date: this._filterDate(this.makeEvent.event.end_date)
 
         };
         this.$log.log(modifiedEvent);
@@ -64,6 +65,12 @@ class CreateEventController {
 
     saveChanges(){
       console.log(this.dateTime);
+    }
+
+    _filterDate(dateValue){
+      let new_date = this.$filter('date')(new Date(dateValue),'yyyy-MM-dd HH:mm:ss');
+
+      return new_date;
     }
 
     $onInit() {
