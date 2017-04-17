@@ -27,11 +27,31 @@
 </md-radio-group>
 </md-input-container>
 
- <md-input-container>
-  <md-select ng-model="vm.makeEvent.organisationId" placeholder="Select an Organisation">
-    <md-option ng-value="opt.id" ng-repeat="opt in vm.allOrganisations" required>{{ opt.name }}</md-option>
-  </md-select>
-</md-input-container>
+<md-autocomplete flex required
+          md-input-name="autocompleteField"
+          md-input-minlength="0"
+          md-input-maxlength="18"
+          md-no-cache="vm.noCache"
+          md-selected-item="vm.selectedItem"
+          md-search-text="vm.searchText"
+          md-selected-item-change="vm.selectedItemChange(item)"
+          md-items="item in vm.querySearch(vm.searchText)"
+          md-item-text="item.name"
+          md-require-match
+          md-floating-label="Select an Organization">
+        <md-item-template>
+          <span md-highlight-text="vm.searchText">{{item.name}}</span>
+        </md-item-template>
+        <md-not-found>
+           No Ecosystems matching "{{vm.searchText}}" were found.
+        </md-not-found>
+        <div ng-messages="autocompleteField.$error" ng-if="autocompleteField.$touched">
+          <div ng-message="required">You <b>must</b> have a favorite state.</div>
+          <div ng-message="md-require-match">Please select an existing state.</div>
+          <div ng-message="minlength">Your entry is not long enough.</div>
+          <div ng-message="maxlength">Your entry is too long.</div>
+        </div>
+  </md-autocomplete>
 
 <!-- <md-datepicker ng-model="vm.makeEvent.event.start_date" md-placeholder="Start Date"></md-datepicker> -->
 <md-input-container>
