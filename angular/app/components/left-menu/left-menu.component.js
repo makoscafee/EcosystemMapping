@@ -203,7 +203,6 @@ class LeftMenuController {
         let data = eventMarkers;
         this.markers = data.markers;
         this.events = data.events;
-        this.$log.log(this.events);
     }
 
     // show projects
