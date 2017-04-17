@@ -64,7 +64,7 @@ class CreateEventController {
     }
 
     saveChanges(){
-      console.log(this.dateTime);
+      //console.log(this.dateTime);
     }
 
     _filterDate(dateValue){

@@ -13,6 +13,7 @@ class CreateOrganisationController {
         this.$state = $state;
         this.$log = $log;
         this.ToastService = ToastService;
+        this.selectedSectors = [];
 
 
         let that = this;
@@ -75,7 +76,7 @@ class CreateOrganisationController {
             date_founded:"1992-04-28 22:21:44",
             date_registered:"1992-04-28 22:21:44",
             target_group:this.or.target_group,
-            sector_id:this.or.sector_id,
+            sector_id:this.selectedSectors,
             role_id:this.or.role_id,
             ecosystem_id:1
 
@@ -96,6 +97,21 @@ class CreateOrganisationController {
                }
            );
     }
+
+    toggleCheckBox(item, list){
+      let idx = list.indexOf(item);
+        if (idx > -1) {
+          list.splice(idx, 1);
+        }
+        else {
+          list.push(item);
+        }
+    }
+
+    checkIfExists(item, list) {
+      return list.indexOf(item) > -1;
+    }
+
 
     // displays all ecosystems
     displayEcosystems() {
