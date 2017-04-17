@@ -1,8 +1,6 @@
 
 <div>
-  <p class="Event_tooltip_header"> {{vm.myMarkerData.name}} </p>
-  <p class="Event_tooltip_description">{{vm.myMarkerData.description}}</p>
-  <p class="Event_tooltip_readmore">
-   <md-button ng-click="vm.getClicked()" class="Event_tooltip_readmore_button">Read more ...</md-button>
-  </p>
+  <h2> {{vm.myMarkerData.name}} </h2>
+  <p>{{vm.myMarkerData.description}}</p>
+   <md-button ng-click="vm.getClicked()">more</md-button>
 </div>
