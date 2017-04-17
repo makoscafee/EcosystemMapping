@@ -13,6 +13,8 @@ class CreateOrganisationController {
         this.$state = $state;
         this.$log = $log;
         this.ToastService = ToastService;
+        this.isOtherSectorSelected = false;
+        this.selectedSectors = [];
 
 
         let that = this;
@@ -75,12 +77,16 @@ class CreateOrganisationController {
             date_founded:"1992-04-28 22:21:44",
             date_registered:"1992-04-28 22:21:44",
             target_group:this.or.target_group,
-            sector_id:this.or.sector_id,
+            sector_id:this.selectedSectors,
             role_id:this.or.role_id,
             ecosystem_id:1
 
 
         };
+
+      if(this.isOtherSectorSelected){
+        data['sector_description'] = this.otherSectorDescription;
+      }
 
        this.organisationService.createOrganisation(data)
            .then(
@@ -96,6 +102,25 @@ class CreateOrganisationController {
                }
            );
     }
+
+    toggleCheckBox(item, list, sectorName){
+      let idx = list.indexOf(item);
+        if (idx > -1) {
+          list.splice(idx, 1);
+        }
+        else {
+          list.push(item);
+        }
+
+        if (sectorName == 'Others') {
+          this.isOtherSectorSelected = !this.isOtherSectorSelected;
+        }
+    }
+
+    checkIfExists(item, list, name) {
+      return list.indexOf(item) > -1;
+    }
+
 
     // displays all ecosystems
     displayEcosystems() {

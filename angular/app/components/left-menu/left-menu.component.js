@@ -1,7 +1,5 @@
 class LeftMenuController {
-    constructor(SidemenuDataService, $log, EcosystemFilterService,
-                EcosystemService, MapDataService, $localStorage, $state,
-                OrganizationService, $rootScope, $scope, DataService, $filter) {
+    constructor(SidemenuDataService, $log, EcosystemFilterService, EcosystemService, MapDataService, $localStorage, $state, OrganizationService, $rootScope, $scope, DataService, $filter) {
         'ngInject';
 
         //Initilizing the services
@@ -18,7 +16,6 @@ class LeftMenuController {
         this.$state = $state;
         this.$filter = $filter;
         let that = this;
-
 
         //global variable
         this.selectedEcosystem = this.$localStorage.ecosystem;
@@ -59,7 +56,6 @@ class LeftMenuController {
             }
         };
 
-
         //getting all roles
         this.roles = this.$localStorage.roles;
 
@@ -72,21 +68,19 @@ class LeftMenuController {
         this.countedRoles = roleCount;
 
         //listening to an event
-        this.$rootScope.$on('stop', function () {
+        this.$rootScope.$on('stop', function() {
             that.$localStorage.booleanData = true;
             that.showProjects();
         });
-        this.$rootScope.$on('newEvent', function () {
+        this.$rootScope.$on('newEvent', function() {
             that.$localStorage.booleanData = true;
             that.showEvents();
         });
-
 
         //getting all sectors
         this.sectors = this.$localStorage.sectors;
 
         //  this.orgLocation = this.MapDataService.checkedOrganisations();
-
 
     }
 
@@ -104,7 +98,7 @@ class LeftMenuController {
                     var marker = {
                         lat: parseFloat(location.lat),
                         lng: parseFloat(location.long),
-                        getMessageScope: function () {
+                        getMessageScope: function() {
                             var infowindowScope = scope.$new(true);
                             infowindowScope.data = response;
                             return infowindowScope;
@@ -117,34 +111,26 @@ class LeftMenuController {
                         if (roleName == "R&D") {
                             marker.icon = this.markerIcons.randD;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Funding Agencies") {
+                        } else if (roleName == "Funding Agencies") {
                             marker.icon = this.markerIcons.fundingAgencies;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Incubators") {
+                        } else if (roleName == "Incubators") {
                             marker.icon = this.markerIcons.incubators;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Development Organization") {
+                        } else if (roleName == "Development Organization") {
                             marker.icon = this.markerIcons.developmentOrganization;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Startup") {
+                        } else if (roleName == "Startup") {
                             marker.icon = this.markerIcons.startup;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Coworking Space") {
+                        } else if (roleName == "Coworking Space") {
                             marker.icon = this.markerIcons.coworkingSpaces;
                             markers.push(marker);
-                        }
-                        else {
+                        } else {
                             this.$log.log("no such a role");
                         }
 
-
-                    }
-                    catch (e) {
+                    } catch (e) {
                         this.$log.log("no role info in this org");
                     }
 
@@ -152,9 +138,7 @@ class LeftMenuController {
             })
         });
 
-
         this.markers = markers;
-
 
     }
 
@@ -177,8 +161,10 @@ class LeftMenuController {
         var scope = this.$scope;
         var markers = [];
         var evts = [];
-        var eventMarkers = {markers: [], events: []}
-
+        var eventMarkers = {
+            markers: [],
+            events: []
+        }
 
         //creating location information
         angular.forEach(this.$localStorage.organisations.data, (response) => {
@@ -187,14 +173,13 @@ class LeftMenuController {
                     angular.forEach(events, (event) => {
                         evts.push(event);
 
-
                         //creating markers
                         angular.forEach(response.locations, (locations) => {
                             angular.forEach(locations, (location) => {
                                 var marker = {
                                     lat: parseFloat(location.lat),
                                     lng: parseFloat(location.long),
-                                    getMessageScope: function () {
+                                    getMessageScope: function() {
                                         var infowindowScope = scope.$new(true);
                                         infowindowScope.data = event;
                                         return infowindowScope;
@@ -208,8 +193,7 @@ class LeftMenuController {
                         })
                     })
                 });
-            }
-            else {
+            } else {
                 this.$log.log("no events or locations");
             }
         });
@@ -229,7 +213,10 @@ class LeftMenuController {
         var scope = this.$scope;
         var markers = [];
         var evts = [];
-        var eventMarkers = {markers: [], events: []}
+        var eventMarkers = {
+            markers: [],
+            events: []
+        }
 
         //creating location information
         angular.forEach(this.$localStorage.organisations.data, (response) => {
@@ -244,7 +231,7 @@ class LeftMenuController {
                                 var marker = {
                                     lat: parseFloat(location.lat),
                                     lng: parseFloat(location.long),
-                                    getMessageScope: function () {
+                                    getMessageScope: function() {
                                         var infowindowScope = scope.$new(true);
                                         infowindowScope.data = event;
                                         return infowindowScope;
@@ -259,9 +246,7 @@ class LeftMenuController {
                     })
                 });
 
-
-            }
-            else {
+            } else {
                 this.$log.log("no events or locations");
             }
 
@@ -279,12 +264,10 @@ class LeftMenuController {
     // show all organisations
     showOrganisations() {
 
-
         this.$log.log("now in initialize");
         this.$log.log(this.$localStorage.booleanData);
-        this.$state.go('app.home.pins.all',{id: 1});
+        this.$state.go('app.home.pins.all', {id: 1});
         this.$localStorage.booleanData = false;
-
 
         /*this.$state.go('app.home.pins.all');*/
 
@@ -305,7 +288,7 @@ class LeftMenuController {
                         var marker = {
                             lat: parseFloat(location.lat),
                             lng: parseFloat(location.long),
-                            getMessageScope: function () {
+                            getMessageScope: function() {
                                 var infowindowScope = scope.$new(true);
                                 infowindowScope.data = response;
                                 return infowindowScope;
@@ -318,34 +301,26 @@ class LeftMenuController {
                             if (roleName == "R&D") {
                                 marker.icon = this.markerIcons.randD;
                                 markers.push(marker);
-                            }
-                            else if (roleName == "Funding Agencies") {
+                            } else if (roleName == "Funding Agencies") {
                                 marker.icon = this.markerIcons.fundingAgencies;
                                 markers.push(marker);
-                            }
-                            else if (roleName == "Incubators") {
+                            } else if (roleName == "Incubators") {
                                 marker.icon = this.markerIcons.incubators;
                                 markers.push(marker);
-                            }
-                            else if (roleName == "Development Organization") {
+                            } else if (roleName == "Development Organization") {
                                 marker.icon = this.markerIcons.developmentOrganization;
                                 markers.push(marker);
-                            }
-                            else if (roleName == "Startup") {
+                            } else if (roleName == "Startup") {
                                 marker.icon = this.markerIcons.startup;
                                 markers.push(marker);
-                            }
-                            else if (roleName == "Coworking Space") {
+                            } else if (roleName == "Coworking Space") {
                                 marker.icon = this.markerIcons.coworkingSpaces;
                                 markers.push(marker);
-                            }
-                            else {
+                            } else {
                                 this.$log.log("no such a role");
                             }
 
-
-                        }
-                        catch (e) {
+                        } catch (e) {
                             this.$log.log("no role info in this org");
                         }
 
@@ -362,7 +337,6 @@ class LeftMenuController {
         return this.OrganizationService.getRoleCount(roleName);
     }
 
-
     makeMarkers(data) {
         let markers = [];
         //let role = {};
@@ -373,7 +347,7 @@ class LeftMenuController {
                     var marker = {
                         lat: parseFloat(location.lat),
                         lng: parseFloat(location.long),
-                        getMessageScope: function () {
+                        getMessageScope: function() {
                             var infowindowScope = scope.$new(true);
                             infowindowScope.data = response;
                             return infowindowScope;
@@ -386,26 +360,20 @@ class LeftMenuController {
                         if (roleName == "R&D") {
                             marker.icon = this.markerIcons.randD;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Funding Agencies") {
+                        } else if (roleName == "Funding Agencies") {
                             marker.icon = this.markerIcons.fundingAgencies;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Startup") {
+                        } else if (roleName == "Startup") {
                             marker.icon = this.markerIcons.startup;
                             markers.push(marker);
-                        }
-                        else if (roleName == "Coworking Space") {
+                        } else if (roleName == "Coworking Space") {
                             marker.icon = this.markerIcons.coworkingSpaces;
                             markers.push(marker);
-                        }
-                        else {
+                        } else {
                             this.$log.log("no such a role");
                         }
 
-
-                    }
-                    catch (e) {
+                    } catch (e) {
                         this.$log.log("no role info in this org");
                     }
 
@@ -413,10 +381,8 @@ class LeftMenuController {
             })
         });
 
-
         return markers;
     }
-
 
     viewEvent(event) {
         this.DataService.setEventFromMarker(event);
@@ -430,22 +396,21 @@ class LeftMenuController {
 
     }
 
-    filterDate(dateValue1,dateValue2) {
-      let new_date_values = { };
-      let new_date_start = this.$filter('date')(new Date(dateValue1),'MMM d');
-      let new_time_start = this.$filter('date')(new Date(dateValue1),'h:mm a');
-      let new_date_end = this.$filter('date')(new Date(dateValue2),'MMM d');
-      let new_time_end = this.$filter('date')(new Date(dateValue2),'h:mm a');
+    filterDate(dateValue1, dateValue2) {
+        let new_date_start = this.$filter('date')(new Date(dateValue1), 'MMM d');
+        let new_time_start = this.$filter('date')(new Date(dateValue1), 'h:mm a');
+        let new_date_end = this.$filter('date')(new Date(dateValue2), 'MMM d');
+        let new_time_end = this.$filter('date')(new Date(dateValue2), 'h:mm a');
 
-      return new_date_values = {
-        event_date: new_date_start + '-' + new_date_end,
-        event_time: new_time_start + '-' + new_time_end
-      }
+        return {
+            event_date: new_date_start + '-' + new_date_end,
+            event_time: new_time_start + '-' + new_time_end
+        }
 
     }
 
     initialize() {
-      this.showOrganisations();
+        this.showOrganisations();
     }
 
     $onInit() {

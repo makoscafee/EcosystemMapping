@@ -48,12 +48,17 @@
             <md-input-container>
              <label class="Input_required Input_header_label md-container-ignore">Select a sector(s)</label>
              <ul>
-              <li ng-repeat="opt in vm.allSectors" class="Details__options-list__item" ng-model="vm.or.sector_id" >
-                <md-checkbox class="Organization_sector_checkbox" aria-label="{{ opt.name }}" ng-value="opt.id">
-                 {{ opt.name }}
+              <li ng-repeat="sector in vm.allSectors" class="Details__options-list__item">
+                <md-checkbox class="Organization_sector_checkbox" aria-label="{{ sector.name }}" ng-checked="vm.checkIfExists(sector.id, vm.selectedSectors)" ng-click="vm.toggleCheckBox(sector.id, vm.selectedSectors, sector.name)">
+                  {{ sector.name }}
                 </md-checkbox>
               </li>
+              <li>{{vm.or.sector_id}}</li>
              </ul>
+            </md-input-container>
+            <md-input-container ng-if="vm.isOtherSectorSelected">
+                <label>Please specify</label>
+                <input type="text" ng-model="vm.otherSectorDescription" >
             </md-input-container>
 
             <md-input-container>
