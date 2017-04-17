@@ -91,7 +91,7 @@ class OrganizationAPIController extends AppBaseController
 
             $organization->roles()->attach(Input::get('role_id'));
 
-            $organization->sectors()->attach(Input::get('sector_id'), ['description' => Input:get('sector_description')]);
+            $organization->sectors()->attach(Input::get('sector_id'), ['description' => Input::get('sector_description')]);
 
             $organization->locations()->attach($location->id);
 
