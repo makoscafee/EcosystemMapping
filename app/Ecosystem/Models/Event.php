@@ -26,6 +26,7 @@ class Event extends Model
         'description',
         'start_date',
         'free_or_paid',
+        'venue',
         'end_date'
     ];
 
@@ -38,6 +39,7 @@ class Event extends Model
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
+        'venue' => 'string',
         'start_date' => 'date',
         'end_date' => 'date'
     ];

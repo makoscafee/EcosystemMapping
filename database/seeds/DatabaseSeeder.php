@@ -123,7 +123,7 @@ class OrganizationSeeder extends Seeder
         $limit = 200;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health", "Sanitation", 'Other');
+        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health", "Sanitation", "Others");
         $ecosystem_parents = EcosystemParent::lists('id')->All();
         for ($i=0; $i < $limit; $i++) {
 
@@ -156,7 +156,7 @@ class RoleSeeder extends Seeder
         $fake = Faker::create();
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
+        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation", "Others");
 
         for ($i=0; $i < sizeOf($roles); $i++) {
 

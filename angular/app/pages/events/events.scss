@@ -149,7 +149,7 @@ $link-color: #1976D2;
 }
 
 .content .title {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -163,7 +163,8 @@ span.Event_date {
 }
 
 md-divider.event_divider {
-    border-right-color: black;
+ border-right-color: rgb(117,117,117);
+margin-right: 5px;
 }
 
 .Date_time_actions.layout-row {

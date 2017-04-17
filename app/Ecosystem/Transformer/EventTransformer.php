@@ -33,6 +33,7 @@ class EventTransformer extends TransformerAbstract
             'start_date' => $event->start_date,
             'end_date'  => $event->end_date,
             'free_or_paid' => $event->free_or_paid,
+            'venue' => $event->venue,
             'links'     => [
                 'rel' => 'self',
                 'uri' => '/events/'.$event->id,

@@ -1,6 +1,6 @@
 <md-input-container>
   <label>Event's Name</label>
-  <input type="text" ng-model="vm.makeEvent.event.name" md-maxlength="30" maxlength="30">
+  <input type="text" ng-model="vm.makeEvent.event.name" md-maxlength="40" maxlength="40" required>
 </md-input-container>
 
 <!-- <md-input-container>
@@ -10,8 +10,14 @@
 
 <md-input-container>
   <label>Event Description</label>
-  <input type="text" ng-model="vm.makeEvent.event.description" md-maxlength="250" maxlength="250">
+  <textarea type="text" rows="3" ng-model="vm.makeEvent.event.description" md-maxlength="250" maxlength="250" required></textarea>
 </md-input-container>
+
+<md-input-container>
+  <label>Event's Venue</label>
+  <input type="text" ng-model="vm.makeEvent.event.venue" md-maxlength="20" maxlength="20" required>
+</md-input-container>
+
 
 <md-input-container>
  <label class="Input_header_label md-container-ignore">Event Type</label>
@@ -23,7 +29,7 @@
 
  <md-input-container>
   <md-select ng-model="vm.makeEvent.organisationId" placeholder="Select an Organisation">
-    <md-option ng-value="opt.id" ng-repeat="opt in vm.allOrganisations">{{ opt.name }}</md-option>
+    <md-option ng-value="opt.id" ng-repeat="opt in vm.allOrganisations" required>{{ opt.name }}</md-option>
   </md-select>
 </md-input-container>
 
@@ -37,6 +43,7 @@
                format='YYYY-MM-DD HH:mm:ss'
                ng-model="vm.makeEvent.event.start_date"
                class="md-input"
+               required
                readonly="vm.readonly">
 </md-input-container>
 <md-input-container>
@@ -48,6 +55,7 @@
                format='YYYY-MM-DD HH:mm:ss'
                ng-model="vm.makeEvent.event.end_date"
                class="md-input"
+               required
                readonly="vm.readonly">
 </md-input-container>
 <md-button ng-click="vm.addEvent()" class="md_button_submit">submit</md-button>

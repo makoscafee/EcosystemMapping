@@ -71,9 +71,7 @@ class Organization extends Model
      **/
     public function events()
     {
-        return $this->belongsToMany(\App\Ecosystem\Models\Event::class, 'event_infos')
-                    ->withPivot('description')
-                    ->withTimestamps();
+        return $this->belongsToMany(\App\Ecosystem\Models\Event::class, 'event_infos')->withTimestamps();
     }
 
     /**
@@ -113,7 +111,9 @@ class Organization extends Model
      **/
     public function sectors()
     {
-        return $this->belongsToMany(\App\Ecosystem\Models\Sector::class, 'organization_sectors')->withTimestamps();
+        return $this->belongsToMany(\App\Ecosystem\Models\Sector::class, 'organization_sectors')
+                    ->withPivot('description')
+                    ->withTimestamps();
     }
 
     /**
