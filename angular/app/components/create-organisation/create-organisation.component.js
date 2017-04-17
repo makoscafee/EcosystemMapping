@@ -13,6 +13,7 @@ class CreateOrganisationController {
         this.$state = $state;
         this.$log = $log;
         this.ToastService = ToastService;
+        this.isOtherSectorSelected = false;
         this.selectedSectors = [];
 
 
@@ -83,6 +84,10 @@ class CreateOrganisationController {
 
         };
 
+      if(this.isOtherSectorSelected){
+        data['sector_description'] = this.otherSectorDescription;
+      }
+
        this.organisationService.createOrganisation(data)
            .then(
                res => {
@@ -98,7 +103,7 @@ class CreateOrganisationController {
            );
     }
 
-    toggleCheckBox(item, list){
+    toggleCheckBox(item, list, sectorName){
       let idx = list.indexOf(item);
         if (idx > -1) {
           list.splice(idx, 1);
@@ -106,9 +111,13 @@ class CreateOrganisationController {
         else {
           list.push(item);
         }
+
+        if (sectorName == 'Others') {
+          this.isOtherSectorSelected = !this.isOtherSectorSelected;
+        }
     }
 
-    checkIfExists(item, list) {
+    checkIfExists(item, list, name) {
       return list.indexOf(item) > -1;
     }
 

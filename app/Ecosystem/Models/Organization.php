@@ -71,7 +71,9 @@ class Organization extends Model
      **/
     public function events()
     {
-        return $this->belongsToMany(\App\Ecosystem\Models\Event::class, 'event_infos')->withTimestamps();
+        return $this->belongsToMany(\App\Ecosystem\Models\Event::class, 'event_infos')
+                    ->withPivot('description')
+                    ->withTimestamps();
     }
 
     /**
