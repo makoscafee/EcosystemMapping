@@ -185,7 +185,7 @@ class SectorSeeder extends Seeder
         $fake = Faker::create();
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation");
+        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health","Sanitation", 'Others');
 
         for ($i=0; $i < sizeOf($sectors); $i++) {
 

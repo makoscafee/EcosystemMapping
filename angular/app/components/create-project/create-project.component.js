@@ -1,5 +1,5 @@
 class CreateProjectController {
-    constructor(ProjectsService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope) {
+    constructor(ProjectsService, $log, OrganizationService, $localStorage, $state, EcosystemService, $rootScope, $q, $timeout) {
         'ngInject';
 
         // Initializing services
@@ -10,6 +10,13 @@ class CreateProjectController {
         this.$rootScope = $rootScope;
         this.$state = $state;
         this.$log = $log;
+        this.$q = $q;
+        this.$timeout = $timeout;
+
+        // list of `state` value/display objects
+        this.states = this.allOrganisations;
+        this.selectedItem = null;
+        this.searchText = null;
     }
     // adds an event to the database
     addProject() {
@@ -52,6 +59,28 @@ class CreateProjectController {
             this.$log.log("organisations retrived successfully");
         });
 
+    }
+
+    querySearch(query) {
+        let results = query
+            ? this.states.filter(createFilterFor(query))
+            : this.states;
+        let deferred = this.$q.defer();
+        this.$timeout(() => {
+            deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+    }
+
+    /**
+    * Create filter function for a query string
+    */
+    createFilterFor(query) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return function(state) => {
+            return (state.value.indexOf(lowercaseQuery) === 0);
+        };
     }
 
     $onInit() {
