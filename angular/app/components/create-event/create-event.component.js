@@ -19,6 +19,7 @@ class CreateEventController {
         let modifiedEvent = {
             name: this.makeEvent.event.name,
             description: this.makeEvent.event.description,
+            venue: this.makeEvent.event.venue,
             free_or_paid: this.makeEvent.event.free_or_paid,
             start_date: this._filterDate(this.makeEvent.event.start_date),
             end_date: this._filterDate(this.makeEvent.event.end_date)
