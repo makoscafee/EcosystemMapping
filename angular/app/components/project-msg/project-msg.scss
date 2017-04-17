@@ -1,0 +1,28 @@
+.Project_tooltip_header{
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #F69139;
+    margin: 0px;
+    padding: 18px 19px;
+    color:#ffffff;
+}
+
+.Project_tooltip_readmore_button{
+ padding: 0 13px;
+ margin:0px;
+//margin-top: 5px;
+ color:#F69139;
+}
+.Project_tooltip_readmore_button:hover{
+ color:#F69139;
+ font-weight: 600;
+ background-color: #ffffff;
+}
+.Project_tooltip_description{
+padding: 0px 18px;
+}
+p.Project_tooltip_readmore{
+    text-align: right;
+    margin-top: -13px;
+    padding-bottom: 10px;
+}
