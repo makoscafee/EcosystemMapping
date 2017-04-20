@@ -35,9 +35,12 @@
 .Sidebar-menu {
     margin-bottom: 10px;
 }
-
+.FeedbackLabel
+{
+ color:#f8e05a
+}
 .Sidebar_menu {
-    align-items: flex-start;
+    align-items: inherit;
     background-color: #2c7ab9;
     /*  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px; */
@@ -146,10 +149,14 @@
  background: rgb(100, 149, 237);
  font-weight: bold;
 }
+li.FeedbackLabel{
+ color: rgb(248, 217, 110) !important;
+}
 
 .feedback_button {
     position: absolute;
     bottom: 10px;
+    left:1px;
     color: #ff8a80;
     font-weight: bold;
 }
