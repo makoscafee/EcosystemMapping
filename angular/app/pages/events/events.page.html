@@ -4,7 +4,7 @@
 
             <h3 class="Events-title">Events</h3>
             <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
-                <md-card class="card" ng-click="vm.viewEvent(event)">
+                <md-card class="card" >
                     <div class="image">
                         <!-- <img src="http://i.imgur.com/td7pKHw.jpg"> -->
                         <span class="title">
@@ -19,16 +19,17 @@
                                 <span class="Event_date">{{vm.filterDate(event.start_date.date, event.end_date.date).event_date}}</span>
                             </div>
                             <md-divider class="event_divider"></md-divider>
-                            <div class="" flex="40">
+                            <div class="" flex="50">
                                 <span class="Event_date">{{vm.filterDate(event.start_date.date, event.end_date.date).event_time}}</span>
                             </div>
                             <md-divider class="event_divider"></md-divider>
-                            <div class="Social_actions" flex="30">
+                            <div class="Social_actions" flex="20">
                                 <md-icon md-svg-src="{{'img/icons/share.svg'}}" aria-label="share"></md-icon>
                                 <md-icon md-svg-src="{{'img/icons/favourite.svg'}}" aria-label="favourite"></md-icon>
                             </div>
                         </div>
                         <h4 class="title">{{event.name}}</h4>
+                        <!-- <p ng-click="vm.viewEvent(event)">{{event.description}}</p>-->
                         <p>{{event.description}}</p>
                     </div>
                     <md-card>

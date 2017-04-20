@@ -8,13 +8,13 @@
         <div ng-repeat="event in vm.events | orderBy : 'start_date.date'">
           <md-card class= " Project-card" ng-click="vm.viewProject(event)">
              <md-card-content layout="row">
-               <div flex="55" class="Project_title_description">
+               <div flex="60" class="Project_title_description">
                  <h1 class="Card-title">{{event.name}}</h1>
                  <p class="Event-description">{{event.description}}</p>
                </div>
-               <div flex="45" class="Project_sector_targetGroup">
-                <h5>Sector: Education</h5>
-                <h5>Target Group: Youth</h5>
+               <div flex="40" class="Project_sector_targetGroup">
+                <p><h5><b>Sector:</b>Education</h5></p>
+                <p><h5><b>Target Group:</b>Youth</h5></p>
                </div>
              </md-card-content>
              <md-card-actions layout="row">
