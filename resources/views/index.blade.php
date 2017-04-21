@@ -41,6 +41,7 @@
 
         var final = document.createElement("script");
         final.src = "{!! elixir('js/final.js') !!}";
+        final.setAttribute = ("async");
         document.head.appendChild(final);
     })();
     </script>
