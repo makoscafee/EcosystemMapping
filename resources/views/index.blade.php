@@ -37,11 +37,13 @@
         link.href = "{!! elixir('css/final.css') !!}";
         link.type = "text/css";
         link.rel = "stylesheet";
-        document.body.appendChild(link);
+        document.head.appendChild(link);
+
+        var final = document.createElement("script");
+        final.src = "{!! elixir('js/final.js') !!}";
+        document.head.appendChild(final);
     })();
     </script>
-
-    <script src="{!! elixir('js/final.js') !!}" async defer></script>
 
 </body>
 </html>
