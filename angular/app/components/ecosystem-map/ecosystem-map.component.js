@@ -18,7 +18,8 @@ class EcosystemMapController {
             zoom: 6
         };
         this.defaults = {
-            zoomControlPosition: 'bottomright'
+            zoomControlPosition: 'bottomright',
+            scrollWheelZoom: false
         };
 
         this.markerIcons = {
