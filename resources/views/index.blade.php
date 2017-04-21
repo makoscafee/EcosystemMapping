@@ -21,12 +21,9 @@
 </head>
 <body>
 
-    <app-shell>
-        <div id="app-shell-header">
-            <a  ui-sref="app.landing" class="DemoHeader-logo">Ecosystem Mapping</a>
-        </div>
+    <!-- <app-shell>
         <div id="app-shell-content"></div>
-    </app-shell>
+    </app-shell> -->
 
     <app-view></app-view>
 
