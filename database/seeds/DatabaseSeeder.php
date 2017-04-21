@@ -73,7 +73,7 @@ class EcosystemSeeder extends Seeder
         $fake = Faker::create();
         $ecosystem_parents = EcosystemParent::lists('id')->All();
           DB::table('ecosystems')->insert([
-            'name' => 'Innovation Ecoystem',
+            'name' => 'Startup Ecosystem',
             'ecosystem_parent_id' => $fake->randomElement($ecosystem_parents),
             'edition' => '1',
             'created_at' => $fake->date('Y-m-d H:i:s'),
