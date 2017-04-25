@@ -123,7 +123,7 @@ class OrganizationSeeder extends Seeder
         $limit = 200;
         $status = array("active", "inactive");
         $roles = array("Startup", "R&D", "Incubators", "Coworking Space", "Funding Agencies", "Development Organization");
-        $sectors = array("Agriculture", "Finance", "Mining", "Education", "Fishing", "Utility", "Health", "Sanitation", "Others");
+        $sectors = array("Agriculture & Agribusiness", "Education", "Energy & Climate", "Finance & Financial Inclusion", "Health", "Manufacturing & Distribution", "Social Business", "Technology & ICT","Water & Sanitation", "Others");
         $ecosystem_parents = EcosystemParent::lists('id')->All();
         for ($i=0; $i < $limit; $i++) {
 
