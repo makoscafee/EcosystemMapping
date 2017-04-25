@@ -123,8 +123,8 @@ md-divider.divide-sector-role {
 }
 
 .md-icon{
- border-color:rgba(204, 205, 194, 0.65);
- border-color:rgb(158,158,158);
+ /*border-color:rgba(204, 205, 194, 0.65);*/
+ border-color:rgb(158,158,158) !important;
 }
 
 md-checkbox{
@@ -155,14 +155,22 @@ md-checkbox{
   color:rgba(0,0,0,0.54);
 }
 
-md-checkbox{
-
-}
-.md-chip{
+md-chip{
+/*
     background-color: rgb(117,117,117);
     padding: 3px 8px 3px 8px;
     border-radius: 11px;
     margin-right: 2px;
+
+    background: rgb(158,158,158);
+    */
+    background: rgb(132, 132, 132);
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    color: #ece8e8;
+    position:absolute;
+    right: 35px;
+    font-size: 14px;
 }
 
 .Media__image {
