@@ -16,7 +16,7 @@
                         md-search-text-change="vm.searchTextChange(vm.searchText)"
                          md-selected-item-change="vm.selectedItemChange(item)"
                         md-min-length="0"
-                        placeholder="Search For An Ecosystem">
+                        placeholder="Select an Ecosystem">
                         <md-item-template>
                            <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.name}}</span>
                         </md-item-template>
@@ -28,7 +28,7 @@
         </div>
         <div>
           <!-- search button -->
-       <md-button class="md-raised md-primary" ng-click="vm.home()">Search</md-button>
+       <md-button class="md-raised md-primary" ng-click="vm.home()">Select</md-button>
         </div>
       </div>
     </div>
