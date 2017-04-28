@@ -57,16 +57,16 @@ class EcosystemMapController {
             selectedDirection: 'down',
             items: [
                 {
-                    name: "Organization",
-                    icon: "img/icons/insert_drive.svg",
+                    name: "Add Organization",
+                    icon: "img/icons/location.svg",
                     direction: "right"
                 }, {
-                    name: "Event",
-                    icon: "img/icons/insert_drive.svg",
+                    name: "Add Event",
+                    icon: "img/icons/event.svg",
                     direction: "top"
                 }, {
-                    name: "Project",
-                    icon: "img/icons/insert_drive.svg",
+                    name: "Add Project",
+                    icon: "img/icons/project.svg",
                     direction: "right"
                 }
             ]
