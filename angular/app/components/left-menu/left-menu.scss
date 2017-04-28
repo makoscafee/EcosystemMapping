@@ -143,7 +143,13 @@
     font-size: x-large;
     color: #ffffff !important;
     background-color: rgb(255,138,128) !important;
+    margin-left:-10px;
 }
+
+md-fab-speed-dial.md-down md-fab-trigger{
+margin-left:-23px; 
+}
+
 
 .md_button_submit{
  background: rgb(100, 149, 237);
