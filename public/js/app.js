@@ -1660,13 +1660,13 @@
 	        value: function openCreatePage($event, item) {
 
 	            var organization_id = this.$localStorage.ecosystem.id;
-	            if (item.name == 'Organization') {
+	            if (item.name == 'Add Organization') {
 
 	                this.$state.go('app.home.create.organisation', { id: organization_id });
-	            } else if (item.name == 'Event') {
+	            } else if (item.name == 'Add Event') {
 
 	                this.$state.go('app.home.create.event', { id: organization_id });
-	            } else if (item.name == 'Project') {
+	            } else if (item.name == 'Add Project') {
 
 	                this.$state.go('app.home.create.project', { id: organization_id });
 	            }
