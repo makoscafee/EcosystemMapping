@@ -25201,8 +25201,8 @@ md-card md-card-content {
   font-size: 14px;
   /*background: rgb(229,115,115);*/
   /*background:rgba(0,0,0,0.54);*/
-  background: rgba(0, 0, 0, 0.38);
-  padding: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 6px;
   border-radius: 5px;
   margin-right: 5px; }
 
@@ -25609,7 +25609,6 @@ md-divider.event_divider {
 .DemoHeader-spacer {
   padding-top: 64px; }
 
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 ul {
   padding: 0;
@@ -25887,6 +25886,7 @@ h1, h2, h3, h4, h5, h6 {
 .field:focus + .icons-container .icon-search {
   opacity: 0;
   transform: translateX(200%); }
+
 
 
 .Login-formContainer {
