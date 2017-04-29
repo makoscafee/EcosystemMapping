@@ -551,31 +551,26 @@ module.run(['$templateCache', function($templateCache) {
     '    <section class="Details__body-side_bar Event-section" >\n' +
     '\n' +
     '      <h2 class="Events-title">{{vm.menuOrganisation.name}}</h2>\n' +
-    '      <h4 class="Events-title"><a>{{vm.menuOrganisation.website}}</a></h4>\n' +
+    '      <h4 class="Events-title"><a href="http://{{vm.menuOrganisation.website}}" target="_blank">{{vm.menuOrganisation.website}}</a></h4>\n' +
     '          <md-card class= " Event-card">\n' +
-    '\n' +
-    '             <md-card-actions layout="column">\n' +
-    '\n' +
-    '               <div>\n' +
-    '                  <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.menuOrganisation.sectors.data">{{sector.name}}</span></h1>\n' +
-    '                  <h1 class="Card-title">Target Group: <span>{{vm.menuOrganisation.target_group}}</span></h1>\n' +
-    '               </div>\n' +
-    '\n' +
-    '               <div layout="row">\n' +
-    '                 <div layout="row">\n' +
-    '                     <i class="Card-icon ion-ios-location"></i><p><span ng-repeat="location in vm.menuOrganisation.locations.data">{{location.address}}</span></p>\n' +
-    '                 </div>\n' +
-    '                 <div layout="row">\n' +
-    '                   <i class=" Card-icon ion-ios-clock"></i><p>{{vm.menuOrganisation.date_founded.date}}</p>\n' +
-    '                 </div>\n' +
-    '               </div>\n' +
-    '             </md-card-actions>\n' +
     '             <md-card-content>\n' +
     '                <p class="Organisation-description">{{vm.menuOrganisation.description}}</p>\n' +
     '             </md-card-content>\n' +
-    '\n' +
-    '            </md-card>\n' +
-    '\n' +
+    '             <div>\n' +
+    '                <h1 class="Card-title organization"><span class="card-sector-title"> Sector:</span> <span ng-repeat="sector in vm.menuOrganisation.sectors.data" class="Card-sector-description">{{sector.name}}</span></h1>\n' +
+    '                <h1 class="Card-title organization"><span class="card-sector-title">Target Group:</span> <span class="Card-sector-description">{{vm.menuOrganisation.target_group}}</span></h1>\n' +
+    '             </div>\n' +
+    '             <md-card-actions layout="column">\n' +
+    '               <div layout="row">\n' +
+    '                 <div layout="row">\n' +
+    '                     <i class="Card-icon ion-ios-location carrat-organization-info"></i><p class="organization_info"><span ng-repeat="location in vm.menuOrganisation.locations.data">{{location.address}}</span></p>\n' +
+    '                 </div>\n' +
+    '                 <div layout="row">\n' +
+    '                   <i class=" Card-icon ion-android-locate carrat-organization-info"></i><p class="organization_info">{{vm.menuOrganisation.date_founded.date}}</p>\n' +
+    '                 </div>\n' +
+    '               </div>\n' +
+    '             </md-card-actions>\n' +
+    '        </md-card>\n' +
     '    </section>\n' +
     '</div>\n' +
     '</section>\n' +
@@ -765,6 +760,8 @@ module.run(['$templateCache', function($templateCache) {
     '                        md-search-text-change="vm.searchTextChange(vm.searchText)"\n' +
     '                         md-selected-item-change="vm.selectedItemChange(item)"\n' +
     '                        md-min-length="0"\n' +
+    '                        md-autoselect="true"\n' +
+    '                        md-menu-class = "selectorInput"\n' +
     '                        placeholder="Select an Ecosystem">\n' +
     '                        <md-item-template>\n' +
     '                           <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.name}}</span>\n' +

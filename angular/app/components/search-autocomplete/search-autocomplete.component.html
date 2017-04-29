@@ -16,6 +16,8 @@
                         md-search-text-change="vm.searchTextChange(vm.searchText)"
                          md-selected-item-change="vm.selectedItemChange(item)"
                         md-min-length="0"
+                        md-autoselect="true"
+                        md-menu-class = "selectorInput"
                         placeholder="Select an Ecosystem">
                         <md-item-template>
                            <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.name}}</span>

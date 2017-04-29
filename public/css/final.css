@@ -25124,7 +25124,8 @@ md-fab-speed-dial.md-down md-fab-trigger {
 
 .md_button_submit {
   background: cornflowerblue;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #FFFFFF; }
 
 a.FeedbackLabel {
   color: #f8d96e !important; }
@@ -25181,10 +25182,36 @@ p.Event_tooltip_readmore {
   font-weight: 400; }
 
 .Organisation-description {
-  color: white; }
+  color: #303030;
+  font-size: 14px;
+  line-height: 1.3; }
 
 .Detail-height {
   min-height: 500px; }
+
+md-card md-card-content {
+  /*border-bottom: 1px solid #575d92;*/
+  border-bottom: 2px solid #b6b9d0;
+  background-color: #FFFFFF; }
+
+.Card-title.organization {
+  padding: 16px 16px 0px 16px; }
+
+.Card-sector-description {
+  font-size: 14px;
+  /*background: rgb(229,115,115);*/
+  background: rgba(0, 0, 0, 0.54);
+  padding: 4px;
+  border-radius: 5px; }
+
+.card-sector-title {
+  font-size: 16px; }
+
+p.organization_info {
+  color: white; }
+
+.carrat-organization-info {
+  color: #ff8a80 !important; }
 
 .Organization_tooltip_header {
   text-transform: uppercase;
@@ -25307,6 +25334,7 @@ div.header {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
+  color: #FFFFFF;
   background: cornflowerblue; }
 
 .Create_event_content {
@@ -25321,6 +25349,7 @@ div.header {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
+  color: #FFFFFF;
   background: cornflowerblue; }
 
 .Create_project_content {
@@ -25335,6 +25364,7 @@ div.header {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
+  color: #FFFFFF;
   background: cornflowerblue; }
 
 .details {
@@ -25366,7 +25396,7 @@ div.header {
   margin: 5px 1px; }
 
 .Event-card {
-  background: #3E4EB8;
+  background: #4b538a;
   height: 100%; }
 
 .Card-icon {
@@ -25377,7 +25407,7 @@ div.header {
 
 .Card-title {
   line-height: 24px;
-  color: #272727;
+  color: #FFFFFF;
   font-weight: bold; }
 
 md-card-actions div p {
@@ -25587,7 +25617,8 @@ a {
   text-decoration: none; }
 
 a:link, a:visited {
-  color: #B0B0B2; }
+  /*color: #B0B0B2;*/
+  color: #4b538a; }
 
 a:hover, a:active {
   color: #0674D7; }
