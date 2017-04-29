@@ -332,7 +332,7 @@ md-card md-card-content {
   font-size: 14px;
   /*background: rgb(229,115,115);*/
   /*background:rgba(0,0,0,0.54);*/
-  background: #717171;
+  background: #303030;
   padding: 4px;
   border-radius: 13px;
   margin-right: 5px; }
@@ -423,6 +423,10 @@ p.Project_tooltip_readmore {
   margin-left: 0;
   width: 100%;
   padding: 5px 0; }
+
+.ResetPassword-input {
+  margin-bottom: 0; }
+
 
 .box {
   height: 700px;
@@ -1224,8 +1228,6 @@ md-chip {
 .md-checkbox {
   margin-bottom: 5px !important; }
 
-.ResetPassword-input {
-  margin-bottom: 0; }
 
 
 .Project_sector_targetGroup {
@@ -1277,8 +1279,6 @@ color: rgb(48,48,48);
 .Register-formContainer {
   margin-top: 80px;
   margin-bottom: 80px; }
-
-
 
 .ResetPassword-formContainer {
   margin-top: 80px;
