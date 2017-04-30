@@ -5,4 +5,7 @@ Homestead.json
 .env
 /bower_components
 .idea/*
+public/css
+public/build
+public/js
 .DS_Store

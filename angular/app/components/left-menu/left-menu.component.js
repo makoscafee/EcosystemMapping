@@ -157,7 +157,6 @@ class LeftMenuController {
     // show events
     showEvents() {
         this.$state.go('app.home.events.all');
-
         var scope = this.$scope;
         var markers = [];
         var evts = [];
@@ -203,6 +202,8 @@ class LeftMenuController {
         let data = eventMarkers;
         this.markers = data.markers;
         this.events = data.events;
+        this.$log.log(data,"data from events");
+
     }
 
     // show projects

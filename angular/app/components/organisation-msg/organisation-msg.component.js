@@ -14,7 +14,7 @@ class OrganisationMsgController{
     }
 
     viewOrganisation(){
-        this.$state.go('app.home.pins.details');
+        this.$state.go('app.home.pins.details',{orgID:this.mapOrganisation.id});
     }
 
     $onInit(){

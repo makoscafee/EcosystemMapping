@@ -194,8 +194,19 @@
 	                templateUrl: getView('pins')
 	            }
 	        }
-	    }).state('app.home.pins.details', {
+	    })
+	    /*
+	    .state('app.home.pins.details', {
 	        url: '/details',
+	        views: {
+	            'organisation': {
+	                templateUrl: getView('organisation-d')
+	            }
+	        }
+	    })
+	    */
+	    .state('app.home.pins.details', {
+	        url: '/details/:orgID',
 	        views: {
 	            'organisation': {
 	                templateUrl: getView('organisation-d')
@@ -1037,7 +1048,7 @@
 	    _createClass(OrganisationMsgController, [{
 	        key: 'viewOrganisation',
 	        value: function viewOrganisation() {
-	            this.$state.go('app.home.pins.details');
+	            this.$state.go('app.home.pins.details', { orgID: this.mapOrganisation.id });
 	        }
 	    }, {
 	        key: '$onInit',
@@ -1231,6 +1242,7 @@
 	        this.$scope = $scope;
 	        this.$log = $log;
 	        this.$state = $state;
+	        //   this.$log.log($scope,"scope from inside");
 	        this.DataService = DataService;
 	        this.myMarkerData = this.$scope.$parent.data;
 	        this.DataService.setEventFromMarker(this.myMarkerData);
@@ -2077,7 +2089,6 @@
 	            var _this3 = this;
 
 	            this.$state.go('app.home.events.all');
-
 	            var scope = this.$scope;
 	            var markers = [];
 	            var evts = [];
@@ -2123,6 +2134,7 @@
 	            var data = eventMarkers;
 	            this.markers = data.markers;
 	            this.events = data.events;
+	            this.$log.log(data, "data from events");
 	        }
 
 	        // show projects

@@ -553,7 +553,7 @@ module.run(['$templateCache', function($templateCache) {
     '      <h2 class="Events-title">{{vm.menuOrganisation.name}}</h2>\n' +
     '      <h4 class="Events-title"><a href="http://{{vm.menuOrganisation.website}}" target="_blank">{{vm.menuOrganisation.website}}</a></h4>\n' +
     '          <md-card class= " Event-card">\n' +
-    '             <md-card-content>\n' +
+    '             <md-card-content class="organization">\n' +
     '                <p class="Organisation-description">{{vm.menuOrganisation.description}}</p>\n' +
     '             </md-card-content>\n' +
     '             <div>\n' +

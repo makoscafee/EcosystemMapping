@@ -7,11 +7,13 @@
 .Detail-height {
   min-height: 500px;
 }
+md-card md-card-content.organization{
+ border-bottom: 1px solid rgba(0,0,0,0.12);
+}
 
 md-card md-card-content
 {
  /*border-bottom: 1px solid #575d92;*/
- border-bottom: 2px solid #b6b9d0;
  background-color:#FFFFFF;
 }
 .Card-title.organization{
@@ -31,9 +33,6 @@ margin-right: 5px;
     font-size: 16px;
 }
 
-p.organization_info{
- color:white;
-}
 .carrat-organization-info{
  color: #ff8a80 !important;
 }
