@@ -6,6 +6,7 @@ class MessageController{
         this.$scope = $scope;
         this.$log = $log;
         this.$state = $state;
+     //   this.$log.log($scope,"scope from inside");
         this.DataService = DataService;
         this.myMarkerData = this.$scope.$parent.data;
         this.DataService.setEventFromMarker(this.myMarkerData);

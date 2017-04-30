@@ -53,8 +53,18 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        /*
         .state('app.home.pins.details', {
             url: '/details',
+            views: {
+                'organisation': {
+                    templateUrl: getView('organisation-d')
+                }
+            }
+        })
+        */
+        .state('app.home.pins.details', {
+            url: '/details/:orgID',
             views: {
                 'organisation': {
                     templateUrl: getView('organisation-d')

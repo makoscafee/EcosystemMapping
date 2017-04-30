@@ -307,10 +307,19 @@ p.Event_tooltip_readmore {
   padding-bottom: 10px; }
 
 .Card-title {
-  color: white;
+  /*color: white;*/
+  color: #303031;
   font-size: 18px;
   line-height: 32px;
   font-weight: 400; }
+
+p.event-details-decription {
+  margin-left: 20px; }
+
+.event-details-title {
+  color: #303031;
+  font-weight: 600;
+  font-size: 15px; }
 
 .Organisation-description {
   color: #303030;
@@ -320,9 +329,11 @@ p.Event_tooltip_readmore {
 .Detail-height {
   min-height: 500px; }
 
+md-card md-card-content.organization {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+
 md-card md-card-content {
   /*border-bottom: 1px solid #575d92;*/
-  border-bottom: 2px solid #b6b9d0;
   background-color: #FFFFFF; }
 
 .Card-title.organization {
@@ -339,9 +350,6 @@ md-card md-card-content {
 
 .card-sector-title {
   font-size: 16px; }
-
-p.organization_info {
-  color: white; }
 
 .carrat-organization-info {
   color: #ff8a80 !important; }
@@ -529,7 +537,7 @@ div.header {
   margin: 5px 1px; }
 
 .Event-card {
-  background: #4b538a;
+  /*background: #4b538a;*/
   height: 100%; }
 
 .Card-icon {
@@ -540,7 +548,8 @@ div.header {
 
 .Card-title {
   line-height: 24px;
-  color: #FFFFFF;
+  /*color:#FFFFFF;*/
+  color: #515151;
   font-weight: bold; }
 
 md-card-actions div p {
@@ -754,7 +763,8 @@ a:link, a:visited {
   color: #4b538a; }
 
 a:hover, a:active {
-  color: #0674D7; }
+  color: #0674D7;
+  text-decoration: underline; }
 
 p {
   font-size: 14px;

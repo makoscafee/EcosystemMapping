@@ -510,26 +510,20 @@ module.run(['$templateCache', function($templateCache) {
     '      <h2 class="Events-title">{{vm.scopeData.name}}</h2>\n' +
     '          <md-card class= " Event-card">\n' +
     '             <md-card-content>\n' +
+    '\n' +
     '               <div>\n' +
-    '                  <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.scopeData.sectors.data">{{sector.name}}</span> </h1>\n' +
+    '              <!--    <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.scopeData.sectors.data">{{sector.name}}</span> </h1>\n' +
     '                  <h1 class="Card-title">Target Group: <span>{{vm.scopeData.target_group}}</span></h1>\n' +
     '                  <h1 class="Card-title">Partners: </h1>\n' +
-    '                  <p class="Event-description">{{vm.scopeData.description}}</p>\n' +
+    '\n' +
+    '                 -->\n' +
+    '                  <p class="event-details-title"><b>Event Description: </b></p>\n' +
+    '                  <p class="event-details-decription">{{vm.scopeData.description}}</p>\n' +
+    '                   <p><span class="event-details-title">Venue: </span>{{vm.scopeData.venue}}</p>\n' +
+    '                   <p><span class="title"><b class="event-details-title">Event Type:</b>  {{vm.scopeData.free_or_paid}}</span></p>\n' +
     '               </div>\n' +
     '             </md-card-content>\n' +
-    '             <md-card-actions layout="column">\n' +
-    '               <div layout="row">\n' +
-    '                 <i class="Card-icon ion-ios-location"></i><p>{{vm.scopeData.address}}</p>\n' +
-    '               </div>\n' +
-    '               <div layout="row">\n' +
-    '                 <i class=" Card-icon ion-ios-clock"></i><p>Event Time</p>\n' +
-    '\n' +
-    '               </div>\n' +
-    '               <div layout="row">\n' +
-    '                 <i class=" Card-icon ion-ios-clock"></i><p>Free</p>\n' +
-    '               </div>\n' +
-    '             </md-card-actions>\n' +
-    '            </md-card>\n' +
+    '         </md-card>\n' +
     '    </section>\n' +
     '</div>\n' +
     '</section>\n' +
@@ -553,7 +547,7 @@ module.run(['$templateCache', function($templateCache) {
     '      <h2 class="Events-title">{{vm.menuOrganisation.name}}</h2>\n' +
     '      <h4 class="Events-title"><a href="http://{{vm.menuOrganisation.website}}" target="_blank">{{vm.menuOrganisation.website}}</a></h4>\n' +
     '          <md-card class= " Event-card">\n' +
-    '             <md-card-content>\n' +
+    '             <md-card-content class="organization">\n' +
     '                <p class="Organisation-description">{{vm.menuOrganisation.description}}</p>\n' +
     '             </md-card-content>\n' +
     '             <div>\n' +

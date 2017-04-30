@@ -11,26 +11,20 @@
       <h2 class="Events-title">{{vm.scopeData.name}}</h2>
           <md-card class= " Event-card">
              <md-card-content>
+
                <div>
-                  <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.scopeData.sectors.data">{{sector.name}}</span> </h1>
+              <!--    <h1 class="Card-title">Sector: <span ng-repeat="sector in vm.scopeData.sectors.data">{{sector.name}}</span> </h1>
                   <h1 class="Card-title">Target Group: <span>{{vm.scopeData.target_group}}</span></h1>
                   <h1 class="Card-title">Partners: </h1>
-                  <p class="Event-description">{{vm.scopeData.description}}</p>
+
+                 -->
+                  <p class="event-details-title"><b>Event Description: </b></p>
+                  <p class="event-details-decription">{{vm.scopeData.description}}</p>
+                   <p><span class="event-details-title">Venue: </span>{{vm.scopeData.venue}}</p>
+                   <p><span class="title"><b class="event-details-title">Event Type:</b>  {{vm.scopeData.free_or_paid}}</span></p>
                </div>
              </md-card-content>
-             <md-card-actions layout="column">
-               <div layout="row">
-                 <i class="Card-icon ion-ios-location"></i><p>{{vm.scopeData.address}}</p>
-               </div>
-               <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>Event Time</p>
-
-               </div>
-               <div layout="row">
-                 <i class=" Card-icon ion-ios-clock"></i><p>Free</p>
-               </div>
-             </md-card-actions>
-            </md-card>
+         </md-card>
     </section>
 </div>
 </section>
