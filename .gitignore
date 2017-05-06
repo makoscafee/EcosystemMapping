@@ -3,9 +3,9 @@
 Homestead.yaml
 Homestead.json
 .env
-/bower_components
-.idea/*
-.DS_Store
 public/js
 public/css
 public/build
+/bower_components
+.idea/*
+.DS_Store
