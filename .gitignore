@@ -6,6 +6,7 @@ Homestead.json
 public/js
 public/css
 public/build
+public/views
 /bower_components
 .idea/*
 .DS_Store

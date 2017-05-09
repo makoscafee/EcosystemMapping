@@ -87,6 +87,7 @@ class EcosystemMapController {
             angular.forEach(response.locations, (locations) => {
                 angular.forEach(locations, (location) => {
                     var marker = {
+                        group: 'markers',
                         lat: parseFloat(location.lat),
                         lng: parseFloat(location.long),
                         getMessageScope: function() {
