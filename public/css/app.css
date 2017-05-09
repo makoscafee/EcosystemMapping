@@ -35,14 +35,14 @@ md-toast[md-theme=warn] .md-toast-content {
 
 
 
+.md-char-count {
+  color: #ff8a80; }
+
 html {
   height: 100%; }
 
 body {
   min-height: 100%; }
-
-.md-char-count {
-  color: #ff8a80; }
 
 .location {
   padding-bottom: 100px;
@@ -433,9 +433,9 @@ p.Project_tooltip_readmore {
   width: 100%;
   padding: 5px 0; }
 
-
 .ResetPassword-input {
   margin-bottom: 0; }
+
 
 .box {
   height: 700px;
@@ -479,7 +479,7 @@ div.header {
   color: #FFFFFF;
   background: cornflowerblue; }
 
-.Create_project_content {
+.Create_event_content {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -494,7 +494,7 @@ div.header {
   color: #FFFFFF;
   background: cornflowerblue; }
 
-.Create_event_content {
+.Create_project_content {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;

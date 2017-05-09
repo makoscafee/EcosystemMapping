@@ -2021,6 +2021,7 @@
 	                angular.forEach(response.locations, function (locations) {
 	                    angular.forEach(locations, function (location) {
 	                        var marker = {
+	                            group: 'markers',
 	                            lat: parseFloat(location.lat),
 	                            lng: parseFloat(location.long),
 	                            getMessageScope: function getMessageScope() {
@@ -2109,6 +2110,7 @@
 	                            angular.forEach(response.locations, function (locations) {
 	                                angular.forEach(locations, function (location) {
 	                                    var marker = {
+	                                        group: 'markers',
 	                                        lat: parseFloat(location.lat),
 	                                        lng: parseFloat(location.long),
 	                                        getMessageScope: function getMessageScope() {
@@ -2166,6 +2168,7 @@
 	                            angular.forEach(response.locations, function (locations) {
 	                                angular.forEach(locations, function (location) {
 	                                    var marker = {
+	                                        group: 'markers',
 	                                        lat: parseFloat(location.lat),
 	                                        lng: parseFloat(location.long),
 	                                        getMessageScope: function getMessageScope() {
@@ -2225,6 +2228,7 @@
 	                        angular.forEach(response.locations, function (locations) {
 	                            angular.forEach(locations, function (location) {
 	                                var marker = {
+	                                    group: 'markers',
 	                                    lat: parseFloat(location.lat),
 	                                    lng: parseFloat(location.long),
 	                                    getMessageScope: function getMessageScope() {
@@ -2289,6 +2293,7 @@
 	                angular.forEach(response.locations, function (locations) {
 	                    angular.forEach(locations, function (location) {
 	                        var marker = {
+	                            group: 'markers',
 	                            lat: parseFloat(location.lat),
 	                            lng: parseFloat(location.long),
 	                            getMessageScope: function getMessageScope() {
